@@ -123,13 +123,15 @@ em { font-style: italic; }
 .nav-logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.25rem; color: var(--ink); text-decoration: none; letter-spacing: -.02em; flex-shrink: 0; }
 .nav-logo span { color: var(--green); }
 .nav-menu { display: flex; align-items: center; gap: .25rem; list-style: none; flex: 1; }
-.nav-item { position: relative; }
+.nav-item { position: relative; list-style: none; }
 .nav-link { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: .875rem; color: var(--ink); padding: .5rem .75rem; border-radius: var(--r); white-space: nowrap; display: block; }
 .nav-link:hover { background: var(--off); text-decoration: none; }
 .nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--rLg); padding: .75rem; min-width: 240px; box-shadow: 0 12px 40px rgba(0,0,0,.12); z-index: 300; }
 .nav-item:hover .nav-dropdown { display: block; }
-.nav-dd-link { display: block; padding: .45rem .75rem; font-size: .85rem; color: var(--ink); border-radius: var(--r); font-weight: 600; }
+.nav-dd-link { display: flex; align-items: center; gap: .55rem; padding: .45rem .75rem; font-size: .85rem; color: var(--ink); border-radius: var(--r); font-weight: 600; }
 .nav-dd-link:hover { background: var(--off); text-decoration: none; }
+.nav-dropdown img { width:20px; height:20px; flex-shrink:0; object-fit:contain; }
+.ndrop-ico { font-size:.95rem; width:22px; text-align:center; flex-shrink:0; }
 .nav-cta { margin-left: auto; background: var(--green); color: var(--white) !important; padding: .5rem 1.25rem; border-radius: 100px; font-size: .875rem; font-weight: 700; flex-shrink: 0; }
 .nav-cta:hover { background: #2d5e47; text-decoration: none !important; }
 .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; border: none; background: none; }
@@ -404,39 +406,52 @@ footer { background: var(--ink); color: var(--white); padding: 4rem 2rem 2rem; m
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/index.html" class="nav-logo">Wir<span>Weit</span>Weg</a>
+    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
     <ul class="nav-menu">
       <li class="nav-item">
-        <a href="/weltreise-planung.html" class="nav-link">Weltreise planen ▾</a>
-        <div class="nav-dropdown">
-          <a href="/idee-zeitplan.html" class="nav-dd-link">💡 Idee &amp; Zeitplan</a>
-          <a href="/budget-kosten.html" class="nav-dd-link" style="color:var(--green)">💰 Budget &amp; Kosten</a>
-          <a href="/job-auto-wohnung.html" class="nav-dd-link">🏠 Job, Auto &amp; Wohnung</a>
-          <a href="/dokumente.html" class="nav-dd-link">📋 Dokumente</a>
-          <a href="/auslandskrankenversicherung.html" class="nav-dd-link">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html" class="nav-dd-link">💳 Kreditkarten &amp; Finanzen</a>
-          <a href="/impfungen.html" class="nav-dd-link">💉 Gesundheit &amp; Impfungen</a>
-          <a href="/routenplanung-visum.html" class="nav-dd-link">🗺️ Route &amp; Visum</a>
-          <a href="/packliste.html" class="nav-dd-link">🎒 Packliste</a>
-          <a href="/technik-auf-reisen.html" class="nav-dd-link">📱 Technik</a>
-          <a href="/wichtige-apps.html" class="nav-dd-link">📲 Apps</a>
+        <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/dokumente.html">📋 Dokumente</a>
+          <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/packliste.html">🎒 Packliste</a>
+          <a href="/technik-auf-reisen.html">📱 Technik</a>
+          <a href="/wichtige-apps.html">📲 Apps</a>
         </div>
       </li>
       <li class="nav-item">
-        <a href="/laenderguides.html" class="nav-link">Länderguides ▾</a>
-        <div class="nav-dropdown">
-          <a href="/thailand.html" class="nav-dd-link"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
-          <a href="/vietnam.html" class="nav-dd-link"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
-          <a href="/indonesien.html" class="nav-dd-link"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
-          <a href="/japan.html" class="nav-dd-link"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
-          <a href="/philippinen.html" class="nav-dd-link"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
+        <a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
+          <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
+          <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
+          <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
+          <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
+          <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
+          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
+          <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
+          <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-      <li class="nav-item"><a href="/reiseblog.html" class="nav-link">Blog</a></li>
-      <li class="nav-item"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+            <li class="nav-item">
+        <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
+          <a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
+          <a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
+          <a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="/ueber-uns.html">Über uns</a></li>
+      <li class="nav-item"><a class="nav-link nav-cta" href="/newsletter.html">Newsletter</a></li>
     </ul>
-    <a href="/newsletter.html" class="nav-cta">Newsletter</a>
-    <button class="nav-burger" onclick="document.querySelector('.mobile-nav').classList.add('open')" aria-label="Menü öffnen">
+    <button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')">
       <span></span><span></span><span></span>
     </button>
   </div>
