@@ -117,35 +117,35 @@ img { max-width: 100%; height: auto; display: block; }
 strong { font-weight: 700; }
 em { font-style: italic; }
 
-/* ── NAV ── */
-.nav { position: sticky; top: 0; z-index: 200; background: var(--white); border-bottom: 1px solid var(--border); }
-.nav-inner { max-width: var(--maxW); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 64px; }
-.nav-logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.25rem; color: var(--ink); text-decoration: none; letter-spacing: -.02em; flex-shrink: 0; }
-.nav-logo span { color: var(--green); }
-.nav-menu { display: flex; align-items: center; gap: .25rem; list-style: none; flex: 1; }
-.nav-item { position: relative; list-style: none; }
-.nav-link { font-family: 'Nunito', sans-serif; font-weight: 600; font-size: .875rem; color: var(--ink); padding: .5rem .75rem; border-radius: var(--r); white-space: nowrap; display: block; }
-.nav-link:hover { background: var(--off); text-decoration: none; }
-.nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--rLg); padding: .75rem; min-width: 240px; box-shadow: 0 12px 40px rgba(0,0,0,.12); z-index: 300; }
-.nav-item:hover .nav-dropdown { display: block; }
-.nav-dd-link { display: flex; align-items: center; gap: .55rem; padding: .45rem .75rem; font-size: .85rem; color: var(--ink); border-radius: var(--r); font-weight: 600; }
-.nav-dd-link:hover { background: var(--off); text-decoration: none; }
-.nav-dropdown img { width:20px; height:20px; flex-shrink:0; object-fit:contain; }
-.ndrop-ico { font-size:.95rem; width:22px; text-align:center; flex-shrink:0; }
-.nav-cta { margin-left: auto; background: var(--green); color: var(--white) !important; padding: .5rem 1.25rem; border-radius: 100px; font-size: .875rem; font-weight: 700; flex-shrink: 0; }
-.nav-cta:hover { background: #2d5e47; text-decoration: none !important; }
-.nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .5rem; border: none; background: none; }
-.nav-burger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s; }
 
-/* ── MOBILE NAV ── */
-.mobile-nav { display: none; position: fixed; inset: 0; background: var(--white); z-index: 500; overflow-y: auto; padding: 1.5rem; flex-direction: column; gap: .25rem; }
-.mobile-nav.open { display: flex; }
-.mobile-nav-close { align-self: flex-end; background: var(--off); border: none; border-radius: var(--r); padding: .5rem 1rem; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: .9rem; cursor: pointer; margin-bottom: 1rem; }
-.mobile-nav-logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.4rem; color: var(--ink); margin-bottom: 1.5rem; }
-.mobile-nav-logo span { color: var(--green); }
-.mobile-nav a { display: block; padding: .65rem .75rem; font-weight: 600; font-size: .95rem; color: var(--ink); border-radius: var(--r); }
-.mobile-nav a:hover { background: var(--off); text-decoration: none; }
-.mobile-nav-section { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--light); padding: .75rem .75rem .25rem; }
+
+
+
+
+
+
+
+
+
+.nav-item:hover 
+
+
+
+.ndrop-ico { font-size:.95rem; width:22px; text-align:center; flex-shrink:0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ── STEPBAR ── */
 .stepbar { background: var(--off); border-bottom: 1px solid var(--border); position: sticky; top: 64px; z-index: 100; overflow-x: auto; }
@@ -302,7 +302,7 @@ em { font-style: italic; }
 .author-role { font-size: .78rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .05em; }
 .author-bio { font-size: .875rem; color: var(--mid); margin-top: .4rem; line-height: 1.65; }
 
-/* ── ART NAV ── */
+
 .artnav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
 .artnav-card { background: var(--off); border: 1px solid var(--border); border-radius: var(--rLg); padding: 1.1rem 1.25rem; text-decoration: none; transition: border-color .2s, background .2s; }
 .artnav-card:hover { border-color: var(--green); background: var(--greenlt); text-decoration: none; }
@@ -376,9 +376,9 @@ footer { background: var(--ink); color: var(--white); padding: 4rem 2rem 2rem; m
 @media(max-width:900px) {
   .art-main { grid-template-columns: 1fr; }
   .art-sidebar { position: static; }
-  .nav-menu { display: none; }
-  .nav-burger { display: flex; }
-  .nav-cta { display: none; }
+  
+  
+  
 }
 @media(max-width:768px) {
   .art-hero { height: 45vh; min-height: 300px; }
