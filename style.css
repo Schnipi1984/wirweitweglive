@@ -25,11 +25,12 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
 .nav-arr{font-size:.6rem;transition:transform .2s;}
 .nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:calc(100% + 4px);left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
+.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
 .nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
 .nav-drop a{display:block;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
 .nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-cta{background:var(--ink);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
+.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
 .nav-cta:hover{background:var(--green);}
 .nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
@@ -265,3 +266,8 @@ img{display:block;width:100%;object-fit:cover;}
   .hero-img{height:240px;}
   .author-box{flex-direction:column;}
 }
+
+/* NAV DROP – Flags & Icons */
+.nav-drop a{display:flex;align-items:center;gap:.55rem;}
+.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
+.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
