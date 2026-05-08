@@ -1,38 +1,327 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Japan Reiseführer | WirWeitWeg</title><meta name="description" content="Tokio, Kyoto, Osaka &amp; mehr – ehrlicher Guide von Marc &amp; Fabienne."><meta property="og:title" content="Japan Reiseführer | WirWeitWeg"><meta property="og:description" content="Tokio, Kyoto, Osaka &amp; mehr – ehrlicher Guide von Marc &amp; Fabienne."><meta property="og:image" content="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.com/japan.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"></head><body><nav class="nav"><div class="nav-inner">
-<a href="/index.html" class="logo">wir<span>·</span>weit<span>·</span>weg</a>
-<nav class="nav-menu">
-<div class="nav-item"><a class="nav-link" href="/weltreise-planung.html">Weltreise Planung <span class="nav-arr">▾</span></a>
-<div class="nav-drop">
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenkasse</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-</div></div>
-<div class="nav-item"><a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
-<div class="nav-drop">
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambotscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-</div></div>
-<div class="nav-item"><a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
-<div class="nav-drop">
-<a href="/sim-karten.html">SIM-Karten &amp; Internet</a>
-<a href="/transport.html">Transport &amp; Weiterreisen</a>
-<a href="/unterkuenfte.html">Unterkünfte finden</a>
-<a href="/lifehacks.html">Lifehacks</a>
-</div></div>
-<a class="nav-link" href="/reiseblog.html">Reiseblog</a>
-<a class="nav-link" href="/ueber-uns.html">Über Uns</a>
-<a class="nav-cta" href="/newsletter.html">Newsletter</a>
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Japan Reiseführer | WirWeitWeg</title><meta name="description" content="Tokio, Kyoto, Osaka &amp; mehr – ehrlicher Guide von Marc &amp; Fabienne."><meta property="og:title" content="Japan Reiseführer | WirWeitWeg"><meta property="og:description" content="Tokio, Kyoto, Osaka &amp; mehr – ehrlicher Guide von Marc &amp; Fabienne."><meta property="og:image" content="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.com/japan.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css"><style>
+/* =====================================================
+   WirWeitWeg – style.css
+   Farben: #151210 | #2d6a4f | #a8d5b5 | #f7f6f2 | #e6e3dc
+   Fonts: Fraunces (Headlines) | Nunito (Body)
+   ===================================================== */
+:root {
+  --white:#fff; --off:#f7f6f2; --ink:#151210; --mid:#5a5550;
+  --light:#b0aba5; --border:#e6e3dc; --green:#2d6a4f;
+  --greenlt:#e6f2ec; --mint:#a8d5b5; --r:12px; --rLg:20px; --maxW:1100px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;object-fit:cover;}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
+.logo span{color:var(--green);}
+.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
+.nav-item{position:relative;list-style:none;}
+.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
+.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
+.nav-arr{font-size:.6rem;transition:transform .2s;}
+.nav-item:hover .nav-arr{transform:rotate(180deg);}
+.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
+.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
+.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
+.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
+.nav-drop a:hover{background:var(--off);color:var(--green);}
+.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
+.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
+.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
+.nav-cta:hover{background:var(--green);}
+.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
+.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
+.nav-mobile.open{display:block;}
+.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
+.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
+.nav-mobile a:hover{color:var(--green);}
+.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border);margin-top:5rem;}
+.footer-inner{max-width:var(--maxW);margin:0 auto;padding:3.25rem 1.5rem 1.75rem;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);}
+.flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;letter-spacing:-.04em;display:block;margin-bottom:.65rem;}
+.flogo span{color:var(--green);}
+.fabout{font-size:.84rem;line-height:1.75;color:var(--mid);margin-bottom:1.25rem;}
+.fsocial{display:flex;gap:.6rem;}
+.fsoc{width:36px;height:36px;border-radius:50%;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .15s;}
+.fsoc:hover{background:var(--greenlt);border-color:var(--mint);}
+.fcol h4{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:.9rem;}
+.fcol ul{list-style:none;}
+.fcol li{margin-bottom:.45rem;}
+.fcol a{font-size:.84rem;color:var(--mid);transition:color .15s;}
+.fcol a:hover{color:var(--green);}
+.footbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding-top:1.4rem;font-size:.76rem;color:var(--light);}
+.footbot a{color:var(--mid);}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.45rem;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;padding:.82rem 1.65rem;border-radius:100px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;}
+.btn:hover{transform:translateY(-2px);}
+.btn-dark{background:var(--ink);color:white;}.btn-dark:hover{background:var(--green);}
+.btn-green{background:var(--green);color:white;}.btn-green:hover{background:#235c42;}
+.btn-outline{background:transparent;border:2px solid var(--border);color:var(--ink);}.btn-outline:hover{border-color:var(--ink);}
+.btn-white{background:white;color:var(--ink);}.btn-white:hover{background:var(--off);}
+.btn-ghost{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.2);}.btn-ghost:hover{background:rgba(255,255,255,.2);}
+.btn-sm{padding:.55rem 1.1rem;font-size:.8rem;}
+
+/* EYEBROW */
+.eyebrow{display:inline-flex;align-items:center;gap:.4rem;background:var(--greenlt);color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:100px;margin-bottom:1rem;}
+.eyebrow::before{content:'✦';font-size:.58rem;}
+.eyebrow.white{background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* INFOBOXEN */
+.infobox{border:1.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.75rem;margin:2rem 0;}
+.infobox.green{background:var(--greenlt);border-color:#b8dfc8;}
+.infobox.dark{background:var(--ink);border-color:var(--ink);}
+.infobox.orange{background:#fff5f0;border-color:#f4c4a8;}
+.infobox.light{background:var(--off);}
+.ibox-ico{font-size:1.5rem;margin-bottom:.5rem;}
+.ibox-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.45rem;}
+.infobox.dark .ibox-title{color:white;}
+.ibox-body{font-size:.9rem;line-height:1.7;color:var(--mid);}
+.infobox.dark .ibox-body{color:rgba(255,255,255,.65);}
+.ibox-body strong{color:var(--ink);}
+.infobox.dark .ibox-body strong{color:white;}
+
+/* STEP BAR */
+.stepbar{background:white;border-bottom:1px solid var(--border);padding:.7rem 0;position:sticky;top:64px;z-index:800;overflow-x:auto;}
+.stepbar::-webkit-scrollbar{display:none;}
+.stepbar-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:.4rem;white-space:nowrap;}
+.stepbtn{display:inline-flex;align-items:center;padding:.36rem .72rem;border-radius:100px;font-size:.76rem;font-weight:700;color:var(--mid);border:1.5px solid var(--border);background:white;text-decoration:none;transition:all .15s;}
+.stepbtn:hover{border-color:var(--green);color:var(--green);}
+.stepbtn.active{background:var(--ink);color:white;border-color:var(--ink);}
+.stepsep{color:var(--border);font-size:.65rem;}
+
+/* BREADCRUMB */
+.bc{max-width:var(--maxW);margin:0 auto;padding:1.1rem 1.5rem .4rem;display:flex;align-items:center;gap:.4rem;font-size:.76rem;color:var(--light);flex-wrap:wrap;}
+.bc a{color:var(--mid);}.bc a:hover{color:var(--green);}
+.bc .sep{color:var(--border);}
+
+/* PAGE HERO */
+.pghero{background:var(--off);border-bottom:1px solid var(--border);padding:3rem 0;}
+.pghero-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
+.pgtitle{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.04em;line-height:1.06;margin-bottom:1rem;}
+.pgtitle em{font-style:italic;font-weight:300;color:var(--green);}
+.pgdesc{font-size:1.05rem;line-height:1.74;color:var(--mid);max-width:600px;margin-bottom:1.25rem;}
+.pgmeta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.pgmeta-i{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--light);font-weight:600;}
+.pgmeta-i strong{color:var(--mid);}
+
+/* LAYOUT */
+.main{max-width:var(--maxW);margin:0 auto;padding:3rem 1.5rem 5rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
+
+/* PROSE */
+.hero-img{width:100%;height:420px;border-radius:var(--rLg);margin-bottom:2.5rem;}
+.prose{font-size:1rem;line-height:1.84;color:#3a3530;}
+.prose h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.85rem;letter-spacing:-.03em;color:var(--ink);margin:3rem 0 1rem;line-height:1.15;}
+.prose h2 em{font-style:italic;font-weight:300;color:var(--green);}
+.prose h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:var(--ink);margin:2.25rem 0 .75rem;}
+.prose p{margin-bottom:1.3rem;}
+.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.prose li{margin-bottom:.65rem;padding-left:.25rem;}
+.prose strong{font-weight:700;color:var(--ink);}
+.prose a{color:var(--green);font-weight:700;}
+.prose blockquote{border-left:3px solid var(--green);padding:.85rem 1.5rem;margin:2rem 0;background:var(--greenlt);border-radius:0 var(--r) var(--r) 0;font-style:italic;font-size:1.05rem;color:var(--mid);line-height:1.68;}
+.sec-divider{border:none;border-top:3px solid var(--off);margin:3rem 0;}
+
+/* TOC */
+.toc{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem 1.65rem;margin-bottom:2.5rem;}
+.toc-title{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.85rem;}
+.toc-list{list-style:none;padding:0;columns:2;gap:1rem;}
+.toc-list li{margin-bottom:.4rem;break-inside:avoid;}
+.toc-list a{font-size:.85rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.4rem;}
+.toc-list a::before{content:'↓';font-size:.68rem;flex-shrink:0;}
+.toc-list a:hover{color:var(--ink);}
+
+/* CANVA SLOT */
+.canva-slot{border:2px dashed var(--border);border-radius:var(--rLg);overflow:hidden;margin:2.5rem 0;background:var(--off);}
+.canva-slot img{width:100%;display:block;}
+.canva-caption{font-size:.74rem;color:var(--light);padding:.55rem 1rem;font-style:italic;text-align:center;border-top:1px solid var(--border);}
+.canva-caption strong{color:var(--mid);font-style:normal;}
+
+/* NUM CARDS */
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}
+.num-card{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;text-align:center;}
+.num-card.dark{background:var(--ink);}
+.num-big{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:900;color:var(--green);line-height:1;display:block;}
+.num-card.dark .num-big{color:var(--mint);}
+.num-label{font-size:.8rem;color:var(--mid);margin-top:.3rem;font-weight:600;}
+.num-card.dark .num-label{color:rgba(255,255,255,.5);}
+
+/* PROGRESS */
+.progress-list{list-style:none;padding:0;margin:1.5rem 0;}
+.progress-item{margin-bottom:1.25rem;}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem;}
+.progress-label{font-size:.9rem;font-weight:700;color:var(--ink);}
+.progress-pct{font-size:.84rem;font-weight:700;color:var(--green);}
+.progress-track{height:10px;background:var(--border);border-radius:100px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:100px;background:var(--green);}
+
+/* CHECKLIST */
+.checklist{list-style:none;padding:0;margin:1rem 0;}
+.checklist li{display:flex;align-items:flex-start;gap:.75rem;padding:.65rem 0;border-bottom:1px solid var(--border);font-size:.92rem;color:var(--mid);line-height:1.62;}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{content:'✓';color:var(--green);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:.1rem;}
+.checklist li strong{color:var(--ink);}
+
+/* FAQ */
+.faq-list{list-style:none;padding:0;margin:1.5rem 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:.75rem;overflow:hidden;}
+.faq-q{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);padding:1.1rem 1.4rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:white;transition:background .15s;user-select:none;}
+.faq-q:hover{background:var(--off);}
+.faq-arr{font-size:.72rem;color:var(--green);transition:transform .25s;flex-shrink:0;}
+.faq-q.open .faq-arr{transform:rotate(180deg);}
+.faq-a{font-size:.9rem;line-height:1.7;color:var(--mid);padding:0 1.4rem;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;}
+.faq-a.open{padding:0 1.4rem 1.15rem;max-height:400px;}
+
+/* OPTION CARDS */
+.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2rem 0;}
+.option-card{border:1.5px solid var(--border);border-radius:var(--r);padding:1.5rem;}
+.option-card.recommended{border-color:var(--green);background:var(--greenlt);}
+.option-badge{display:inline-block;background:var(--green);color:white;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .65rem;border-radius:100px;margin-bottom:.75rem;}
+.option-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;}
+.option-pros{list-style:none;padding:0;margin-top:.75rem;}
+.option-pros li{display:flex;align-items:flex-start;gap:.5rem;font-size:.85rem;color:var(--mid);margin-bottom:.4rem;line-height:1.5;}
+.option-pros li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.option-pros li.con::before{content:'✗';color:#e07040;}
+
+/* SHARE */
+.share-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 0;margin:2.5rem 0;display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;}
+.share-label{font-size:.8rem;font-weight:700;color:var(--mid);}
+.share-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.48rem 1.05rem;border-radius:100px;font-size:.78rem;font-weight:700;border:1.5px solid var(--border);background:white;cursor:pointer;transition:all .18s;text-decoration:none;color:var(--ink);font-family:'Nunito',sans-serif;}
+.share-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08);}
+.share-btn.pin{border-color:#e60023;color:#e60023;}.share-btn.pin:hover{background:#e60023;color:white;}
+.share-btn.wa{border-color:#25d366;color:#25d366;}.share-btn.wa:hover{background:#25d366;color:white;}
+.share-btn.fb{border-color:#1877f2;color:#1877f2;}.share-btn.fb:hover{background:#1877f2;color:white;}
+
+/* AUTHOR */
+.author-box{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.75rem;display:flex;gap:1.4rem;align-items:flex-start;margin:2.5rem 0;}
+.author-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid white;box-shadow:0 4px 12px rgba(0,0,0,.1);}
+.author-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.2rem;}
+.author-role{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;}
+.author-bio{font-size:.86rem;line-height:1.66;color:var(--mid);}
+
+/* RELATED */
+.related{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
+.related-title{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.03em;margin-bottom:1.5rem;}
+.related-title em{font-style:italic;font-weight:300;color:var(--green);}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.related-card{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;}
+.related-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.08);}
+.rcard-img{width:100%;height:140px;object-fit:cover;display:block;transition:transform .4s;}
+.related-card:hover .rcard-img{transform:scale(1.05);}
+.rcard-body{padding:1rem 1.1rem 1.2rem;}
+.rcard-tag{display:inline-block;background:var(--greenlt);color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .6rem;border-radius:100px;margin-bottom:.4rem;}
+.rcard-title{font-family:'Fraunces',serif;font-weight:700;font-size:.95rem;line-height:1.3;color:var(--ink);}
+.rcard-link{display:inline-flex;align-items:center;gap:.25rem;font-size:.76rem;font-weight:700;color:var(--green);margin-top:.5rem;transition:gap .2s;}
+.related-card:hover .rcard-link{gap:.45rem;}
+
+/* ARTNAV */
+.artnav{display:flex;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;margin-top:3rem;}
+
+/* SIDEBAR */
+.sbox{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem;}
+.sbox-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
+.stepnav{list-style:none;}
+.stepnav li a{display:flex;align-items:center;gap:.4rem;padding:.4rem .6rem;font-size:.8rem;font-weight:600;color:var(--mid);border-radius:8px;transition:all .13s;text-decoration:none;}
+.stepnav li a:hover{background:white;color:var(--green);}
+.stepnav li.cur a{background:white;color:var(--green);font-weight:700;}
+.stepnav li .sn{font-size:.68rem;color:var(--light);min-width:22px;}
+.nlform{display:flex;flex-direction:column;gap:.6rem;}
+.nlform input{background:white;border:1.5px solid var(--border);border-radius:100px;padding:.72rem 1.1rem;font-family:'Nunito',sans-serif;font-size:.84rem;color:var(--ink);outline:none;transition:border-color .2s;}
+.nlform input:focus{border-color:var(--green);}
+.nlform input::placeholder{color:var(--light);}
+.nl-note{font-size:.7rem;color:var(--light);margin-top:.3rem;text-align:center;}
+.pdf-box{background:var(--ink);border-radius:var(--r);padding:1.4rem;color:white;margin-bottom:1.2rem;}
+.pdf-ico{font-size:1.8rem;margin-bottom:.5rem;}
+.pdf-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;margin-bottom:.4rem;}
+.pdf-desc{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:1rem;}
+.cd-box{background:var(--green);border-radius:var(--r);padding:1.4rem;color:white;margin-bottom:1.2rem;text-align:center;}
+.cd-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.5rem;}
+.cd-num{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:900;color:white;line-height:1;display:block;}
+.cd-unit{font-size:.76rem;color:rgba(255,255,255,.65);margin-top:.2rem;}
+.cd-date{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.15);}
+.cd-date strong{color:white;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .num-grid{grid-template-columns:1fr 1fr;}
+  .related-grid{grid-template-columns:1fr 1fr;}
+  .option-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .nav-menu{display:none;}
+  .nav-burger{display:flex;}
+  .toc-list{columns:1;}
+}
+@media(max-width:600px){
+  .num-grid{grid-template-columns:1fr;}
+  .related-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-img{height:240px;}
+  .author-box{flex-direction:column;}
+}
+
+</style>
+</head><body><nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/dokumente.html">📋 Dokumente</a>
+          <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/packliste.html">🎒 Packliste</a>
+          <a href="/technik-auf-reisen.html">📱 Technik</a>
+          <a href="/wichtige-apps.html">📲 Apps</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
+          <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
+          <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
+          <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
+          <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
+          <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
+          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
+          <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
+          <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
+        </div>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
+          <a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
+          <a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
+          <a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="/ueber-uns.html">Über uns</a></li>
+      <li class="nav-item"><a class="nav-link nav-cta" href="/newsletter.html">Newsletter</a></li>
+    </ul>
+    <button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 <button class="nav-burger"><span></span><span></span><span></span></button>
 </div></nav>
