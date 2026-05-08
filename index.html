@@ -48,17 +48,20 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
 .logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
 .logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;}
-.nav-item{position:relative;}
+.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
+.nav-item{position:relative;list-style:none;}
 .nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
 .nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
 .nav-arr{font-size:.6rem;transition:transform .2s;}
 .nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:calc(100% + 4px);left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
+.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
 .nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-drop a{display:block;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
+.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
+.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
 .nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-cta{background:var(--ink);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
+.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
+.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
+.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
 .nav-cta:hover{background:var(--green);}
 .nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
@@ -1437,6 +1440,15 @@ section { padding: 5rem 0; }
           <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
           <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
+        </div>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
+        <div class="nav-drop">
+          <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
+          <a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
+          <a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
+          <a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a>
         </div>
       </li>
       <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
