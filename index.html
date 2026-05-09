@@ -23,6 +23,8 @@
 <link rel="canonical" href="https://wirweitweg.blog/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#2d6a4f">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=1400&q=85&fit=crop">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
@@ -33,9 +35,10 @@
    Fonts: Fraunces (Headlines) | Nunito (Body)
    ===================================================== */
 :root {
-  --white:#fff; --off:#f7f6f2; --ink:#151210; --mid:#5a5550;
-  --light:#b0aba5; --border:#e6e3dc; --green:#2d6a4f;
-  --greenlt:#e6f2ec; --mint:#a8d5b5; --r:12px; --rLg:20px; --maxW:1100px;
+  --white:#fff; --off:#faf8f4; --ink:#1a1611; --mid:#5a5550;
+  --light:#a8a29e; --border:#e8e2d8; --green:#3d7a5c;
+  --greenlt:#eaf2ec; --mint:#a8d5b5; --sand:#c9a96e; --sandlt:#f5edd8;
+  --r:12px; --rLg:20px; --maxW:1280px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -62,14 +65,13 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
 .ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
 .nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
+.nav-cta:hover{background:#235c42;}
 .nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
 .nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
 .nav-mobile.open{display:block;}
 .nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-.nav-mobile a{display:flex;align-items:center;gap:.55rem;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
-.nav-mobile a img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
+.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
 .nav-mobile a:hover{color:var(--green);}
 .nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
 
@@ -317,11 +319,6 @@ img{display:block;width:100%;object-fit:cover;}
         "@type": "ImageObject",
         "url": "https://wirweitweg.blog/apple-touch-icon.png"
       }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://wirweitweg.blog/suche?q={search_term_string}",
-      "query-input": "required name=search_term_string"
     }
   },
   {
@@ -370,22 +367,7 @@ img{display:block;width:100%;object-fit:cover;}
 ]
 </script>
 <style>
-/* ── OVERRIDES ───────────────────────────────────────────── */
-:root {
-  --ink:    #1a1611;
-  --green:  #3d7a5c;
-  --mint:   #a8d5b5;
-  --off:    #faf8f4;
-  --border: #e8e2d8;
-  --greenlt:#eaf2ec;
-  --sand:   #c9a96e;
-  --sandlt: #f5edd8;
-  --mid:    #5a5550;
-  --light:  #a8a29e;
-  --r:      12px;
-  --rLg:    20px;
-  --maxW:   1280px;
-}
+/* ── PAGE OVERRIDES ──────────────────────────────────────── */
 body { background: var(--off); }
 
 /* ── NAV override for 1280px ─────────────────────────────── */
@@ -914,7 +896,7 @@ section { padding: 5rem 0; }
   font-family: 'Fraunces', serif;
   font-weight: 900;
   font-size: 1.8rem;
-  color: var(--border);
+  color: #c8c2ba;
   line-height: 1;
   min-width: 2.5rem;
   letter-spacing: -.04em;
@@ -1478,6 +1460,11 @@ section { padding: 5rem 0; }
   <a href="/packliste.html">🎒 Packliste</a>
   <a href="/technik-auf-reisen.html">📱 Technik auf Reisen</a>
   <a href="/wichtige-apps.html">📲 Wichtige Apps</a>
+  <div class="nav-mobile-section">Reisetipps</div>
+  <a href="/sim-karten.html">📶 SIM-Karten &amp; Internet</a>
+  <a href="/transport.html">🚌 Transport &amp; Weiterreisen</a>
+  <a href="/unterkuenfte.html">🛏️ Unterkünfte finden</a>
+  <a href="/lifehacks.html">⚡ Lifehacks</a>
   <div class="nav-mobile-section">Länderguides</div>
   <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
   <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
@@ -1534,15 +1521,10 @@ section { padding: 5rem 0; }
 
   <!-- Text-Overlay über Mittelbereich -->
   <div class="hero-text">
-    <!-- 
-      Hero-Text Varianten (Variante A aktiv):
-      A: "Kein Rückflugticket." / Weltreise-Blog aus der Schweiz
-      B: "Asien. Und alles danach." / Weltreise-Blog von Marc & Fabienne
-      C: "Die Welt wartet nicht." / Unser Reiseblog. Kein Datum zurück.
-    -->
     <h1>Kein <em>Rückflug</em>ticket.</h1>
     <p>Weltreise-Blog aus der Schweiz · Marc & Fabienne · Abflug 30. Juni 2026</p>
     <a href="/weltreise-planung.html" class="btn btn-white">Zur Weltreise-Planung →</a>
+    <a href="/ueber-uns.html" class="btn btn-ghost" style="margin-left:.75rem;">Über uns →</a>
   </div>
 </section>
 
@@ -1577,20 +1559,20 @@ section { padding: 5rem 0; }
       <div class="intro-text">
         <span class="eyebrow">Unser Abenteuer</span>
         <h2>Zwei Schweizer,<br><em>eine Weltreise.</em></h2>
-        <p>Wir sind Marc und Fabienne aus Solothurn. Am 30. Juni 2026 heben wir ab – ohne Rückflugticket, ohne fixen Plan für das Ende. Was wir mitnehmen: Neugier, ein Kamera und genug Zeit, um wirklich anzukommen.</p>
+        <p>Wir sind Marc und Fabienne aus Solothurn. Am 30. Juni 2026 heben wir ab – ohne Rückflugticket, ohne fixen Plan für das Ende. Was wir mitnehmen: Neugier, eine Kamera und genug Zeit, um wirklich anzukommen.</p>
         <p>Dieser Blog ist kein Hochglanz-Prospekt. Hier schreiben zwei Menschen, die gerade das Gleiche durchmachen wie du: Planung, Zweifel, Vorfreude. Ehrlich, auf Schweizerdeutsch direkt – und hoffentlich nützlich.</p>
         <div class="intro-meta">
           <div class="intro-meta-item">
-            <strong>1</strong>
-            <span>Open-End-Reise</span>
+            <strong>2</strong>
+            <span>Personen</span>
           </div>
           <div class="intro-meta-item">
             <strong>9+</strong>
             <span>Länder geplant</span>
           </div>
           <div class="intro-meta-item">
-            <strong>CH</strong>
-            <span>Perspektive</span>
+            <strong>40L</strong>
+            <span>Gepäck pro Person</span>
           </div>
           <div class="intro-meta-item">
             <strong>0</strong>
@@ -1892,7 +1874,7 @@ section { padding: 5rem 0; }
           <span class="blog-tag">Planung</span>
           <h3>Wie wir unser Weltreise-Budget berechnet haben</h3>
           <p>Was kostet ein Jahr Asien wirklich? Wir zeigen unsere Kalkulation – mit echten Schweizer Zahlen.</p>
-          <span class="blog-meta">15. April 2026 · 8 Min Lesezeit</span>
+          <span class="blog-meta">Bald verfügbar · 8 Min Lesezeit</span>
         </div>
       </a>
       <a class="blog-card" href="/reiseblog.html">
@@ -1901,7 +1883,7 @@ section { padding: 5rem 0; }
           <span class="blog-tag">Schweiz-Spezial</span>
           <h3>KVG sistieren oder Auslandversicherung? Das müsst ihr wissen</h3>
           <p>Der grösste Versicherungs-Irrgarten der Schweiz – endlich verständlich erklärt.</p>
-          <span class="blog-meta">3. April 2026 · 11 Min Lesezeit</span>
+          <span class="blog-meta">Bald verfügbar · 11 Min Lesezeit</span>
         </div>
       </a>
       <a class="blog-card" href="/reiseblog.html">
@@ -1910,7 +1892,7 @@ section { padding: 5rem 0; }
           <span class="blog-tag">Reiseziele</span>
           <h3>Thailand im Sommer: Was wirklich auf euch wartet</h3>
           <p>Monsun, Menschenmassen, günstige Preise – wir klären auf was Thailand in der Nebensaison bedeutet.</p>
-          <span class="blog-meta">22. März 2026 · 7 Min Lesezeit</span>
+          <span class="blog-meta">Bald verfügbar · 7 Min Lesezeit</span>
         </div>
       </a>
     </div>
@@ -1925,7 +1907,7 @@ section { padding: 5rem 0; }
         <span class="eyebrow">Praktische Infos</span>
         <h2>Nützliche <em>Reisetipps</em></h2>
       </div>
-      <a href="/reiseblog.html" class="btn btn-outline btn-sm">Alle Tipps →</a>
+      <a href="/reisetipps.html" class="btn btn-outline btn-sm">Alle Tipps →</a>
     </div>
     <div class="tips-grid">
       <a class="tip-card" href="/kreditkarten.html">
@@ -1952,43 +1934,11 @@ section { padding: 5rem 0; }
   </div>
 </section>
 
-<!-- ═══════════════════════════════ NEWSLETTER ════════════════ -->
-<section class="newsletter">
-  <div class="wrap">
-    <div class="nl-grid">
-      <div class="nl-text">
-        <span class="eyebrow white">Direkt im Postfach</span>
-        <h2>Dabei sein,<br><em>wenn es losgeht.</em></h2>
-        <p>Kein Spam, kein Weekly-Roundup-Blabla. Wir schreiben wenn etwas passiert – einen Artikel, eine Erkenntnis, einen ehrlichen Moment auf Reise.</p>
-        <ul class="nl-perks">
-          <li>Neue Artikel direkt ins Postfach</li>
-          <li>Reise-Updates von unterwegs</li>
-          <li>Planungstipps aus der Schweiz</li>
-          <li>Kein Paid Content, keine Werbung</li>
-        </ul>
-      </div>
-      <div>
-        <div class="nl-form">
-          <div class="nl-row">
-            <input class="nl-input" type="text" placeholder="Vorname">
-            <input class="nl-input" type="text" placeholder="Nachname">
-          </div>
-          <input class="nl-input" type="email" placeholder="deine@email.ch">
-          <button class="btn btn-white" style="width:100%;justify-content:center;">
-            Jetzt anmelden ✦
-          </button>
-          <p class="nl-note">Kein Spam. Jederzeit abmeldbar. Wir hassen Spam genauso wie ihr.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════════════════ SOCIAL ════════════════════ -->
 <section class="social-sec">
   <div class="wrap">
     <div class="sec-head" style="text-align:center;margin-bottom:2rem;">
-      <span class="eyebrow">Folg uns</span>
+      <span class="eyebrow">Folgt uns</span>
       <h2>WirWeitWeg <em>überall.</em></h2>
     </div>
     <div class="social-grid">
@@ -2044,6 +1994,35 @@ section { padding: 5rem 0; }
           <span class="social-follow">Anmelden →</span>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ NEWSLETTER ════════════════ -->
+<section class="newsletter">
+  <div class="wrap">
+    <div class="nl-grid">
+      <div class="nl-text">
+        <span class="eyebrow white">Direkt im Postfach</span>
+        <h2>Dabei sein,<br><em>wenn es losgeht.</em></h2>
+        <p>Kein Spam, kein Weekly-Roundup-Blabla. Wir schreiben wenn etwas passiert – einen Artikel, eine Erkenntnis, einen ehrlichen Moment auf Reise.</p>
+        <ul class="nl-perks">
+          <li>Neue Artikel direkt ins Postfach</li>
+          <li>Reise-Updates von unterwegs</li>
+          <li>Planungstipps aus der Schweiz</li>
+          <li>Kein Paid Content, keine Werbung</li>
+        </ul>
+      </div>
+      <div>
+        <div class="nl-form">
+          <input class="nl-input" type="text" placeholder="Dein Vorname">
+          <input class="nl-input" type="email" placeholder="deine@email.ch">
+          <button class="btn btn-white" style="width:100%;justify-content:center;">
+            Jetzt anmelden ✦
+          </button>
+          <p class="nl-note">Kein Spam. Jederzeit abmeldbar. Wir hassen Spam genauso wie ihr.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2138,7 +2117,7 @@ function updateCountdown() {
   const h = Math.floor((diff % 86400000) / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-d').textContent = d;
+  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
   document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
   document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
   document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
