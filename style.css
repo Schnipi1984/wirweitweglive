@@ -46,7 +46,7 @@ img{display:block;width:100%;object-fit:cover;}
 
 
 /* ── FOOTER ──────────────────────────────────────────────── */
-.footer{background:#1e4035;color:white;padding:4rem 0 0;border-top:none;margin-top:0;}
+.footer{background:#2a1f12;color:white;padding:4rem 0 0;border-top:none;margin-top:0;}
 .footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);}
 .f-brand .flogo{font-family:"Fraunces",serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:white;text-decoration:none;}
