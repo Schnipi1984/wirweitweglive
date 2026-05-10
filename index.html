@@ -25,6 +25,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#2d6a4f">
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=1400&q=85&fit=crop">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
@@ -300,6 +301,46 @@ img{display:block;width:100%;object-fit:cover;}
   .hero-img{height:240px;}
   .author-box{flex-direction:column;}
 }
+
+
+/* ── WORLD MAP ─────────────────────────────────── */
+.map-sec{padding:5rem 0;background:var(--off);}
+.map-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
+.map-head{text-align:center;margin-bottom:2.5rem;}
+.map-sec h2,.yt-sec h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.1;letter-spacing:-.03em;color:var(--ink);margin-bottom:.5rem;}
+.map-sec h2 em,.yt-sec h2 em{font-style:italic;font-weight:300;color:var(--green);}
+#travel-map{height:560px;overflow:hidden;border-radius:0;border:none;}
+.map-legend{display:flex;gap:1.5rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap;}
+.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--mid);}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+/* ── YOUTUBE ───────────────────────────────────── */
+.yt-sec{padding:5rem 0;background:var(--off);}
+.yt-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
+.yt-head{text-align:center;margin-bottom:2.5rem;}
+.yt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.yt-facade{position:relative;border-radius:var(--rLg);overflow:hidden;aspect-ratio:16/9;cursor:pointer;background:#111;}
+.yt-facade img{width:100%;height:100%;object-fit:cover;transition:transform .3s,opacity .3s;}
+.yt-facade:hover img{transform:scale(1.03);opacity:.85;}
+.yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.yt-play-btn{width:64px;height:64px;background:rgba(220,0,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
+.yt-facade:hover .yt-play-btn{transform:scale(1.12);}
+.yt-play-btn svg{width:26px;height:26px;fill:white;margin-left:4px;}
+.yt-subscribe{margin-top:2rem;text-align:center;}
+.yt-sub-bar{display:inline-flex;align-items:center;gap:.75rem;background:var(--ink);color:white;padding:.85rem 1.75rem;border-radius:100px;font-weight:700;font-size:.88rem;transition:background .2s;}
+.yt-sub-bar:hover{background:#2d2620;}
+.yt-sub-bar svg{width:22px;height:22px;fill:#ff0000;}
+/* ── BMaC STICKY ───────────────────────────────── */
+.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
+.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
+.bmc-btn:hover{transform:translateY(-3px);}
+@media(max-width:768px){.yt-grid{grid-template-columns:1fr;}}
+
+
+
+
+.f-affiliate { border-top: 1px solid rgba(255,255,255,.08); margin: 0 2rem; padding: 1.5rem 0; }
+.f-affiliate p { font-size: .75rem; color: rgba(255,255,255,.45); line-height: 1.65; text-align: center; max-width: 700px; margin: 0 auto; }
+.f-affiliate strong { color: rgba(255,255,255,.65); }
 
 </style>
 <script type="application/ld+json">
@@ -779,14 +820,18 @@ section { padding: 5rem 0; }
 /* jc-card = naked link only, NO radius, NO shadow */
 .jc-card {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   width: 100%;
   text-decoration: none;
   color: var(--ink);
 }
 .jc-header {
   padding: 2rem 1.75rem 1.5rem;
+  height: 195px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .jc-ich {
   font-family: 'Fraunces', serif;
@@ -806,7 +851,8 @@ section { padding: 5rem 0; }
 .jc-body {
   padding: 1.5rem 1.75rem 2rem;
   border-top: 1px solid rgba(0,0,0,.06);
-  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .jc-reply {
   font-size: .88rem;
@@ -833,14 +879,14 @@ section { padding: 5rem 0; }
 }
 .jc-links li a:hover { opacity: .65; }
 .jc-cta {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   font-family: 'Nunito', sans-serif;
   font-size: .82rem;
   font-weight: 700;
   padding: .62rem 1.35rem;
   border-radius: 100px;
   transition: all .2s;
+  margin-top: auto;
 }
 /* Card 1 – Sand */
 .jc-sand .jc-header  { background: var(--sandlt); }
@@ -863,13 +909,13 @@ section { padding: 5rem 0; }
 .jc-green .jc-cta { background: var(--greenlt); color: var(--green); border: 1.5px solid var(--mint); }
 .jc-col:hover .jc-green .jc-cta { background: var(--green); color: white; border-color: var(--green); }
 /* Card 3 – Dark */
-.jc-ink .jc-header   { background: var(--ink); }
+.jc-ink .jc-header   { background: #2d5c47; }
 .jc-ink .jc-ich      { color: white; }
 .jc-ink .jc-sub      { color: var(--mint); opacity: 1; }
-.jc-ink .jc-body     { background: #272219 !important; border-color: rgba(255,255,255,.08); }
-.jc-ink .jc-reply    { color: rgba(255,255,255,.8); }
+.jc-ink .jc-body     { background: white !important; border-top: 0 !important; padding-top: 1.5rem !important; }
+.jc-ink .jc-reply    { color: var(--mid) !important; }
 .jc-ink .jc-links    { border-color: rgba(255,255,255,.1); }
-.jc-ink .jc-links li a { color: var(--mint); }
+.jc-ink .jc-links li a { color: var(--green); }
 .jc-ink .jc-cta { background: rgba(255,255,255,.1); color: white; border: 1.5px solid rgba(255,255,255,.2); }
 .jc-col:hover .jc-ink .jc-cta { background: var(--mint); color: var(--ink); border-color: var(--mint); }
 
@@ -1685,18 +1731,18 @@ section { padding: 5rem 0; }
 
       <div class="jc-col">
         <a class="jc-card jc-ink" href="/reiseblog.html">
-          <div class="jc-header">
-            <div class="jc-ich">Ich folge eurer<br>Reise einfach gern.</div>
-            <p class="jc-sub">Willkommen in unserem Reisetagebuch!</p>
+          <div class="jc-header" style="background:#2d5c47;">
+            <div class="jc-ich" style="color:white;">Ich folge eurer<br>Reise einfach gern.</div>
+            <p class="jc-sub" style="color:#a8d5b5;">Willkommen in unserem Reisetagebuch!</p>
           </div>
-          <div class="jc-body" style="background:#272219;border-top:1px solid rgba(255,255,255,.08);">
-            <p class="jc-reply" style="color:rgba(255,255,255,.8);">Sehr gerne! Wir schreiben alles auf – die schönen Momente genauso wie die schlechten Tage. Kein Hochglanz, kein Filter. Ehrlich aus erster Hand.</p>
-            <ul class="jc-links" style="border-top-color:rgba(255,255,255,.1);">
-              <li><a href="/reiseblog.html" style="color:#a8d5b5;">→ Neueste Artikel lesen</a></li>
-              <li><a href="/newsletter.html" style="color:#a8d5b5;">→ Newsletter – direkt im Postfach</a></li>
-              <li><a href="/ueber-uns.html" style="color:#a8d5b5;">→ Wer sind Marc & Fabienne?</a></li>
+          <div class="jc-body" style="border-top:none;background:white;">
+            <p class="jc-reply" style="color:#5a5550;">Sehr gerne! Wir schreiben alles auf – die schönen Momente genauso wie die schlechten Tage. Kein Hochglanz, kein Filter. Ehrlich aus erster Hand.</p>
+            <ul class="jc-links" style="border-top-color:#e8e2d8;">
+              <li><a href="/reiseblog.html" style="color:#1a1611;">→ Neueste Artikel lesen</a></li>
+              <li><a href="/newsletter.html" style="color:#1a1611;">→ Newsletter – direkt im Postfach</a></li>
+              <li><a href="/ueber-uns.html" style="color:#1a1611;">→ Wer sind Marc & Fabienne?</a></li>
             </ul>
-            <span class="jc-cta" style="background:rgba(255,255,255,.1);color:white;border:1.5px solid rgba(255,255,255,.2);">Zum Blog →</span>
+            <span class="jc-cta" style="background:transparent;color:#1a1611;border:none;">Zum Blog →</span>
           </div>
         </a>
       </div>
@@ -1939,6 +1985,49 @@ section { padding: 5rem 0; }
   </div>
 </section>
 
+
+<!-- ═══ WELTKARTE ══════════════════════════════════════════ -->
+<section class="map-sec">
+  <div class="map-inner">
+    <div class="map-head">
+      <span class="eyebrow">Unsere Reiseroute</span>
+      <h2>Wo wir <em>hinwollen.</em></h2>
+      <p style="color:var(--mid);margin-top:.5rem;font-size:.95rem;">Klick auf ein Land für mehr Infos.</p>
+    </div>
+    <div id="travel-map"></div>
+    <div class="map-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#3d7a5c;"></div> Schweiz (Heimat)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#a8d5b5;border:1.5px solid #3d7a5c;"></div> Geplante Destinationen</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ YOUTUBE ════════════════════════════════════════════ -->
+<section class="yt-sec">
+  <div class="yt-inner">
+    <div class="yt-head">
+      <span class="eyebrow">YouTube</span>
+      <h2>Schaut uns <em>über die Schulter.</em></h2>
+    </div>
+    <div class="yt-grid">
+      <div class="yt-facade" onclick="loadYT(this,'dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&q=80&fit=crop" alt="Bali, Indonesien">
+        <div class="yt-play"><div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      </div>
+      <div class="yt-facade" onclick="loadYT(this,'dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80&fit=crop" alt="Malaysia">
+        <div class="yt-play"><div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      </div>
+    </div>
+    <div class="yt-subscribe">
+      <a href="https://youtube.com/@wirweitweg" class="yt-sub-bar">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        Kanal abonnieren – kostenlos dabei sein
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════ SOCIAL ════════════════════ -->
 <section class="social-sec">
   <div class="wrap">
@@ -2093,6 +2182,9 @@ section { padding: 5rem 0; }
         </ul>
       </div>
     </div>
+    <div class="f-affiliate">
+      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
+    </div>
     <div class="footer-bottom">
       <span>© 2026 WirWeitWeg · Weltreise-Blog aus der Schweiz</span>
       <div class="footer-bottom-links">
@@ -2130,5 +2222,78 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 </script>
+
+<div class="bmc-wrap">
+  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
+    ☕ Kaffee spendieren
+  </button>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script>
+
+// YouTube Lazy Load
+function loadYT(el,id){
+  const i=document.createElement('iframe');
+  i.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
+  i.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;';
+  i.allow='autoplay;encrypted-media';i.allowFullscreen=true;
+  el.innerHTML='';el.appendChild(i);
+}
+// D3 Choropleth World Map
+(function(){
+  const W=document.getElementById('travel-map');
+  if(!W)return;
+  const planned=new Set([764,704,360,458,702,116,418,608,392]);
+  const home=new Set([756]);
+  const links={764:'/thailand.html',704:'/vietnam.html',360:'/indonesien.html',458:'/malaysia.html',702:'/singapur.html',116:'/kambodscha.html',418:'/laos.html',608:'/philippinen.html',392:'/japan.html'};
+  const names={764:'Thailand',704:'Vietnam',360:'Indonesien',458:'Malaysia',702:'Singapur',116:'Kambodscha',418:'Laos',608:'Philippinen',392:'Japan',756:'Schweiz 🏠'};
+  const svg=d3.select('#travel-map').append('svg').attr('width','100%').attr('height','100%').style('background','var(--off)');
+  const g=svg.append('g');
+  const tip=d3.select('body').append('div').style('position','fixed').style('background','rgba(26,22,17,.9)').style('color','white').style('padding','.4rem .85rem').style('border-radius','8px').style('font-size','.8rem').style('font-weight','700').style('pointer-events','none').style('opacity','0').style('z-index','9999').style('font-family','Nunito,sans-serif');
+  function draw(){
+    const w=W.offsetWidth||900,h=W.offsetHeight||560;
+    svg.attr('viewBox','0 0 '+w+' '+h);
+    const proj=d3.geoNaturalEarth1().scale(w/5.8).translate([w*.5,h*.53]);
+    const path=d3.geoPath().projection(proj);
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world=>{
+      const countries=topojson.feature(world,world.objects.countries);
+      g.selectAll('path').remove();
+      g.selectAll('path').data(countries.features).join('path')
+        .attr('d',path)
+        .attr('fill',d=>{const id=+d.id;return home.has(id)?'#2d6a4f':planned.has(id)?'#a8d5b5':'#ddd8d0';})
+        .attr('stroke','#faf8f4').attr('stroke-width',.5)
+        .style('cursor',d=>planned.has(+d.id)||home.has(+d.id)?'pointer':'default')
+        .on('mouseover',function(e,d){
+          const id=+d.id;if(!names[id])return;
+          d3.select(this).attr('fill',planned.has(id)?'#3d7a5c':home.has(id)?'#1a4a2e':'#ddd8d0');
+          tip.html(names[id]).style('opacity','1');
+        })
+        .on('mousemove',e=>{tip.style('left',(e.clientX+12)+'px').style('top',(e.clientY-28)+'px');})
+        .on('mouseout',function(e,d){
+          const id=+d.id;
+          d3.select(this).attr('fill',home.has(id)?'#2d6a4f':planned.has(id)?'#a8d5b5':'#ddd8d0');
+          tip.style('opacity','0');
+        })
+        .on('click',(e,d)=>{const u=links[+d.id];if(u)window.location.href=u;});
+    });
+  }
+  draw();
+  window.addEventListener('resize',()=>{clearTimeout(window._mt);window._mt=setTimeout(draw,100);});
+})();
+// Equalize journey card headers
+function eqHeaders(){
+  const hs=document.querySelectorAll('.jc-header');
+  hs.forEach(h=>h.style.height='auto');
+  let m=0;hs.forEach(h=>{m=Math.max(m,h.offsetHeight);});
+  hs.forEach(h=>{h.style.height=m+'px';});
+}
+eqHeaders();
+window.addEventListener('resize',()=>{clearTimeout(window._eqt);window._eqt=setTimeout(eqHeaders,80);});
+</script>
+
+
+
 </body>
 </html>
