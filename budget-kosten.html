@@ -349,59 +349,31 @@ em { font-style: italic; }
 .sidebar-nl-form button { background: var(--sand); color: var(--white); border: none; border-radius: 100px; padding: .65rem; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: .875rem; cursor: pointer; }
 .sidebar-nl-form button:hover { background: #b08a50; }
 
-/* ── FOOTER ── */
-footer { background: var(--ink); color: var(--white); padding: 4rem 2rem 2rem; margin-top: 5rem; }
-.footer-inner { max-width: var(--maxW); margin: 0 auto; }
-.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.4rem; color: var(--white); margin-bottom: .75rem; }
-.footer-logo span { color: var(--mint); }
-.footer-tagline { font-size: .875rem; opacity: .6; line-height: 1.6; max-width: 260px; }
-.footer-col-title { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--mint); margin-bottom: .875rem; }
-.footer-col-list { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
-.footer-col-list li a { font-size: .85rem; color: rgba(255,255,255,.6); }
-.footer-col-list li a:hover { color: var(--white); text-decoration: none; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-copy { font-size: .8rem; opacity: .5; }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { font-size: .8rem; opacity: .5; color: var(--white); }
-.footer-links a:hover { opacity: 1; text-decoration: none; }
-
-/* ── RESPONSIVE ── */
-@media(max-width:1024px) {
-  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
-  .footer-top > div:first-child { grid-column: 1 / -1; }
-}
-@media(max-width:900px) {
-  .art-main { grid-template-columns: 1fr; }
-  .art-sidebar { position: static; }
-  .nav-menu { display: none; }
-  .nav-burger { display: flex; }
-  .nav-cta { display: none; }
-}
-@media(max-width:768px) {
-  .art-hero { height: 45vh; min-height: 300px; }
-  .art-h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .footer-top > div:first-child { grid-column: 1 / -1; }
-  .num-grid { grid-template-columns: 1fr; }
-  .compare-grid { grid-template-columns: 1fr; }
-}
-@media(max-width:600px) {
-  .art-main { padding: 1.5rem 1.25rem 0; }
-  .related-grid { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
-  .author-box { flex-direction: column; }
-  .artnav { grid-template-columns: 1fr; }
-  .breadcrumb { padding: .75rem 1.25rem .25rem; }
-  .stepbar-inner { padding: 0 1rem; }
-  .art-hero-content { padding: 1.5rem 1.25rem; }
-  .kosten-table { font-size: .8rem; }
-}
-
-/* ── AFFILIATE + BMaC ──────────────────────────────────── */
-.f-affiliate{border-top:1px solid rgba(255,255,255,.08);margin:0 2rem;padding:1.5rem 0;}
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer{background:#1e4035;color:white;padding:4rem 0 0;border-top:none;margin-top:0;}
+.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:white;text-decoration:none;}
+.f-brand .flogo span{color:#a8d5b5;}
+.f-brand p{font-size:.84rem;line-height:1.7;color:rgba(255,255,255,.55);margin-bottom:1.25rem;}
+.f-social{display:flex;gap:.6rem;}
+.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:rgba(255,255,255,.65);transition:all .15s;text-decoration:none;}
+.f-soc:hover{background:#2d6a4f;color:white;border-color:#2d6a4f;}
+.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1rem;}
+.f-col ul{list-style:none;padding:0;margin:0;}
+.f-col li{margin-bottom:.45rem;}
+.f-col a{font-size:.84rem;color:rgba(255,255,255,.55);transition:color .15s;text-decoration:none;}
+.f-col a:hover{color:#a8d5b5;}
+.f-affiliate{border-top:1px solid rgba(255,255,255,.08);padding:1.5rem 0;}
 .f-affiliate p{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}
 .f-affiliate strong{color:rgba(255,255,255,.65);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:rgba(255,255,255,.3);}
+.footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none;}
+.footer-bottom a:hover{color:#a8d5b5;}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
+@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
 .bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
 .bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
 .bmc-btn:hover{transform:translateY(-3px);}
@@ -1010,57 +982,83 @@ footer { background: var(--ink); color: var(--white); padding: 4rem 2rem 2rem; m
 </div><!-- end art-main -->
 
 <!-- FOOTER -->
-<footer>
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <div>
-        <div class="footer-logo">Wir<span>Weit</span>Weg</div>
-        <div class="footer-tagline">Weltreise-Blog von Marc &amp; Fabienne aus Solothurn, Schweiz. Ehrliche Planung, echte Zahlen, Schweizer Perspektive.</div>
+      <div class="f-brand">
+        <a class="flogo" href="/">Wir<span>Weit</span>Weg</a>
+        <p>Weltreise-Blog aus der Schweiz von Marc &amp; Fabienne. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
+        <div class="f-social">
+          <a class="f-soc" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" title="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
+          </a>
+          <a class="f-soc" href="https://youtube.com/@wirweitweg" target="_blank" rel="noopener" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+          </a>
+        </div>
       </div>
-      <div>
-        <div class="footer-col-title">Weltreise planen</div>
-        <ul class="footer-col-list">
+      <div class="f-col">
+        <h4>Weltreise planen</h4>
+        <ul>
           <li><a href="/idee-zeitplan.html">Idee &amp; Zeitplan</a></li>
           <li><a href="/budget-kosten.html">Budget &amp; Kosten</a></li>
-          <li><a href="/job-auto-wohnung.html">Job, Auto &amp; Wohnung</a></li>
-          <li><a href="/auslandskrankenversicherung.html">Krankenversicherung</a></li>
+          <li><a href="/auslandskrankenversicherung.html">Versicherung</a></li>
           <li><a href="/kreditkarten.html">Kreditkarten</a></li>
           <li><a href="/packliste.html">Packliste</a></li>
+          <li><a href="/wichtige-apps.html">Apps</a></li>
         </ul>
       </div>
-      <div>
-        <div class="footer-col-title">Länderguides</div>
-        <ul class="footer-col-list">
-          <li><a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a></li>
-          <li><a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a></li>
-          <li><a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a></li>
-          <li><a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a></li>
-          <li><a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a></li>
+      <div class="f-col">
+        <h4>Länderguides</h4>
+        <ul>
+          <li><a href="/thailand.html">Thailand</a></li>
+          <li><a href="/vietnam.html">Vietnam</a></li>
+          <li><a href="/indonesien.html">Indonesien</a></li>
+          <li><a href="/japan.html">Japan</a></li>
+          <li><a href="/singapur.html">Singapur</a></li>
+          <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
       </div>
-      <div>
-        <div class="footer-col-title">Folgt uns</div>
-        <ul class="footer-col-list">
-          <li><a href="https://instagram.com/wirweitweg" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">TikTok</a></li>
-          <li><a href="https://youtube.com/@wirweitweg" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="/newsletter.html">Newsletter</a></li>
+      <div class="f-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="/reiseblog.html">Alle Artikel</a></li>
+          <li><a href="/reisetipps.html">Reisetipps</a></li>
+          <li><a href="/reiseblog.html">Reiseberichte</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>WirWeitWeg</h4>
+        <ul>
           <li><a href="/ueber-uns.html">Über uns</a></li>
+          <li><a href="/newsletter.html">Newsletter</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+          <li><a href="/impressum.html">Impressum</a></li>
+          <li><a href="/datenschutz.html">Datenschutz</a></li>
         </ul>
       </div>
     </div>
-        <div class="f-affiliate">
+    <div class="f-affiliate">
       <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 WirWeitWeg · Marc &amp; Fabienne · Solothurn, Schweiz</div>
-      <div class="footer-links">
+      <span>© 2026 WirWeitWeg &middot; Weltreise-Blog aus der Schweiz</span>
+      <div class="footer-bottom-links">
         <a href="/impressum.html">Impressum</a>
         <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/kontakt.html">Kontakt</a>
       </div>
     </div>
   </div>
 </footer>
+<div class="bmc-wrap">
+  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
+    ☕ Kaffee spendieren
+  </button>
+</div>
 
 <script>
 function update(){
