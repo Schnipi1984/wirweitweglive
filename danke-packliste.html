@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<link rel="icon" type="image/png" href="/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deine Packliste – WirWeitWeg</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--ink:#1e1e2e;--off:#fff9ee;--white:#fff;--mid:#6b7280;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--r:12px;--rLg:20px;--maxW:1280px;}
+body{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.84;color:var(--ink);background:var(--off);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh;}
+a{text-decoration:none;color:inherit;}
+.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;color:var(--ink);}
+.logo span{color:var(--green);}
+.wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem;}
+.card{background:var(--white);border-radius:var(--rLg);padding:2.5rem 2rem;max-width:480px;width:100%;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.07);}
+.icon{font-size:3rem;margin-bottom:1rem;}
+h1{font-family:'Fraunces',serif;font-weight:900;font-size:1.8rem;color:var(--ink);margin-bottom:.75rem;line-height:1.2;}
+h1 em{font-weight:300;font-style:italic;color:var(--green);}
+.sub{color:var(--mid);font-size:.95rem;margin-bottom:2rem;line-height:1.6;}
+.dl-btn{display:inline-block;background:var(--green);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:100px;transition:background .2s;}
+.dl-btn:hover{background:#0b875e;}
+.back{margin-top:1.5rem;font-size:.85rem;color:var(--mid);}
+.back a{color:var(--green);font-weight:700;}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="card">
+    <div class="icon">📄</div>
+    <h1>Deine <em>Packliste</em> ist bereit</h1>
+    <p class="sub">Danke für deine Anmeldung! Hier kannst du die komplette Weltreise-Packliste als PDF herunterladen.</p>
+    <a class="dl-btn" href="/packliste.pdf" download>Packliste herunterladen →</a>
+    <p class="back">Zurück zum Blog: <a href="/">wirweitweg.blog</a></p>
+  </div>
+</div>
+</body>
+</html>
