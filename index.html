@@ -703,9 +703,9 @@ img{max-width:100%;height:auto;display:block;}
         <div class="nl-box-title">Jetzt anmelden</div>
         <div class="nl-box-sub">DSGVO-konform · kostenlos · monatlich</div>
         <div class="nl-form">
-          <input class="nl-input" type="text" placeholder="Dein Vorname" autocomplete="given-name">
-          <input class="nl-input" type="email" placeholder="deine@email.ch" autocomplete="email">
-          <button class="nl-btn">Jetzt anmelden ✦</button>
+          <input class="nl-input" id="nlVorname" type="text" placeholder="Dein Vorname" autocomplete="given-name">
+          <input class="nl-input" id="nlEmail" type="email" placeholder="deine@email.ch" autocomplete="email">
+          <button class="nl-btn" id="nlBtn" onclick="nlSubmit()">Jetzt anmelden ✦</button>
           <p class="nl-note">Kein Spam. Jederzeit abmeldbar. Wir hassen Spam genauso wie ihr.</p>
         </div>
       </div>
@@ -888,6 +888,22 @@ img{max-width:100%;height:auto;display:block;}
   }
   setTimeout(tick,1000);
 })();
+</script>
+<script>
+function nlSubmit(){
+  var v=document.getElementById('nlVorname').value.trim();
+  var e=document.getElementById('nlEmail').value.trim();
+  var btn=document.getElementById('nlBtn');
+  if(!v||!e){alert('Bitte Vorname und E-Mail eingeben.');return;}
+  btn.disabled=true;btn.textContent='Wird gesendet…';
+  fetch('/functions/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vorname:v,email:e,quelle:'newsletter'})})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.status===204){window.location.href='/danke.html';}
+      else{btn.disabled=false;btn.textContent='Jetzt anmelden ✦';alert('Fehler – bitte nochmal versuchen.');}
+    })
+    .catch(function(){btn.disabled=false;btn.textContent='Jetzt anmelden ✦';alert('Fehler – bitte nochmal versuchen.');});
+}
 </script>
 </body>
 </html>
