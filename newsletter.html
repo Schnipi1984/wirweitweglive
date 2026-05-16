@@ -1,15 +1,6 @@
 <!DOCTYPE html><html lang="de"><head>
-<link rel="icon" type="image/png" href="/logo.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newsletter | WirWeitWeg</title><meta name="description" content="Einmal im Monat – kein Spam. Updates direkt von unserer Weltreise."><meta property="og:title" content="Newsletter | WirWeitWeg"><meta property="og:description" content="Einmal im Monat – kein Spam. Updates direkt von unserer Weltreise."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.blog/newsletter.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #1e1e2e | #0e9f6e | #6ee7b7 | #fff9ee | #e2e8f0
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#fff9ee; --ink:#1e1e2e; --mid:#6b7280;
-  --light:#b0b8c8; --border:#e2e8f0; --green:#0e9f6e;
-  --greenlt:#d1fae5; --mint:#6ee7b7; --r:12px; --rLg:20px; --maxW:1280px;
-}
+<link rel="icon" type="image/png" href="/logo.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Newsletter | WirWeitWeg</title><meta name="description" content="Einmal im Monat direkt von unserer Weltreise – ehrliche Reiseberichte, Tipps und Insiderwissen. Kein Spam."><meta property="og:title" content="Newsletter | WirWeitWeg"><meta property="og:description" content="Einmal im Monat direkt von unserer Weltreise – kein Spam."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.blog/newsletter.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
+:root{--white:#fff;--off:#fff9ee;--ink:#1e1e2e;--mid:#6b7280;--light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--r:12px;--rLg:20px;--maxW:1280px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
@@ -44,8 +35,54 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
 .nav-mobile a:hover{color:var(--green);}
 .nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
+@media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}}
 
-/* ── FOOTER ──────────────────────────────────────────────── */
+/* ── HERO ── */
+.nl-hero{background:var(--ink);padding:5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.nl-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 60% 0%,rgba(14,159,110,.18) 0%,transparent 65%),radial-gradient(ellipse at 20% 100%,rgba(110,231,183,.08) 0%,transparent 55%);pointer-events:none;}
+.nl-hero-inner{max-width:680px;margin:0 auto;position:relative;}
+.nl-hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(14,159,110,.15);border:1px solid rgba(14,159,110,.3);color:var(--mint);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .9rem;border-radius:100px;margin-bottom:1.75rem;}
+.nl-hero-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);display:block;}
+.nl-hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.5rem);color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.25rem;}
+.nl-hero h1 em{font-weight:300;font-style:italic;color:var(--mint);}
+.nl-hero p{font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.75;max-width:520px;margin:0 auto;}
+
+/* ── FORM BOX ── */
+.nl-form-wrap{max-width:520px;margin:-2.5rem auto 0;padding:0 1.5rem;position:relative;z-index:10;}
+.nl-form-box{background:#fff;border-radius:var(--rLg);padding:2.25rem;box-shadow:0 12px 48px rgba(0,0,0,.14);}
+.nl-form-box h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.25rem;color:var(--ink);margin-bottom:.4rem;}
+.nl-form-box p{font-size:.88rem;color:var(--mid);margin-bottom:1.5rem;line-height:1.6;}
+.nl-field{margin-bottom:.85rem;}
+.nl-field label{display:block;font-size:.78rem;font-weight:700;color:var(--ink);margin-bottom:.35rem;letter-spacing:.02em;}
+.nl-field input{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:var(--r);font-family:'Nunito',sans-serif;font-size:.95rem;color:var(--ink);outline:none;transition:border-color .15s;}
+.nl-field input:focus{border-color:var(--green);}
+.nl-field input::placeholder{color:var(--light);}
+.nl-submit{width:100%;background:var(--green);color:#fff;border:none;border-radius:100px;padding:.9rem 1.5rem;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:opacity .15s,transform .15s;margin-top:.25rem;}
+.nl-submit:hover{opacity:.88;transform:translateY(-1px);}
+.nl-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.nl-trust{display:flex;align-items:center;justify-content:center;gap:1.25rem;margin-top:1.1rem;flex-wrap:wrap;}
+.nl-trust-item{display:flex;align-items:center;gap:.35rem;font-size:.73rem;color:var(--light);font-weight:600;}
+.nl-trust-item svg{width:13px;height:13px;color:var(--green);}
+
+/* ── PERKS ── */
+.nl-perks-sec{max-width:860px;margin:4.5rem auto 0;padding:0 1.5rem;}
+.nl-perks-sec h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;color:var(--ink);margin-bottom:1.5rem;text-align:center;}
+.nl-perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.nl-perk{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem 1.25rem;}
+.nl-perk-icon{font-size:1.6rem;margin-bottom:.75rem;}
+.nl-perk h3{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.4rem;}
+.nl-perk p{font-size:.84rem;color:var(--mid);line-height:1.65;}
+
+/* ── PREVIEW ── */
+.nl-preview{max-width:860px;margin:4rem auto 5rem;padding:0 1.5rem;}
+.nl-preview h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;color:var(--ink);margin-bottom:1.5rem;text-align:center;}
+.nl-preview-list{display:flex;flex-direction:column;gap:.75rem;}
+.nl-preview-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--off);border:1px solid var(--border);border-radius:var(--r);}
+.nl-preview-dot{width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;}
+.nl-preview-item p{font-size:.88rem;color:var(--mid);line-height:1.5;}
+.nl-preview-item strong{color:var(--ink);}
+
+/* ── FOOTER ── */
 .footer{background:#fff9ee;padding:2.1rem 0 0;}
 .footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.7rem;border-bottom:1px solid rgba(0,0,0,.1);}
@@ -71,22 +108,35 @@ img{display:block;width:100%;object-fit:cover;}
 .bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
 .bmc-btn:hover{transform:translateY(-3px);}
 @media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
+
+@media(max-width:680px){
+  .nl-perks-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .nl-hero{padding:3.5rem 1rem 3.5rem;}
+  .nl-form-wrap{padding:0 1rem;}
+  .nl-form-box{padding:1.75rem 1.25rem;}
+  .nl-perks-sec,.nl-preview{padding:0 1rem;}
+  .nl-perks-grid{grid-template-columns:1fr;}
+  .nl-trust{gap:.75rem;}
+}
 </style>
-</head><body><nav class="nav">
+</head><body>
+<nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
     <ul class="nav-menu">
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
@@ -106,7 +156,7 @@ img{display:block;width:100%;object-fit:cover;}
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
@@ -124,33 +174,121 @@ img{display:block;width:100%;object-fit:cover;}
     </button>
   </div>
 </nav>
-<button class="nav-burger"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="nav-mobile" id="mob"><button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
-<div class="nav-mobile-section">Weltreise Planung</div>
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-<div class="nav-mobile-section">Länderguides</div>
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambodscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-<div class="nav-mobile-section">Mehr</div>
-<a href="/reisetipps.html">Reisetipps</a>
-<a href="/reiseblog.html">Reiseblog</a>
-<a href="/ueber-uns.html">Über Uns</a>
-<a href="/newsletter.html">Newsletter</a>
-</div><div class="pghero"><div class="pghero-inner"><h1 class="pgtitle">News- <em>letter</em></h1><p class="pgdesc">Einmal im Monat – kein Spam. Updates direkt von unserer Weltreise.</p></div></div><div style="max-width:760px;margin:3rem auto;padding:0 1.5rem;" class="prose"><div class="infobox green"><div class="ibox-ico">✉️</div><div class="ibox-title">Was dich erwartet</div><div class="ibox-body">Neue Artikel, Planungs-Updates und bald direkte Berichte von unterwegs. Kein Spam, jederzeit abmeldbar.</div></div><div style="max-width:460px;margin:2rem 0;"><form class="nlform" onsubmit="nlSubmit(event)"><input type="text" id="nlVorname" placeholder="Dein Vorname" autocomplete="given-name" required><input type="email" id="nlEmail" placeholder="Deine E-Mail" autocomplete="email" required><button id="nlBtn" class="btn btn-green" style="width:100%;justify-content:center;margin-top:.4rem">Jetzt anmelden</button></form><p class="nl-note" style="margin-top:.75rem;">DSGVO-konform · jederzeit abmeldbar · keine Werbung</p></div></div><footer class="footer">
+<div class="nav-mobile" id="mob">
+  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
+  <a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
+  <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
+  <a href="/wichtige-apps.html">11 · Wichtige Apps</a>
+  <div class="nav-mobile-section">Länderguides</div>
+  <a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a><a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
+  <a href="/japan.html">Japan</a>
+  <div class="nav-mobile-section">Mehr</div>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Reiseblog</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
+</div>
+
+<!-- HERO -->
+<div class="nl-hero">
+  <div class="nl-hero-inner">
+    <div class="nl-hero-badge">Ab 30. Juni live von unterwegs</div>
+    <h1>Reise-Updates direkt<br>in dein <em>Postfach</em></h1>
+    <p>Kein Massentourismus, kein Hochglanz – nur ehrliche Berichte, praktische Tipps und Einblicke, die du woanders nicht findest.</p>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="nl-form-wrap">
+  <div class="nl-form-box">
+    <h2>Jetzt anmelden</h2>
+    <p>Einmal im Monat. Kein Spam. Jederzeit abmeldbar.</p>
+    <form onsubmit="nlSubmit(event)">
+      <div class="nl-field">
+        <label for="nlVorname">Vorname</label>
+        <input type="text" id="nlVorname" placeholder="Dein Vorname" autocomplete="given-name" required>
+      </div>
+      <div class="nl-field">
+        <label for="nlEmail">E-Mail-Adresse</label>
+        <input type="email" id="nlEmail" placeholder="deine@email.ch" autocomplete="email" required>
+      </div>
+      <button class="nl-submit" id="nlBtn" type="submit">Jetzt kostenlos anmelden →</button>
+    </form>
+    <div class="nl-trust">
+      <span class="nl-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        DSGVO-konform
+      </span>
+      <span class="nl-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Kein Spam
+      </span>
+      <span class="nl-trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        1-Click Abmeldung
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- PERKS -->
+<div class="nl-perks-sec" style="margin-top:4.5rem;">
+  <h2>Was dich erwartet</h2>
+  <div class="nl-perks-grid">
+    <div class="nl-perk">
+      <div class="nl-perk-icon">✈️</div>
+      <h3>Reiseberichte</h3>
+      <p>Ehrliche Eindrücke aus Asien – was wirklich passiert ist, nicht die Instagram-Version davon.</p>
+    </div>
+    <div class="nl-perk">
+      <div class="nl-perk-icon">💡</div>
+      <h3>Insider-Tipps</h3>
+      <p>Konkrete Tipps zu Budget, Unterkünften, Transport und allem, was man vorher nicht weiss.</p>
+    </div>
+    <div class="nl-perk">
+      <div class="nl-perk-icon">🗺️</div>
+      <h3>Planungs-Updates</h3>
+      <p>Vor dem Start: Was wir vorbereiten, buchen und erleben – der Blick hinter die Kulissen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PREVIEW -->
+<div class="nl-preview">
+  <h2>Themen aus kommenden Ausgaben</h2>
+  <div class="nl-preview-list">
+    <div class="nl-preview-item">
+      <div class="nl-preview-dot"></div>
+      <p><strong>Erster Monat in Thailand</strong> – Bangkoks Chaos, Inseln und was uns wirklich überrascht hat</p>
+    </div>
+    <div class="nl-preview-item">
+      <div class="nl-preview-dot"></div>
+      <p><strong>Budget-Check nach 30 Tagen</strong> – Was wir wirklich ausgegeben haben vs. was wir geplant hatten</p>
+    </div>
+    <div class="nl-preview-item">
+      <div class="nl-preview-dot"></div>
+      <p><strong>Unterwegs in Vietnam</strong> – Züge, Scooter und die besten Strassenküchen</p>
+    </div>
+    <div class="nl-preview-item">
+      <div class="nl-preview-dot"></div>
+      <p><strong>Was wir anders machen würden</strong> – Unsere ehrlichsten Learnings nach 3 Monaten</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
@@ -228,7 +366,8 @@ img{display:block;width:100%;object-fit:cover;}
   <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
     ☕ Kaffee spendieren
   </button>
-</div><script src="/script.js"></script>
+</div>
+<script src="/script.js"></script>
 <script>
 function nlSubmit(e){
   e.preventDefault();
@@ -238,8 +377,8 @@ function nlSubmit(e){
   btn.textContent='Wird angemeldet…';btn.disabled=true;
   fetch('/functions/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vorname:v,email:m})})
     .then(function(r){return r.json();})
-    .then(function(){btn.textContent='✓ Fast geschafft – E-Mail bestätigen!';})
-    .catch(function(){btn.textContent='Fehler – bitte nochmal';btn.disabled=false;});
+    .then(function(){btn.textContent='Fast geschafft – E-Mail bestätigen!';})
+    .catch(function(){btn.textContent='Fehler – bitte nochmal versuchen';btn.disabled=false;});
 }
 </script>
 </body></html>
