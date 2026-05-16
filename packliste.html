@@ -318,8 +318,8 @@ strong{font-weight:700;}
 .footer-bottom a:hover{color:#0e9f6e;}
 .footer-bottom-links{display:flex;gap:1rem;}
 @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
+@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand img{height:80px!important;}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
 /* ── BMC ── */
 .bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
 .bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
@@ -329,11 +329,12 @@ strong{font-weight:700;}
 @media(max-width:1024px){.art-main{grid-template-columns:1fr;}.art-sidebar{position:static;}}
 @media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}.related-grid{grid-template-columns:1fr 1fr;}.img-pair{grid-template-columns:1fr;}.num-grid{grid-template-columns:1fr 1fr;}.pack-two{grid-template-columns:1fr;}}
 @media(max-width:600px){.art-main{padding:1.5rem 1.25rem 3rem;}.related-grid{grid-template-columns:1fr;}.artnav{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.num-grid{grid-template-columns:1fr;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
 .sidebar-pdf input[type="email"] { width: 100%; box-sizing: border-box; padding: .55rem .75rem; border-radius: 100px; border: none; font-family: 'Nunito', sans-serif; font-size: .83rem; margin-bottom: .5rem; outline: none; }
 .sidebar-pdf button { display: block; width: 100%; background: var(--mint); color: var(--ink); text-align: center; padding: .65rem; border-radius: 100px; font-weight: 700; font-size: .85rem; border: none; cursor: pointer; font-family: 'Nunito', sans-serif; transition: background .2s; }
 .sidebar-pdf button:hover { background: #8fcca3; }
 .sidebar-pdf button:disabled { opacity: .7; cursor: default; }
+@media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
 </style>
 </head>
 <body>

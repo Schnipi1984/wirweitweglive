@@ -102,8 +102,8 @@ img { display: block; width: 100%; object-fit: cover; }
 @media (max-width: 1024px) { .lg-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .lg-grid { grid-template-columns: 1fr; } .art-hero { height: 42vh; min-height: 280px; } }
 @media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } .nav-menu { display: none; } .nav-burger { display: flex; } }
-@media (max-width: 640px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand img{height:80px!important;}}
+@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
   </style>
 </head>
 <body>
