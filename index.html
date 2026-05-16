@@ -4,69 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WirWeitWeg – Weltreise-Blog aus der Schweiz</title>
-<meta name="description" content="Marc & Fabienne reisen ab 30. Juni 2026 durch Asien. Ehrliche Tipps, Planungshilfen und Geschichten aus erster Hand – aus Schweizer Perspektive.">
-<meta property="og:title" content="WirWeitWeg – Weltreise-Blog aus der Schweiz">
-<meta property="og:description" content="Weltreise-Blog von Marc & Fabienne aus der Schweiz. Abflug: 30. Juni 2026 – ohne Rückflugticket.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://wirweitweg.blog">
-<meta property="og:image" content="https://wirweitweg.blog/og-image.jpg">
-<meta property="og:locale" content="de_CH">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WirWeitWeg – Weltreise-Blog aus der Schweiz">
-<meta name="twitter:description" content="Weltreise-Blog von Marc & Fabienne. Abflug: 30. Juni 2026.">
-<meta name="twitter:image" content="https://wirweitweg.blog/og-image.jpg">
-<meta name="twitter:site" content="@wirweitweg">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Marc & Fabienne – WirWeitWeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<link rel="canonical" href="https://wirweitweg.blog/">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#2d6a4f">
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=1400&q=85&fit=crop">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="description" content="Fabienne & Marc aus Solothurn reisen ab Juni 2026 durch Asien. Ehrliche Tipps, echte Erfahrungen.">
+<link rel="icon" type="image/png" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #151210 | #2d6a4f | #a8d5b5 | #f7f6f2 | #e6e3dc
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#faf8f4; --ink:#1a1611; --mid:#5a5550;
-  --light:#a8a29e; --border:#e8e2d8; --green:#3d7a5c;
-  --greenlt:#eaf2ec; --mint:#a8d5b5; --sand:#c9a96e; --sandlt:#f5edd8;
-  --r:12px; --rLg:20px; --maxW:1280px;
+:root{
+  --ink:#1e1e2e;--off:#fff9ee;--white:#fff;--mid:#6b7280;
+  --light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;
+  --greenlt:#d1fae5;--mint:#6ee7b7;--sand:#f59e42;--sandlt:#fff7ed;
+  --r:12px;--rLg:20px;--maxW:1280px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
+body{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.84;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
+img{max-width:100%;height:auto;display:block;}
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;color:var(--ink);}
 .logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
-.nav-item{position:relative;list-style:none;}
+.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;}
+.nav-item{position:relative;}
 .nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
-.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
+.nav-link:hover{background:var(--off);color:var(--ink);}
 .nav-arr{font-size:.6rem;transition:transform .2s;}
 .nav-item:hover .nav-arr{transform:rotate(180deg);}
 .nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
 .nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
+.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;}
 .nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
 .nav-drop a:hover{background:var(--off);color:var(--green);}
 .nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
-.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:#235c42;}
+.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;}
 .nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
 .nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
@@ -76,1372 +49,204 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-mobile a:hover{color:var(--green);}
 .nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
 
-/* FOOTER */
-.footer{border-top:1px solid var(--border);margin-top:5rem;}
-.footer-inner{max-width:var(--maxW);margin:0 auto;padding:3.25rem 1.5rem 1.75rem;}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);}
-.flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;letter-spacing:-.04em;display:block;margin-bottom:.65rem;}
-.flogo span{color:var(--green);}
-.fabout{font-size:.84rem;line-height:1.75;color:var(--mid);margin-bottom:1.25rem;}
-.fsocial{display:flex;gap:.6rem;}
-.fsoc{width:36px;height:36px;border-radius:50%;background:var(--off);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:all .15s;}
-.fsoc:hover{background:var(--greenlt);border-color:var(--mint);}
-.fcol h4{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:.9rem;}
-.fcol ul{list-style:none;}
-.fcol li{margin-bottom:.45rem;}
-.fcol a{font-size:.84rem;color:var(--mid);transition:color .15s;}
-.fcol a:hover{color:var(--green);}
-.footbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding-top:1.4rem;font-size:.76rem;color:var(--light);}
-.footbot a{color:var(--mid);}
+/* ═══════════ HERO ═══════════ */
+.hero{position:relative;height:80vh;min-height:490px;max-height:760px;overflow:hidden;}
+.hero-bg{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,8,6,.58) 0%,rgba(10,8,6,.68) 50%,rgba(10,8,6,.8) 100%);}
+.hero-body{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;}
+.hero-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.65);margin-bottom:.75rem;}
+.hero-logo{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(3.5rem,8vw,6.5rem);color:#fff;letter-spacing:-.05em;line-height:1;margin-bottom:.5rem;}
+.hero-logo span{color:var(--green);}
+.hero-tagline{font-family:'Caveat',cursive;font-size:clamp(1.2rem,2.5vw,1.6rem);color:rgba(255,255,255,.8);margin-bottom:2.5rem;letter-spacing:.01em;}
+.hero-countdown{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-bottom:2.5rem;}
+.hcd-block{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:.75rem 1.1rem;min-width:68px;text-align:center;}
+.hcd-num{font-family:'Fraunces',serif;font-weight:900;font-size:2rem;color:#fff;line-height:1;display:block;}
+.hcd-lbl{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-top:.2rem;display:block;}
+.hcd-sep{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:rgba(255,255,255,.25);line-height:1;}
+.hero-cd-label{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.75rem;}
+.hero-row{display:flex;align-items:center;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.hero-cta-main{display:inline-flex;align-items:center;gap:.6rem;background:var(--green);color:white;border-radius:100px;padding:.85rem 2rem;font-weight:700;font-size:.95rem;font-family:'Nunito',sans-serif;transition:transform .2s,box-shadow .2s;}
+.hero-cta-main:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(61,122,92,.4);}
+.hero-cta-ghost{display:inline-flex;align-items:center;gap:.5rem;border:2px solid rgba(255,255,255,.35);color:rgba(255,255,255,.9);border-radius:100px;padding:.8rem 1.75rem;font-weight:700;font-size:.95rem;font-family:'Nunito',sans-serif;transition:all .2s;}
+.hero-cta-ghost:hover{border-color:rgba(255,255,255,.75);background:rgba(255,255,255,.08);}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(255,255,255,.4);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;animation:bobble 2s ease-in-out infinite;}
+@keyframes bobble{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(5px);}}
 
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:.45rem;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:700;padding:.82rem 1.65rem;border-radius:100px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;}
-.btn:hover{transform:translateY(-2px);}
-.btn-dark{background:var(--ink);color:white;}.btn-dark:hover{background:var(--green);}
-.btn-green{background:var(--green);color:white;}.btn-green:hover{background:#235c42;}
-.btn-outline{background:transparent;border:2px solid var(--border);color:var(--ink);}.btn-outline:hover{border-color:var(--ink);}
-.btn-white{background:white;color:var(--ink);}.btn-white:hover{background:var(--off);}
-.btn-ghost{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.2);}.btn-ghost:hover{background:rgba(255,255,255,.2);}
-.btn-sm{padding:.55rem 1.1rem;font-size:.8rem;}
+/* ═══════════ INTRO ═══════════ */
+.intro{padding:6rem 1.5rem;background:linear-gradient(180deg,#fff 0%,#fff9ee 40%,#fff9ee 70%,#fff 100%);}
+.intro-inner{max-width:var(--maxW);margin:0 auto;display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:center;}
+.intro-visual{position:relative;}
+.intro-img-big{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--rLg);}
+.intro-img-small{position:absolute;width:52%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--rLg);border:5px solid var(--white);box-shadow:0 16px 48px rgba(0,0,0,.18);right:-12%;bottom:-6%;}
+.intro-badge{position:absolute;top:2rem;left:-2rem;background:var(--green);color:white;border-radius:var(--rLg);padding:.75rem 1.1rem;font-family:'Fraunces',serif;font-weight:900;font-size:.85rem;line-height:1.35;text-align:center;box-shadow:0 8px 24px rgba(61,122,92,.35);}
+.intro-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:.875rem;display:block;}
+.intro-h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,3.5vw,2.8rem);letter-spacing:-.04em;line-height:1.1;color:var(--ink);margin-bottom:1.25rem;}
+.intro-h2 em{font-weight:300;font-style:italic;color:var(--green);}
+.intro-p{color:var(--mid);font-size:.97rem;line-height:1.85;margin-bottom:1rem;}
+.intro-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2rem 0;}
+.stat-box{background:var(--off);border-radius:var(--r);padding:1rem .75rem;text-align:center;}
+.stat-num{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:var(--green);line-height:1;}
+.stat-lbl{font-size:.72rem;font-weight:700;color:var(--mid);text-transform:uppercase;letter-spacing:.05em;margin-top:.2rem;}
+.intro-links{display:flex;flex-direction:column;gap:.65rem;margin:1.5rem 0 1.75rem;}
+.intro-link{display:flex;align-items:flex-start;gap:.75rem;font-size:.93rem;color:var(--mid);text-decoration:none;transition:color .15s;}
+.intro-link:hover{color:var(--green);}
+.intro-link strong{color:var(--ink);font-weight:700;}
+.intro-link:hover strong{color:var(--green);}
+.intro-link-arr{color:var(--green);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:.1rem;}
+.btn-solid{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:white;border-radius:100px;padding:.75rem 1.75rem;font-weight:700;font-size:.9rem;transition:transform .2s;}
+.btn-solid:hover{transform:translateY(-2px);}
 
-/* EYEBROW */
-.eyebrow{display:inline-flex;align-items:center;gap:.4rem;background:var(--greenlt);color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .85rem;border-radius:100px;margin-bottom:1rem;}
-.eyebrow::before{content:'✦';font-size:.58rem;}
-.eyebrow.white{background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+/* ═══════════ HUB CARDS ═══════════ */
+.hub{background:var(--off);padding:5rem 1.5rem;}
+.hub-inner{max-width:var(--maxW);margin:0 auto;}
+.sec-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);display:block;margin-bottom:.75rem;}
+.sec-h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.04em;line-height:1.15;color:var(--ink);margin-bottom:2.5rem;}
+.sec-h2 em{font-weight:300;font-style:italic;color:var(--green);}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.hub-card{border-radius:var(--rLg);overflow:hidden;background:var(--white);border:1px solid var(--border);text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+.hub-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.12);}
+.hub-img{height:220px;object-fit:cover;width:100%;transition:transform .4s;}
+.hub-card:hover .hub-img{transform:scale(1.04);}
+.hub-img-wrap{overflow:hidden;}
+.hub-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.hub-tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:.5rem;}
+.hub-title{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);line-height:1.2;margin-bottom:.6rem;}
+.hub-desc{font-size:.88rem;color:var(--mid);line-height:1.7;flex:1;}
+.hub-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:700;color:var(--green);margin-top:1.1rem;}
 
-/* INFOBOXEN */
-.infobox{border:1.5px solid var(--border);border-radius:var(--r);padding:1.5rem 1.75rem;margin:2rem 0;}
-.infobox.green{background:var(--greenlt);border-color:#b8dfc8;}
-.infobox.dark{background:var(--ink);border-color:var(--ink);}
-.infobox.orange{background:#fff5f0;border-color:#f4c4a8;}
-.infobox.light{background:var(--off);}
-.ibox-ico{font-size:1.5rem;margin-bottom:.5rem;}
-.ibox-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.45rem;}
-.infobox.dark .ibox-title{color:white;}
-.ibox-body{font-size:.9rem;line-height:1.7;color:var(--mid);}
-.infobox.dark .ibox-body{color:rgba(255,255,255,.65);}
-.ibox-body strong{color:var(--ink);}
-.infobox.dark .ibox-body strong{color:white;}
+/* ═══════════ PLANUNG ═══════════ */
+.planung{padding:5rem 1.5rem;background:#fff;}
+.planung-inner{max-width:var(--maxW);margin:0 auto;}
+.planung-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;gap:1rem;flex-wrap:wrap;}
+.btn-outline{display:inline-flex;align-items:center;gap:.4rem;border:2px solid var(--border);border-radius:100px;padding:.55rem 1.25rem;font-size:.84rem;font-weight:700;color:var(--mid);transition:all .2s;}
+.btn-outline:hover{border-color:var(--green);color:var(--green);}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.875rem;}
+.step-card{background:#fff;border-radius:var(--rLg);padding:1.25rem;text-decoration:none;display:flex;gap:1rem;align-items:center;box-shadow:0 4px 16px rgba(0,0,0,.09),0 1px 3px rgba(0,0,0,.06);transition:all .2s;}
+.step-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12),0 2px 6px rgba(0,0,0,.07);}
+.step-n-wrap{width:44px;height:44px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-n{font-family:'Fraunces',serif;font-weight:900;font-size:.95rem;color:#fff;line-height:1;}
+.step-title{font-family:'Fraunces',serif;font-weight:700;font-size:.9rem;color:var(--ink);line-height:1.3;}
+.step-sub{font-size:.77rem;color:var(--mid);margin-top:.2rem;}
 
-/* STEP BAR */
-.stepbar{background:white;border-bottom:1px solid var(--border);padding:.7rem 0;position:sticky;top:64px;z-index:800;overflow-x:auto;}
-.stepbar::-webkit-scrollbar{display:none;}
-.stepbar-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;gap:.4rem;white-space:nowrap;}
-.stepbtn{display:inline-flex;align-items:center;padding:.36rem .72rem;border-radius:100px;font-size:.76rem;font-weight:700;color:var(--mid);border:1.5px solid var(--border);background:white;text-decoration:none;transition:all .15s;}
-.stepbtn:hover{border-color:var(--green);color:var(--green);}
-.stepbtn.active{background:var(--ink);color:white;border-color:var(--ink);}
-.stepsep{color:var(--border);font-size:.65rem;}
+/* ═══════════ LÄNDER ═══════════ */
+.laender{padding:5rem 1.5rem;background:linear-gradient(180deg,#fff 0%,#fff9ee 20%,#fff9ee 80%,#fff 100%);}
+.laender-inner{max-width:var(--maxW);margin:0 auto;}
+.laender-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;gap:1rem;flex-wrap:wrap;}
+.land-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.land-card{position:relative;border-radius:var(--r);overflow:hidden;height:220px;text-decoration:none;display:block;}
+.land-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.land-card:hover img{transform:scale(1.06);}
+.land-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,6,.82) 0%,rgba(10,8,6,.0) 55%);}
+.land-info{position:absolute;bottom:0;left:0;right:0;padding:.875rem;display:flex;justify-content:space-between;align-items:flex-end;}
+.land-flag{width:16px!important;height:16px!important;flex-shrink:0;}
+.land-name{font-family:'Fraunces',serif;font-weight:900;font-size:1rem;color:#fff;line-height:1.2;}
 
-/* BREADCRUMB */
-.bc{max-width:var(--maxW);margin:0 auto;padding:1.1rem 1.5rem .4rem;display:flex;align-items:center;gap:.4rem;font-size:.76rem;color:var(--light);flex-wrap:wrap;}
-.bc a{color:var(--mid);}.bc a:hover{color:var(--green);}
-.bc .sep{color:var(--border);}
+/* ═══════════ NEWSLETTER ═══════════ */
+.newsletter{background:linear-gradient(135deg,#2d6a4f 0%,#1a4a38 100%);padding:5rem 1.5rem;position:relative;overflow:hidden;}
+.newsletter::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
+.nl-inner{max-width:var(--maxW);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;}
+.nl-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);border-radius:100px;padding:.3rem .875rem;margin-bottom:.875rem;}
+.nl-h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.6rem);color:#fff;letter-spacing:-.04em;line-height:1.1;margin-bottom:.875rem;}
+.nl-h2 em{font-weight:300;font-style:italic;color:var(--mint);}
+.nl-p{color:rgba(255,255,255,.7);font-size:.97rem;line-height:1.8;}
+.nl-perks{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem;}
+.nl-perks li{display:flex;align-items:center;gap:.65rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:600;}
+.nl-perks li::before{content:'✦';color:var(--mint);font-size:.65rem;flex-shrink:0;}
+.nl-box{background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:var(--rLg);padding:2rem;}
+.nl-box-title{font-family:'Fraunces',serif;font-weight:900;font-size:1.25rem;color:#fff;margin-bottom:.3rem;}
+.nl-box-sub{font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.25rem;}
+.nl-form{display:flex;flex-direction:column;gap:.65rem;}
+.nl-input{background:rgba(255,255,255,.95);border:none;border-radius:var(--r);padding:.78rem 1rem;font-family:'Nunito',sans-serif;font-size:.9rem;color:var(--ink);outline:none;width:100%;transition:box-shadow .2s;}
+.nl-input:focus{box-shadow:0 0 0 2px var(--mint);}
+.nl-input::placeholder{color:var(--light);}
+.nl-btn{background:var(--mint);color:var(--ink);border:none;border-radius:100px;padding:.82rem;font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .2s;}
+.nl-btn:hover{background:#8fcca3;}
+.nl-note{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.3rem;line-height:1.55;}
 
-/* PAGE HERO */
-.pghero{background:var(--off);border-bottom:1px solid var(--border);padding:3rem 0;}
-.pghero-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.pgtitle{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,5vw,3.8rem);letter-spacing:-.04em;line-height:1.06;margin-bottom:1rem;}
-.pgtitle em{font-style:italic;font-weight:300;color:var(--green);}
-.pgdesc{font-size:1.05rem;line-height:1.74;color:var(--mid);max-width:600px;margin-bottom:1.25rem;}
-.pgmeta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
-.pgmeta-i{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--light);font-weight:600;}
-.pgmeta-i strong{color:var(--mid);}
+/* ═══════════ SOCIAL ═══════════ */
+.social-bar{padding:3rem 1.5rem;border-top:1px solid var(--border);}
+.social-bar-inner{max-width:var(--maxW);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.social-bar-text h3{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);}
+.social-bar-text p{font-size:.88rem;color:var(--mid);margin-top:.2rem;}
+.social-icons{display:flex;gap:1rem;}
+.soc-pill{display:inline-flex;align-items:center;gap:.6rem;border-radius:100px;padding:.6rem 1.1rem;font-family:'Nunito',sans-serif;font-weight:700;font-size:.84rem;transition:transform .2s,box-shadow .2s;text-decoration:none;}
+.soc-pill:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.18);}
+.soc-pill svg{width:18px;height:18px;}
 
-/* LAYOUT */
-.main{max-width:var(--maxW);margin:0 auto;padding:3rem 1.5rem 5rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}
+/* ═══════════ FOOTER ═══════════ */
+.footer{background:#fff9ee;padding:2.1rem 0 0;}
+.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.7rem;border-bottom:1px solid rgba(0,0,0,.1);}
+.f-brand p{font-size:.82rem;line-height:1.65;color:#5a5550;margin-bottom:1rem;}
+.f-social{display:flex;gap:.5rem;}
+.f-soc{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:#5a5550;transition:all .15s;text-decoration:none;}
+.f-soc:hover{background:#3d7a5c;color:white;border-color:#3d7a5c;}
+.f-col h4{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0aba5;margin-bottom:.75rem;}
+.f-col ul{list-style:none;}
+.f-col li{margin-bottom:.35rem;}
+.f-col a{font-size:.82rem;color:#5a5550;transition:color .15s;}
+.f-col a:hover{color:#3d7a5c;}
+.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:.85rem 0;}
+.f-affiliate p{font-size:.73rem;color:#b0aba5;line-height:1.6;text-align:center;max-width:700px;margin:0 auto;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.85rem 0;font-size:.74rem;color:#b0aba5;}
+.footer-bottom a{color:#b0aba5;}
+.footer-bottom a:hover{color:#3d7a5c;}
+.footer-bottom-links{display:flex;gap:1rem;}
 
-/* PROSE */
-.hero-img{width:100%;height:420px;border-radius:var(--rLg);margin-bottom:2.5rem;}
-.prose{font-size:1rem;line-height:1.84;color:#3a3530;}
-.prose h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.85rem;letter-spacing:-.03em;color:var(--ink);margin:3rem 0 1rem;line-height:1.15;}
-.prose h2 em{font-style:italic;font-weight:300;color:var(--green);}
-.prose h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:var(--ink);margin:2.25rem 0 .75rem;}
-.prose p{margin-bottom:1.3rem;}
-.prose ul,.prose ol{padding-left:1.5rem;margin-bottom:1.3rem;}
-.prose li{margin-bottom:.65rem;padding-left:.25rem;}
-.prose strong{font-weight:700;color:var(--ink);}
-.prose a{color:var(--green);font-weight:700;}
-.prose blockquote{border-left:3px solid var(--green);padding:.85rem 1.5rem;margin:2rem 0;background:var(--greenlt);border-radius:0 var(--r) var(--r) 0;font-style:italic;font-size:1.05rem;color:var(--mid);line-height:1.68;}
-.sec-divider{border:none;border-top:3px solid var(--off);margin:3rem 0;}
-
-/* TOC */
-.toc{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem 1.65rem;margin-bottom:2.5rem;}
-.toc-title{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.85rem;}
-.toc-list{list-style:none;padding:0;columns:2;gap:1rem;}
-.toc-list li{margin-bottom:.4rem;break-inside:avoid;}
-.toc-list a{font-size:.85rem;font-weight:600;color:var(--green);display:flex;align-items:center;gap:.4rem;}
-.toc-list a::before{content:'↓';font-size:.68rem;flex-shrink:0;}
-.toc-list a:hover{color:var(--ink);}
-
-/* CANVA SLOT */
-.canva-slot{border:2px dashed var(--border);border-radius:var(--rLg);overflow:hidden;margin:2.5rem 0;background:var(--off);}
-.canva-slot img{width:100%;display:block;}
-.canva-caption{font-size:.74rem;color:var(--light);padding:.55rem 1rem;font-style:italic;text-align:center;border-top:1px solid var(--border);}
-.canva-caption strong{color:var(--mid);font-style:normal;}
-
-/* NUM CARDS */
-.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}
-.num-card{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;text-align:center;}
-.num-card.dark{background:var(--ink);}
-.num-big{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:900;color:var(--green);line-height:1;display:block;}
-.num-card.dark .num-big{color:var(--mint);}
-.num-label{font-size:.8rem;color:var(--mid);margin-top:.3rem;font-weight:600;}
-.num-card.dark .num-label{color:rgba(255,255,255,.5);}
-
-/* PROGRESS */
-.progress-list{list-style:none;padding:0;margin:1.5rem 0;}
-.progress-item{margin-bottom:1.25rem;}
-.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem;}
-.progress-label{font-size:.9rem;font-weight:700;color:var(--ink);}
-.progress-pct{font-size:.84rem;font-weight:700;color:var(--green);}
-.progress-track{height:10px;background:var(--border);border-radius:100px;overflow:hidden;}
-.progress-fill{height:100%;border-radius:100px;background:var(--green);}
-
-/* CHECKLIST */
-.checklist{list-style:none;padding:0;margin:1rem 0;}
-.checklist li{display:flex;align-items:flex-start;gap:.75rem;padding:.65rem 0;border-bottom:1px solid var(--border);font-size:.92rem;color:var(--mid);line-height:1.62;}
-.checklist li:last-child{border-bottom:none;}
-.checklist li::before{content:'✓';color:var(--green);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:.1rem;}
-.checklist li strong{color:var(--ink);}
-
-/* FAQ */
-.faq-list{list-style:none;padding:0;margin:1.5rem 0;}
-.faq-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:.75rem;overflow:hidden;}
-.faq-q{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);padding:1.1rem 1.4rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:white;transition:background .15s;user-select:none;}
-.faq-q:hover{background:var(--off);}
-.faq-arr{font-size:.72rem;color:var(--green);transition:transform .25s;flex-shrink:0;}
-.faq-q.open .faq-arr{transform:rotate(180deg);}
-.faq-a{font-size:.9rem;line-height:1.7;color:var(--mid);padding:0 1.4rem;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;}
-.faq-a.open{padding:0 1.4rem 1.15rem;max-height:400px;}
-
-/* OPTION CARDS */
-.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2rem 0;}
-.option-card{border:1.5px solid var(--border);border-radius:var(--r);padding:1.5rem;}
-.option-card.recommended{border-color:var(--green);background:var(--greenlt);}
-.option-badge{display:inline-block;background:var(--green);color:white;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .65rem;border-radius:100px;margin-bottom:.75rem;}
-.option-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;}
-.option-pros{list-style:none;padding:0;margin-top:.75rem;}
-.option-pros li{display:flex;align-items:flex-start;gap:.5rem;font-size:.85rem;color:var(--mid);margin-bottom:.4rem;line-height:1.5;}
-.option-pros li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
-.option-pros li.con::before{content:'✗';color:#e07040;}
-
-/* SHARE */
-.share-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 0;margin:2.5rem 0;display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;}
-.share-label{font-size:.8rem;font-weight:700;color:var(--mid);}
-.share-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.48rem 1.05rem;border-radius:100px;font-size:.78rem;font-weight:700;border:1.5px solid var(--border);background:white;cursor:pointer;transition:all .18s;text-decoration:none;color:var(--ink);font-family:'Nunito',sans-serif;}
-.share-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08);}
-.share-btn.pin{border-color:#e60023;color:#e60023;}.share-btn.pin:hover{background:#e60023;color:white;}
-.share-btn.wa{border-color:#25d366;color:#25d366;}.share-btn.wa:hover{background:#25d366;color:white;}
-.share-btn.fb{border-color:#1877f2;color:#1877f2;}.share-btn.fb:hover{background:#1877f2;color:white;}
-
-/* AUTHOR */
-.author-box{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.75rem;display:flex;gap:1.4rem;align-items:flex-start;margin:2.5rem 0;}
-.author-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid white;box-shadow:0 4px 12px rgba(0,0,0,.1);}
-.author-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.2rem;}
-.author-role{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;}
-.author-bio{font-size:.86rem;line-height:1.66;color:var(--mid);}
-
-/* RELATED */
-.related{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
-.related-title{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.03em;margin-bottom:1.5rem;}
-.related-title em{font-style:italic;font-weight:300;color:var(--green);}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
-.related-card{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;}
-.related-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.08);}
-.rcard-img{width:100%;height:140px;object-fit:cover;display:block;transition:transform .4s;}
-.related-card:hover .rcard-img{transform:scale(1.05);}
-.rcard-body{padding:1rem 1.1rem 1.2rem;}
-.rcard-tag{display:inline-block;background:var(--greenlt);color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .6rem;border-radius:100px;margin-bottom:.4rem;}
-.rcard-title{font-family:'Fraunces',serif;font-weight:700;font-size:.95rem;line-height:1.3;color:var(--ink);}
-.rcard-link{display:inline-flex;align-items:center;gap:.25rem;font-size:.76rem;font-weight:700;color:var(--green);margin-top:.5rem;transition:gap .2s;}
-.related-card:hover .rcard-link{gap:.45rem;}
-
-/* ARTNAV */
-.artnav{display:flex;justify-content:space-between;gap:1rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap;margin-top:3rem;}
-
-/* SIDEBAR */
-.sbox{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;margin-bottom:1.2rem;}
-.sbox-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:1rem;}
-.stepnav{list-style:none;}
-.stepnav li a{display:flex;align-items:center;gap:.4rem;padding:.4rem .6rem;font-size:.8rem;font-weight:600;color:var(--mid);border-radius:8px;transition:all .13s;text-decoration:none;}
-.stepnav li a:hover{background:white;color:var(--green);}
-.stepnav li.cur a{background:white;color:var(--green);font-weight:700;}
-.stepnav li .sn{font-size:.68rem;color:var(--light);min-width:22px;}
-.nlform{display:flex;flex-direction:column;gap:.6rem;}
-.nlform input{background:white;border:1.5px solid var(--border);border-radius:100px;padding:.72rem 1.1rem;font-family:'Nunito',sans-serif;font-size:.84rem;color:var(--ink);outline:none;transition:border-color .2s;}
-.nlform input:focus{border-color:var(--green);}
-.nlform input::placeholder{color:var(--light);}
-.nl-note{font-size:.7rem;color:var(--light);margin-top:.3rem;text-align:center;}
-.pdf-box{background:var(--ink);border-radius:var(--r);padding:1.4rem;color:white;margin-bottom:1.2rem;}
-.pdf-ico{font-size:1.8rem;margin-bottom:.5rem;}
-.pdf-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;margin-bottom:.4rem;}
-.pdf-desc{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:1rem;}
-.cd-box{background:var(--green);border-radius:var(--r);padding:1.4rem;color:white;margin-bottom:1.2rem;text-align:center;}
-.cd-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.5rem;}
-.cd-num{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:900;color:white;line-height:1;display:block;}
-.cd-unit{font-size:.76rem;color:rgba(255,255,255,.65);margin-top:.2rem;}
-.cd-date{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(255,255,255,.15);}
-.cd-date strong{color:white;}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .main{grid-template-columns:1fr;}
-  .num-grid{grid-template-columns:1fr 1fr;}
-  .related-grid{grid-template-columns:1fr 1fr;}
-  .option-grid{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr 1fr;}
-  .nav-menu{display:none;}
-  .nav-burger{display:flex;}
-  .toc-list{columns:1;}
-}
-@media(max-width:600px){
-  .num-grid{grid-template-columns:1fr;}
-  .related-grid{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr;}
-  .hero-img{height:240px;}
-  .author-box{flex-direction:column;}
-}
-
-
-/* ── WORLD MAP ─────────────────────────────────── */
+/* ═══════════ MAP ═══════════ */
 .map-sec{padding:5rem 0;background:var(--off);}
 .map-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
 .map-head{text-align:center;margin-bottom:2.5rem;}
-.map-sec h2,.yt-sec h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.1;letter-spacing:-.03em;color:var(--ink);margin-bottom:.5rem;}
-.map-sec h2 em,.yt-sec h2 em{font-style:italic;font-weight:300;color:var(--green);}
-#travel-map{height:560px;overflow:hidden;border-radius:0;border:none;}
+.map-head h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.1;letter-spacing:-.03em;color:var(--ink);margin-bottom:.5rem;}
+.map-head h2 em{font-style:italic;font-weight:300;color:var(--green);}
+.map-eyebrow{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);background:var(--greenlt);border-radius:100px;padding:.3rem .875rem;margin-bottom:.75rem;}
+#travel-map{height:520px;overflow:hidden;}
 .map-legend{display:flex;gap:1.5rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap;}
-.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--mid);}
+.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.84rem;color:var(--mid);font-weight:600;}
 .legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
-/* ── YOUTUBE ───────────────────────────────────── */
-.yt-sec{padding:5rem 0;background:var(--off);}
-.yt-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.yt-head{text-align:center;margin-bottom:2.5rem;}
-.yt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.yt-facade{position:relative;border-radius:var(--rLg);overflow:hidden;aspect-ratio:16/9;cursor:pointer;background:#111;}
-.yt-facade img{width:100%;height:100%;object-fit:cover;transition:transform .3s,opacity .3s;}
-.yt-facade:hover img{transform:scale(1.03);opacity:.85;}
-.yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-.yt-play-btn{width:64px;height:64px;background:rgba(220,0,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s;}
-.yt-facade:hover .yt-play-btn{transform:scale(1.12);}
-.yt-play-btn svg{width:26px;height:26px;fill:white;margin-left:4px;}
-.yt-subscribe{margin-top:2rem;text-align:center;}
-.yt-sub-bar{display:inline-flex;align-items:center;gap:.75rem;background:var(--ink);color:white;padding:.85rem 1.75rem;border-radius:100px;font-weight:700;font-size:.88rem;transition:background .2s;}
-.yt-sub-bar:hover{background:#2d2620;}
-.yt-sub-bar svg{width:22px;height:22px;fill:#ff0000;}
-/* ── BMaC STICKY ───────────────────────────────── */
+@media(max-width:768px){#travel-map{height:350px;}}
+@media(max-width:480px){#travel-map{height:260px;}}
+
+/* ── BMC ── */
 .bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
+.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;font-family:'Nunito',sans-serif;}
 .bmc-btn:hover{transform:translateY(-3px);}
-@media(max-width:768px){.yt-grid{grid-template-columns:1fr;}}
 
-
-
-
-.f-affiliate { border-top: 1px solid rgba(255,255,255,.08); margin: 0 2rem; padding: 1.5rem 0; }
-.f-affiliate p { font-size: .75rem; color: rgba(255,255,255,.45); line-height: 1.65; text-align: center; max-width: 700px; margin: 0 auto; }
-.f-affiliate strong { color: rgba(255,255,255,.65); }
-
-</style>
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "WirWeitWeg",
-    "url": "https://wirweitweg.blog",
-    "description": "Weltreise-Blog aus der Schweiz von Marc & Fabienne – ehrliche Tipps, Planungshilfen und Reisegeschichten ab 30. Juni 2026.",
-    "inLanguage": "de-CH",
-    "publisher": {
-      "@type": "Organization",
-      "name": "WirWeitWeg",
-      "url": "https://wirweitweg.blog",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://wirweitweg.blog/apple-touch-icon.png"
-      }
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "WirWeitWeg – Weltreise-Blog aus der Schweiz",
-    "url": "https://wirweitweg.blog",
-    "description": "Marc & Fabienne reisen ab 30. Juni 2026 ohne Rückflugticket durch Asien. Ehrliche Guides, echte Zahlen, Schweizer Perspektive.",
-    "inLanguage": "de-CH",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "Marc",
-        "url": "https://wirweitweg.blog/ueber-uns.html"
-      },
-      {
-        "@type": "Person",
-        "name": "Fabienne",
-        "url": "https://wirweitweg.blog/ueber-uns.html"
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "WirWeitWeg",
-      "url": "https://wirweitweg.blog"
-    },
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://wirweitweg.blog/og-image.jpg",
-      "width": 1200,
-      "height": 630
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://wirweitweg.blog"
-      }
-    ]
-  }
-]
-</script>
-<style>
-/* ── PAGE OVERRIDES ──────────────────────────────────────── */
-body { background: var(--off); }
-
-/* ── NAV override for 1280px ─────────────────────────────── */
-.nav-inner { max-width: var(--maxW); }
-
-/* ── HERO COLLAGE ────────────────────────────────────────── */
-.hero {
-  position: relative;
-  background: #1a1611;
-  overflow: visible;
-  margin-bottom: 0;
-}
-.hero-inner {
-  display: grid;
-  grid-template-columns: 220px 1fr 220px;
-  gap: 0;
-  min-height: 580px;
-  position: relative;
-}
-/* Center: main landscape photo */
-.hero-center {
-  position: relative;
-  overflow: hidden;
-}
-.hero-center img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.hero-center::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(26,22,17,.72) 0%,
-    rgba(26,22,17,.18) 45%,
-    transparent 70%
-  );
-}
-/* Text overlay */
-.hero-text {
-  position: absolute;
-  bottom: 0; left: 220px; right: 220px;
-  z-index: 10;
-  padding: 2.5rem 3rem;
-  text-align: center;
-}
-.hero-text h1 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
-  color: white;
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  text-transform: uppercase;
-  margin-bottom: .5rem;
-  text-shadow: 0 2px 20px rgba(0,0,0,.4);
-}
-.hero-text h1 em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--mint);
-}
-.hero-text p {
-  font-size: 1rem;
-  color: rgba(255,255,255,.82);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  letter-spacing: .02em;
-}
-/* Side photo panels */
-.hero-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding: 2rem 1rem;
-  background: #f0ece5;
-  position: relative;
-  z-index: 5;
-}
-.hero-side.left { background: #ece8e0; }
-.hero-side.right { background: #e8e4dc; }
-.photo-card {
-  width: 172px;
-  background: white;
-  padding: 8px 8px 28px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.18), 0 1px 4px rgba(0,0,0,.08);
-  transition: transform .3s ease;
-}
-.photo-card:hover { transform: scale(1.03) rotate(0deg) !important; }
-.photo-card img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  display: block;
-}
-.photo-card span {
-  display: block;
-  font-family: 'Caveat', cursive;
-  font-size: .88rem;
-  color: var(--mid);
-  text-align: center;
-  margin-top: 6px;
-}
-.hero-side.left .photo-card:nth-child(1) { transform: rotate(-3deg) translateX(-6px); }
-.hero-side.left .photo-card:nth-child(2) { transform: rotate(2.5deg) translateX(8px); }
-.hero-side.right .photo-card:nth-child(1) { transform: rotate(2deg) translateX(6px); }
-.hero-side.right .photo-card:nth-child(2) { transform: rotate(-2.5deg) translateX(-8px); }
-
-/* ── COUNTDOWN STRIP ─────────────────────────────────────── */
-.countdown-strip {
-  background: var(--green);
-  color: white;
-  padding: .9rem 0;
-}
-.countdown-inner {
-  max-width: var(--maxW);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.cd-label-strip {
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  opacity: .8;
-}
-.cd-units {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-}
-.cd-unit-block {
-  text-align: center;
-}
-.cd-unit-block .num {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: 1.9rem;
-  line-height: 1;
-  display: block;
-}
-.cd-unit-block .lbl {
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  opacity: .65;
-  display: block;
-}
-.cd-sep { font-size: 1.4rem; opacity: .35; align-self: flex-start; margin-top: .1rem; }
-.cd-date-strip {
-  font-size: .78rem;
-  opacity: .7;
-  font-weight: 600;
-}
-.cd-date-strip strong { opacity: 1; }
-
-/* ── SECTION WRAPPER ─────────────────────────────────────── */
-.wrap {
-  max-width: var(--maxW);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-section { padding: 5rem 0; }
-
-/* ── SECTION HEADER ──────────────────────────────────────── */
-.sec-head {
-  margin-bottom: 3rem;
-}
-.sec-head h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  letter-spacing: -.04em;
-  line-height: 1.1;
-  color: var(--ink);
-}
-.sec-head h2 em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--green);
-}
-.sec-head p {
-  font-size: 1rem;
-  color: var(--mid);
-  line-height: 1.7;
-  margin-top: .6rem;
-  max-width: 540px;
-}
-
-/* ── INTRO ───────────────────────────────────────────────── */
-.intro {
-  background: white;
-  padding: 5rem 0;
-}
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.intro-img-wrap {
-  position: relative;
-}
-.intro-img-wrap img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: var(--rLg);
-  display: block;
-}
-.intro-signature {
-  position: absolute;
-  bottom: -1rem;
-  right: -1rem;
-  background: var(--sand);
-  color: white;
-  font-family: 'Caveat', cursive;
-  font-size: 1.1rem;
-  padding: .6rem 1.2rem;
-  border-radius: 100px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.15);
-}
-.intro-text h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
-  letter-spacing: -.04em;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
-}
-.intro-text h2 em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--green);
-}
-.intro-text p {
-  font-size: 1rem;
-  line-height: 1.78;
-  color: var(--mid);
-  margin-bottom: 1rem;
-}
-.intro-meta {
-  display: flex;
-  gap: 2rem;
-  margin: 1.75rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.intro-meta-item strong {
-  display: block;
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: var(--green);
-}
-.intro-meta-item span {
-  font-size: .78rem;
-  font-weight: 700;
-  color: var(--light);
-  letter-spacing: .05em;
-  text-transform: uppercase;
-}
-
-/* ── FEATURES ────────────────────────────────────────────── */
-.features { background: var(--off); }
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.feat-card {
-  position: relative;
-  border-radius: var(--rLg);
-  overflow: hidden;
-  height: 400px;
-  display: block;
-  text-decoration: none;
-}
-.feat-card img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .5s ease;
-}
-.feat-card:hover img { transform: scale(1.04); }
-.feat-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26,22,17,.75) 0%, transparent 60%);
-}
-.feat-card-body {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  z-index: 2;
-  padding: 1.75rem;
-}
-.feat-tag {
-  display: inline-block;
-  background: rgba(255,255,255,.18);
-  color: white;
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: .22rem .75rem;
-  border-radius: 100px;
-  margin-bottom: .6rem;
-  backdrop-filter: blur(4px);
-}
-.feat-card-body h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: white;
-  line-height: 1.2;
-  margin-bottom: .4rem;
-}
-.feat-card-body p {
-  font-size: .84rem;
-  color: rgba(255,255,255,.75);
-  line-height: 1.5;
-  margin-bottom: .9rem;
-}
-.feat-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  font-size: .8rem;
-  font-weight: 700;
-  color: var(--mint);
-  letter-spacing: .03em;
-}
-.feat-card:hover .feat-link { gap: .55rem; }
-
-/* ── READER JOURNEY ──────────────────────────────────────── */
-.journey { padding: 4rem 0 5rem; background: white; overflow: hidden; }
-.journey-intro {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-.journey-intro h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  letter-spacing: -.04em;
-  color: var(--ink);
-}
-.journey-intro h2 em { font-style: italic; font-weight: 300; color: var(--green); }
-
-/* Banner photo – full bleed */
-.journey-bg {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-}
-.journey-bg img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center 55%;
-  display: block;
-}
-.journey-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-    rgba(21,18,16,.1) 0%,
-    transparent 35%,
-    rgba(21,18,16,.55) 100%
-  );
-}
-
-/* Cards pulled up over the photo */
-.journey-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: -110px;
-  position: relative;
-  z-index: 5;
-  align-items: stretch;
-}
-/* jc-col is the visual card – owns border-radius, shadow, overflow */
-.jc-col {
-  border-radius: var(--rLg);
-  overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0,0,0,.15);
-  transition: transform .3s ease, box-shadow .3s ease;
-  display: flex;
-  flex-direction: column;
-}
-.jc-col:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 52px rgba(0,0,0,.2);
-}
-/* jc-card = naked link only, NO radius, NO shadow */
-.jc-card {
-  flex: 1;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  width: 100%;
-  text-decoration: none;
-  color: var(--ink);
-}
-.jc-header {
-  padding: 2rem 1.75rem 1.5rem;
-  height: 195px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.jc-ich {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.3rem, 1.7vw, 1.65rem);
-  line-height: 1.15;
-  letter-spacing: -.03em;
-  margin-bottom: .5rem;
-}
-.jc-sub {
-  font-size: .79rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  opacity: .6;
-}
-/* Body fills remaining card height, seamlessly connected */
-.jc-body {
-  padding: 1.5rem 1.75rem 2rem;
-  border-top: 1px solid rgba(0,0,0,.06);
-  display: flex;
-  flex-direction: column;
-}
-.jc-reply {
-  font-size: .88rem;
-  line-height: 1.72;
-  margin-bottom: 1.1rem;
-}
-.jc-links {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.4rem;
-  display: flex;
-  flex-direction: column;
-  gap: .3rem;
-  padding-top: .9rem;
-  border-top: 1px solid rgba(0,0,0,.07);
-}
-.jc-links li a {
-  font-size: .81rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: block;
-  padding: .12rem 0;
-  transition: opacity .2s;
-}
-.jc-links li a:hover { opacity: .65; }
-.jc-cta {
-  display: inline-block;
-  font-family: 'Nunito', sans-serif;
-  font-size: .82rem;
-  font-weight: 700;
-  padding: .62rem 1.35rem;
-  border-radius: 100px;
-  transition: all .2s;
-  margin-top: auto;
-}
-/* Card 1 – Sand */
-.jc-sand .jc-header  { background: var(--sandlt); }
-.jc-sand .jc-ich     { color: var(--ink) !important; }
-.jc-sand .jc-sub     { color: var(--sand); }
-.jc-sand .jc-body    { background: #fffdf8; }
-.jc-sand .jc-reply   { color: var(--mid) !important; }
-.jc-sand .jc-links   { border-color: var(--border); }
-.jc-sand .jc-links li a { color: var(--sand); }
-.jc-sand .jc-cta { background: var(--sandlt); color: var(--ink); border: 1.5px solid var(--sand); }
-.jc-col:hover .jc-sand .jc-cta { background: var(--sand); color: white; }
-/* Card 2 – Green */
-.jc-green .jc-header { background: var(--greenlt); }
-.jc-green .jc-ich    { color: var(--green) !important; }
-.jc-green .jc-sub    { color: var(--green); }
-.jc-green .jc-body   { background: #f6fbf8; }
-.jc-green .jc-reply  { color: var(--mid) !important; }
-.jc-green .jc-links  { border-color: #d0e8da; }
-.jc-green .jc-links li a { color: var(--green); }
-.jc-green .jc-cta { background: var(--greenlt); color: var(--green); border: 1.5px solid var(--mint); }
-.jc-col:hover .jc-green .jc-cta { background: var(--green); color: white; border-color: var(--green); }
-/* Card 3 – Dark */
-.jc-ink .jc-header   { background: #2d5c47; }
-.jc-ink .jc-ich      { color: white; }
-.jc-ink .jc-sub      { color: var(--mint); opacity: 1; }
-.jc-ink .jc-body     { background: white !important; border-top: 0 !important; padding-top: 1.5rem !important; }
-.jc-ink .jc-reply    { color: var(--mid) !important; }
-.jc-ink .jc-links    { border-color: rgba(255,255,255,.1); }
-.jc-ink .jc-links li a { color: var(--green); }
-.jc-ink .jc-cta { background: rgba(255,255,255,.1); color: white; border: 1.5px solid rgba(255,255,255,.2); }
-.jc-col:hover .jc-ink .jc-cta { background: var(--mint); color: var(--ink); border-color: var(--mint); }
-
-/* ── PLANUNG ─────────────────────────────────────────────── */
-.planung { background: var(--off); }
-.planung-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-.plan-item {
-  padding: 1.5rem 2rem 1.5rem 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-  text-decoration: none;
-  color: inherit;
-  transition: background .15s;
-  border-radius: 4px;
-}
-.plan-item:hover { background: rgba(255,255,255,.6); }
-.plan-item:nth-child(odd) { padding-right: 3rem; }
-.plan-item:nth-child(even) {
-  padding-left: 2rem;
-  border-left: 1px solid var(--border);
-}
-.plan-num {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: #c8c2ba;
-  line-height: 1;
-  min-width: 2.5rem;
-  letter-spacing: -.04em;
-}
-.plan-body h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--ink);
-  margin-bottom: .25rem;
-}
-.plan-body p {
-  font-size: .83rem;
-  color: var(--mid);
-  line-height: 1.55;
-}
-.plan-item:hover .plan-num { color: var(--green); }
-.plan-item:hover .plan-body h3 { color: var(--green); }
-
-/* ── REISEZIELE ──────────────────────────────────────────── */
-.reiseziele { background: white; }
-.land-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-.land-card {
-  position: relative;
-  border-radius: var(--r);
-  overflow: hidden;
-  height: 220px;
-  display: block;
-  text-decoration: none;
-}
-.land-card img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform .4s;
-}
-.land-card:hover img { transform: scale(1.05); }
-.land-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26,22,17,.65) 0%, transparent 55%);
-}
-.land-info {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  z-index: 2;
-  padding: 1rem 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.land-name {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: white;
-}
-.land-flag {
-  font-size: 1.4rem;
-}
-
-/* ── WIE WIR REISEN ──────────────────────────────────────── */
-.howwereise { background: var(--sandlt); }
-.how-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-.how-text h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
-  letter-spacing: -.04em;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-.how-text h2 em { font-style: italic; font-weight: 300; color: var(--green); }
-.how-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-.how-list li {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(201,169,110,.25);
-}
-.how-list li:last-child { border-bottom: none; }
-.how-ico {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: white;
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-.how-list h4 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: .95rem;
-  margin-bottom: .2rem;
-  color: var(--ink);
-}
-.how-list p {
-  font-size: .84rem;
-  color: var(--mid);
-  line-height: 1.55;
-}
-.how-img img {
-  width: 100%;
-  height: 440px;
-  object-fit: cover;
-  border-radius: var(--rLg);
-}
-
-/* ── BLOG ────────────────────────────────────────────────── */
-.blog { background: var(--off); }
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.blog-card {
-  background: white;
-  border-radius: var(--rLg);
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform .25s, box-shadow .25s;
-  border: 1px solid var(--border);
-}
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,.1);
-}
-.blog-card-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform .4s;
-}
-.blog-card:hover .blog-card-img { transform: scale(1.03); }
-.blog-card-body {
-  padding: 1.4rem 1.5rem 1.75rem;
-}
-.blog-tag {
-  display: inline-block;
-  background: var(--greenlt);
-  color: var(--green);
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: .2rem .65rem;
-  border-radius: 100px;
-  margin-bottom: .6rem;
-}
-.blog-card-body h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 1.3;
-  color: var(--ink);
-  margin-bottom: .5rem;
-}
-.blog-card-body p {
-  font-size: .84rem;
-  color: var(--mid);
-  line-height: 1.6;
-  margin-bottom: .85rem;
-}
-.blog-meta {
-  font-size: .74rem;
-  color: var(--light);
-  font-weight: 600;
-}
-
-/* ── NEWSLETTER ──────────────────────────────────────────── */
-.newsletter {
-  background: var(--green);
-  padding: 5rem 0;
-}
-.nl-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.nl-text h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
-  color: white;
-  letter-spacing: -.04em;
-  line-height: 1.1;
-  margin-bottom: .75rem;
-}
-.nl-text h2 em { font-style: italic; font-weight: 300; color: var(--mint); }
-.nl-text p { font-size: .95rem; color: rgba(255,255,255,.75); line-height: 1.7; }
-.nl-form {
-  display: flex;
-  flex-direction: column;
-  gap: .85rem;
-}
-.nl-row { display: flex; gap: .75rem; }
-.nl-input {
-  flex: 1;
-  background: rgba(255,255,255,.12);
-  border: 1.5px solid rgba(255,255,255,.25);
-  border-radius: 100px;
-  padding: .82rem 1.4rem;
-  font-family: 'Nunito', sans-serif;
-  font-size: .9rem;
-  color: white;
-  outline: none;
-  transition: border-color .2s, background .2s;
-}
-.nl-input::placeholder { color: rgba(255,255,255,.45); }
-.nl-input:focus { border-color: var(--mint); background: rgba(255,255,255,.18); }
-.nl-note { font-size: .72rem; color: rgba(255,255,255,.45); padding: 0 1rem; }
-.nl-perks {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem;
-}
-.nl-perks li {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  font-size: .84rem;
-  color: rgba(255,255,255,.75);
-}
-.nl-perks li::before { content: '✦'; color: var(--mint); font-size: .6rem; }
-
-/* ── SOCIAL ──────────────────────────────────────────────── */
-.social-sec { background: white; }
-.social-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-.social-card {
-  position: relative;
-  border-radius: var(--rLg);
-  overflow: hidden;
-  height: 300px;
-  display: block;
-  text-decoration: none;
-}
-.social-card img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform .5s;
-}
-.social-card:hover img { transform: scale(1.04); }
-.social-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26,22,17,.7) 0%, transparent 55%);
-}
-.social-card-top {
-  position: absolute;
-  top: 1rem; left: 1rem;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-}
-.social-icon {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.18);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: white;
-  border: 1px solid rgba(255,255,255,.25);
-}
-.social-card-bottom {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  z-index: 2;
-  padding: 1.25rem 1.4rem;
-}
-.social-platform {
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.65);
-  margin-bottom: .2rem;
-}
-.social-handle {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: white;
-}
-.social-follow {
-  display: inline-flex;
-  align-items: center;
-  gap: .35rem;
-  background: rgba(255,255,255,.15);
-  color: white;
-  font-size: .72rem;
-  font-weight: 700;
-  padding: .3rem .9rem;
-  border-radius: 100px;
-  margin-top: .6rem;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,.2);
-  transition: background .2s;
-}
-.social-card:hover .social-follow { background: rgba(255,255,255,.25); }
-
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer {
-  background: #f5edd8;
-  color: #1a1611;
-  padding: 4rem 0 0;
-  border-top: none;
-  margin-top: 0;
-}
-.footer-top {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
-  gap: 2.5rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-}
-.f-brand .flogo {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  letter-spacing: -.04em;
-  display: block;
-  margin-bottom: .75rem;
-  color: white;
-}
-.f-brand .flogo span { color: var(--mint); }
-.f-brand p {
-  font-size: .84rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,.5);
-  margin-bottom: 1.25rem;
-}
-.f-social { display: flex; gap: .6rem; }
-.f-soc {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .9rem;
-  color: rgba(255,255,255,.65);
-  transition: all .15s;
-  text-decoration: none;
-}
-.f-soc:hover { background: var(--green); color: white; border-color: var(--green); }
-.f-col h4 {
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.35);
-  margin-bottom: 1rem;
-}
-.f-col ul { list-style: none; }
-.f-col li { margin-bottom: .45rem; }
-.f-col a {
-  font-size: .84rem;
-  color: rgba(255,255,255,.55);
-  transition: color .15s;
-  text-decoration: none;
-}
-.f-col a:hover { color: var(--mint); }
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .65rem;
-  padding: 1.4rem 0;
-  font-size: .76rem;
-  color: rgba(255,255,255,.3);
-}
-.footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; }
-.footer-bottom a:hover { color: var(--mint); }
-.footer-bottom-links { display: flex; gap: 1.25rem; }
-
-/* ── BLOG TEASER (Reisetipps) ────────────────────────────── */
-.reisetipps { background: white; }
-.tips-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-.tip-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform .25s;
-}
-.tip-card:hover { transform: translateY(-4px); }
-.tip-card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--r);
-  display: block;
-  margin-bottom: .85rem;
-}
-.tip-card-tag {
-  font-size: .65rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: .3rem;
-}
-.tip-card h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: .95rem;
-  color: var(--ink);
-  line-height: 1.3;
-}
-
-/* ── RESPONSIVE ──────────────────────────────────────────── */
+/* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .hero-inner { grid-template-columns: 160px 1fr 160px; }
-  .hero-text { left: 160px; right: 160px; }
-  .photo-card { width: 130px; }
-  .photo-card img { height: 100px; }
-  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
-  .tips-grid { grid-template-columns: 1fr 1fr; }
+  .intro-inner{grid-template-columns:1fr;gap:3rem;}
+  .intro-visual{max-width:480px;}
+  .intro-img-small{right:-5%;bottom:-5%;}
+  .intro-badge{left:0;}
+  .hub-grid{grid-template-columns:1fr 1fr;}
+  .steps-grid{grid-template-columns:repeat(3,1fr);}
+  .land-grid{grid-template-columns:repeat(2,1fr);}
+  .nl-inner{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr 1fr;}
 }
 @media(max-width:768px){
-  section { padding: 3rem 0; }
-  .hero-inner { grid-template-columns: 1fr; min-height: auto; }
-  .hero-side { display: none; }
-  .hero-center { min-height: 420px; }
-  .hero-text { left: 0; right: 0; padding: 1.5rem; }
-  .intro-grid, .how-grid, .nl-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .features-grid, .blog-grid, .land-grid { grid-template-columns: 1fr 1fr; }
-  .planung-grid { grid-template-columns: 1fr; }
-  .plan-item:nth-child(even) { border-left: none; padding-left: 0; }
-  .social-grid { grid-template-columns: 1fr 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .journey-grid { grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: -80px; }
-  .how-img { display: none; }
-  .cd-label-strip, .cd-date-strip { display: none; }
-  .countdown-inner { gap: .75rem; justify-content: center; }
-  .journey-bg { height: 300px; }
-  .sec-head h2, .journey-intro h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .nav-menu{display:none;}
+  .nav-burger{display:flex;}
+  .hero-h1{font-size:2.8rem;}
+  .hero-countdown{display:none;}
+  .hub-grid{grid-template-columns:1fr;}
+  .steps-grid{grid-template-columns:1fr 1fr;}
+  .land-grid{grid-template-columns:1fr;}
+  .social-bar-inner{flex-direction:column;text-align:center;}
+  .footer-top{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:480px){
-  section { padding: 2.5rem 0; }
-  .features-grid, .blog-grid, .land-grid, .tips-grid { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: 1fr; }
-  .intro-meta { gap: 1.25rem; }
-  .footer-top { grid-template-columns: 1fr; }
-  .nl-row { flex-direction: column; gap: .6rem; }
-  .journey-grid { grid-template-columns: 1fr; margin-top: -40px; }
-  .journey-bg { height: 240px; }
-  .hero-center { min-height: 320px; }
-  .jc-ich { font-size: 1.3rem; }
-  .plan-item { padding-right: 0; }
+  .steps-grid{grid-template-columns:1fr;}
+  .land-grid{grid-template-columns:1fr 1fr;}
+  .intro-stats{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .hero-row{flex-direction:column;align-items:flex-start;}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════ NAV ═══════════════════════ -->
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
@@ -1449,14 +254,14 @@ section { padding: 5rem 0; }
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
@@ -1465,24 +270,23 @@ section { padding: 5rem 0; }
       <li class="nav-item">
         <a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
-          <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
-          <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
-          <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
-          <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
-          <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
-          <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
-          <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
+          <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" alt="">Thailand</a>
+          <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" alt="">Vietnam</a>
+          <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" alt="">Indonesien</a>
+          <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" alt="">Japan</a>
+          <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" alt="">Malaysia</a>
+          <a href="/kambodscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" alt="">Kambodscha</a>
+          <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" alt="">Laos</a>
+          <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
-          <a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
-          <a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
-          <a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a>
+          <a href="/sim-karten.html">📶 SIM-Karten &amp; Internet</a>
+          <a href="/transport.html">🚌 Transport</a>
+          <a href="/unterkuenfte.html">🛏️ Unterkünfte</a>
+          <a href="/lifehacks.html">⚡ Lifehacks</a>
         </div>
       </li>
       <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
@@ -1495,152 +299,118 @@ section { padding: 5rem 0; }
   </div>
 </nav>
 
-<!-- Mobile Nav -->
 <div class="nav-mobile" id="mob">
   <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
-  <div class="nav-mobile-section">Weltreise planen</div>
-  <a href="/weltreise-planung.html">📋 Alle Planungsschritte</a>
-  <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-  <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-  <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
-  <a href="/dokumente.html">📄 Dokumente</a>
-  <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung & KVG</a>
-  <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-  <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-  <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
-  <a href="/packliste.html">🎒 Packliste</a>
-  <a href="/technik-auf-reisen.html">📱 Technik auf Reisen</a>
-  <a href="/wichtige-apps.html">📲 Wichtige Apps</a>
-  <div class="nav-mobile-section">Reisetipps</div>
-  <a href="/sim-karten.html">📶 SIM-Karten &amp; Internet</a>
-  <a href="/transport.html">🚌 Transport &amp; Weiterreisen</a>
-  <a href="/unterkuenfte.html">🛏️ Unterkünfte finden</a>
-  <a href="/lifehacks.html">⚡ Lifehacks</a>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/auslandskrankenversicherung.html">05 · Krankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/packliste.html">09 · Packliste</a>
   <div class="nav-mobile-section">Länderguides</div>
-  <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
-  <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
-  <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
-  <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
-  <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
-  <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-  <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
-  <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
-  <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
+  <a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a>
+  <a href="/indonesien.html">Indonesien</a>
+  <a href="/japan.html">Japan</a>
   <div class="nav-mobile-section">Mehr</div>
-  <a href="/reiseblog.html">✍️ Blog</a>
-  <a href="/ueber-uns.html">👋 Über uns</a>
-  <a href="/newsletter.html">📬 Newsletter</a>
-  <a href="/kontakt.html">✉️ Kontakt</a>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
 </div>
 
-<!-- ═══════════════════════════════ HERO COLLAGE ══════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- HERO                                       -->
+<!-- ══════════════════════════════════════════ -->
 <section class="hero">
-  <div class="hero-inner">
-    <!-- Linke Foto-Karten -->
-    <div class="hero-side left">
-      <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1569271532956-3fb81a207115?w=400&q=80&fit=crop" alt="Hoi An Vietnam" loading="lazy">
-        <span>Hội An, Vietnam</span>
+  <img class="hero-bg"
+    src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=1920&q=90&fit=crop&crop=center"
+    alt="Mount Bromo Indonesien Sonnenuntergang" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <div class="hero-eyebrow">✦ Weltreise Blog aus der Schweiz ✦</div>
+    <div class="hero-logo">Wir<span>Weit</span>Weg</div>
+    <div class="hero-tagline">Kein Rückflugticket. Dafür echte Tipps.</div>
+    <div class="hero-cd-label" id="cd-label">Abflug in</div>
+    <div class="hero-countdown">
+      <div class="hcd-block">
+        <span class="hcd-num" id="cd-d">--</span>
+        <span class="hcd-lbl">Tage</span>
       </div>
-      <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=400&q=80&fit=crop" alt="Bali Reisterrassen" loading="lazy">
-        <span>Bali, Indonesien</span>
+      <div class="hcd-sep">:</div>
+      <div class="hcd-block">
+        <span class="hcd-num" id="cd-h">--</span>
+        <span class="hcd-lbl">Std</span>
+      </div>
+      <div class="hcd-sep">:</div>
+      <div class="hcd-block">
+        <span class="hcd-num" id="cd-m">--</span>
+        <span class="hcd-lbl">Min</span>
+      </div>
+      <div class="hcd-sep">:</div>
+      <div class="hcd-block">
+        <span class="hcd-num" id="cd-s">--</span>
+        <span class="hcd-lbl">Sek</span>
       </div>
     </div>
-
-    <!-- Mittleres Landschaftsfoto -->
-    <div class="hero-center">
-      <img
-        src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=1400&q=85&fit=crop"
-        alt="Asien Reise Weltreise Thailand"
-        loading="eager"
-      >
-    </div>
-
-    <!-- Rechte Foto-Karten -->
-    <div class="hero-side right">
-      <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=400&q=80&fit=crop&crop=center" alt="Kyoto, Japan" loading="lazy">
-        <span>Kyoto, Japan</span>
-      </div>
-      <div class="photo-card">
-        <img src="https://images.unsplash.com/photo-1583417267826-aebc4d1542e1?w=400&q=80&fit=crop" alt="Vietnam Landschaft" loading="lazy">
-        <span>Sa Pa, Vietnam</span>
-      </div>
+    <div class="hero-row">
+      <a href="/weltreise-planung.html" class="hero-cta-main">Weltreise planen →</a>
+      <a href="/ueber-uns.html" class="hero-cta-ghost">Über uns</a>
     </div>
   </div>
-
-  <!-- Text-Overlay über Mittelbereich -->
-  <div class="hero-text">
-    <h1>Kein <em>Rückflug</em>ticket.</h1>
-    <p>Weltreise-Blog aus der Schweiz · Marc & Fabienne · Abflug 30. Juni 2026</p>
-    <a href="/weltreise-planung.html" class="btn btn-white">Zur Weltreise-Planung →</a>
-    <a href="/ueber-uns.html" class="btn btn-ghost" style="margin-left:.75rem;">Über uns →</a>
+  <div class="hero-scroll">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Scroll
   </div>
 </section>
 
-<!-- ═══════════════════════════════ COUNTDOWN ════════════════ -->
-<div class="countdown-strip">
-  <div class="countdown-inner">
-    <span class="cd-label-strip">Abflug in</span>
-    <div class="cd-units">
-      <div class="cd-unit-block"><span class="num" id="cd-d">--</span><span class="lbl">Tage</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit-block"><span class="num" id="cd-h">--</span><span class="lbl">Std</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit-block"><span class="num" id="cd-m">--</span><span class="lbl">Min</span></div>
-      <span class="cd-sep">:</span>
-      <div class="cd-unit-block"><span class="num" id="cd-s">--</span><span class="lbl">Sek</span></div>
-    </div>
-    <span class="cd-date-strip">bis <strong>30. Juni 2026</strong> ab Zürich</span>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════ INTRO ════════════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- INTRO                                      -->
+<!-- ══════════════════════════════════════════ -->
 <section class="intro">
-  <div class="wrap">
-    <div class="intro-grid">
-      <div class="intro-img-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80&fit=crop"
-          alt="Marc und Fabienne auf Reise"
-        >
-        <span class="intro-signature">Marc & Fabienne ✈</span>
+  <div class="intro-inner">
+    <div class="intro-visual">
+      <img class="intro-img-big"
+        src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=900&q=85&fit=crop"
+        alt="Reisen Fabienne und Marc">
+      <img class="intro-img-small"
+        src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=600&q=80&fit=crop"
+        alt="Weltreise Momente">
+    </div>
+    <div class="intro-text">
+      <span class="intro-tag">Wer wir sind</span>
+      <h2 class="intro-h2">Zwei Schweizer,<br><em>eine Weltreise.</em></h2>
+      <p class="intro-p">Wir sind Fabienne &amp; Marc aus Solothurn. Am 30. Juni 2026 heben wir ab – ohne Rückflugticket, ohne zu wissen wann wir zurückkommen. Einfach los.</p>
+      <p class="intro-p">Kein Hochglanz-Blog, keine bezahlten Empfehlungen. Nur zwei Menschen, die ehrlich aufschreiben was wirklich passiert – vor, während und nach der Reise.</p>
+      <div class="intro-links">
+        <a class="intro-link" href="/weltreise-planung.html">
+          <span class="intro-link-arr">→</span>
+          <span><strong>Weltreise Planung:</strong> Von der Idee bis zum Abflug – aus Schweizer Sicht</span>
+        </a>
+        <a class="intro-link" href="/laenderguides.html">
+          <span class="intro-link-arr">→</span>
+          <span><strong>Länderguides:</strong> Thailand, Vietnam, Japan und mehr</span>
+        </a>
+        <a class="intro-link" href="/reisetipps.html">
+          <span class="intro-link-arr">→</span>
+          <span><strong>Reisetipps:</strong> SIM-Karten, Kreditkarten, Unterkünfte</span>
+        </a>
+        <a class="intro-link" href="/blog.html">
+          <span class="intro-link-arr">→</span>
+          <span><strong>Blog:</strong> Reiseberichte und Erlebnisse unterwegs</span>
+        </a>
       </div>
-      <div class="intro-text">
-        <span class="eyebrow">Unser Abenteuer</span>
-        <h2>Zwei Schweizer,<br><em>eine Weltreise.</em></h2>
-        <p>Wir sind Marc und Fabienne aus Solothurn. Am 30. Juni 2026 heben wir ab – ohne Rückflugticket, ohne fixen Plan für das Ende. Was wir mitnehmen: Neugier, eine Kamera und genug Zeit, um wirklich anzukommen.</p>
-        <p>Dieser Blog ist kein Hochglanz-Prospekt. Hier schreiben zwei Menschen, die gerade das Gleiche durchmachen wie du: Planung, Zweifel, Vorfreude. Ehrlich, auf Schweizerdeutsch direkt – und hoffentlich nützlich.</p>
-        <div class="intro-meta">
-          <div class="intro-meta-item">
-            <strong>2</strong>
-            <span>Personen</span>
-          </div>
-          <div class="intro-meta-item">
-            <strong>9+</strong>
-            <span>Länder geplant</span>
-          </div>
-          <div class="intro-meta-item">
-            <strong>40L</strong>
-            <span>Gepäck pro Person</span>
-          </div>
-          <div class="intro-meta-item">
-            <strong>0</strong>
-            <span>Rückflugtickets</span>
-          </div>
-        </div>
-        <a href="/ueber-uns.html" class="btn btn-dark">Mehr über uns →</a>
-      </div>
+      <a href="/ueber-uns.html" class="btn-solid">Mehr über uns →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ WELTKARTE ══════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- MAP                                        -->
+<!-- ══════════════════════════════════════════ -->
 <section class="map-sec">
   <div class="map-inner">
     <div class="map-head">
-      <span class="eyebrow">Unsere Reiseroute</span>
+      <span class="map-eyebrow">Unsere Reiseroute</span>
       <h2>Wo wir <em>hinwollen.</em></h2>
       <p style="color:var(--mid);margin-top:.5rem;font-size:.95rem;">Klick auf ein Land für mehr Infos.</p>
     </div>
@@ -1652,467 +422,170 @@ section { padding: 5rem 0; }
   </div>
 </section>
 
-<!-- ═══════════════════════════════ FEATURES ═════════════════ -->
-<section class="features">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Womit können wir <em>helfen?</em></h2>
-      <p>Von der ersten Idee bis zum letzten Packen – und alles was danach kommt.</p>
-    </div>
-    <div class="features-grid">
-      <a class="feat-card" href="/weltreise-planung.html">
-        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80&fit=crop" alt="Weltreise planen" loading="lazy">
-        <div class="feat-card-body">
-          <span class="feat-tag">11 Schritte</span>
-          <h3>Weltreise planen</h3>
-          <p>Budget, Visum, Versicherung – alles was du brauchst, bevor du aufbrichst.</p>
-          <span class="feat-link">Zur Planung →</span>
-        </div>
-      </a>
-      <a class="feat-card" href="/laenderguides.html">
-        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&q=80&fit=crop&crop=center" alt="Reiseziele Südostasien" loading="lazy">
-        <div class="feat-card-body">
-          <span class="feat-tag">Südostasien</span>
-          <h3>Länderguides</h3>
-          <p>Praktische Infos zu Thailand, Vietnam, Japan und 6 weiteren Ländern.</p>
-          <span class="feat-link">Alle Länder →</span>
-        </div>
-      </a>
-      <a class="feat-card" href="/ueber-uns.html">
-        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80&fit=crop" alt="Über uns Marc Fabienne" loading="lazy">
-        <div class="feat-card-body">
-          <span class="feat-tag">Marc & Fabienne</span>
-          <h3>Wer steckt dahinter?</h3>
-          <p>Zwei Menschen aus der Schweiz, die beschlossen haben, das alles wirklich zu machen.</p>
-          <span class="feat-link">Unsere Geschichte →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════════════════════════ USP ══════════════════════ -->
-<!-- ═══════════════════════════════ READER JOURNEY ════════════ -->
-<section class="journey">
-  <div class="wrap">
-    <div class="journey-intro">
-      <span class="eyebrow">Wo stehst du gerade?</span>
-      <h2>Schön, dass du <em>hier bist.</em></h2>
-    </div>
-  </div>
 
-  <div class="journey-bg">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85&fit=crop" alt="Traumstrand in Südostasien – WirWeitWeg" loading="lazy">
-  </div>
-
-  <!-- Karten ragen aus dem Foto heraus -->
-  <div class="wrap">
-    <div class="journey-grid">
-
-      <div class="jc-col">
-        <a class="jc-card jc-sand" href="/weltreise-planung.html">
-          <div class="jc-header">
-            <div class="jc-ich">Ich plane gerade<br>meine Weltreise.</div>
-            <p class="jc-sub">Her mit allen Infos, Tipps & Tricks!</p>
-          </div>
-          <div class="jc-body">
-            <p class="jc-reply">Dann bist du hier genau richtig. Wir haben alles aufgeschrieben, was wir selbst gesucht haben – Budget, KVG sistieren, Visa, Packliste. Alles aus Schweizer Sicht, keine deutschen Steuer-Erklärungen.</p>
-            <ul class="jc-links">
-              <li><a href="/weltreise-planung.html">→ Weltreise planen: A bis Z</a></li>
-              <li><a href="/budget-kosten.html">→ Was kostet eine Weltreise wirklich?</a></li>
-              <li><a href="/auslandskrankenversicherung.html">→ KVG sistieren – so geht's</a></li>
-            </ul>
-            <span class="jc-cta">Zur Planung →</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="jc-col">
-        <a class="jc-card jc-green" href="/ueber-uns.html">
-          <div class="jc-header">
-            <div class="jc-ich">Ich träume davon –<br>aber trau mich noch nicht.</div>
-            <p class="jc-sub">Tipps & ehrliche Worte für dich!</p>
-          </div>
-          <div class="jc-body">
-            <p class="jc-reply">Das kennen wir so gut. Wir haben selbst zwei Jahre gewartet. Irgendwann hilft es einfach, andere zu lesen die den Sprung gemacht haben – und zu sehen, dass es nicht perfekt sein muss.</p>
-            <ul class="jc-links">
-              <li><a href="/ueber-uns.html">→ Wie alles bei uns angefangen hat</a></li>
-              <li><a href="/idee-zeitplan.html">→ Wann ist der richtige Zeitpunkt?</a></li>
-              <li><a href="/budget-kosten.html">→ Geht das mit normalem Budget?</a></li>
-            </ul>
-            <span class="jc-cta">Unsere Geschichte →</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="jc-col">
-        <a class="jc-card jc-ink" href="/reiseblog.html">
-          <div class="jc-header" style="background:#2d5c47;">
-            <div class="jc-ich" style="color:white;">Ich folge eurer<br>Reise einfach gern.</div>
-            <p class="jc-sub" style="color:#a8d5b5;">Willkommen in unserem Reisetagebuch!</p>
-          </div>
-          <div class="jc-body" style="border-top:none;background:white;">
-            <p class="jc-reply" style="color:#5a5550;">Sehr gerne! Wir schreiben alles auf – die schönen Momente genauso wie die schlechten Tage. Kein Hochglanz, kein Filter. Ehrlich aus erster Hand.</p>
-            <ul class="jc-links" style="border-top-color:#e8e2d8;">
-              <li><a href="/reiseblog.html" style="color:#1a1611;">→ Neueste Artikel lesen</a></li>
-              <li><a href="/newsletter.html" style="color:#1a1611;">→ Newsletter – direkt im Postfach</a></li>
-              <li><a href="/ueber-uns.html" style="color:#1a1611;">→ Wer sind Marc & Fabienne?</a></li>
-            </ul>
-            <span class="jc-cta" style="background:transparent;color:#1a1611;border:none;">Zum Blog →</span>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ PLANUNG ══════════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- PLANUNG                                   -->
+<!-- ══════════════════════════════════════════ -->
 <section class="planung">
-  <div class="wrap">
-    <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;">
+  <div class="planung-inner">
+    <div class="planung-head">
       <div>
-        <span class="eyebrow">Schritt für Schritt</span>
-        <h2>Die <em>komplette</em> Planung</h2>
-        <p>Von der ersten Idee bis zum Abflug – unser Leitfaden für die Schweiz.</p>
+        <span class="sec-eyebrow">Schritt für Schritt</span>
+        <h2 class="sec-h2" style="margin-bottom:0;">Die <em>komplette</em> Planung</h2>
       </div>
-      <a href="/weltreise-planung.html" class="btn btn-outline btn-sm">Alle Schritte →</a>
+      <a href="/weltreise-planung.html" class="btn-outline">Alle Schritte →</a>
     </div>
-    <div class="planung-grid">
-      <a class="plan-item" href="/idee-zeitplan.html">
-        <span class="plan-num">01</span>
-        <div class="plan-body"><h3>Idee & Zeitplan</h3><p>Wann soll es losgehen? Wie lange? Die ersten Entscheidungen.</p></div>
+    <div class="steps-grid">
+      <a class="step-card" href="/idee-zeitplan.html">
+        <div class="step-n-wrap"><span class="step-n">01</span></div>
+        <div><div class="step-title">Idee &amp; Zeitplan</div><div class="step-sub">Wann, wie lang, wohin?</div></div>
       </a>
-      <a class="plan-item" href="/budget-kosten.html">
-        <span class="plan-num">02</span>
-        <div class="plan-body"><h3>Budget & Kosten</h3><p>Was kostet eine Weltreise wirklich – mit Schweizer Zahlen.</p></div>
+      <a class="step-card" href="/budget-kosten.html">
+        <div class="step-n-wrap"><span class="step-n">02</span></div>
+        <div><div class="step-title">Budget &amp; Kosten</div><div class="step-sub">Echte Schweizer Zahlen</div></div>
       </a>
-      <a class="plan-item" href="/job-auto-wohnung.html">
-        <span class="plan-num">03</span>
-        <div class="plan-body"><h3>Job, Auto & Wohnung</h3><p>Kündigen, vermieten, verkaufen. So löst ihr euer altes Leben auf.</p></div>
+      <a class="step-card" href="/job-auto-wohnung.html">
+        <div class="step-n-wrap"><span class="step-n">03</span></div>
+        <div><div class="step-title">Job, Auto &amp; Wohnung</div><div class="step-sub">Das Leben aufräumen</div></div>
       </a>
-      <a class="plan-item" href="/dokumente.html">
-        <span class="plan-num">04</span>
-        <div class="plan-body"><h3>Dokumente</h3><p>Pass, Vollmachten, Scan-Archiv – nichts vergessen.</p></div>
+      <a class="step-card" href="/dokumente.html">
+        <div class="step-n-wrap"><span class="step-n">04</span></div>
+        <div><div class="step-title">Dokumente</div><div class="step-sub">Pass, Vollmachten, Scans</div></div>
       </a>
-      <a class="plan-item" href="/auslandskrankenversicherung.html">
-        <span class="plan-num">05</span>
-        <div class="plan-body"><h3>Versicherung & KVG</h3><p>Was passiert mit der Krankenkasse? KVG sistieren oder nicht?</p></div>
+      <a class="step-card" href="/auslandskrankenversicherung.html">
+        <div class="step-n-wrap"><span class="step-n">05</span></div>
+        <div><div class="step-title">Krankenversicherung</div><div class="step-sub">KVG sistieren &amp; AKV</div></div>
       </a>
-      <a class="plan-item" href="/kreditkarten.html">
-        <span class="plan-num">06</span>
-        <div class="plan-body"><h3>Kreditkarten & Finanzen</h3><p>Welche Karte für Asien? Wie Geld abheben ohne Gebühren.</p></div>
+      <a class="step-card" href="/kreditkarten.html">
+        <div class="step-n-wrap"><span class="step-n">06</span></div>
+        <div><div class="step-title">Kreditkarten</div><div class="step-sub">Gebührenfrei weltweit</div></div>
       </a>
-      <a class="plan-item" href="/impfungen.html">
-        <span class="plan-num">07</span>
-        <div class="plan-body"><h3>Gesundheit & Impfungen</h3><p>Was braucht ihr wirklich? Tropenkrankheiten, Apotheke, Notfall.</p></div>
+      <a class="step-card" href="/impfungen.html">
+        <div class="step-n-wrap"><span class="step-n">07</span></div>
+        <div><div class="step-title">Gesundheit &amp; Impfungen</div><div class="step-sub">Was ihr wirklich braucht</div></div>
       </a>
-      <a class="plan-item" href="/routenplanung-visum.html">
-        <span class="plan-num">08</span>
-        <div class="plan-body"><h3>Route & Visum</h3><p>Unsere geplante Asienroute und alle Visa-Infos auf einen Blick.</p></div>
-      </a>
-      <a class="plan-item" href="/packliste.html">
-        <span class="plan-num">09</span>
-        <div class="plan-body"><h3>Packliste</h3><p>Was wir wirklich mitnehmen – und was wir zuhause lassen.</p></div>
-      </a>
-      <a class="plan-item" href="/technik-auf-reisen.html">
-        <span class="plan-num">10</span>
-        <div class="plan-body"><h3>Technik auf Reisen</h3><p>Kamera, Laptop, SIM-Karte – unser Technik-Setup.</p></div>
-      </a>
-      <a class="plan-item" href="/wichtige-apps.html">
-        <span class="plan-num">11</span>
-        <div class="plan-body"><h3>Wichtige Apps</h3><p>Die besten Apps für Asien-Reisende – getestet und empfohlen.</p></div>
+      <a class="step-card" href="/routenplanung-visum.html">
+        <div class="step-n-wrap"><span class="step-n">08</span></div>
+        <div><div class="step-title">Route &amp; Visum</div><div class="step-sub">Planung ohne starren Plan</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ REISEZIELE ════════════════ -->
-<section class="reiseziele">
-  <div class="wrap">
-    <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;">
+<!-- ══════════════════════════════════════════ -->
+<!-- LÄNDER                                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="laender">
+  <div class="laender-inner">
+    <div class="laender-head">
       <div>
-        <span class="eyebrow">Südostasien & Japan</span>
-        <h2>Unsere <em>Reiseziele</em></h2>
+        <span class="sec-eyebrow">Südostasien &amp; Japan</span>
+        <h2 class="sec-h2" style="margin-bottom:0;">Unsere <em>Reiseziele</em></h2>
       </div>
-      <a href="/laenderguides.html" class="btn btn-outline btn-sm">Alle Länder →</a>
+      <a href="/laenderguides.html" class="btn-outline">Alle Länder →</a>
     </div>
     <div class="land-grid">
       <a class="land-card" href="/thailand.html">
-        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80&fit=crop&crop=center" alt="Thailand – Wat Arun Bangkok" loading="lazy">
-        <div class="land-info"><span class="land-name">Thailand</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt=""></span></div>
+        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80&fit=crop&crop=center" alt="Thailand" loading="lazy">
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Thailand</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/vietnam.html">
         <img src="https://images.unsplash.com/photo-1569271532956-3fb81a207115?w=600&q=80&fit=crop" alt="Vietnam" loading="lazy">
-        <div class="land-info"><span class="land-name">Vietnam</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt=""></span></div>
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Vietnam</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/indonesien.html">
         <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=600&q=80&fit=crop" alt="Indonesien" loading="lazy">
-        <div class="land-info"><span class="land-name">Indonesien</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt=""></span></div>
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Indonesien</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/japan.html">
-        <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=600&q=80&fit=crop&crop=center" alt="Japan – Fushimi Inari Kyoto" loading="lazy">
-        <div class="land-info"><span class="land-name">Japan</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt=""></span></div>
+        <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=600&q=80&fit=crop&crop=center" alt="Japan" loading="lazy">
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Japan</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/malaysia.html">
         <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80&fit=crop" alt="Malaysia" loading="lazy">
-        <div class="land-info"><span class="land-name">Malaysia</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt=""></span></div>
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Malaysia</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/singapur.html">
         <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&q=80&fit=crop" alt="Singapur" loading="lazy">
-        <div class="land-info"><span class="land-name">Singapur</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt=""></span></div>
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Singapur</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" alt="">
+        </div>
       </a>
-      <a class="land-card" href="/kambotscha.html">
-        <img src="https://images.unsplash.com/photo-1526324585411-e24d5ba61edd?w=600&q=80&fit=crop&crop=center" alt="Kambodscha – Angkor Wat" loading="lazy">
-        <div class="land-info"><span class="land-name">Kambodscha</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt=""></span></div>
+      <a class="land-card" href="/kambodscha.html">
+        <img src="https://images.unsplash.com/photo-1526324585411-e24d5ba61edd?w=600&q=80&fit=crop&crop=center" alt="Kambodscha" loading="lazy">
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Kambodscha</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/laos.html">
-        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80&fit=crop&crop=center" alt="Laos – Kuang Si Wasserfälle" loading="lazy">
-        <div class="land-info"><span class="land-name">Laos</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt=""></span></div>
+        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=600&q=80&fit=crop&crop=center" alt="Laos" loading="lazy">
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Laos</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" alt="">
+        </div>
       </a>
       <a class="land-card" href="/philippinen.html">
         <img src="https://images.unsplash.com/photo-1529686342540-1b43aec0df75?w=600&q=80&fit=crop" alt="Philippinen" loading="lazy">
-        <div class="land-info"><span class="land-name">Philippinen</span><span class="land-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt=""></span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ WIE WIR REISEN ════════════ -->
-<section class="howwereise">
-  <div class="wrap">
-    <div class="how-grid">
-      <div class="how-text">
-        <span class="eyebrow">Unser Stil</span>
-        <h2>Wie wir <em>reisen.</em></h2>
-        <p style="color:var(--mid);font-size:.95rem;line-height:1.7;margin-bottom:.5rem;">Keine geführten Touren, keine vorgefertigten Routen. Wir entscheiden jeden Morgen neu – und schreiben darüber was wirklich passiert.</p>
-        <ul class="how-list">
-          <li>
-            <div class="how-ico">🌱</div>
-            <div>
-              <h4>Langsam & bewusst</h4>
-              <p>Wir bleiben länger an einem Ort. Lieber eine Stadt wirklich kennenlernen als zehn Länder abhaken.</p>
-            </div>
-          </li>
-          <li>
-            <div class="how-ico">💚</div>
-            <div>
-              <h4>Nachhaltig so gut es geht</h4>
-              <p>Kein Null-Emissionen-Versprechen. Aber bewusste Entscheidungen: Bus vor Flug, Local vor Kette.</p>
-            </div>
-          </li>
-          <li>
-            <div class="how-ico">📖</div>
-            <div>
-              <h4>Ehrlich dokumentiert</h4>
-              <p>Die schlechten Tage gehören dazu. Wir schreiben über Blaaaa genauso wie über Sonnenuntergänge.</p>
-            </div>
-          </li>
-          <li>
-            <div class="how-ico">🇨🇭</div>
-            <div>
-              <h4>Schweizer Sichtweise</h4>
-              <p>Was uns als Schweizer überrascht, was wir vermissen, was wir auf Anhieb besser finden – unzensiert.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="how-img">
-        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80&fit=crop" alt="Reisen Asien Markt" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ BLOG ══════════════════════ -->
-<section class="blog">
-  <div class="wrap">
-    <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;">
-      <div>
-        <span class="eyebrow">Neueste Artikel</span>
-        <h2>Aus dem <em>Reiseblog</em></h2>
-      </div>
-      <a href="/reiseblog.html" class="btn btn-outline btn-sm">Alle Artikel →</a>
-    </div>
-    <div class="blog-grid">
-      <a class="blog-card" href="/reiseblog.html">
-        <img class="blog-card-img" src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=700&q=80&fit=crop" alt="Vietnam Reise" loading="lazy">
-        <div class="blog-card-body">
-          <span class="blog-tag">Planung</span>
-          <h3>Wie wir unser Weltreise-Budget berechnet haben</h3>
-          <p>Was kostet ein Jahr Asien wirklich? Wir zeigen unsere Kalkulation – mit echten Schweizer Zahlen.</p>
-          <span class="blog-meta">Bald verfügbar · 8 Min Lesezeit</span>
-        </div>
-      </a>
-      <a class="blog-card" href="/reiseblog.html">
-        <img class="blog-card-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80&fit=crop" alt="Asien Strasse" loading="lazy">
-        <div class="blog-card-body">
-          <span class="blog-tag">Schweiz-Spezial</span>
-          <h3>KVG sistieren oder Auslandversicherung? Das müsst ihr wissen</h3>
-          <p>Der grösste Versicherungs-Irrgarten der Schweiz – endlich verständlich erklärt.</p>
-          <span class="blog-meta">Bald verfügbar · 11 Min Lesezeit</span>
-        </div>
-      </a>
-      <a class="blog-card" href="/reiseblog.html">
-        <img class="blog-card-img" src="https://images.unsplash.com/photo-1529686342540-1b43aec0df75?w=700&q=80&fit=crop" alt="Thailand Strand" loading="lazy">
-        <div class="blog-card-body">
-          <span class="blog-tag">Reiseziele</span>
-          <h3>Thailand im Sommer: Was wirklich auf euch wartet</h3>
-          <p>Monsun, Menschenmassen, günstige Preise – wir klären auf was Thailand in der Nebensaison bedeutet.</p>
-          <span class="blog-meta">Bald verfügbar · 7 Min Lesezeit</span>
+        <div class="land-overlay"></div>
+        <div class="land-info">
+          <div class="land-name">Philippinen</div>
+          <img class="land-flag" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" alt="">
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ REISETIPPS ════════════════ -->
-<section class="reisetipps">
-  <div class="wrap">
-    <div class="sec-head" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;">
-      <div>
-        <span class="eyebrow">Praktische Infos</span>
-        <h2>Nützliche <em>Reisetipps</em></h2>
-      </div>
-      <a href="/reisetipps.html" class="btn btn-outline btn-sm">Alle Tipps →</a>
-    </div>
-    <div class="tips-grid">
-      <a class="tip-card" href="/kreditkarten.html">
-        <img class="tip-card-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80&fit=crop" alt="Kreditkarte" loading="lazy">
-        <div class="tip-card-tag">Finanzen</div>
-        <h3>Beste Kreditkarten für Südostasien</h3>
-      </a>
-      <a class="tip-card" href="/packliste.html">
-        <img class="tip-card-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&q=80&fit=crop" alt="Packliste" loading="lazy">
-        <div class="tip-card-tag">Packen</div>
-        <h3>Unsere komplette Packliste für Asien</h3>
-      </a>
-      <a class="tip-card" href="/technik-auf-reisen.html">
-        <img class="tip-card-img" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&q=80&fit=crop" alt="Technik" loading="lazy">
-        <div class="tip-card-tag">Technik</div>
-        <h3>Kamera & Gadgets die wirklich nützlich sind</h3>
-      </a>
-      <a class="tip-card" href="/auslandskrankenversicherung.html">
-        <img class="tip-card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80&fit=crop" alt="Versicherung" loading="lazy">
-        <div class="tip-card-tag">Versicherung</div>
-        <h3>Welche Auslandversicherung wirklich schützt</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ YOUTUBE ════════════════════════════════════════════ -->
-<section class="yt-sec">
-  <div class="yt-inner">
-    <div class="yt-head">
-      <span class="eyebrow">YouTube</span>
-      <h2>Schaut uns <em>über die Schulter.</em></h2>
-    </div>
-    <div class="yt-grid">
-      <div class="yt-facade" onclick="window.open('https://www.youtube.com/@Wirweitweg555','_blank')">
-        <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&q=80&fit=crop" alt="Bali, Indonesien">
-        <div class="yt-play"><div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      </div>
-      <div class="yt-facade" onclick="window.open('https://www.youtube.com/@Wirweitweg555','_blank')">
-        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80&fit=crop" alt="Malaysia">
-        <div class="yt-play"><div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-      </div>
-    </div>
-    <div class="yt-subscribe">
-      <a href="https://www.youtube.com/@Wirweitweg555" class="yt-sub-bar">
-        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
-        Kanal abonnieren – kostenlos dabei sein
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ SOCIAL ════════════════════ -->
-<section class="social-sec">
-  <div class="wrap">
-    <div class="sec-head" style="text-align:center;margin-bottom:2rem;">
-      <span class="eyebrow">Folgt uns</span>
-      <h2>WirWeitWeg <em>überall.</em></h2>
-    </div>
-    <div class="social-grid">
-      <a class="social-card" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80&fit=crop" alt="WirWeitWeg Instagram" loading="lazy">
-        <div class="social-card-top">
-          <div class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
-          </div>
-        </div>
-        <div class="social-card-bottom">
-          <div class="social-platform">Instagram</div>
-          <div class="social-handle">@wirweitweg</div>
-          <span class="social-follow">Folgen →</span>
-        </div>
-      </a>
-      <a class="social-card" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80&fit=crop" alt="WirWeitWeg TikTok" loading="lazy">
-        <div class="social-card-top">
-          <div class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
-          </div>
-        </div>
-        <div class="social-card-bottom">
-          <div class="social-platform">TikTok</div>
-          <div class="social-handle">@wirweitweg</div>
-          <span class="social-follow">Folgen →</span>
-        </div>
-      </a>
-      <a class="social-card" href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80&fit=crop" alt="WirWeitWeg YouTube" loading="lazy">
-        <div class="social-card-top">
-          <div class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
-          </div>
-        </div>
-        <div class="social-card-bottom">
-          <div class="social-platform">YouTube</div>
-          <div class="social-handle">WirWeitWeg</div>
-          <span class="social-follow">Abonnieren →</span>
-        </div>
-      </a>
-      <a class="social-card" href="/newsletter.html">
-        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800&q=80&fit=crop" alt="WirWeitWeg Newsletter" loading="lazy">
-        <div class="social-card-top">
-          <div class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-        </div>
-        <div class="social-card-bottom">
-          <div class="social-platform">Newsletter</div>
-          <div class="social-handle">Direkt im Postfach</div>
-          <span class="social-follow">Anmelden →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════ NEWSLETTER ════════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- NEWSLETTER                                -->
+<!-- ══════════════════════════════════════════ -->
 <section class="newsletter">
-  <div class="wrap">
-    <div class="nl-grid">
-      <div class="nl-text">
-        <span class="eyebrow white">Direkt im Postfach</span>
-        <h2>Dabei sein,<br><em>wenn es losgeht.</em></h2>
-        <p>Kein Spam, kein Weekly-Roundup-Blabla. Wir schreiben wenn etwas passiert – einen Artikel, eine Erkenntnis, einen ehrlichen Moment auf Reise.</p>
-        <ul class="nl-perks">
-          <li>Neue Artikel direkt ins Postfach</li>
-          <li>Reise-Updates von unterwegs</li>
-          <li>Planungstipps aus der Schweiz</li>
-          <li>Kein Paid Content, keine Werbung</li>
-        </ul>
-      </div>
-      <div>
+  <div class="nl-inner">
+    <div class="nl-left">
+      <span class="nl-tag">Newsletter</span>
+      <h2 class="nl-h2">Dabei sein,<br><em>wenn es losgeht.</em></h2>
+      <p class="nl-p">Kein Spam, kein Weekly-Roundup-Blabla. Wir schreiben wenn etwas passiert – einen Artikel, eine Erkenntnis, einen ehrlichen Moment auf Reise.</p>
+      <ul class="nl-perks">
+        <li>Neue Artikel direkt ins Postfach</li>
+        <li>Reise-Updates von unterwegs</li>
+        <li>Planungstipps aus der Schweiz</li>
+        <li>Kein Paid Content, keine Werbung</li>
+      </ul>
+    </div>
+    <div>
+      <div class="nl-box">
+        <div class="nl-box-title">Jetzt anmelden</div>
+        <div class="nl-box-sub">DSGVO-konform · kostenlos · monatlich</div>
         <div class="nl-form">
-          <input class="nl-input" type="text" placeholder="Dein Vorname">
-          <input class="nl-input" type="email" placeholder="deine@email.ch">
-          <button class="btn btn-white" style="width:100%;justify-content:center;">
-            Jetzt anmelden ✦
-          </button>
+          <input class="nl-input" type="text" placeholder="Dein Vorname" autocomplete="given-name">
+          <input class="nl-input" type="email" placeholder="deine@email.ch" autocomplete="email">
+          <button class="nl-btn">Jetzt anmelden ✦</button>
           <p class="nl-note">Kein Spam. Jederzeit abmeldbar. Wir hassen Spam genauso wie ihr.</p>
         </div>
       </div>
@@ -2120,34 +593,68 @@ section { padding: 5rem 0; }
   </div>
 </section>
 
-<!-- ═══════════════════════════════ FOOTER ════════════════════ -->
+<!-- ══════════════════════════════════════════ -->
+<!-- SOCIAL                                    -->
+<!-- ══════════════════════════════════════════ -->
+<div class="social-bar">
+  <div class="social-bar-inner">
+    <div class="social-bar-text">
+      <h3>Folgt uns auf Social Media</h3>
+      <p>Folgt uns auf Instagram, TikTok, YouTube &amp; Pinterest.</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener" class="soc-pill" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" class="soc-pill" style="background:#010101;color:white;">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener" class="soc-pill" style="background:#FF0000;color:white;">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+        YouTube
+      </a>
+      <a href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener" class="soc-pill" style="background:#e60023;color:white;">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 010 .345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        Pinterest
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- FOOTER                                    -->
+<!-- ══════════════════════════════════════════ -->
 <footer class="footer">
-  <div class="wrap">
+  <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
-        <a class="flogo" href="/">Wir<span>Weit</span>Weg</a>
-        <p>Weltreise-Blog aus der Schweiz von Marc & Fabienne. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
+        <a href="/"><img src="/logo-schwarz.png?v=2" alt="WirWeitWeg" style="height:120px;width:auto;margin-bottom:.6rem;display:block;"></a>
+        <p>Weltreise-Blog aus der Schweiz von Fabienne &amp; Marc. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
         <div class="f-social">
-          <a class="f-soc" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener" title="Instagram">
+          <a class="f-soc" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" title="TikTok">
+          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
           </a>
-          <a class="f-soc" href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener" title="YouTube">
+          <a class="f-soc" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+          </a>
+          <a class="f-soc" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
       </div>
       <div class="f-col">
         <h4>Weltreise planen</h4>
         <ul>
-          <li><a href="/idee-zeitplan.html">Idee & Zeitplan</a></li>
-          <li><a href="/budget-kosten.html">Budget & Kosten</a></li>
+          <li><a href="/idee-zeitplan.html">Idee &amp; Zeitplan</a></li>
+          <li><a href="/budget-kosten.html">Budget &amp; Kosten</a></li>
           <li><a href="/auslandskrankenversicherung.html">Versicherung</a></li>
           <li><a href="/kreditkarten.html">Kreditkarten</a></li>
           <li><a href="/packliste.html">Packliste</a></li>
-          <li><a href="/wichtige-apps.html">Apps</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -2157,17 +664,16 @@ section { padding: 5rem 0; }
           <li><a href="/vietnam.html">Vietnam</a></li>
           <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
-          <li><a href="/singapur.html">Singapur</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
       </div>
       <div class="f-col">
-        <h4>Blog</h4>
+        <h4>Reisetipps</h4>
         <ul>
-          <li><a href="/reiseblog.html">Alle Artikel</a></li>
-          <li><a href="/reiseblog.html">Planung</a></li>
-          <li><a href="/reiseblog.html">Reiseberichte</a></li>
-          <li><a href="/reiseblog.html">Reisetipps</a></li>
+          <li><a href="/sim-karten.html">SIM-Karten</a></li>
+          <li><a href="/transport.html">Transport</a></li>
+          <li><a href="/unterkuenfte.html">Unterkünfte</a></li>
+          <li><a href="/lifehacks.html">Lifehacks</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -2182,10 +688,10 @@ section { padding: 5rem 0; }
       </div>
     </div>
     <div class="f-affiliate">
-      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
+      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 WirWeitWeg · Weltreise-Blog aus der Schweiz</span>
+      <span>© 2026 WirWeitWeg &middot; Weltreise-Blog aus der Schweiz</span>
       <div class="footer-bottom-links">
         <a href="/impressum.html">Impressum</a>
         <a href="/datenschutz.html">Datenschutz</a>
@@ -2195,52 +701,14 @@ section { padding: 5rem 0; }
   </div>
 </footer>
 
-<!-- ═══════════════════════════════ SCRIPTS ═══════════════════ -->
-<script>
-// Countdown
-function updateCountdown() {
-  const target = new Date('2026-06-30T08:00:00');
-  const now = new Date();
-  const diff = target - now;
-  if (diff <= 0) {
-    document.getElementById('cd-d').textContent = '0';
-    document.getElementById('cd-h').textContent = '00';
-    document.getElementById('cd-m').textContent = '00';
-    document.getElementById('cd-s').textContent = '00';
-    return;
-  }
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
-</script>
-
 <div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
+  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button>
 </div>
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://unpkg.com/topojson@3"></script>
 <script>
-
-// YouTube Lazy Load
-function loadYT(el,id){
-  const i=document.createElement('iframe');
-  i.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
-  i.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;';
-  i.allow='autoplay;encrypted-media';i.allowFullscreen=true;
-  el.innerHTML='';el.appendChild(i);
-}
-// D3 Choropleth World Map
+// D3 World Map
 (function(){
   const W=document.getElementById('travel-map');
   if(!W)return;
@@ -2252,7 +720,7 @@ function loadYT(el,id){
   const g=svg.append('g');
   const tip=d3.select('body').append('div').style('position','fixed').style('background','rgba(26,22,17,.9)').style('color','white').style('padding','.4rem .85rem').style('border-radius','8px').style('font-size','.8rem').style('font-weight','700').style('pointer-events','none').style('opacity','0').style('z-index','9999').style('font-family','Nunito,sans-serif');
   function draw(){
-    const w=W.offsetWidth||900,h=W.offsetHeight||560;
+    const w=W.offsetWidth||900,h=W.offsetHeight||520;
     svg.attr('viewBox','0 0 '+w+' '+h);
     const proj=d3.geoNaturalEarth1().scale(w/5.8).translate([w*.5,h*.53]);
     const path=d3.geoPath().projection(proj);
@@ -2264,36 +732,42 @@ function loadYT(el,id){
         .attr('fill',d=>{const id=+d.id;return home.has(id)?'#2d6a4f':planned.has(id)?'#a8d5b5':'#ddd8d0';})
         .attr('stroke','#faf8f4').attr('stroke-width',.5)
         .style('cursor',d=>planned.has(+d.id)||home.has(+d.id)?'pointer':'default')
-        .on('mouseover',function(e,d){
-          const id=+d.id;if(!names[id])return;
-          d3.select(this).attr('fill',planned.has(id)?'#3d7a5c':home.has(id)?'#1a4a2e':'#ddd8d0');
-          tip.html(names[id]).style('opacity','1');
-        })
+        .on('mouseover',function(e,d){const id=+d.id;if(!names[id])return;d3.select(this).attr('fill',planned.has(id)?'#3d7a5c':home.has(id)?'#1a4a2e':'#ddd8d0');tip.html(names[id]).style('opacity','1');})
         .on('mousemove',e=>{tip.style('left',(e.clientX+12)+'px').style('top',(e.clientY-28)+'px');})
-        .on('mouseout',function(e,d){
-          const id=+d.id;
-          d3.select(this).attr('fill',home.has(id)?'#2d6a4f':planned.has(id)?'#a8d5b5':'#ddd8d0');
-          tip.style('opacity','0');
-        })
+        .on('mouseout',function(e,d){const id=+d.id;d3.select(this).attr('fill',home.has(id)?'#2d6a4f':planned.has(id)?'#a8d5b5':'#ddd8d0');tip.style('opacity','0');})
         .on('click',(e,d)=>{const u=links[+d.id];if(u)window.location.href=u;});
     });
   }
   draw();
   window.addEventListener('resize',()=>{clearTimeout(window._mt);window._mt=setTimeout(draw,100);});
 })();
-// Equalize journey card headers
-function eqHeaders(){
-  const hs=document.querySelectorAll('.jc-header');
-  hs.forEach(h=>h.style.height='auto');
-  let m=0;hs.forEach(h=>{m=Math.max(m,h.offsetHeight);});
-  hs.forEach(h=>{h.style.height=m+'px';});
-}
-eqHeaders();
-window.addEventListener('resize',()=>{clearTimeout(window._eqt);window._eqt=setTimeout(eqHeaders,80);});
 </script>
-
-
-
+<script>
+(function tick(){
+  var dep=new Date('2026-06-30T00:00:00');
+  var now=new Date();
+  var diff=dep-now;
+  var pad=function(n){return n<10?'0'+n:n;};
+  var el=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+  var lbl=document.getElementById('cd-label');
+  if(diff>0){
+    if(lbl)lbl.textContent='Abflug in';
+    var d=Math.floor(diff/86400000);
+    var h=Math.floor((diff%86400000)/3600000);
+    var m=Math.floor((diff%3600000)/60000);
+    var s=Math.floor((diff%60000)/1000);
+    el('cd-d',d); el('cd-h',pad(h)); el('cd-m',pad(m)); el('cd-s',pad(s));
+  } else {
+    if(lbl)lbl.textContent='Unterwegs seit';
+    var gone=now-dep;
+    var d=Math.floor(gone/86400000);
+    var h=Math.floor((gone%86400000)/3600000);
+    var m=Math.floor((gone%3600000)/60000);
+    var s=Math.floor((gone%60000)/1000);
+    el('cd-d',d); el('cd-h',pad(h)); el('cd-m',pad(m)); el('cd-s',pad(s));
+  }
+  setTimeout(tick,1000);
+})();
+</script>
 </body>
 </html>
-
