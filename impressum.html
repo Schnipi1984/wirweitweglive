@@ -1,92 +1,44 @@
-<!DOCTYPE html><html lang="de"><head>
-<link rel="icon" type="image/png" href="/logo.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Impressum | WirWeitWeg</title><meta name="description" content="Rechtliche Angaben gemäss Schweizer Recht."><meta property="og:title" content="Impressum | WirWeitWeg"><meta property="og:description" content="Rechtliche Angaben gemäss Schweizer Recht."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.blog/impressum.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #1e1e2e | #0e9f6e | #6ee7b7 | #fff9ee | #e2e8f0
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#fff9ee; --ink:#1e1e2e; --mid:#6b7280;
-  --light:#b0b8c8; --border:#e2e8f0; --green:#0e9f6e;
-  --greenlt:#d1fae5; --mint:#6ee7b7; --r:12px; --rLg:20px; --maxW:1280px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
-.logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
-.nav-item{position:relative;list-style:none;}
-.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
-.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
-.nav-arr{font-size:.6rem;transition:transform .2s;}
-.nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
-.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
-.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
-.nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
-.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
-.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
-.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
-.nav-mobile.open{display:block;}
-.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
-.nav-mobile a:hover{color:var(--green);}
-.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
-
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer{background:#fff9ee;padding:2.1rem 0 0;}
-.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.7rem;border-bottom:1px solid rgba(0,0,0,.1);}
-.f-brand p{font-size:.82rem;line-height:1.65;color:#6b7280;margin-bottom:1rem;}
-.f-social{display:flex;gap:.5rem;}
-.f-soc{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:#6b7280;transition:all .15s;text-decoration:none;}
-.f-soc:hover{background:#0e9f6e;color:white;border-color:#0e9f6e;}
-.f-col h4{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0b8c8;margin-bottom:.75rem;}
-.f-col ul{list-style:none;}
-.f-col li{margin-bottom:.35rem;}
-.f-col a{font-size:.82rem;color:#6b7280;transition:color .15s;}
-.f-col a:hover{color:#0e9f6e;}
-.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:.85rem 0;}
-.f-affiliate p{font-size:.73rem;color:#b0b8c8;line-height:1.6;text-align:center;max-width:700px;margin:0 auto;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.85rem 0;font-size:.74rem;color:#b0b8c8;}
-.footer-bottom a{color:#b0b8c8;}
-.footer-bottom a:hover{color:#0e9f6e;}
-.footer-bottom-links{display:flex;gap:1rem;}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand img{height:80px!important;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
-.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
-.bmc-btn:hover{transform:translateY(-3px);}
-@media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Impressum | WirWeitWeg</title>
+<meta name="description" content="Impressum und rechtliche Angaben von WirWeitWeg.">
+<link rel="canonical" href="https://wirweitweg.blog/impressum.html">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=3">
+<style>
+.page-wrap{max-width:680px;margin:4rem auto;padding:0 1.5rem 6rem;}
+.page-title{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.04em;color:var(--ink);margin-bottom:2.5rem;}
+.page-title em{font-style:italic;font-weight:300;color:var(--green);}
+.imp-block{margin-bottom:2rem;}
+.imp-block h2{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;}
+.imp-block p{font-size:.95rem;line-height:1.75;color:var(--mid);}
+.imp-block a{color:var(--green);font-weight:700;}
+.imp-divider{border:none;border-top:1px solid var(--border);margin:2rem 0;}
+@media(max-width:600px){.page-wrap{margin:2.5rem auto;}}
 </style>
-</head><body><nav class="nav">
+</head>
+<body>
+
+<nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
     <ul class="nav-menu">
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
@@ -106,7 +58,7 @@ img{display:block;width:100%;object-fit:cover;}
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
@@ -124,33 +76,70 @@ img{display:block;width:100%;object-fit:cover;}
     </button>
   </div>
 </nav>
-<button class="nav-burger"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="nav-mobile"><button class="nav-mobile-close">✕</button>
-<div class="nav-mobile-section">Weltreise Planung</div>
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-<div class="nav-mobile-section">Länderguides</div>
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambodscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-<div class="nav-mobile-section">Mehr</div>
-<a href="/reisetipps.html">Reisetipps</a>
-<a href="/reiseblog.html">Reiseblog</a>
-<a href="/ueber-uns.html">Über Uns</a>
-<a href="/newsletter.html">Newsletter</a>
-</div><div class="pghero"><div class="pghero-inner"><h1 class="pgtitle">Im- <em>pressum</em></h1><p class="pgdesc">Rechtliche Angaben gemäss Schweizer Recht.</p></div></div><div style="max-width:760px;margin:3rem auto;padding:0 1.5rem;" class="prose"><p><strong>WirWeitWeg</strong><br>Marc &amp; Fabienne<br>Solothurn, Schweiz</p><p style="margin-top:1rem;"><strong>E-Mail:</strong> hallo@wirweitweg.blog</p><h3>Haftungsausschluss</h3><p>Die Inhalte wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit kann keine Gewähr übernommen werden.</p><h3>Urheberrecht</h3><p>Alle Inhalte unterliegen dem Schweizer Urheberrecht. Vervielfältigung nur mit schriftlicher Genehmigung.</p></div><footer class="footer">
+
+<div class="nav-mobile" id="mob">
+  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
+  <a href="/auslandskrankenversicherung.html">05 · Krankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Gesundheit &amp; Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
+  <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik</a>
+  <a href="/wichtige-apps.html">11 · Apps</a>
+  <div class="nav-mobile-section">Länderguides</div>
+  <a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a>
+  <a href="/indonesien.html">Indonesien</a>
+  <a href="/japan.html">Japan</a>
+  <a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a>
+  <a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a>
+  <a href="/philippinen.html">Philippinen</a>
+  <div class="nav-mobile-section">Mehr</div>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Blog</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
+</div>
+
+<div class="page-wrap">
+  <h1 class="page-title">Im<em>pressum</em></h1>
+
+  <div class="imp-block">
+    <h2>Betreiber</h2>
+    <p>Marc &amp; Fabienne<br>Solothurn, Schweiz</p>
+  </div>
+
+  <div class="imp-block">
+    <h2>Kontakt</h2>
+    <p><a href="mailto:hallo@wirweitweg.blog">hallo@wirweitweg.blog</a></p>
+  </div>
+
+  <hr class="imp-divider">
+
+  <div class="imp-block">
+    <h2>Haftungsausschluss</h2>
+    <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität kann jedoch keine Gewähr übernommen werden.</p>
+  </div>
+
+  <div class="imp-block">
+    <h2>Urheberrecht</h2>
+    <p>Alle Inhalte und Bilder unterliegen dem Schweizer Urheberrecht. Eine Vervielfältigung oder Verwendung ist nur mit schriftlicher Genehmigung gestattet.</p>
+  </div>
+
+  <div class="imp-block">
+    <h2>Externe Links</h2>
+    <p>Diese Website enthält Links zu externen Seiten. Für deren Inhalte übernehmen wir keine Haftung.</p>
+  </div>
+</div>
+
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
@@ -224,9 +213,10 @@ img{display:block;width:100%;object-fit:cover;}
     </div>
   </div>
 </footer>
+
 <div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
-</div><script src="/script.js"></script>
-</body></html>
+  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button>
+</div>
+
+</body>
+</html>
