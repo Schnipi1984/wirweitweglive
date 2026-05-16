@@ -215,32 +215,83 @@ img{max-width:100%;height:auto;display:block;}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .intro-inner{grid-template-columns:1fr;gap:3rem;}
-  .intro-visual{max-width:480px;}
+  .intro-visual{max-width:480px;margin:0 auto;}
   .intro-img-small{right:-5%;bottom:-5%;}
   .intro-badge{left:0;}
   .hub-grid{grid-template-columns:1fr 1fr;}
   .steps-grid{grid-template-columns:repeat(3,1fr);}
   .land-grid{grid-template-columns:repeat(2,1fr);}
-  .nl-inner{grid-template-columns:1fr;}
+  .nl-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .nl-left{text-align:center;}
+  .nl-perks{align-items:center;}
   .footer-top{grid-template-columns:1fr 1fr 1fr;}
 }
 @media(max-width:768px){
   .nav-menu{display:none;}
   .nav-burger{display:flex;}
-  .hero-h1{font-size:2.8rem;}
+  /* Hero */
+  .hero{height:70vh;min-height:440px;}
+  .hero-cd-label{display:none;}
   .hero-countdown{display:none;}
+  .hero-row{flex-direction:column;align-items:center;gap:.75rem;width:100%;}
+  .hero-cta-main,.hero-cta-ghost{width:100%;max-width:300px;justify-content:center;}
+  /* Intro */
+  .intro{padding:3.5rem 1.25rem;}
+  .intro-inner{gap:2rem;}
+  .intro-visual{max-width:100%;}
+  .intro-img-small{display:none;}
+  .intro-badge{display:none;}
+  /* Hub */
+  .hub{padding:3.5rem 1.25rem;}
   .hub-grid{grid-template-columns:1fr;}
+  .hub-img{height:200px;}
+  /* Planung */
+  .planung{padding:3.5rem 1.25rem;}
   .steps-grid{grid-template-columns:1fr 1fr;}
-  .land-grid{grid-template-columns:1fr;}
+  /* Länder */
+  .laender{padding:3.5rem 1.25rem;}
+  .land-grid{grid-template-columns:1fr 1fr;}
+  /* Newsletter */
+  .newsletter{padding:3.5rem 1.25rem;}
+  .nl-left{text-align:center;}
+  .nl-perks{align-items:flex-start;text-align:left;}
+  /* Map */
+  .map-sec{padding:3.5rem 0;}
+  #travel-map{height:350px;}
+  /* Social */
+  .social-bar{padding:2rem 1.25rem;}
   .social-bar-inner{flex-direction:column;text-align:center;}
+  .social-icons{flex-wrap:wrap;justify-content:center;}
+  .soc-pill{font-size:.78rem;padding:.5rem .9rem;}
+  /* Footer */
   .footer-top{grid-template-columns:1fr 1fr;}
+  .footer-inner{padding:0 1.25rem;}
 }
 @media(max-width:480px){
-  .steps-grid{grid-template-columns:1fr;}
-  .land-grid{grid-template-columns:1fr 1fr;}
+  /* Hero */
+  .hero{height:65vh;min-height:400px;}
+  .hero-cta-main,.hero-cta-ghost{max-width:100%;}
+  /* Intro */
+  .intro{padding:2.5rem 1rem;}
   .intro-stats{grid-template-columns:1fr 1fr;}
+  /* Hub */
+  .hub{padding:2.5rem 1rem;}
+  /* Planung */
+  .planung{padding:2.5rem 1rem;}
+  .steps-grid{grid-template-columns:1fr;}
+  /* Länder */
+  .laender{padding:2.5rem 1rem;}
+  .land-grid{grid-template-columns:1fr 1fr;}
+  /* Newsletter */
+  .newsletter{padding:2.5rem 1rem;}
+  /* Map */
+  .map-sec{padding:2rem 0;}
+  #travel-map{height:260px;}
+  /* Social */
+  .social-bar{padding:2rem 1rem;}
+  /* Footer */
   .footer-top{grid-template-columns:1fr;}
-  .hero-row{flex-direction:column;align-items:flex-start;}
+  .footer-inner{padding:0 1rem;}
 }
 </style>
 </head>
@@ -304,16 +355,28 @@ img{max-width:100%;height:auto;display:block;}
   <div class="nav-mobile-section">Weltreise Planung</div>
   <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
   <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
   <a href="/auslandskrankenversicherung.html">05 · Krankenversicherung</a>
   <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Gesundheit &amp; Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
   <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik</a>
+  <a href="/wichtige-apps.html">11 · Apps</a>
   <div class="nav-mobile-section">Länderguides</div>
   <a href="/thailand.html">Thailand</a>
   <a href="/vietnam.html">Vietnam</a>
   <a href="/indonesien.html">Indonesien</a>
   <a href="/japan.html">Japan</a>
+  <a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a>
+  <a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a>
+  <a href="/philippinen.html">Philippinen</a>
   <div class="nav-mobile-section">Mehr</div>
   <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Blog</a>
   <a href="/ueber-uns.html">Über Uns</a>
   <a href="/newsletter.html">Newsletter</a>
 </div>
