@@ -1,100 +1,135 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Länderguides – Reiseführer für Weltreisende | WirWeitWeg</title><meta name="description" content="Ehrliche Länderguides von Marc & Fabienne: Indonesien, Thailand, Vietnam, Japan und mehr."><meta property="og:title" content="Länderguides – Reiseführer für Weltreisende | WirWeitWeg"><meta property="og:description" content="Ehrliche Länderguides von Marc & Fabienne: Indonesien, Thailand, Vietnam, Japan und mehr."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.com/laenderguides.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=2"><style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #151210 | #2d6a4f | #a8d5b5 | #f7f6f2 | #e6e3dc
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Länderguides – Reiseführer für Weltreisende | WirWeitWeg</title>
+  <meta name="description" content="Ehrliche Länderguides von Fabienne & Marc: Thailand, Vietnam, Kambodscha, Laos, Malaysia, Singapur, Indonesien, Philippinen, Japan.">
+  <meta property="og:title" content="Länderguides – Reiseführer für Weltreisende | WirWeitWeg">
+  <meta property="og:description" content="Ehrliche Länderguides von Fabienne & Marc: Thailand, Vietnam, Kambodscha, Laos, Malaysia, Singapur, Indonesien, Philippinen, Japan.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80">
+  <link rel="canonical" href="https://wirweitweg.blog/laenderguides.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=3">
+  <style>
 :root {
-  --white:#fff; --off:#f7f6f2; --ink:#151210; --mid:#5a5550;
-  --light:#b0aba5; --border:#e6e3dc; --green:#2d6a4f;
-  --greenlt:#e6f2ec; --mint:#a8d5b5; --r:12px; --rLg:20px; --maxW:1100px;
+  --ink: #1e1e2e; --off: #fff9ee; --white: #fff; --mid: #6b7280;
+  --light: #b0b8c8; --border: #e2e8f0; --green: #0e9f6e;
+  --greenlt: #d1fae5; --mint: #6ee7b7; --sand: #f59e42; --sandlt: #fff7ed;
+  --r: 12px; --rLg: 20px; --maxW: 1280px;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; font-size: 1rem; line-height: 1.84; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { display: block; width: 100%; object-fit: cover; }
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
-.logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
-.nav-item{position:relative;list-style:none;}
-.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
-.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
-.nav-arr{font-size:.6rem;transition:transform .2s;}
-.nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
-.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
-.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
-.nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
-.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
-.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
-.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
-.nav-mobile.open{display:block;}
-.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
-.nav-mobile a:hover{color:var(--green);}
-.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
+.nav { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: var(--maxW); margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.5rem; letter-spacing: -.04em; color: var(--ink); }
+.logo span { color: var(--green); }
+.nav-menu { display: flex; align-items: center; gap: .25rem; list-style: none; padding: 0; margin: 0; }
+.nav-item { position: relative; list-style: none; }
+.nav-link { font-size: .84rem; font-weight: 700; color: var(--mid); padding: .45rem .85rem; border-radius: 9px; transition: all .15s; display: flex; align-items: center; gap: .25rem; white-space: nowrap; }
+.nav-link:hover, .nav-link.active { background: var(--off); color: var(--ink); }
+.nav-arr { font-size: .6rem; transition: transform .2s; }
+.nav-item:hover .nav-arr { transform: rotate(180deg); }
+.nav-drop { position: absolute; top: 100%; left: 0; background: white; border: 1px solid var(--border); border-radius: var(--r); padding: .5rem; min-width: 220px; box-shadow: 0 8px 32px rgba(0,0,0,.1); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: all .2s; }
+.nav-item:hover .nav-drop { opacity: 1; pointer-events: all; transform: translateY(0); }
+.nav-item::after { content: ""; position: absolute; height: 8px; bottom: -8px; left: 0; right: 0; display: block; }
+.nav-drop a { display: flex; align-items: center; gap: .55rem; font-size: .82rem; font-weight: 600; color: var(--mid); padding: .45rem .75rem; border-radius: 8px; }
+.nav-drop a:hover { background: var(--off); color: var(--green); }
+.nav-drop img { width: 20px; height: 20px; flex-shrink: 0; object-fit: contain; }
+.ndrop-ico { font-size: .95rem; width: 22px; text-align: center; flex-shrink: 0; }
+.nav-cta { background: var(--green); color: white !important; border-radius: 100px; padding: .45rem 1.15rem; font-size: .84rem; font-weight: 700; transition: background .15s; }
+.nav-burger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: .4rem; }
+.nav-burger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
+.nav-mobile { display: none; position: fixed; inset: 0; background: white; z-index: 999; padding: 5rem 1.5rem 2rem; overflow-y: auto; }
+.nav-mobile.open { display: block; }
+.nav-mobile-close { position: absolute; top: 1.25rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+.nav-mobile a { display: block; font-size: 1rem; font-weight: 700; color: var(--ink); padding: .7rem 0; border-bottom: 1px solid var(--border); }
+.nav-mobile a:hover { color: var(--green); }
+.nav-mobile-section { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--light); padding: .85rem 0 .25rem; margin-top: .5rem; }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer{background:#f5edd8;color:#1a1611;padding:4rem 0 0;border-top:none;margin-top:0;}
-.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(0,0,0,.1);}
-.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:#1a1611;text-decoration:none;}
-.f-brand .flogo span{color:#2d6a4f;}
-.f-brand p{font-size:.84rem;line-height:1.7;color:#5a5550;margin-bottom:1.25rem;}
-.f-social{display:flex;gap:.6rem;}
-.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#5a5550;transition:all .15s;text-decoration:none;}
-.f-soc:hover{background:#2d6a4f;color:white;border-color:#2d6a4f;}
-.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0aba5;margin-bottom:1rem;}
-.f-col ul{list-style:none;padding:0;margin:0;}
-.f-col li{margin-bottom:.45rem;}
-.f-col a{font-size:.84rem;color:#5a5550;transition:color .15s;text-decoration:none;}
-.f-col a:hover{color:#2d6a4f;}
-.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:1.5rem 0;}
-.f-affiliate p{font-size:.75rem;color:#b0aba5;line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}
-.f-affiliate strong{color:#5a5550;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:#b0aba5;}
-.footer-bottom a{color:#b0aba5;text-decoration:none;}
-.footer-bottom a:hover{color:#2d6a4f;}
-.footer-bottom-links{display:flex;gap:1.25rem;}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
-.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
-.bmc-btn:hover{transform:translateY(-3px);}
-</style>
-</head><body><nav class="nav">
+/* HERO */
+.art-hero { height: 55vh; min-height: 380px; position: relative; overflow: hidden; }
+.art-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.art-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,16,12,.75) 40%, rgba(20,16,12,.1) 100%); }
+.art-hero-content { position: absolute; bottom: 0; left: 0; right: 0; max-width: var(--maxW); margin: 0 auto; padding: 2.5rem 1.5rem; }
+.art-eyebrow { display: inline-flex; align-items: center; gap: .5rem; background: var(--green); color: #fff; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: .3rem .75rem; border-radius: 100px; margin-bottom: .875rem; }
+.art-h1 { font-family: 'Fraunces', serif; font-weight: 900; font-size: clamp(1.9rem, 4vw, 3rem); color: #fff; line-height: 1.15; margin-bottom: .875rem; }
+.art-h1 em { font-weight: 300; font-style: italic; color: var(--mint); }
+.art-hero p { font-size: 1rem; color: rgba(255,255,255,.75); max-width: 520px; }
+
+/* GRID */
+.lg-wrap { max-width: var(--maxW); margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+.lg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.lg-card { border: 1px solid var(--border); border-radius: var(--rLg); overflow: hidden; background: var(--white); display: block; color: inherit; transition: transform .25s, box-shadow .25s; }
+.lg-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,.1); }
+.lg-card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.lg-card-body { padding: 1.3rem 1.5rem 1.65rem; }
+.lg-card-flag { font-size: 1.4rem; margin-bottom: .4rem; }
+.lg-card-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); margin-bottom: .3rem; }
+.lg-card-sub { font-size: .84rem; line-height: 1.62; color: var(--mid); }
+.lg-card-link { display: inline-flex; align-items: center; gap: .3rem; font-size: .8rem; font-weight: 700; color: var(--green); margin-top: .65rem; }
+
+/* FOOTER */
+.footer { background: #fff7ed; color: #1e1e2e; padding: 4rem 0 0; margin-top: 0; }
+.footer-inner { max-width: var(--maxW); margin: 0 auto; padding: 0 1.5rem; }
+.footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(0,0,0,.1); }
+.f-brand .flogo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.4rem; letter-spacing: -.04em; display: block; margin-bottom: .75rem; color: #1e1e2e; text-decoration: none; }
+.f-brand .flogo span { color: #0e9f6e; }
+.f-brand p { font-size: .84rem; line-height: 1.7; color: #6b7280; margin-bottom: 1.25rem; }
+.f-social { display: flex; gap: .6rem; }
+.f-soc { width: 36px; height: 36px; border-radius: 50%; background: rgba(0,0,0,.07); border: 1px solid rgba(0,0,0,.12); display: flex; align-items: center; justify-content: center; color: #6b7280; transition: all .15s; text-decoration: none; }
+.f-soc:hover { background: #0e9f6e; color: white; border-color: #0e9f6e; }
+.f-col h4 { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #b0b8c8; margin-bottom: 1rem; }
+.f-col ul { list-style: none; padding: 0; margin: 0; }
+.f-col li { margin-bottom: .45rem; }
+.f-col a { font-size: .84rem; color: #6b7280; transition: color .15s; text-decoration: none; }
+.f-col a:hover { color: #0e9f6e; }
+.f-affiliate { border-top: 1px solid rgba(0,0,0,.08); padding: 1.5rem 0; }
+.f-affiliate p { font-size: .75rem; color: #b0b8c8; line-height: 1.65; text-align: center; max-width: 700px; margin: 0 auto; }
+.f-affiliate strong { color: #6b7280; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .65rem; padding: 1.4rem 0; font-size: .76rem; color: #b0b8c8; }
+.footer-bottom a { color: #b0b8c8; text-decoration: none; }
+.footer-bottom a:hover { color: #0e9f6e; }
+.footer-bottom-links { display: flex; gap: 1.25rem; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) { .lg-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .lg-grid { grid-template-columns: 1fr; } .art-hero { height: 42vh; min-height: 280px; } }
+@media (max-width: 900px) { .footer-top { grid-template-columns: 1fr 1fr 1fr; } .nav-menu { display: none; } .nav-burger { display: flex; } }
+@media (max-width: 640px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
     <ul class="nav-menu">
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
+        <a class="nav-link active" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
           <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
@@ -102,12 +137,12 @@ img{display:block;width:100%;object-fit:cover;}
           <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
           <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
           <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
+          <a href="/kambodscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
           <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
@@ -125,47 +160,165 @@ img{display:block;width:100%;object-fit:cover;}
     </button>
   </div>
 </nav>
-<button class="nav-burger"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="nav-mobile"><button class="nav-mobile-close">✕</button>
-<div class="nav-mobile-section">Weltreise Planung</div>
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-<div class="nav-mobile-section">Länderguides</div>
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambotscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-<div class="nav-mobile-section">Mehr</div>
-<a href="/reisetipps.html">Reisetipps</a>
-<a href="/reiseblog.html">Reiseblog</a>
-<a href="/ueber-uns.html">Über Uns</a>
-<a href="/newsletter.html">Newsletter</a>
-</div><div class="pghero"><div class="pghero-inner"><span class="eyebrow">Reiseziele</span><h1 class="pgtitle">Länder-<em>guides</em></h1><p class="pgdesc">Ehrliche Reiseführer für alle Länder auf unserer Route.</p></div></div><div style="max-width:var(--maxW);margin:3rem auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;"><a href="/indonesien.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Indonesien</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Bali, Gili Air, Lombok &amp; mehr</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/malaysia.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f11?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Malaysia</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Kuala Lumpur, Penang, Borneo &amp; mehr</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/singapur.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Singapur</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Der perfekte Stopover in Südostasien</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/thailand.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Thailand</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Bangkok, Chiang Mai, Inseln &amp; mehr</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/vietnam.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Vietnam</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Hanoi, Hoi An, Ho Chi Minh &amp; mehr</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/kambotscha.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Kambotscha</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Angkor Wat und versteckte Schätze</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/laos.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Laos</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Das ruhigste Land Südostasiens</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/philippinen.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Philippinen</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Inseln, Tauchen und Abenteuer</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a><a href="/japan.html" style="border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;background:white;display:block;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80" style="width:100%;height:200px;object-fit:cover;display:block;"><div style="padding:1.3rem 1.5rem 1.65rem;"><div style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:.35rem;">Japan</div><p style="font-size:.84rem;line-height:1.62;color:var(--mid);">Tokio, Kyoto, Osaka &amp; mehr</p><span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;font-weight:700;color:var(--green);margin-top:.65rem;">Guide lesen →</span></div></a></div><style>a[style*="transition:transform"]:hover{transform:translateY(-5px)!important;box-shadow:0 15px 40px rgba(0,0,0,.08)!important;}@media(max-width:900px){div[style*="repeat(3,1fr)"]{grid-template-columns:repeat(2,1fr)!important;}}@media(max-width:600px){div[style*="repeat(3,1fr)"]{grid-template-columns:1fr!important;}}</style><footer class="footer">
+
+<div class="nav-mobile" id="mob">
+  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
+  <a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
+  <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
+  <a href="/wichtige-apps.html">11 · Wichtige Apps</a>
+  <div class="nav-mobile-section">Länderguides</div>
+  <a href="/indonesien.html">Indonesien</a>
+  <a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a>
+  <a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a>
+  <a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a>
+  <a href="/philippinen.html">Philippinen</a>
+  <a href="/japan.html">Japan</a>
+  <div class="nav-mobile-section">Mehr</div>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Reiseblog</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
+</div>
+
+<!-- HERO -->
+<div class="art-hero">
+  <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1400&q=80" alt="Weltreise Länderguides">
+  <div class="art-hero-overlay"></div>
+  <div class="art-hero-content">
+    <div class="art-eyebrow">🌏 Reiseziele</div>
+    <h1 class="art-h1">Länder-<em>guides</em></h1>
+    <p>Ehrliche Reiseführer für alle Länder auf unserer Route – von Fabienne &amp; Marc.</p>
+  </div>
+</div>
+
+<!-- LÄNDER GRID -->
+<div class="lg-wrap">
+  <div class="lg-grid">
+
+    <a href="/thailand.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=75&fit=crop" alt="Thailand">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇹🇭</div>
+        <div class="lg-card-title">Thailand</div>
+        <p class="lg-card-sub">Bangkok, Chiang Mai, Inseln &amp; mehr</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/vietnam.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=800&q=75&fit=crop" alt="Vietnam">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇻🇳</div>
+        <div class="lg-card-title">Vietnam</div>
+        <p class="lg-card-sub">Hanoi, Hoi An, Ho Chi Minh &amp; mehr</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/kambodscha.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=800&q=75&fit=crop" alt="Kambodscha">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇰🇭</div>
+        <div class="lg-card-title">Kambodscha</div>
+        <p class="lg-card-sub">Angkor Wat und versteckte Schätze</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/laos.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=75&fit=crop" alt="Laos">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇱🇦</div>
+        <div class="lg-card-title">Laos</div>
+        <p class="lg-card-sub">Das ruhigste Land Südostasiens</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/malaysia.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=75&fit=crop" alt="Malaysia">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇲🇾</div>
+        <div class="lg-card-title">Malaysia</div>
+        <p class="lg-card-sub">Kuala Lumpur, Penang, Borneo &amp; mehr</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/singapur.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=800&q=75&fit=crop" alt="Singapur">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇸🇬</div>
+        <div class="lg-card-title">Singapur</div>
+        <p class="lg-card-sub">Der perfekte Stopover in Südostasien</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/indonesien.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=75&fit=crop" alt="Indonesien">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇮🇩</div>
+        <div class="lg-card-title">Indonesien</div>
+        <p class="lg-card-sub">Bali, Gili Air, Lombok &amp; mehr</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/philippinen.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=75&fit=crop" alt="Philippinen">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇵🇭</div>
+        <div class="lg-card-title">Philippinen</div>
+        <p class="lg-card-sub">Inseln, Tauchen und Abenteuer</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+    <a href="/japan.html" class="lg-card">
+      <img class="lg-card-img" src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=75&fit=crop" alt="Japan">
+      <div class="lg-card-body">
+        <div class="lg-card-flag">🇯🇵</div>
+        <div class="lg-card-title">Japan</div>
+        <p class="lg-card-sub">Tokio, Kyoto, Osaka &amp; mehr</p>
+        <span class="lg-card-link">Guide lesen →</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
-        <a class="flogo" href="/">Wir<span>Weit</span>Weg</a>
-        <p>Weltreise-Blog aus der Schweiz von Marc &amp; Fabienne. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
+        <a href="/"><img src="/logo-schwarz.png?v=2" alt="WirWeitWeg" style="height:120px;width:auto;margin-bottom:.6rem;display:block;"></a>
+        <p>Weltreise-Blog aus der Schweiz von Fabienne &amp; Marc. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
         <div class="f-social">
-          <a class="f-soc" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener" title="Instagram">
+          <a class="f-soc" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" title="TikTok">
+          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
           </a>
-          <a class="f-soc" href="https://youtube.com/@wirweitweg" target="_blank" rel="noopener" title="YouTube">
+          <a class="f-soc" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+          </a>
+          <a class="f-soc" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
       </div>
@@ -177,7 +330,6 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/auslandskrankenversicherung.html">Versicherung</a></li>
           <li><a href="/kreditkarten.html">Kreditkarten</a></li>
           <li><a href="/packliste.html">Packliste</a></li>
-          <li><a href="/wichtige-apps.html">Apps</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -187,16 +339,16 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/vietnam.html">Vietnam</a></li>
           <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
-          <li><a href="/singapur.html">Singapur</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
       </div>
       <div class="f-col">
-        <h4>Blog</h4>
+        <h4>Reisetipps</h4>
         <ul>
-          <li><a href="/reiseblog.html">Alle Artikel</a></li>
-          <li><a href="/reisetipps.html">Reisetipps</a></li>
-          <li><a href="/reiseblog.html">Reiseberichte</a></li>
+          <li><a href="/sim-karten.html">SIM-Karten</a></li>
+          <li><a href="/transport.html">Transport</a></li>
+          <li><a href="/unterkuenfte.html">Unterkünfte</a></li>
+          <li><a href="/lifehacks.html">Lifehacks</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -211,7 +363,7 @@ img{display:block;width:100%;object-fit:cover;}
       </div>
     </div>
     <div class="f-affiliate">
-      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
+      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p>
     </div>
     <div class="footer-bottom">
       <span>© 2026 WirWeitWeg &middot; Weltreise-Blog aus der Schweiz</span>
@@ -223,9 +375,6 @@ img{display:block;width:100%;object-fit:cover;}
     </div>
   </div>
 </footer>
-<div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
-</div><script src="/script.js"></script>
-</body></html>
+
+</body>
+</html>

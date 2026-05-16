@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Über uns – Marc & Fabienne aus Solothurn | WirWeitWeg</title>
-<meta name="description" content="Wir sind Marc & Fabienne – ein Projektleiter und eine Bürofrau aus Solothurn. Im Dezember 2024 kam die Idee. Am 30. Juni 2026 fliegen wir los. Ohne Rückflugticket. Hier ist unsere Geschichte.">
-<meta property="og:title" content="Über uns – Marc & Fabienne | WirWeitWeg">
-<meta property="og:description" content="Ein Projektleiter, eine Bürofrau, ein Gespräch im Dezember 2024 – und ein Abflug am 30. Juni 2026 ohne Rückflugticket.">
+<title>Über uns – Fabienne &amp; Marc aus Solothurn | WirWeitWeg</title>
+<meta name="description" content="Wir sind Fabienne & Marc – ein Projektleiter und eine Bürofrau aus Solothurn. Am 30. Juni 2026 fliegen wir los.">
+<meta property="og:title" content="Über uns – Fabienne &amp; Marc | WirWeitWeg">
+<meta property="og:description" content="Zwei Leute aus Solothurn. Ein Abflug am 30. Juni 2026. Ohne Rückflugticket.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wirweitweg.blog/ueber-uns.html">
 <meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80">
@@ -17,30 +17,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-
-
-
+<link rel="stylesheet" href="/style.css?v=3">
 <style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #151210 | #2d6a4f | #a8d5b5 | #f7f6f2 | #e6e3dc
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#f7f6f2; --ink:#151210; --mid:#5a5550;
-  --light:#b0aba5; --border:#e6e3dc; --green:#2d6a4f;
-  --greenlt:#e6f2ec; --mint:#a8d5b5; --r:12px; --rLg:20px; --maxW:1100px;
-}
+:root{--ink:#1e1e2e;--off:#fff9ee;--white:#fff;--mid:#6b7280;--light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--sand:#f59e42;--sandlt:#fff7ed;--r:12px;--rLg:20px;--maxW:1280px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
+body{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.84;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;color:var(--ink);}
 .logo span{color:var(--green);}
 .nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
 .nav-item{position:relative;list-style:none;}
@@ -55,8 +44,7 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-drop a:hover{background:var(--off);color:var(--green);}
 .nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
 .ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
+.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;}
 .nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
 .nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
 .nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
@@ -66,39 +54,142 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-mobile a:hover{color:var(--green);}
 .nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
 
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer{background:#f5edd8;color:#1a1611;padding:4rem 0 0;border-top:none;margin-top:0;}
+/* ============================
+   PERSONEN – 2 Spalten, grosse Fotos
+   ============================ */
+.persons-grid{display:grid;grid-template-columns:1fr 1fr;max-width:var(--maxW);margin:0 auto;}
+.person-col{padding:0;}
+.person-col:first-child{border-right:1px solid var(--border);}
+.person-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;}
+.person-img-placeholder{width:100%;aspect-ratio:3/4;background:var(--off);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;}
+.person-img-placeholder-init{font-family:'Fraunces',serif;font-weight:900;font-size:5rem;color:var(--border);}
+.person-img-placeholder-label{font-size:.78rem;color:var(--light);font-weight:700;}
+.person-text{padding:2rem 2.5rem 3rem;}
+.person-text h2{font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.85rem;}
+.person-text p{color:#3a3530;margin-bottom:1rem;line-height:1.84;font-size:1rem;}
+.person-text .placeholder-hint{border:1.5px dashed var(--border);padding:1rem 1.25rem;border-radius:8px;}
+.person-text .placeholder-hint-lbl{font-size:.7rem;font-weight:700;color:var(--sand);margin-bottom:.3rem;}
+.person-text .placeholder-hint p{font-size:.85rem;color:var(--light);margin:0;}
+
+/* SOCIAL ICONS */
+.soc-row{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
+.soc-icon{display:inline-flex;flex-direction:column;align-items:center;gap:.35rem;text-decoration:none;}
+.soc-icon:hover .soc-box{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.22);}
+.soc-box{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;}
+.soc-box svg{width:24px;height:24px;}
+.soc-lbl{font-size:.68rem;font-weight:700;color:var(--mid);}
+
+/* ============================
+   FAVORITEN – gestrichelte Box
+   ============================ */
+.favoriten-section{padding:3.5rem 1.5rem 3rem;}
+.favoriten-inner{max-width:var(--maxW);margin:0 auto;}
+.favoriten-h2{font-family:'Fraunces',serif;font-weight:900;font-size:2rem;color:var(--ink);text-align:center;margin-bottom:2rem;letter-spacing:-.02em;}
+.favoriten-box{border:2px dashed var(--green);border-radius:var(--rLg);overflow:hidden;}
+.favoriten-cols{display:grid;grid-template-columns:1fr 1fr;}
+.fav-col{padding:1.75rem 2rem 2rem;}
+.fav-col:first-child{border-right:2px dashed var(--green);}
+.fav-col-name{font-family:'Fraunces',serif;font-weight:900;font-size:1.35rem;color:var(--green);text-align:center;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid var(--border);}
+.fav-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem;}
+.fav-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;color:#3a3530;line-height:1.5;}
+.fav-icon{flex-shrink:0;width:18px;height:18px;margin-top:.15rem;color:var(--mid);}
+.fav-item strong{color:var(--ink);}
+.fav-placeholder{color:var(--light);font-style:italic;}
+
+/* ============================
+   REISEZIELE – Slider
+   ============================ */
+.chrono-section{padding:3.5rem 0 0;}
+.chrono-h2{font-family:'Fraunces',serif;font-weight:900;font-size:2rem;color:var(--ink);text-align:center;margin-bottom:.5rem;letter-spacing:-.02em;}
+.chrono-sub{text-align:center;font-size:.9rem;color:var(--mid);margin-bottom:2rem;}
+.chrono-slider-wrap{position:relative;max-width:730px;margin:0 auto;padding:0 1.5rem 3.5rem;}
+.chrono-slides{position:relative;border-radius:var(--rLg);overflow:hidden;}
+.chrono-slide{display:none;flex-direction:column;}
+.chrono-slide.active{display:flex;}
+.chrono-slide-img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.chrono-caption{text-align:center;font-size:.92rem;color:var(--mid);padding:.85rem 0;font-weight:700;}
+.chrono-nav{display:flex;align-items:center;justify-content:space-between;position:absolute;top:42%;left:1.5rem;right:1.5rem;pointer-events:none;}
+.chrono-btn{pointer-events:all;background:rgba(255,255,255,.88);border:none;border-radius:50%;width:42px;height:42px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.15);transition:background .15s;}
+.chrono-btn:hover{background:#fff;}
+.chrono-sep{border:none;border-top:1px solid var(--border);max-width:var(--maxW);margin:0 auto;}
+
+/* ============================
+   COUNTDOWN
+   ============================ */
+.countdown-section{padding:3.5rem 1.5rem;text-align:center;border-top:1px solid var(--border);}
+.countdown-inner{max-width:540px;margin:0 auto;}
+.countdown-h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.65rem;color:var(--ink);margin-bottom:.4rem;}
+.countdown-sub{font-size:.9rem;color:var(--mid);margin-bottom:2rem;}
+.cd-row{display:flex;justify-content:center;gap:3rem;}
+.cd-item{text-align:center;}
+.cd-num{font-family:'Fraunces',serif;font-weight:900;font-size:3.5rem;color:var(--ink);line-height:1;}
+.cd-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-top:.25rem;}
+
+/* ============================
+   CLOSING
+   ============================ */
+.closing-section{padding:2.5rem 1.5rem 4rem;border-top:1px solid var(--border);}
+.closing-inner{max-width:660px;margin:0 auto;text-align:center;}
+.closing-p{color:#3a3530;line-height:1.8;margin-bottom:1.75rem;}
+.sig{font-family:'Caveat',cursive;font-size:2rem;color:var(--green);margin-bottom:1.75rem;}
+.soc-row{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin-bottom:2.25rem;}
+.soc-btn{display:inline-flex;align-items:center;gap:.45rem;border:1.5px solid var(--border);border-radius:100px;padding:.5rem 1rem;font-size:.84rem;font-weight:700;color:var(--mid);transition:all .15s;}
+.soc-btn:hover{border-color:var(--green);color:var(--green);}
+.cbox{background:var(--off);border-radius:var(--rLg);padding:1.75rem;text-align:left;}
+.cbox h3{font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;margin-bottom:.3rem;}
+.cbox p{font-size:.88rem;color:var(--mid);margin-bottom:1.1rem;}
+.cbox-links{display:flex;gap:.6rem;flex-wrap:wrap;}
+.btn-pri{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.05rem;border-radius:100px;font-size:.83rem;font-weight:700;background:var(--green);color:white;}
+.btn-pri:hover{background:#235538;}
+.btn-sec{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.05rem;border-radius:100px;font-size:.83rem;font-weight:700;border:1.5px solid var(--border);color:var(--mid);}
+.btn-sec:hover{border-color:var(--green);color:var(--green);}
+
+/* FOOTER */
+.footer{background:#fff7ed;color:#1e1e2e;padding:4rem 0 0;border-top:1px solid var(--border);}
 .footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(0,0,0,.1);}
-.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:#1a1611;text-decoration:none;}
-.f-brand .flogo span{color:#2d6a4f;}
-.f-brand p{font-size:.84rem;line-height:1.7;color:#5a5550;margin-bottom:1.25rem;}
+.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:#1e1e2e;}
+.f-brand .flogo span{color:#0e9f6e;}
+.f-brand p{font-size:.84rem;line-height:1.7;color:#6b7280;margin-bottom:1.25rem;}
 .f-social{display:flex;gap:.6rem;}
-.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#5a5550;transition:all .15s;text-decoration:none;}
-.f-soc:hover{background:#2d6a4f;color:white;border-color:#2d6a4f;}
-.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0aba5;margin-bottom:1rem;}
+.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:#6b7280;transition:all .15s;}
+.f-soc:hover{background:#0e9f6e;color:white;border-color:#0e9f6e;}
+.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0b8c8;margin-bottom:1rem;}
 .f-col ul{list-style:none;padding:0;margin:0;}
 .f-col li{margin-bottom:.45rem;}
-.f-col a{font-size:.84rem;color:#5a5550;transition:color .15s;text-decoration:none;}
-.f-col a:hover{color:#2d6a4f;}
+.f-col a{font-size:.84rem;color:#6b7280;transition:color .15s;}
+.f-col a:hover{color:#0e9f6e;}
 .f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:1.5rem 0;}
-.f-affiliate p{font-size:.75rem;color:#b0aba5;line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}
-.f-affiliate strong{color:#5a5550;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:#b0aba5;}
-.footer-bottom a{color:#b0aba5;text-decoration:none;}
-.footer-bottom a:hover{color:#2d6a4f;}
+.f-affiliate p{font-size:.75rem;color:#b0b8c8;line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}
+.f-affiliate strong{color:#6b7280;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:#b0b8c8;}
+.footer-bottom a{color:#b0b8c8;}
+.footer-bottom a:hover{color:#0e9f6e;}
 .footer-bottom-links{display:flex;gap:1.25rem;}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
-.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
-.bmc-btn:hover{transform:translateY(-3px);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .persons-grid,.videos-grid{grid-template-columns:1fr;}
+  .person-col:first-child,.video-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
+  .favoriten-cols{grid-template-columns:1fr;}
+  .fav-col:first-child{border-right:none;border-bottom:2px dashed var(--green);}
+  .footer-top{grid-template-columns:1fr 1fr 1fr;}
+  .nav-menu{display:none;}
+  .nav-burger{display:flex;}
+}
+@media(max-width:640px){
+  .person-text{padding:1.5rem;}
+  .cd-row{gap:1.75rem;}
+  .cd-num{font-size:2.75rem;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:420px){
+  .footer-top{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
@@ -106,14 +197,14 @@ img{display:block;width:100%;object-fit:cover;}
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
@@ -128,12 +219,12 @@ img{display:block;width:100%;object-fit:cover;}
           <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
           <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
           <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
+          <a href="/kambodscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
           <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
@@ -143,7 +234,7 @@ img{display:block;width:100%;object-fit:cover;}
         </div>
       </li>
       <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="/ueber-uns.html">Über uns</a></li>
+      <li class="nav-item"><a class="nav-link active" href="/ueber-uns.html">Über uns</a></li>
       <li class="nav-item"><a class="nav-link nav-cta" href="/newsletter.html">Newsletter</a></li>
     </ul>
     <button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')">
@@ -152,252 +243,235 @@ img{display:block;width:100%;object-fit:cover;}
   </div>
 </nav>
 
-<!-- MOBILE NAV -->
-<div class="mob">
-  <button class="mob-close" onclick="document.querySelector('.mob').classList.remove('open')">✕ Schliessen</button>
-  <div class="mob-logo">Wir<span>Weit</span>Weg</div>
-  <div class="mob-sec">Weltreise planen</div>
-  <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
-  <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
-  <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
-  <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-  <a href="/packliste.html">🎒 Packliste</a>
-  <div class="mob-sec">Entdecken</div>
-  <a href="/laenderguides.html">🌏 Länderguides</a>
-  <a href="/reiseblog.html">✍️ Blog</a>
-  <a href="/ueber-uns.html" style="color:var(--green);font-weight:700">👋 Über uns</a>
-  <a href="/newsletter.html" style="color:var(--green);font-weight:700;margin-top:.75rem">→ Newsletter</a>
+<div class="nav-mobile" id="mob">
+  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
+  <a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
+  <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
+  <a href="/wichtige-apps.html">11 · Wichtige Apps</a>
+  <div class="nav-mobile-section">Länderguides</div>
+  <a href="/indonesien.html">Indonesien</a>
+  <a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a>
+  <a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a>
+  <a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a>
+  <a href="/philippinen.html">Philippinen</a>
+  <a href="/japan.html">Japan</a>
+  <div class="nav-mobile-section">Mehr</div>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Reiseblog</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
 </div>
 
-<!-- ─── KINO HERO ─── -->
-<div class="kino">
-  <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=85&fit=crop" alt="WirWeitWeg – die Welt wartet" loading="eager">
-  <div class="kino-overlay"></div>
-  <div class="kino-content">
-    <div class="kino-eyebrow">Solothurn, Schweiz · Weltreise ab 30. Juni 2026</div>
-    <h1 class="kino-h1">Das sind Marc<br>&amp; <em>Fabienne.</em></h1>
-    <p class="kino-sub">Der eine Projektleiter im Sanitärbereich. Die andere im Büro. Und damals beide ein kleines bisschen bereit für mehr – sie wussten es nur noch nicht.</p>
-  </div>
-</div>
-
-<!-- ─── INTRO ─── -->
-<div class="intro">
-  <div class="intro-eyebrow">Unsere Geschichte</div>
-  <p class="intro-lead">Wir sind kein Reiseblog von jemandem, der schon überall war. Wir sind mittendrin – im Planen, im Loslassen, im Vorfreuen. Und wir schreiben auf, was wir dabei lernen. <em>Für alle, die dasselbe gerade durchmachen.</em></p>
-  <div class="intro-body">
-    <p>Marc war Projektleiter im Sanitärbereich. Fabienne hat im Büro gearbeitet. Zusammen lebten sie in Solothurn, hatten ihre Routinen, ihre Feierabende, ihre Wochenenden. Ein Leben, das gut war – das muss man wirklich so sagen. Keine Krise, kein Drama, kein «ich muss hier raus». Einfach – irgendwann das ruhige Gefühl, dass das nicht alles gewesen sein kann.</p>
-  </div>
-</div>
-
-<!-- ─── PERSONEN ─── -->
-<div class="persons">
-
-  <!-- MARC -->
-  <div class="p-card">
-    <div class="p-photo">
-      <!-- 📸 Ersetze durch: <img src="marc.jpg" alt="Marc" class="p-photo-img"> -->
-      <div class="p-photo-placeholder">
-        <div class="p-initial">M</div>
-      </div>
-    </div>
-    <div class="p-body">
-      <div class="p-name">Marc</div>
-      <div class="p-role">Projektleiter Sanitär · Der mit dem Plan</div>
-      <div class="p-placeholder">
-        <div class="p-placeholder-label">✏️ Marc – trag hier ein was wirklich zu dir passt</div>
-        <p class="p-placeholder-text">Was liebst du? Was nervt dich auf Reisen? Was kann man über dich sagen das Menschen zum Schmunzeln bringt? 2–3 Sätze die zeigen wer du bist – so wie Ania & Daniel es machen.</p>
-      </div>
-    </div>
-  </div>
+<!-- ============================
+     PERSONEN – 2 grosse Fotos nebeneinander
+     ============================ -->
+<div class="persons-grid">
 
   <!-- FABIENNE -->
-  <div class="p-card">
-    <div class="p-photo">
-      <!-- 📸 Ersetze durch: <img src="fabienne.jpg" alt="Fabienne" class="p-photo-img"> -->
-      <div class="p-photo-placeholder">
-        <div class="p-initial">F</div>
+  <div class="person-col" id="fabienne">
+    <!-- 📸 Ersetze durch echtes Foto: <img src="/img/fabienne.jpg" alt="Fabienne" class="person-img"> -->
+    <div class="person-img-placeholder">
+      <div class="person-img-placeholder-init">F</div>
+      <div class="person-img-placeholder-label">📸 Foto von Fabienne einfügen</div>
+    </div>
+    <div class="person-text">
+      <h2>Wer ist Fabienne?</h2>
+      <!-- ✏️ Ersetze diesen Platzhalter durch deinen echten Bio-Text -->
+      <div class="placeholder-hint">
+        <div class="placeholder-hint-lbl">✏️ Fabienne – dein Text kommt hier hin</div>
+        <p>Wer bist du? Was liebst du am Reisen? Was sagt Marc über dich, das du selbst nie so sagen würdest? 3–5 Sätze, locker, so wie du redest.</p>
       </div>
     </div>
-    <div class="p-body">
-      <div class="p-name">Fabienne</div>
-      <div class="p-role">Büro · Die mit dem Blick</div>
-      <div class="p-placeholder">
-        <div class="p-placeholder-label">✏️ Fabienne – trag hier ein was wirklich zu dir passt</div>
-        <p class="p-placeholder-text">Was liebst du? Was macht dich als Reisende aus? Was sagt Marc über dich, das du selbst nie so sagen würdest? 2–3 Sätze – direkt, menschlich, erkennbar.</p>
+  </div>
+
+  <!-- MARC -->
+  <div class="person-col" id="marc">
+    <!-- 📸 Ersetze durch echtes Foto: <img src="/img/marc.jpg" alt="Marc" class="person-img"> -->
+    <div class="person-img-placeholder">
+      <div class="person-img-placeholder-init">M</div>
+      <div class="person-img-placeholder-label">📸 Foto von Marc einfügen</div>
+    </div>
+    <div class="person-text">
+      <h2>Wer ist Marc?</h2>
+      <!-- ✏️ Ersetze diesen Platzhalter durch deinen echten Bio-Text -->
+      <div class="placeholder-hint">
+        <div class="placeholder-hint-lbl">✏️ Marc – dein Text kommt hier hin</div>
+        <p>Wer bist du? Was begeistert dich, was nervt dich? Worüber redest du stundenlang? 3–5 Sätze – direkt und ehrlich.</p>
       </div>
     </div>
   </div>
 
 </div>
 
-<!-- ─── KAPITEL 1: DAVOR ─── -->
-<div class="story-section story-off" style="margin-top:4rem">
-  <div class="s-year">2024</div>
-  <div class="story-inner">
-    <div class="s-eyebrow">Kapitel 1 · Bevor die Idee kam</div>
-    <h2 class="s-h2">Es war eigentlich <em>alles gut.</em></h2>
-    <p>Marc war Projektleiter im Sanitärbereich. Fünf Tage die Woche, Baustellen, Verantwortung, Abende auf dem Sofa. Fabienne sass im Büro. Beide in Solothurn. Beide mit einem Leben, das nach Plan lief. Und einem leisen Gefühl – ganz hinten im Kopf, das man nicht richtig benennen kann – dass Plan vielleicht nicht alles ist.</p>
-    <p>Für eine Weltreise hat keiner von beiden je konkret geplant. Das war etwas für andere Leute. Mutigere Leute. Leute ohne Wohnung, ohne Job, ohne das, was man gemeinhin als «Normalität» bezeichnet.</p>
-    <p>Dann kam der Dezember 2024.</p>
-  </div>
-</div>
 
-<!-- ─── KAPITEL 2: DIE IDEE ─── -->
-<div class="story-section story-dark">
-  <div class="s-year">2024</div>
-  <div class="story-inner">
-    <div class="s-eyebrow">Kapitel 2 · Dezember 2024</div>
-    <h2 class="s-h2">Das Gespräch vor <em>Berlin.</em></h2>
-    <p>Sie standen kurz vor dem Silvester-Trip nach Berlin. Irgendwo in den Tagen davor – wahrscheinlich am Küchentisch, wie das bei solchen Gesprächen so ist – kam das Thema. Nicht das erste Mal. Aber das erste Mal, dass keiner von beiden «ja, irgendwann mal» gesagt hat.</p>
+<!-- ============================
+     DIE FAVORITEN VON ...
+     ============================ -->
+<div class="favoriten-section">
+  <div class="favoriten-inner">
+    <h2 class="favoriten-h2">Die Favoriten von ...</h2>
+    <div class="favoriten-box">
+      <div class="favoriten-cols">
 
-    <p style="font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:1.2rem;color:var(--white);line-height:1.6;margin:1.75rem 0">«Was wäre, wenn wir das wirklich machen?»</p>
-
-    <p>Und dann haben sie angefangen zu rechnen. Wann könnte man gehen? Was kostet das? Was müsste man alles klären? Die Fragen waren nicht klein. Aber sie hatten plötzlich die Möglichkeit von Antworten. Das fühlte sich anders an als alle Male davor.</p>
-
-    <div class="pq">
-      <p>Es muss nicht erst alles schlecht sein, um etwas Grosses zu wagen. Manchmal reicht es, wenn es gut ist – und man trotzdem weiss, dass es noch mehr geben könnte.</p>
-      <cite>— Marc &amp; Fabienne</cite>
-    </div>
-
-    <p>Sie sind nach Berlin geflogen. Silvester. Feuerwerk. Und irgendwo zwischen Sekt und Mitternacht war klar: Das war nicht mehr «irgendwann mal».</p>
-  </div>
-</div>
-
-<!-- ─── KAPITEL 3: PLANUNG ─── -->
-<div class="story-section">
-  <div class="s-year">2025</div>
-  <div class="story-inner">
-    <div class="s-eyebrow">Kapitel 3 · 2025</div>
-    <h2 class="s-h2">Ein Jahr lang <em>alles klären.</em></h2>
-    <p>Was dann folgte, war ein Jahr voller Fragen. Nicht die romantischen – «Wohin zuerst? Thailand oder Vietnam?» – sondern die echten. Was passiert mit der KVG wenn man mehr als drei Monate weg ist? Wie läuft das mit der Pensionskasse, wenn man kündigt? Was macht man mit dem Auto? Mit der Post? Mit den Abos?</p>
-    <p>Auf viele davon gab es in den bekannten Weltreise-Blogs keine Antwort – weil die meisten aus Deutschland schreiben. Für Schweizer braucht es andere Lösungen. Marc und Fabienne haben sie gesucht, gefunden, und hier aufgeschrieben.</p>
-
-    <div class="artikel-links">
-      <a href="/budget-kosten.html" class="al">
-        <span class="al-icon">💰</span>
-        <div class="al-body">
-          <div class="al-label">Planungsartikel</div>
-          <div class="al-title">Was kostet eine Weltreise aus der Schweiz? – Echte CHF-Zahlen</div>
+        <!-- FABIENNE FAVORITEN -->
+        <div class="fav-col">
+          <div class="fav-col-name">Fabienne</div>
+          <ul class="fav-list">
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span><strong>Städte:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              <span><strong>Länder:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span><strong>Serien:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4"/></svg>
+              <span><strong>Filme:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg>
+              <span><strong>Podcasts:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              <span><strong>Bands:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+              <span><strong>Bücher:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+          </ul>
         </div>
-        <span class="al-arrow">→</span>
-      </a>
-      <a href="/job-auto-wohnung.html" class="al">
-        <span class="al-icon">🏠</span>
-        <div class="al-body">
-          <div class="al-label">Planungsartikel</div>
-          <div class="al-title">Job kündigen, Wohnung auflösen, Auto verkaufen – Schritt für Schritt</div>
+
+        <!-- MARC FAVORITEN -->
+        <div class="fav-col">
+          <div class="fav-col-name">Marc</div>
+          <ul class="fav-list">
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span><strong>Städte:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              <span><strong>Länder:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span><strong>Serien:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4"/></svg>
+              <span><strong>Filme:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg>
+              <span><strong>Podcasts:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              <span><strong>Bands:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+            <li class="fav-item">
+              <svg class="fav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+              <span><strong>Bücher:</strong> <span class="fav-placeholder">bitte ausfüllen</span></span>
+            </li>
+          </ul>
         </div>
-        <span class="al-arrow">→</span>
-      </a>
-      <a href="/auslandskrankenversicherung.html" class="al">
-        <span class="al-icon">🏥</span>
-        <div class="al-body">
-          <div class="al-label">Planungsartikel · Schweizer Spezialthema</div>
-          <div class="al-title">KVG kündigen bei dauerhafter Emigration – alles was du wissen musst</div>
-        </div>
-        <span class="al-arrow">→</span>
-      </a>
-      <a href="/weltreise-planung.html" class="al">
-        <span class="al-icon">📋</span>
-        <div class="al-body">
-          <div class="al-label">Übersicht</div>
-          <div class="al-title">Alle 11 Planungsschritte auf einen Blick</div>
-        </div>
-        <span class="al-arrow">→</span>
-      </a>
-    </div>
 
-    <div class="ibox green">
-      <div class="ibox-ico">🇨🇭</div>
-      <div class="ibox-t">Warum Schweizer einen eigenen Blog brauchen</div>
-      <div class="ibox-b">Die deutschen Weltreise-Blogs sind toll. Aber KVG ist nicht GKV. RAV ist nicht Arbeitsamt. Pensionskasse ist nicht Rentenkasse. WirWeitWeg schreibt aus der Schweiz für Schweizer – mit CHF-Zahlen und Antworten auf die Fragen, die sonst niemand beantwortet.</div>
-    </div>
-  </div>
-</div>
-
-<!-- ─── KAPITEL 4: KÜNDIGUNG ─── -->
-<div class="story-section story-dark">
-  <div class="s-year">2026</div>
-  <div class="story-inner">
-    <div class="s-eyebrow">Kapitel 4 · Anfang 2026</div>
-    <h2 class="s-h2">Der Punkt <em>ohne Rückweg.</em></h2>
-    <p>Dann haben sie gekündigt. Zuerst die Jobs. Dann die Wohnung. Das ist der Moment, wo Weltreise aufhört, ein Plan zu sein – und anfängt, wirklich passiert zu sein.</p>
-    <p>Der Kopf hört in diesem Moment auf, in beide Richtungen zu denken. Die Frage «Machen wir das wirklich?» stellt sich nicht mehr. Es ist entschieden. Und das ist, auch wenn man kaum schlafen kann davon, eine der besten Gefühle, die es gibt.</p>
-
-    <div class="pq">
-      <p>Wir haben die Wohnungsschlüssel abgegeben. Das Büro geleert. Und dann waren es auf einmal keine Pläne mehr – es war einfach wahr.</p>
-      <cite>— Fabienne</cite>
-    </div>
-
-    <figure class="s-img">
-      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1000&q=80&fit=crop" alt="Die Welt wartet" loading="lazy">
-      <figcaption>Irgendwo dort draussen wartet das nächste Kapitel.</figcaption>
-    </figure>
-  </div>
-</div>
-
-<!-- ─── KAPITEL 5: DER BLOG ─── -->
-<div class="story-section story-off">
-  <div class="s-year">NOW</div>
-  <div class="story-inner">
-    <div class="s-eyebrow">Kapitel 5 · Jetzt</div>
-    <h2 class="s-h2">Der Blog, <em>bevor die Reise beginnt.</em></h2>
-    <p>Geh-mal-reisen haben ihren Blog ein Jahr vor der Abreise gestartet – um die Planung festzuhalten und anderen zu helfen. Dasselbe machen Marc und Fabienne. Nur mit einem anderen Fokus: der Schweiz.</p>
-    <p>Dieser Blog existiert, weil die Planung einer Weltreise aus der Schweiz anders ist als aus Deutschland. Und weil jemand der dasselbe gerade durchmacht, eine Anlaufstelle verdient, die wirklich zu seiner Situation passt.</p>
-    <p>Und weil ein Blog der vor der Reise startet etwas hat, das kein nachgeschriebener Bericht je haben kann: die echte Vorfreude. Den echten Countdown. Die echten offenen Fragen.</p>
-
-    <div class="artikel-links">
-      <a href="/idee-zeitplan.html" class="al">
-        <span class="al-icon">💡</span>
-        <div class="al-body">
-          <div class="al-label">Schritt 01</div>
-          <div class="al-title">Wie entsteht eine Weltreise-Idee – und wann ist der richtige Zeitpunkt?</div>
-        </div>
-        <span class="al-arrow">→</span>
-      </a>
-      <a href="/kreditkarten.html" class="al">
-        <span class="al-icon">💳</span>
-        <div class="al-body">
-          <div class="al-label">Schritt 06 · Schweizer Fokus</div>
-          <div class="al-title">Wise, Revolut, Neon – die besten Karten für Schweizer auf Weltreise</div>
-        </div>
-        <span class="al-arrow">→</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ─── ABFLUG SZENE ─── -->
-<div class="abflug">
-  <div class="abflug-inner">
-    <div class="abflug-eyebrow">30. Juni 2026 · Zürich</div>
-    <div class="abflug-date">Wir packen die Rucksäcke.<br>Wir geben den Schlüssel ab.<br><em>Wir fliegen.</em></div>
-    <p class="abflug-text">Zwei 40-Liter-Rucksäcke. Ein One-Way-Ticket. Kein Plan für danach – und das ist genau so gewollt.</p>
-    <div>
-      <div class="cd-strip">
-        <span class="cd-num" id="cdNum">–</span>
-        <span class="cd-unit">Tage</span>
       </div>
-      <div class="cd-label">bis zum Abflug</div>
     </div>
   </div>
 </div>
 
-<!-- ─── SCHLUSS ─── */-->
-<div class="closing">
-  <p class="closing-text">Danke, dass du hier bist. Ob du selbst eine Weltreise planst, mitverfolgst wie das mit Solothurn und dem Rest der Welt zusammenpasst – oder einfach neugierig bist was passiert, wenn zwei ganz normale Leute alles loslassen.</p>
-  <div class="sig">Marc &amp; Fabienne</div>
-  <div class="social-row">
-    <a href="https://instagram.com/wirweitweg" class="soc-btn" target="_blank" rel="noopener">📸 Instagram</a>
-    <a href="https://tiktok.com/@wirweitweg" class="soc-btn" target="_blank" rel="noopener">🎬 TikTok</a>
-    <a href="https://youtube.com/@wirweitweg" class="soc-btn" target="_blank" rel="noopener">▶️ YouTube</a>
+<!-- ============================
+     UNSERE REISECHRONOLOGIE – Slider
+     ============================ -->
+<hr class="chrono-sep">
+<div class="chrono-section">
+  <h2 class="chrono-h2">Unsere Wunschziele</h2>
+  <p class="chrono-sub">Geplant ab 30. Juni 2026 – Reihenfolge kann sich noch ändern.</p>
+  <div class="chrono-slider-wrap">
+    <div class="chrono-slides" id="chronoSlides">
+      <div class="chrono-slide active">
+        <img class="chrono-slide-img" src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1000&q=85&fit=crop" alt="Thailand">
+        <div class="chrono-caption">Thailand – Tempel, Strände, Street Food</div>
+      </div>
+      <div class="chrono-slide">
+        <img class="chrono-slide-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1000&q=85&fit=crop" alt="Vietnam">
+        <div class="chrono-caption">Vietnam – Ha Long Bay bis Ho-Chi-Minh-Stadt</div>
+      </div>
+      <div class="chrono-slide">
+        <img class="chrono-slide-img" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=1000&q=85&fit=crop" alt="Kambodscha">
+        <div class="chrono-caption">Kambodscha – Angkor Wat</div>
+      </div>
+      <div class="chrono-slide">
+        <img class="chrono-slide-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1000&q=85&fit=crop" alt="Indonesien">
+        <div class="chrono-caption">Indonesien – Bali und die Inseln</div>
+      </div>
+      <div class="chrono-slide">
+        <img class="chrono-slide-img" src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1000&q=85&fit=crop" alt="Japan">
+        <div class="chrono-caption">Japan – Tokyo, Kyoto und mehr</div>
+      </div>
+    </div>
+    <div class="chrono-nav">
+      <button class="chrono-btn" onclick="moveChrono(-1)">&#8249;</button>
+      <button class="chrono-btn" onclick="moveChrono(1)">&#8250;</button>
+    </div>
   </div>
-  <div class="cbox">
-    <h3>Schreib uns</h3>
-    <p>Fragen zur Planung aus der Schweiz, Feedback, oder einfach Hallo – wir lesen alles.</p>
-    <div class="clinks">
-      <a href="/cdn-cgi/l/email-protection#dcb4bdb0b0b39cabb5aeabb9b5a8abb9bbf2beb0b3bb" class="cl pri">✉️ <span class="__cf_email__" data-cfemail="a9c1c8c5c5c6e9dec0dbdeccc0dddeccce87cbc5c6ce">[email&#160;protected]</span></a>
-      <a href="/newsletter.html" class="cl sec">→ Newsletter</a>
+</div>
+
+
+<!-- ============================
+     CLOSING
+     ============================ -->
+<div class="closing-section">
+  <div class="closing-inner">
+    <p class="closing-p">Danke, dass du hier bist – ob du selbst eine Weltreise planst, mitfieberst, oder einfach neugierig bist was passiert wenn zwei ganz normale Leute aus Solothurn alles loslassen.</p>
+    <div class="sig">Fabienne &amp; Marc</div>
+    <div class="soc-row">
+      <a href="https://www.instagram.com/_wir_weit_weg_/" class="soc-icon" target="_blank" rel="noopener">
+        <div class="soc-box" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
+        </div>
+        <span class="soc-lbl">Instagram</span>
+      </a>
+      <a href="https://tiktok.com/@wirweitweg" class="soc-icon" target="_blank" rel="noopener">
+        <div class="soc-box" style="background:#010101">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
+        </div>
+        <span class="soc-lbl">TikTok</span>
+      </a>
+      <a href="https://youtube.com/@Wirweitweg555" class="soc-icon" target="_blank" rel="noopener">
+        <div class="soc-box" style="background:#FF0000">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+        </div>
+        <span class="soc-lbl">YouTube</span>
+      </a>
+    </div>
+    <div class="cbox">
+      <h3>Schreib uns</h3>
+      <p>Fragen, Feedback, oder einfach Hallo – wir lesen alles.</p>
+      <div class="cbox-links">
+        <a href="mailto:wirweitweg555@gmail.com" class="btn-pri">✉️ E-Mail schreiben</a>
+        <a href="/newsletter.html" class="btn-sec">→ Newsletter</a>
+      </div>
     </div>
   </div>
 </div>
@@ -407,17 +481,20 @@ img{display:block;width:100%;object-fit:cover;}
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
-        <a class="flogo" href="/">Wir<span>Weit</span>Weg</a>
-        <p>Weltreise-Blog aus der Schweiz von Marc &amp; Fabienne. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
+        <a href="/"><img src="/logo-schwarz.png?v=2" alt="WirWeitWeg" style="height:120px;width:auto;margin-bottom:.6rem;display:block;"></a>
+        <p>Weltreise-Blog aus der Schweiz von Fabienne &amp; Marc. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
         <div class="f-social">
-          <a class="f-soc" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener" title="Instagram">
+          <a class="f-soc" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" title="TikTok">
+          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
           </a>
-          <a class="f-soc" href="https://youtube.com/@wirweitweg" target="_blank" rel="noopener" title="YouTube">
+          <a class="f-soc" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+          </a>
+          <a class="f-soc" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
       </div>
@@ -429,7 +506,6 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/auslandskrankenversicherung.html">Versicherung</a></li>
           <li><a href="/kreditkarten.html">Kreditkarten</a></li>
           <li><a href="/packliste.html">Packliste</a></li>
-          <li><a href="/wichtige-apps.html">Apps</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -439,16 +515,16 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/vietnam.html">Vietnam</a></li>
           <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
-          <li><a href="/singapur.html">Singapur</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
       </div>
       <div class="f-col">
-        <h4>Blog</h4>
+        <h4>Reisetipps</h4>
         <ul>
-          <li><a href="/reiseblog.html">Alle Artikel</a></li>
-          <li><a href="/reisetipps.html">Reisetipps</a></li>
-          <li><a href="/reiseblog.html">Reiseberichte</a></li>
+          <li><a href="/sim-karten.html">SIM-Karten</a></li>
+          <li><a href="/transport.html">Transport</a></li>
+          <li><a href="/unterkuenfte.html">Unterkünfte</a></li>
+          <li><a href="/lifehacks.html">Lifehacks</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -463,7 +539,7 @@ img{display:block;width:100%;object-fit:cover;}
       </div>
     </div>
     <div class="f-affiliate">
-      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
+      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p>
     </div>
     <div class="footer-bottom">
       <span>© 2026 WirWeitWeg &middot; Weltreise-Blog aus der Schweiz</span>
@@ -475,13 +551,15 @@ img{display:block;width:100%;object-fit:cover;}
     </div>
   </div>
 </footer>
-<div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
-</div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function update(){var d=new Date('2026-06-30T08:00:00')-new Date();var e=document.getElementById('cdNum');if(e)e.textContent=d>0?Math.floor(d/86400000):'0';}
-update();setInterval(update,60000);
+
+<script>
+var chronoIdx=0;
+function moveChrono(dir){
+  var slides=document.querySelectorAll('.chrono-slide');
+  slides[chronoIdx].classList.remove('active');
+  chronoIdx=(chronoIdx+dir+slides.length)%slides.length;
+  slides[chronoIdx].classList.add('active');
+}
 </script>
 </body>
 </html>

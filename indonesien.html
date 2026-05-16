@@ -1,546 +1,90 @@
-
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Indonesien Reiseführer 2026 – Bali, Lombok, Gili Air & mehr | WirWeitWeg</title><meta name="description" content="Der ehrliche Indonesien-Reiseführer für Weltreisende: Bali, Ubud, Canggu, Gili Air, Lombok – Kosten, Tipps, Highlights und alles was du wissen musst."><meta property="og:title" content="Indonesien Reiseführer | WirWeitWeg"><meta property="og:description" content="Der ehrliche Indonesien-Reiseführer für Weltreisende: Bali, Ubud, Canggu, Gili Air, Lombok – Kosten, Tipps, Highlights und alles was du wissen musst."><meta property="og:image" content="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.com/indonesien.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=2"><style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #151210 | #2d6a4f | #a8d5b5 | #f7f6f2 | #e6e3dc
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#f7f6f2; --ink:#151210; --mid:#5a5550;
-  --light:#b0aba5; --border:#e6e3dc; --green:#2d6a4f;
-  --greenlt:#e6f2ec; --mint:#a8d5b5; --r:12px; --rLg:20px; --maxW:1100px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
-.logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
-.nav-item{position:relative;list-style:none;}
-.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
-.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
-.nav-arr{font-size:.6rem;transition:transform .2s;}
-.nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
-.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
-.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
-.nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
-.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
-.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
-.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
-.nav-mobile.open{display:block;}
-.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
-.nav-mobile a:hover{color:var(--green);}
-.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
-
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer{background:#f5edd8;color:#1a1611;padding:4rem 0 0;border-top:none;margin-top:0;}
-.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(0,0,0,.1);}
-.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:#1a1611;text-decoration:none;}
-.f-brand .flogo span{color:#2d6a4f;}
-.f-brand p{font-size:.84rem;line-height:1.7;color:#5a5550;margin-bottom:1.25rem;}
-.f-social{display:flex;gap:.6rem;}
-.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#5a5550;transition:all .15s;text-decoration:none;}
-.f-soc:hover{background:#2d6a4f;color:white;border-color:#2d6a4f;}
-.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0aba5;margin-bottom:1rem;}
-.f-col ul{list-style:none;padding:0;margin:0;}
-.f-col li{margin-bottom:.45rem;}
-.f-col a{font-size:.84rem;color:#5a5550;transition:color .15s;text-decoration:none;}
-.f-col a:hover{color:#2d6a4f;}
-.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:1.5rem 0;}
-.f-affiliate p{font-size:.75rem;color:#b0aba5;line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}
-.f-affiliate strong{color:#5a5550;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:#b0aba5;}
-.footer-bottom a{color:#b0aba5;text-decoration:none;}
-.footer-bottom a:hover{color:#2d6a4f;}
-.footer-bottom-links{display:flex;gap:1.25rem;}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
-.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
-.bmc-btn:hover{transform:translateY(-3px);}
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indonesien Reiseführer – Bali, Lombok & Java | WirWeitWeg</title>
+<meta name="description" content="Indonesien als Weltreise-Stopp: Bali, Lombok, Java und die Inselwelt. Fabienne & Marc bereiten den ehrlichen Schweizer Guide vor – ab 2026.">
+<meta property="og:title" content="Indonesien Reiseführer | WirWeitWeg"><meta property="og:description" content="Bali, Lombok, Java – der ehrliche Guide von Fabienne & Marc folgt ab 2026."><meta property="og:type" content="article"><meta property="og:url" content="https://wirweitweg.blog/indonesien.html"><meta property="og:image" content="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80"><meta property="og:locale" content="de_CH"><meta name="twitter:card" content="summary_large_image"><meta name="robots" content="index, follow"><meta name="author" content="Fabienne &amp; Marc – WirWeitWeg">
+<link rel="canonical" href="https://wirweitweg.blog/indonesien.html">
+<link rel="icon" type="image/png" href="/logo.png"><link rel="apple-touch-icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Indonesien Reiseführer – Bali, Lombok & Java","image":"https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80","author":[{"@type":"Person","name":"Fabienne"},{"@type":"Person","name":"Marc"}],"publisher":{"@type":"Organization","name":"WirWeitWeg","url":"https://wirweitweg.blog"},"datePublished":"2026-05-14","inLanguage":"de-CH"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wirweitweg.blog"},{"@type":"ListItem","position":2,"name":"Länderguides","item":"https://wirweitweg.blog/laenderguides.html"},{"@type":"ListItem","position":3,"name":"Indonesien","item":"https://wirweitweg.blog/indonesien.html"}]}]</script>
+<style>
+:root{--ink:#1e1e2e;--off:#fff9ee;--white:#fff;--mid:#6b7280;--light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--sand:#f59e42;--sandlt:#fff7ed;--r:12px;--rLg:20px;--maxW:1280px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.84;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}a{text-decoration:none;color:inherit;}img{max-width:100%;height:auto;display:block;}strong{font-weight:700;}
+.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;color:var(--ink);}.logo span{color:var(--green);}.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}.nav-item{position:relative;list-style:none;}.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}.nav-arr{font-size:.6rem;transition:transform .2s;}.nav-item:hover .nav-arr{transform:rotate(180deg);}.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}.nav-drop a:hover{background:var(--off);color:var(--green);}.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;}.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}.nav-mobile.open{display:block;}.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}.nav-mobile a:hover{color:var(--green);}.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
+.breadcrumb{max-width:var(--maxW);margin:0 auto;padding:1rem 1.5rem .25rem;font-size:.8rem;color:var(--light);display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;}.breadcrumb a{color:var(--light);}.breadcrumb a:hover{color:var(--green);}.breadcrumb span{color:var(--border);}
+.art-hero{height:55vh;min-height:380px;position:relative;overflow:hidden;}.art-hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}.art-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,12,.82) 40%,rgba(20,16,12,.1) 100%);}.art-hero-content{position:absolute;bottom:0;left:0;right:0;max-width:var(--maxW);margin:0 auto;padding:2.5rem 1.5rem;}.art-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:#fff;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .75rem;border-radius:100px;margin-bottom:.875rem;}.art-h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(1.9rem,4vw,3rem);color:#fff;line-height:1.15;margin-bottom:.875rem;}.art-h1 em{font-weight:300;font-style:italic;color:var(--mint);}.art-meta-row{display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;}.art-meta-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:rgba(255,255,255,.75);font-weight:600;}.art-meta-item svg{width:14px;height:14px;opacity:.7;}
+.art-main{max-width:var(--maxW);margin:0 auto;padding:2.5rem 1.5rem 4rem;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;}.art-content{min-width:0;color:#3a3530;}.art-content a{color:var(--green);font-weight:700;}.art-content h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.85rem;letter-spacing:-.03em;color:var(--ink);margin:3rem 0 1rem;line-height:1.15;}.art-content h2 em{font-weight:300;font-style:italic;color:var(--green);}.art-content p{margin-bottom:1.3rem;}.art-content strong{font-weight:700;color:var(--ink);}
+.pull-quote{border-left:4px solid var(--green);background:var(--greenlt);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.5rem 1.75rem;margin:2rem 0;}.pull-quote p{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:1.2rem;color:var(--ink);line-height:1.5;margin:0 0 .5rem;}.pull-quote cite{font-size:.8rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.05em;font-style:normal;}
+.infobox{display:grid;grid-template-columns:auto 1fr;gap:.25rem .875rem;padding:1.25rem 1.5rem;border-radius:var(--rLg);margin:1.75rem 0;}.infobox.sand{background:var(--sandlt);border:1px solid #e8d5b0;}.ibox-ico{font-size:1.4rem;grid-row:span 2;padding-top:.1rem;}.ibox-title{font-weight:700;font-size:.9rem;color:#8a6a30;text-transform:uppercase;letter-spacing:.04em;}.ibox-body{font-size:.9rem;line-height:1.7;grid-column:2;}.ibox-body a{font-weight:700;}
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}.num-card{background:var(--off);border-radius:var(--rLg);padding:1.5rem 1.25rem;text-align:center;}.num-value{font-family:'Fraunces',serif;font-weight:900;font-size:1.8rem;color:var(--green);line-height:1.1;}.num-label{font-size:.8rem;font-weight:700;color:var(--mid);margin-top:.4rem;}
+.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}.preview-card{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.25rem;display:flex;gap:.875rem;align-items:flex-start;}.preview-card-ico{font-size:1.5rem;flex-shrink:0;line-height:1;}.preview-card-title{font-family:'Fraunces',serif;font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.2rem;}.preview-card-sub{font-size:.8rem;color:var(--mid);line-height:1.55;}.preview-card-tag{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--green);background:var(--greenlt);border-radius:100px;padding:.15rem .6rem;margin-bottom:.4rem;}
+.share-row{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.25rem 0;margin:2.5rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}.share-label{font-size:.78rem;font-weight:700;color:var(--mid);margin-right:.25rem;}.share-icon{display:inline-flex;flex-direction:column;align-items:center;gap:.3rem;text-decoration:none;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;padding:0;}.share-icon:hover .share-icon-box{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.22);}.share-icon-box{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;}.share-icon-box svg{width:22px;height:22px;}.share-icon-label{font-size:.65rem;font-weight:700;color:var(--mid);}
+.author-box{display:flex;gap:1.25rem;align-items:flex-start;background:var(--off);border-radius:var(--rLg);padding:1.5rem;margin:2.5rem 0;}.author-avatar{width:72px;height:72px;border-radius:50%;flex-shrink:0;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--white);}.author-info{flex:1;}.author-name{font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--ink);}.author-role{font-size:.78rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.05em;}.author-bio{font-size:.875rem;color:var(--mid);margin-top:.4rem;line-height:1.65;}
+.related-section{margin:3rem 0 0;}.related-title{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);margin-bottom:1.25rem;}.related-title em{font-weight:300;font-style:italic;color:var(--green);}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}.related-card{border-radius:var(--rLg);overflow:hidden;border:1px solid var(--border);text-decoration:none;display:block;transition:box-shadow .2s;}.related-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.12);}.related-img{height:150px;object-fit:cover;width:100%;}.related-body{padding:.875rem 1rem;}.related-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--green);}.related-rtitle{font-family:'Fraunces',serif;font-weight:700;font-size:.95rem;color:var(--ink);margin-top:.25rem;line-height:1.35;}
+.art-sidebar{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:128px;}.sidebar-countdown{background:var(--green);border-radius:var(--rLg);padding:1.5rem;color:var(--white);text-align:center;}.cd-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.8;}.cd-num{font-family:'Fraunces',serif;font-weight:900;font-size:3rem;line-height:1;margin:.35rem 0;display:block;}.cd-sub{font-size:.8rem;opacity:.75;}.cd-date{font-size:.75rem;font-weight:700;margin-top:.5rem;opacity:.6;}.sidebar-countries{background:var(--off);border-radius:var(--rLg);padding:1.25rem;}.sidebar-countries-title{font-family:'Fraunces',serif;font-weight:900;font-size:.95rem;color:var(--ink);margin-bottom:.875rem;}.sidebar-country-list{list-style:none;display:flex;flex-direction:column;gap:.2rem;}.sidebar-country-list li a{display:flex;align-items:center;gap:.5rem;padding:.4rem .6rem;border-radius:var(--r);font-size:.8rem;font-weight:600;color:var(--mid);text-decoration:none;}.sidebar-country-list li a:hover{background:var(--border);color:var(--ink);}.sidebar-country-list li.active a{background:var(--ink);color:var(--white);}.sidebar-country-list li a img{width:18px;height:18px;flex-shrink:0;}.sidebar-newsletter{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem;}.sidebar-nl-title{font-family:'Fraunces',serif;font-weight:900;font-size:.95rem;color:var(--ink);margin-bottom:.35rem;}.sidebar-nl-sub{font-size:.8rem;color:var(--mid);margin-bottom:1rem;line-height:1.55;}.sidebar-nl-form{display:flex;flex-direction:column;gap:.6rem;}.sidebar-nl-form input{padding:.6rem .875rem;border:1px solid var(--border);border-radius:var(--r);font-family:'Nunito',sans-serif;font-size:.875rem;background:var(--white);width:100%;}.sidebar-nl-form button{background:var(--green);color:var(--white);border:none;border-radius:100px;padding:.65rem;font-family:'Nunito',sans-serif;font-weight:700;font-size:.875rem;cursor:pointer;}.nl-note{font-size:.72rem;color:var(--light);margin-top:.4rem;line-height:1.5;}
+.footer{background:#fff7ed;color:#1e1e2e;padding:4rem 0 0;margin-top:0;}.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(0,0,0,.1);}.f-brand .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;letter-spacing:-.04em;display:block;margin-bottom:.75rem;color:#1e1e2e;text-decoration:none;}.f-brand .flogo span{color:#0e9f6e;}.f-brand p{font-size:.84rem;line-height:1.7;color:#6b7280;margin-bottom:1.25rem;}.f-social{display:flex;gap:.6rem;}.f-soc{width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#6b7280;transition:all .15s;text-decoration:none;}.f-soc:hover{background:#0e9f6e;color:white;border-color:#0e9f6e;}.f-col h4{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0b8c8;margin-bottom:1rem;}.f-col ul{list-style:none;padding:0;margin:0;}.f-col li{margin-bottom:.45rem;}.f-col a{font-size:.84rem;color:#6b7280;transition:color .15s;text-decoration:none;}.f-col a:hover{color:#0e9f6e;}.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:1.5rem 0;}.f-affiliate p{font-size:.75rem;color:#b0b8c8;line-height:1.65;text-align:center;max-width:700px;margin:0 auto;}.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;padding:1.4rem 0;font-size:.76rem;color:#b0b8c8;}.footer-bottom a{color:#b0b8c8;text-decoration:none;}.footer-bottom a:hover{color:#0e9f6e;}.footer-bottom-links{display:flex;gap:1.25rem;}
+.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#FFDD00;color:#000;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}.bmc-btn:hover{transform:translateY(-3px);}
+@media(max-width:1024px){.art-main{grid-template-columns:1fr;}.art-sidebar{position:static;}}@media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}.related-grid{grid-template-columns:1fr 1fr;}.preview-grid{grid-template-columns:1fr;}.num-grid{grid-template-columns:1fr 1fr;}}@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}@media(max-width:600px){.art-main{padding:1.5rem 1.25rem 3rem;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.num-grid{grid-template-columns:1fr;}}@media(max-width:480px){.footer-top{grid-template-columns:1fr;}}
 </style>
-</head><body><nav class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
-          <a href="/dokumente.html">📋 Dokumente</a>
-          <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
-          <a href="/packliste.html">🎒 Packliste</a>
-          <a href="/technik-auf-reisen.html">📱 Technik</a>
-          <a href="/wichtige-apps.html">📲 Apps</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
-          <a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
-          <a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a>
-          <a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
-          <a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a>
-          <a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-          <a href="/kambotscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
-          <a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
-          <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
-        </div>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
-          <a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
-          <a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
-          <a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a>
-        </div>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="/ueber-uns.html">Über uns</a></li>
-      <li class="nav-item"><a class="nav-link nav-cta" href="/newsletter.html">Newsletter</a></li>
-    </ul>
-    <button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<button class="nav-burger"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="nav-mobile"><button class="nav-mobile-close">✕</button>
-<div class="nav-mobile-section">Weltreise Planung</div>
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-<div class="nav-mobile-section">Länderguides</div>
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambotscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-<div class="nav-mobile-section">Mehr</div>
-<a href="/reisetipps.html">Reisetipps</a>
-<a href="/reiseblog.html">Reiseblog</a>
-<a href="/ueber-uns.html">Über Uns</a>
-<a href="/newsletter.html">Newsletter</a>
-</div><div class="bc"><a href="/index.html">Home</a><span class="sep">›</span><a href="/laenderguides.html">Länderguides</a><span class="sep">›</span><span>Indonesien</span></div><div class="pghero"><div class="pghero-inner"><span class="eyebrow">Länderguide</span><h1 class="pgtitle">Indonesien – <em>Unser erster Stop</em></h1><p class="pgdesc">Bali, Ubud, Canggu, Gili Air &amp; Lombok – unser ehrlicher Reiseführer für Weltreisende. Was wir geplant haben, was es kostet und die besten Tipps für Schweizer.</p></div></div><div class="main"><article>
-
-<div class="country-hero-grid">
-<img class="main-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900&q=80" alt="Bali Indonesien – ⚠️ Durch euer eigenes Foto ersetzen!">
-<div class="side-imgs">
-<img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=500&q=80" alt="Reisfelder Ubud Bali – ⚠️ Ersetzen!">
-<img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80" alt="Gili Air – ⚠️ Ersetzen!">
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a class="logo" href="/">Wir<span>Weit</span>Weg</a><ul class="nav-menu"><li class="nav-item"><a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a><div class="nav-drop"><a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a><a href="/budget-kosten.html">💰 Budget &amp; Kosten</a><a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a><a href="/dokumente.html">📋 Dokumente</a><a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a><a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a><a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a><a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a><a href="/packliste.html">🎒 Packliste</a><a href="/technik-auf-reisen.html">📱 Technik</a><a href="/wichtige-apps.html">📲 Apps</a></div></li><li class="nav-item"><a class="nav-link active" href="/laenderguides.html">Länderguides <span class="nav-arr">▾</span></a><div class="nav-drop"><a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a><a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a><a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien</a><a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a><a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia</a><a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a><a href="/kambodscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a><a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a><a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a></div></li><li class="nav-item"><a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a><div class="nav-drop"><a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a><a href="/transport.html"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a><a href="/unterkuenfte.html"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a><a href="/lifehacks.html"><span class="ndrop-ico">⚡</span>Lifehacks</a></div></li><li class="nav-item"><a class="nav-link" href="/reiseblog.html">Blog</a></li><li class="nav-item"><a class="nav-link" href="/ueber-uns.html">Über uns</a></li><li class="nav-item"><a class="nav-link nav-cta" href="/newsletter.html">Newsletter</a></li></ul><button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mobile" id="mob"><button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button><div class="nav-mobile-section">Weltreise Planung</div><a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a><a href="/budget-kosten.html">02 · Budget &amp; Kosten</a><a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a><a href="/dokumente.html">04 · Dokumente</a><a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a><a href="/kreditkarten.html">06 · Kreditkarten</a><a href="/impfungen.html">07 · Impfungen</a><a href="/routenplanung-visum.html">08 · Route &amp; Visum</a><a href="/packliste.html">09 · Packliste</a><a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a><a href="/wichtige-apps.html">11 · Wichtige Apps</a><div class="nav-mobile-section">Länderguides</div><a href="/thailand.html">Thailand</a><a href="/vietnam.html">Vietnam</a><a href="/indonesien.html">Indonesien</a><a href="/japan.html">Japan</a><a href="/malaysia.html">Malaysia</a><a href="/singapur.html">Singapur</a><a href="/kambodscha.html">Kambodscha</a><a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a><div class="nav-mobile-section">Mehr</div><a href="/reisetipps.html">Reisetipps</a><a href="/reiseblog.html">Reiseblog</a><a href="/ueber-uns.html">Über Uns</a><a href="/newsletter.html">Newsletter</a></div>
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/laenderguides.html">Länderguides</a><span>›</span>Indonesien</div>
+<div class="art-hero"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&q=85&fit=crop" alt="Reisterrassen Bali Indonesien" loading="eager"><div class="art-hero-overlay"></div><div class="art-hero-content"><div class="art-eyebrow">🇮🇩 Länderguide</div><h1 class="art-h1">Indonesien –<br><em>unser Guide kommt bald</em></h1><div class="art-meta-row"><span class="art-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Fabienne &amp; Marc</span><span class="art-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Ab 2026</span><span class="art-meta-item">🇨🇭 Schweizer Perspektive</span></div></div></div>
+<div class="art-main">
+  <article class="art-content">
+    <p>Indonesien ist kein Land — es ist ein Kontinent in Inselform. Über 17'000 Inseln, acht Weltreligionen, Hunderte von Sprachen. Bali kennt jeder. Aber Lombok, die Komodo-Inseln, Java mit seinen Vulkanen, Sulawesi — das ist Indonesien das die meisten nie sehen.</p>
+    <p>Wir sind noch nicht dort. Unser Abflug ist der 30. Juni 2026 — danach schreiben wir diesen Guide mit echten Zahlen, ehrlichen Einschätzungen und allem was wir uns vorher gewünscht hätten zu wissen.</p>
+    <div class="infobox sand"><div class="ibox-ico">✍️</div><div class="ibox-title">Guide in Arbeit – ab 2026</div><div class="ibox-body">Wir reisen ab dem 30. Juni 2026 durch Asien. Indonesien steht auf unserer Route. Sobald wir dort waren, füllen wir diese Seite mit echten Erfahrungen. <a href="/newsletter.html">Im Newsletter erfährst du es zuerst.</a></div></div>
+    <h2>Was dieser Guide <em>abdecken wird</em></h2>
+    <p>Das planen wir für den ausführlichen Indonesien-Guide:</p>
+    <div class="preview-grid">
+      <div class="preview-card"><div class="preview-card-ico">🌴</div><div><div class="preview-card-tag">Klassiker</div><div class="preview-card-title">Bali</div><div class="preview-card-sub">Ubud, Seminyak, Canggu — Bali jenseits des Hypes. Was lohnt sich wirklich?</div></div></div>
+      <div class="preview-card"><div class="preview-card-ico">🏝️</div><div><div class="preview-card-tag">Geheimtipp</div><div class="preview-card-title">Lombok & Gili-Inseln</div><div class="preview-card-sub">Balis ruhigerer Nachbar: Rinjani, weisse Strände, Schnorcheln ohne Massen.</div></div></div>
+      <div class="preview-card"><div class="preview-card-ico">🌋</div><div><div class="preview-card-tag">Kultur</div><div class="preview-card-title">Java & Yogyakarta</div><div class="preview-card-sub">Borobudur, Prambanan, aktive Vulkane — das kulturelle Herz Indonesiens.</div></div></div>
+      <div class="preview-card"><div class="preview-card-ico">✈️</div><div><div class="preview-card-tag">Logistik</div><div class="preview-card-title">Inselhüpfen</div><div class="preview-card-sub">Wie man sich in Indonesien von Insel zu Insel bewegt — Fähren, Flüge, Zeiten.</div></div></div>
+      <div class="preview-card"><div class="preview-card-ico">💸</div><div><div class="preview-card-tag">Budget</div><div class="preview-card-title">Was kostet Indonesien?</div><div class="preview-card-sub">Bali ist teurer geworden — echte Zahlen für Budget- und Komfort-Reisende.</div></div></div>
+      <div class="preview-card"><div class="preview-card-ico">🛂</div><div><div class="preview-card-tag">Einreise</div><div class="preview-card-title">Visa on Arrival</div><div class="preview-card-sub">30 Tage VOA am Flughafen — Ablauf, Kosten, Verlängerung für Schweizer 2026.</div></div></div>
+    </div>
+    <div class="num-grid"><div class="num-card"><div class="num-value">30 Tage</div><div class="num-label">Visa on Arrival (verlängerbar)</div></div><div class="num-card"><div class="num-value">~40–80 CHF</div><div class="num-label">Tagesbudget Backpacker-Stil</div></div><div class="num-card"><div class="num-value">~13 h</div><div class="num-label">Flug Zürich → Bali</div></div></div>
+    <h2>Warum wir uns auf <em>Indonesien freuen</em></h2>
+    <p>Bali hat uns beide schon lange fasziniert — aber was uns wirklich interessiert, liegt dahinter. Die Komodo-Drachen auf Flores. Die Urwälder Borneos. Ein Land das grösser ist als Europa, und in dem die meisten Reisenden nur einen winzigen Bruchteil sehen.</p>
+    <div class="pull-quote"><p>Ich will einmal auf Bali aufwachen und wissen: das war erst der Anfang. Lombok, Flores, Sulawesi — Indonesien hat so viel mehr zu bieten als seine Instagram-Version.</p><cite>— Fabienne</cite></div>
+    <p>Wie viel Zeit wir in Indonesien verbringen werden, wissen wir noch nicht. Aber wir wissen: es wird nicht genug sein.</p>
+    <h2>Bis dahin – <em>bleib auf dem Laufenden</em></h2>
+    <p>Den Guide gibt es sobald wir dort waren. Den schnellsten Weg dahin kennst du: Newsletter eintragen oder uns auf Social folgen.</p>
+    <div class="share-row"><span class="share-label">Folge uns:</span><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg></div><span class="share-icon-label">Instagram</span></a><a href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#010101"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg></div><span class="share-icon-label">TikTok</span></a><a href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#FF0000"><svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg></div><span class="share-icon-label">YouTube</span></a><a href="https://pinterest.com/pin/create/button/?url=https://wirweitweg.blog/indonesien.html&description=Indonesien+Reisef%C3%BChrer+von+WirWeitWeg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#e60023"><svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div><span class="share-icon-label">Pinterest</span></a></div>
+    <div class="author-box"><div class="author-avatar">F+M</div><div class="author-info"><div class="author-name">Fabienne &amp; Marc</div><div class="author-role">WirWeitWeg · Solothurn, Schweiz</div><div class="author-bio">Wir sind ein Paar aus Solothurn, das am 30. Juni 2026 zu einer Open-End-Weltreise aufbricht. Indonesien ist eines der Länder auf die wir uns am meisten freuen — dieser Guide wächst mit unserer Reise.</div></div></div>
+    <section class="related-section"><h2 class="related-title">Andere <em>Länderguides</em></h2><div class="related-grid"><a href="/malaysia.html" class="related-card"><img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=500&q=75&fit=crop" alt="Malaysia" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Länderguide</div><div class="related-rtitle">Malaysia</div></div></a><a href="/singapur.html" class="related-card"><img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=500&q=75&fit=crop" alt="Singapur" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Länderguide</div><div class="related-rtitle">Singapur</div></div></a><a href="/philippinen.html" class="related-card"><img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=500&q=75&fit=crop" alt="Philippinen" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Länderguide</div><div class="related-rtitle">Philippinen</div></div></a></div></section>
+  </article>
+  <aside class="art-sidebar">
+    <div class="sidebar-countdown"><div class="cd-label">Abflug in</div><span class="cd-num" id="cdDays">—</span><div class="cd-sub">Tagen</div><div class="cd-date">30. Juni 2026</div></div>
+    <div class="sidebar-countries"><div class="sidebar-countries-title">Alle Länderguides</div><ul class="sidebar-country-list"><li><a href="/thailand.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" alt="">Thailand</a></li><li><a href="/vietnam.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" alt="">Vietnam</a></li><li><a href="/kambodscha.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" alt="">Kambodscha</a></li><li><a href="/laos.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" alt="">Laos</a></li><li><a href="/malaysia.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" alt="">Malaysia</a></li><li><a href="/singapur.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" alt="">Singapur</a></li><li class="active"><a href="/indonesien.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" alt="">Indonesien</a></li><li><a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" alt="">Philippinen</a></li><li><a href="/japan.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" alt="">Japan</a></li></ul></div>
+    <div class="sidebar-newsletter"><div class="sidebar-nl-title">Guide erscheint – du erfährst es zuerst</div><div class="sidebar-nl-sub">Kein Spam. Wir schreiben, wenn wir wirklich etwas zu sagen haben.</div><form class="sidebar-nl-form" onsubmit="sbSubmit(event)"><input type="text" id="sbVorname" placeholder="Dein Vorname" autocomplete="given-name" required><input type="email" id="sbEmail" placeholder="Deine E-Mail-Adresse" autocomplete="email" required><button type="submit" id="sbBtn">Benachrichtigen</button><div class="nl-note">Kein Spam. Jederzeit abmeldbar.</div></form></div>
+  </aside>
 </div>
-</div>
-<p style="font-size:.72rem;color:var(--light);text-align:center;margin-top:-.5rem;margin-bottom:2rem;font-style:italic;">⚠️ Alle Fotos durch eure eigenen ersetzen</p>
-
-<div class="fact-row">
-<div class="fact"><div class="fact-ico">⏱️</div><span class="fact-val">6 Wochen</span><span class="fact-label">Unser Aufenthalt</span></div>
-<div class="fact"><div class="fact-ico">💰</div><span class="fact-val">~45 CHF/Tag</span><span class="fact-label">Kosten pro Person</span></div>
-<div class="fact"><div class="fact-ico">🛂</div><span class="fact-val">Visa on Arrival</span><span class="fact-label">30 Tage, ~35 USD</span></div>
-<div class="fact"><div class="fact-ico">🗺️</div><span class="fact-val">3 Inseln</span><span class="fact-label">Bali, Gili Air, Lombok</span></div>
-</div>
-
-<div class="toc">
-<div class="toc-title">📋 Inhalt dieser Seite</div>
-<ul class="toc-list">
-<li><a href="#warum">Warum Indonesien?</a></li>
-<li><a href="#bali">Bali – alles was du wissen musst</a></li>
-<li><a href="#ubud">Ubud – das kulturelle Herz</a></li>
-<li><a href="#canggu">Canggu &amp; Seminyak</a></li>
-<li><a href="#gili">Gili Air – Paradies mit Einschränkungen</a></li>
-<li><a href="#lombok">Lombok – das unterschätzte Juwel</a></li>
-<li><a href="#kosten">Kosten &amp; Budget</a></li>
-<li><a href="#visum">Visum &amp; Einreise</a></li>
-<li><a href="#praktisches">Praktisches</a></li>
-</ul>
-</div>
-
-<div class="prose">
-
-<h2 id="warum">🌴 Warum Indonesien als <em>erster Stop?</em></h2>
-
-<p>Es gibt Länder, die man bereist. Und es gibt Länder, die einen verändern. Indonesien gehört für uns eindeutig zur zweiten Kategorie.</p>
-
-<p>Wir haben lange diskutiert, wo wir unsere Open-End Weltreise starten wollen. Japan? Thailand? Am Ende hat Indonesien das Rennen gemacht – und das aus mehreren Gründen. Die Reisfelder bei Ubud, die türkisblauen Gewässer rund um die Gili-Inseln, der rauchende Rinjani-Vulkan auf Lombok. Indonesien ist abwechslungsreich genug für sechs Wochen – und dabei günstig genug, um nicht sofort das Budget zu sprengen.</p>
-
-<p>Mit über 17.000 Inseln ist Indonesien das viertgrösste Land der Welt nach Einwohnerzahl. Man könnte ein Leben lang durch die Inseln reisen und wäre immer noch nicht fertig. Wir konzentrieren uns auf drei: Bali, die Gili-Inseln und Lombok.</p>
-
-<div class="infobox green">
-<div class="ibox-ico">💡</div>
-<div class="ibox-title">Unser ehrlicher Tipp vorab</div>
-<div class="ibox-body">Bali ist touristisch. Sehr touristisch. Und trotzdem hat es uns für Wochen gefangen gehalten. Der Trick: <strong>Weg von Kuta, hin nach Ubud oder Canggu</strong>. Diese zwei Orte zeigen dir ein völlig anderes Bali – eines, das du auf keinen Fall verpassen solltest.</div>
-</div>
-
-<!-- BALI -->
-<h2 id="bali">🌺 Bali – <em>alles was du wissen musst</em></h2>
-
-<img class="dest-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1100&q=80" alt="Bali Tempel Sonnenuntergang – ⚠️ Durch euer eigenes Foto ersetzen!">
-<p class="dest-img-note">⚠️ Durch euer eigenes Bali-Foto ersetzen</p>
-
-<p>Bali ist das bekannteste Reiseziel Indonesiens – und das aus gutem Grund. Nirgendwo sonst auf der Welt finden sich auf so engem Raum so viele Tempel, so viel Natur, so viel Kunst und so viel Lebensfreude wie auf dieser kleinen Insel im indonesischen Archipel.</p>
-
-<p>Aber Bali ist auch ein Opfer seines eigenen Erfolgs geworden. Kuta Beach ist zu einem touristischen Alptraum verkommen – vollgestopft mit Souvenirläden, billigen Restaurants und Strandverkäufern die dir alle fünf Minuten etwas aufschwatzen wollen. Der Trick ist zu wissen, wo das echte Bali steckt. Und das liegt eben nicht an der Südküste, sondern im Landesinneren und in den weniger bekannten Ecken der Insel.</p>
-
-<blockquote>„Als wir zum ersten Mal die Reisfelder von Tegallalang sahen, haben wir beide kein Wort gesagt. Diese tiefgrünen Terrassen, der Nebel der sich durch die Täler zieht, der Geruch nach feuchter Erde – das war einer dieser Momente, für die man reist."<br><strong style="font-style:normal;color:var(--ink)">– Fabienne, Solothurn</strong></blockquote>
-
-<h3>Die verschiedenen Gesichter Balis</h3>
-<p>Bali ist nicht Bali ist nicht Bali. Jede Region hat ihre eigene Persönlichkeit – und die richtige Wahl hängt davon ab, was du suchst.</p>
-
-<div class="hl-grid">
-<div class="hl-card">
-<img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=500&q=80" alt="Ubud Reisfelder Bali – ⚠️ Ersetzen!">
-<div class="hl-card-body">
-<div class="hl-card-title">🌿 Ubud – Kulturhauptstadt</div>
-<p class="hl-card-desc">Das kulturelle und spirituelle Herz Balis. Reisfelder, balinesische Tempel, Kunstgalerien, Yoga-Studios und die besten Restaurants der Insel. Wir haben hier zwei Wochen verbracht – und es hätten auch drei sein können.</p>
-</div>
-</div>
-<div class="hl-card">
-<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Canggu Surf Bali – ⚠️ Ersetzen!">
-<div class="hl-card-body">
-<div class="hl-card-title">🏄 Canggu – Hipster &amp; Surfer</div>
-<p class="hl-card-desc">Das Viertel der digitalen Nomaden. Fantastische Surfwellen, coole Cafés, tolle Restaurants und ein lebhaftes Nachtleben. Perfekt für alle, die etwas mehr Energie suchen als in Ubud.</p>
-</div>
-</div>
-<div class="hl-card">
-<img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80" alt="Seminyak Bali – ⚠️ Ersetzen!">
-<div class="hl-card-body">
-<div class="hl-card-title">🌅 Seminyak – Strandleben</div>
-<p class="hl-card-desc">Etwas gehobener als Kuta, aber ohne den Trubel. Schöne Strandbars, gute Restaurants und die besten Sonnenuntergänge Balis. Ideal für ein paar entspannte Tage am Strand.</p>
-</div>
-</div>
-</div>
-
-<div class="infobox orange">
-<div class="ibox-ico">⚠️</div>
-<div class="ibox-title">Kuta – schön und gut, aber...</div>
-<div class="ibox-body">Kuta war mal ein verschlafenes Fischerdorf. Heute ist es die touristischste Ecke Balis. Überfüllt, laut, voller Shops die alle das Gleiche verkaufen. Wir haben einen Tag dort verbracht und sind dann sofort nach Canggu weitergereist. Wenn du Party suchst: Kuta ist richtig. Wenn du Bali erleben willst: Geh woanders hin.</div>
-</div>
-
-<!-- UBUD -->
-<h2 id="ubud">🌿 Ubud – <em>das kulturelle Herz Balis</em></h2>
-
-<div class="two-col-img">
-<div>
-<img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&q=80" alt="Tegallalang Reisfelder Ubud – ⚠️ Ersetzen!">
-<p class="two-col-img-note">⚠️ Durch euer eigenes Ubud-Foto ersetzen</p>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80" alt="Ubud Tempel Bali – ⚠️ Ersetzen!">
-<p class="two-col-img-note">⚠️ Durch euer eigenes Foto ersetzen</p>
-</div>
-</div>
-
-<p>Ubud liegt im Herzen Balis, umgeben von Reisfeldern, Urwald und Vulkanen. Wer Bali nur aus Instagram kennt, kennt meistens Ubud – die Schaukelfotos über dem Regenwald, die Tempel im Morgennebel, die endlosen grünen Terrassen.</p>
-
-<p>Die Realität ist noch schöner als die Fotos. Ubud ist ein Ort, an dem man ankommt und denkt: okay, ich bleibe eine Woche. Und dann bleiben zwei daraus. Die Stadt hat eine Energie, die sich schwer in Worte fassen lässt. Vielleicht liegt es an den tausenden Tempeln, an den täglichen Opfergaben die man überall auf der Strasse findet, oder an der Tatsache dass das Leben hier noch einen Rhythmus hat der uns im hektischen Europa fehlt.</p>
-
-<h3>Was du in Ubud nicht verpassen solltest</h3>
-<ul class="checklist">
-<li><strong>Tegallalang Reisfelder:</strong> Die ikonischen Reisterrassen – am frühen Morgen um 7 Uhr ist man (fast) alleine. Um 10 Uhr sind die Touristen-Busse da.</li>
-<li><strong>Sacred Monkey Forest:</strong> Ein heiliger Wald mitten in Ubud mit hunderten Makaken-Affen. Handtaschen und Brillen fest halten – die Affen sind Diebe.</li>
-<li><strong>Pura Tirta Empul:</strong> Der heilige Quell-Tempel wo gläubige Balinesen sich reinigen. Respektvoll besuchen, Sarong anlegen.</li>
-<li><strong>Kochkurs:</strong> Ein balinesischer Kochkurs gehört für uns zum Pflichtprogramm. Morgens auf den Markt, nachmittags kochen – eine der besten Aktivitäten überhaupt.</li>
-<li><strong>Mount Batur Sunrise Trek:</strong> Aufbruch nachts um 2 Uhr, Aufstieg zum Vulkan, Sonnenaufgang auf 1717 Metern. Einer der unvergesslichsten Momente der Reise.</li>
-<li><strong>Abendspaziergang durch die Reisfelder:</strong> Einfach der Strasse folgen, in die Felder abbiegen, Stille geniessen. Kostenlos und unvergesslich.</li>
-</ul>
-
-<div class="infobox green">
-<div class="ibox-ico">💡</div>
-<div class="ibox-title">Unterkunft in Ubud</div>
-<div class="ibox-body">In Ubud schläft man am schönsten in einem kleinen Guesthouse oder einer Villa mit Reisfeldblick. Preise ab ~20–30 CHF pro Nacht für ein privates Zimmer mit Frühstück. Das Frühstück in Bali ist übrigens legendär – frische Früchte, Nasi Goreng, frisch gepresste Säfte.</div>
-</div>
-
-<!-- CANGGU -->
-<h2 id="canggu">🏄 Canggu &amp; Seminyak – <em>Surfen, Cafés &amp; Sunsets</em></h2>
-
-<img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1100&q=80" alt="Canggu Strand Bali – ⚠️ Durch euer eigenes Foto ersetzen!">
-<p class="dest-img-note">⚠️ Durch euer eigenes Foto ersetzen</p>
-
-<p>Canggu ist das, was Kuta vor 20 Jahren war – nur für eine andere Generation. Die Strassen sind gesäumt von Cafés die Smoothie Bowls servieren, Coworking Spaces, Surf-Shops und Restaurants aus aller Welt. Es ist touristisch, ja. Aber auf eine Art, die Spass macht.</p>
-
-<p>Das Surfen in Canggu ist für Anfänger und Fortgeschrittene gleichermassen toll. Die Wellen bei Echo Beach sind für erfahrenere Surfer, Batu Bolong ist ideal für Einsteiger. Surfstunden kosten ~15–25 CHF, Brettvermietung ~8–12 CHF täglich.</p>
-
-<p>Seminyak, südlich von Canggu, ist etwas ruhiger und gehobener. Die Strandbars hier sind legendär – besonders bei Sonnenuntergang. Ein Bintang-Bier in der Hand, die Füsse im Sand, die Sonne versinkt im Meer. Das ist Bali.</p>
-
-<!-- GILI AIR -->
-<h2 id="gili">🐠 Gili Air – <em>Schildkröten, Stille und türkisblaues Wasser</em></h2>
-
-<div class="two-col-img">
-<div>
-<img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=700&q=80" alt="Gili Air Strand – ⚠️ Ersetzen!">
-<p class="two-col-img-note">⚠️ Durch euer eigenes Foto ersetzen</p>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=700&q=80" alt="Schnorcheln Gili Schildkröte – ⚠️ Ersetzen!">
-<p class="two-col-img-note">⚠️ Durch euer eigenes Foto ersetzen</p>
-</div>
-</div>
-
-<p>Es gibt Orte auf der Welt, die so aussehen wie man sie sich vorstellt wenn man als Kind an «Paradies» denkt. Gili Air ist so ein Ort.</p>
-
-<p>Keine Motorräder, keine Autos, kein Lärm. Die einzigen Fahrzeuge sind Pferdekutschen und Fahrräder. Das Wasser ist so türkisblau, dass man es nicht glauben kann, bis man selbst darin steht. Und direkt vor dem Strand – in einer Tiefe von vielleicht drei Metern – schwimmen Schildkröten als wäre es das Normalste der Welt.</p>
-
-<p>Wir haben drei Tage auf Gili Air verbracht. Der erste Tag haben wir damit verbracht, einfach im Wasser zu schwimmen und nicht glauben zu können, wo wir sind. Der zweite Tag war dem Schnorcheln gewidmet – Schildkröten, bunte Fische, intakte Korallenriffe. Am dritten Tag haben wir die Insel zu Fuss umrundet (dauert etwa eine Stunde) und dabei festgestellt: Das war genau die richtige Menge Zeit.</p>
-
-<div class="infobox green">
-<div class="ibox-ico">💡</div>
-<div class="ibox-title">Gili Air vs. Gili Trawangan</div>
-<div class="ibox-body"><strong>Gili Air</strong> ist das ruhigste der drei Gili-Inseln. Perfekt für Erholung, Schnorcheln und Entschleunigung. Ideal für 2–4 Tage.<br><br><strong>Gili Trawangan</strong> ist die Party-Insel. Mehr Tourismus, mehr Bars, mehr Lärm – aber auch mehr Energie. Für Nightlife die richtige Wahl.<br><br><strong>Gili Meno</strong> ist die Einsamste der drei. Kaum Touristen, kaum Infrastruktur – für echte Robinsons.</div>
-</div>
-
-<div class="infobox light">
-<div class="ibox-ico">📌</div>
-<div class="ibox-title">Kosten auf Gili Air</div>
-<div class="ibox-body">Alles auf Gili Air wird per Boot angeliefert – das spiegelt sich in den Preisen. Rechne mit <strong>60–80 CHF pro Tag</strong>, deutlich mehr als auf Bali. Ein Zimmer kostet 30–60 CHF, Essen 15–25 CHF. Für 3–4 Tage ist das aber absolut es wert.</div>
-</div>
-
-<!-- LOMBOK -->
-<h2 id="lombok">🏔 Lombok – <em>das unterschätzte Juwel Indonesiens</em></h2>
-
-<img class="dest-img" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1100&q=80" alt="Lombok Strand – ⚠️ Durch euer eigenes Foto ersetzen!">
-<p class="dest-img-note">⚠️ Durch euer eigenes Lombok-Foto ersetzen</p>
-
-<p>Lombok ist Bali vor zwanzig Jahren. Weniger Touristen, günstigere Preise, gleiche – manchmal sogar schönere – Natur. Die meisten Reisenden fahren nur für einen Tag oder zwei rüber, um dann wieder zurück nach Bali zu fahren. Das ist ein Fehler.</p>
-
-<p>Lombok hat seinen eigenen Charakter, seine eigene Kultur, seine eigene Energie. Die Insel ist muslimisch geprägt – das merkt man sofort, wenn man morgens um fünf Uhr durch den Ruf zum Gebet geweckt wird. Aber es ist eine offene, gastfreundliche Form des Islam, die den Tourismus willkommen heisst.</p>
-
-<p>Was Lombok wirklich besonders macht, ist der Rinjani. Der 3.726 Meter hohe Vulkan dominiert das Innere der Insel und ist für viele Reisende der Grund, warum sie überhaupt nach Lombok kommen. Das Trekking dauert 2–3 Tage und ist anspruchsvoll – aber der Blick vom Gipfel auf den türkisfarbenen Kratersee ist einer dieser Momente, die man niemals vergisst.</p>
-
-<blockquote>„Lombok hat uns überrascht. Nicht wegen des Rinjani – den haben wir wegen schlechten Wetters leider verpasst – sondern wegen der Strände im Süden. Kuta Lombok (nicht zu verwechseln mit Kuta Bali!) ist eines der schönsten Fleckchen Erde, die wir je gesehen haben."<br><strong style="font-style:normal;color:var(--ink)">– Marc, Solothurn</strong></blockquote>
-
-<h3>Highlights auf Lombok</h3>
-<ul class="checklist">
-<li><strong>Rinjani Trekking:</strong> 2–3 Tage, anspruchsvoll aber unvergesslich. Nur mit Guiding-Pflicht. Kosten: ~150–250 CHF für Paket inkl. Guide, Essen und Camping.</li>
-<li><strong>Kuta Beach Lombok:</strong> Weisser Sand, türkises Wasser, kaum Touristen. Ein Strandparadies das noch nicht von den Massen entdeckt wurde.</li>
-<li><strong>Tanjung Aan:</strong> Zwei Buchten mit unterschiedlichem Sand – eine weiss, eine mit kleinen runden Körnern. Unwirklich schön.</li>
-<li><strong>Pantai Selong Belanak:</strong> Langer geschwungener Strand, ideal zum Surfen lernen. Sanfte Wellen, freundliche Einheimische.</li>
-<li><strong>Senggigi:</strong> Die touristische Hauptstadt Lomboks. Entspannt, gute Restaurants, schöne Küstenstrasse.</li>
-<li><strong>Sasak Dörfer:</strong> Traditionelle Dörfer der einheimischen Sasak-Bevölkerung – ein Einblick ins echte Lombok abseits der Touristenpfade.</li>
-</ul>
-
-<!-- KOSTEN -->
-<h2 id="kosten">💰 Kosten &amp; <em>Budget in Indonesien</em></h2>
-
-<p>Indonesien – besonders Bali und Lombok – ist günstig. Deutlich günstiger als die Schweiz, aber auch etwas teurer als andere südostasiatische Länder wie Thailand oder Vietnam. Hier sind unsere ehrlichen Zahlen:</p>
-
-<table style="width:100%;border-collapse:collapse;font-size:.88rem;margin:1.5rem 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);">
-<thead><tr style="background:var(--ink);color:white;">
-<th style="text-align:left;padding:.7rem 1rem;">Kategorie</th>
-<th style="padding:.7rem 1rem;text-align:center;">Budget</th>
-<th style="padding:.7rem 1rem;text-align:center;">Komfort</th>
-<th style="padding:.7rem 1rem;text-align:left;">Beispiel</th>
-</tr></thead>
-<tbody>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🏨 Unterkunft</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--green);font-weight:700">8–18 CHF</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--mid)">25–60 CHF</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Guesthouse mit Frühstück</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🍜 Essen &amp; Trinken</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--green);font-weight:700">5–12 CHF</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--mid)">15–35 CHF</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Nasi Goreng 1.50 CHF</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🛵 Transport</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--green);font-weight:700">3–10 CHF</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--mid)">10–25 CHF</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Motorrad mieten 8 CHF/Tag</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🎭 Aktivitäten</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--mid)">5–15 CHF</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--mid)">20–80 CHF</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Tempel 3 CHF, Trekking 30+ CHF</td>
-</tr>
-<tr style="background:var(--greenlt)">
-<td style="padding:.75rem 1rem;font-weight:700">📊 Total/Tag</td>
-<td style="padding:.75rem 1rem;text-align:center;color:var(--green);font-weight:700">~25–35 CHF</td>
-<td style="padding:.75rem 1rem;text-align:center;font-weight:700">~50–80 CHF</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Unser Schnitt: ~45 CHF</td>
-</tr>
-</tbody>
-</table>
-
-<div class="infobox light">
-<div class="ibox-ico">📌</div>
-<div class="ibox-title">Gili-Inseln: Teurer Ausreisser</div>
-<div class="ibox-body">Die Gili-Inseln sind deutlich teurer als Bali oder Lombok, weil alles per Boot angeliefert wird. Rechne mit 60–80 CHF pro Tag. Für 3–4 Tage absolut wert – aber plane es ins Budget ein.</div>
-</div>
-
-<!-- VISUM -->
-<h2 id="visum">🛂 Visum &amp; <em>Einreise für Schweizer</em></h2>
-
-<p>Als Schweizer erhältst du bei der Einreise nach Indonesien automatisch ein <strong>Visa on Arrival (VOA)</strong>. Du brauchst nichts im Voraus zu beantragen.</p>
-
-<ul class="checklist">
-<li><strong>Kosten:</strong> ~500.000 IDR (~35 USD) – in bar bezahlen, USD-Noten mitnehmen</li>
-<li><strong>Gültigkeit:</strong> 30 Tage ab Einreise</li>
-<li><strong>Verlängerung:</strong> Einmal verlängerbar auf 60 Tage (~35 USD extra, beim Einwanderungsamt)</li>
-<li><strong>Reisepass:</strong> Mindestens 6 Monate gültig nach Einreise</li>
-<li><strong>Rückflugnachweis:</strong> Manchmal verlangt – Onward-Ticket parat haben</li>
-</ul>
-
-<p>🔗 <strong>Aktuelle Infos:</strong> <a href="https://www.eda.admin.ch/eda/de/home/laender-reise-information/indonesien.html" target="_blank" rel="noopener">EDA – Reisehinweise Indonesien →</a></p>
-
-<!-- PRAKTISCHES -->
-<h2 id="praktisches">📋 Praktisches für <em>deinen Indonesien-Aufenthalt</em></h2>
-
-<div class="option-grid">
-<div class="option-card">
-<div class="option-title">💰 Währung &amp; Geld</div>
-<ul class="option-pros">
-<li>Währung: Indonesische Rupiah (IDR)</li>
-<li>1 CHF ≈ 13.000–14.500 IDR</li>
-<li>Bankomaten überall in Touristengebieten</li>
-<li>Revolut funktioniert problemlos</li>
-<li class="con">Bankomat-Limit oft ~1,5 Mio IDR pro Abhebung</li>
-<li class="con">Auf Gili-Inseln: wenige Bankomaten, Bargeld mitnehmen</li>
-</ul>
-</div>
-<div class="option-card">
-<div class="option-title">📱 SIM &amp; Internet</div>
-<ul class="option-pros">
-<li>Telkomsel beste Netzabdeckung</li>
-<li>SIM am Flughafen Denpasar kaufen</li>
-<li>10GB ca. 5–8 CHF</li>
-<li>Internet sehr gut in Touristengebieten</li>
-<li class="con">Abgelegene Gebiete: schlechter Empfang</li>
-<li class="con">Auf Gili Air: langsameres Internet</li>
-</ul>
-</div>
-</div>
-
-<table style="width:100%;border-collapse:collapse;font-size:.88rem;margin:1.5rem 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);">
-<thead><tr style="background:var(--ink);color:white;">
-<th style="text-align:left;padding:.7rem 1rem;">Thema</th>
-<th style="padding:.7rem 1rem;text-align:left;">Was du wissen musst</th>
-</tr></thead>
-<tbody>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🌡️ Beste Reisezeit</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Trockenzeit Mai–September ideal. Wir kommen im September – perfektes Timing. Regenzeit Okt–April: trotzdem reisbar, aber mehr Regen und Wolken.</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">✈️ Anreise</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Zürich–Bangkok (Zwischenlandung)–Bali (Denpasar). Ca. 14–16 Stunden total. Günstige Tickets ab ~500–800 CHF.</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🗣️ Sprache</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Bahasa Indonesia. In allen Touristengebieten kommt man mit Englisch bestens durch. Ein paar Worte Bahasa – Terima kasih (Danke) und Selamat pagi (Guten Morgen) – öffnen Herzen.</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🙏 Kultur &amp; Respekt</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Beim Tempelbesuch: Schultern und Knie bedecken, einen Sarong anlegen (oft ausgeliehen). Überall liegen kleine Opfergaben auf dem Boden – nie drübersteigen.</td>
-</tr>
-<tr style="border-bottom:1px solid var(--border)">
-<td style="padding:.75rem 1rem;font-weight:700">🛵 Motorrad</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Günstigste und flexibelste Fortbewegung. Nur mit internationalem Führerschein! Helm immer tragen, defensiv fahren – Unfälle passieren häufig.</td>
-</tr>
-<tr>
-<td style="padding:.75rem 1rem;font-weight:700">🦟 Gesundheit</td>
-<td style="padding:.75rem 1rem;color:var(--mid)">Dengue-Mücken vorhanden – Mückenschutz ist Pflicht. Kein Leitungswasser trinken. Mehr zu Impfungen in <a href="/impfungen.html">Schritt 07: Impfungen</a>.</td>
-</tr>
-</tbody>
-</table>
-
-<div class="infobox orange">
-<div class="ibox-ico">⚠️</div>
-<div class="ibox-title">Kein Leitungswasser trinken!</div>
-<div class="ibox-body">Das Leitungswasser in Indonesien ist nicht trinkbar. Kaufe immer Wasserflaschen (sehr günstig) oder nutze einen Wasserfilter. Auch beim Zähneputzen kein Leitungswasser verwenden.</div>
-</div>
-
-</div>
-
-<div class="share-wrap">
-<span class="share-label">Teilen:</span>
-<a href="https://pinterest.com/pin/create/button/?url=https://wirweitweg.com/indonesien.html" target="_blank" class="share-btn pin">📌 Pinterest</a>
-<a href="https://wa.me/?text=https://wirweitweg.com/indonesien.html" target="_blank" class="share-btn wa">💬 WhatsApp</a>
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://wirweitweg.com/indonesien.html" target="_blank" class="share-btn fb">📘 Facebook</a>
-<button class="share-btn" onclick="copyLink(this)">🔗 Link kopieren</button>
-</div>
-
-<div class="author-box">
-<img class="author-avatar" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&q=80" alt="Marc und Fabienne">
-<div>
-<div class="author-name">Marc &amp; Fabienne</div>
-<div class="author-role">✦ WirWeitWeg · Solothurn, Schweiz</div>
-<div class="author-bio">Wir planen unsere Open-End Weltreise ab dem 30. Juni 2026 – Indonesien ist unsere erste Destination. Hier teilen wir alles ehrlich mit Schweizer Perspektive.</div>
-</div>
-</div>
-
-<div class="related">
-<h2 class="related-title">Das könnte dich auch <em>interessieren</em></h2>
-<div class="related-grid">
-<a href="/thailand.html" class="related-card"><img class="rcard-img" src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&q=70" alt="Thailand"><div class="rcard-body"><span class="rcard-tag">Länderguide</span><div class="rcard-title">Thailand</div><div class="rcard-link">Lesen →</div></div></a>
-<a href="/routenplanung-visum.html" class="related-card"><img class="rcard-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=70" alt="Route"><div class="rcard-body"><span class="rcard-tag">Planung</span><div class="rcard-title">Route &amp; Visum</div><div class="rcard-link">Lesen →</div></div></a>
-<a href="/budget-kosten.html" class="related-card"><img class="rcard-img" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=70" alt="Budget"><div class="rcard-body"><span class="rcard-tag">Planung</span><div class="rcard-title">Budget &amp; Kosten</div><div class="rcard-link">Lesen →</div></div></a>
-</div>
-</div></article><aside>
-<div class="cd-box"><div class="cd-label">✈️ Bis zum Abflug</div><span class="cd-num" id="cdNum">–</span><div class="cd-unit">Tage</div><div class="cd-date">Abflug: <strong>30. Juni 2026</strong></div></div>
-<div class="sbox"><div class="sbox-title">🌏 Alle Länderguides</div><ul class="stepnav">
-<li class="cur"><a href="/indonesien.html"><span class="sn">→</span> Indonesien</a></li>
-<li><a href="/malaysia.html"><span class="sn">→</span> Malaysia</a></li>
-<li><a href="/singapur.html"><span class="sn">→</span> Singapur</a></li>
-<li><a href="/thailand.html"><span class="sn">→</span> Thailand</a></li>
-<li><a href="/vietnam.html"><span class="sn">→</span> Vietnam</a></li>
-<li><a href="/kambotscha.html"><span class="sn">→</span> Kambotscha</a></li>
-<li><a href="/laos.html"><span class="sn">→</span> Laos</a></li>
-<li><a href="/philippinen.html"><span class="sn">→</span> Philippinen</a></li>
-<li><a href="/japan.html"><span class="sn">→</span> Japan</a></li>
-</ul></div>
-<div class="sbox"><div class="sbox-title">✉️ Newsletter</div>
-<p style="font-size:.82rem;color:var(--mid);margin-bottom:.9rem;line-height:1.6">Einmal im Monat – kein Spam.</p>
-<div class="nlform"><input type="text" placeholder="Vorname"><input type="email" placeholder="E-Mail">
-<button class="btn btn-green" style="width:100%;justify-content:center;margin-top:.2rem">Anmelden</button></div>
-<p class="nl-note">DSGVO-konform · jederzeit abmeldbar</p></div>
-</aside></div><footer class="footer">
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
-        <a class="flogo" href="/">Wir<span>Weit</span>Weg</a>
-        <p>Weltreise-Blog aus der Schweiz von Marc &amp; Fabienne. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
+        <a href="/"><img src="/logo-schwarz.png?v=2" alt="WirWeitWeg" style="height:120px;width:auto;margin-bottom:.6rem;display:block;"></a>
+        <p>Weltreise-Blog aus der Schweiz von Fabienne &amp; Marc. Wir reisen ab 30. Juni 2026 durch Asien – ehrlich, menschlich, ohne Rückflugticket.</p>
         <div class="f-social">
-          <a class="f-soc" href="https://instagram.com/wirweitweg" target="_blank" rel="noopener" title="Instagram">
+          <a class="f-soc" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener" title="TikTok">
+          <a class="f-soc" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
           </a>
-          <a class="f-soc" href="https://youtube.com/@wirweitweg" target="_blank" rel="noopener" title="YouTube">
+          <a class="f-soc" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+          </a>
+          <a class="f-soc" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
       </div>
@@ -552,7 +96,6 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/auslandskrankenversicherung.html">Versicherung</a></li>
           <li><a href="/kreditkarten.html">Kreditkarten</a></li>
           <li><a href="/packliste.html">Packliste</a></li>
-          <li><a href="/wichtige-apps.html">Apps</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -562,16 +105,16 @@ img{display:block;width:100%;object-fit:cover;}
           <li><a href="/vietnam.html">Vietnam</a></li>
           <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
-          <li><a href="/singapur.html">Singapur</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
       </div>
       <div class="f-col">
-        <h4>Blog</h4>
+        <h4>Reisetipps</h4>
         <ul>
-          <li><a href="/reiseblog.html">Alle Artikel</a></li>
-          <li><a href="/reisetipps.html">Reisetipps</a></li>
-          <li><a href="/reiseblog.html">Reiseberichte</a></li>
+          <li><a href="/sim-karten.html">SIM-Karten</a></li>
+          <li><a href="/transport.html">Transport</a></li>
+          <li><a href="/unterkuenfte.html">Unterkünfte</a></li>
+          <li><a href="/lifehacks.html">Lifehacks</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -586,7 +129,7 @@ img{display:block;width:100%;object-fit:cover;}
       </div>
     </div>
     <div class="f-affiliate">
-      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst. Das Produkt wird dadurch für dich nicht teurer!</p>
+      <p><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p>
     </div>
     <div class="footer-bottom">
       <span>© 2026 WirWeitWeg &middot; Weltreise-Blog aus der Schweiz</span>
@@ -598,9 +141,6 @@ img{display:block;width:100%;object-fit:cover;}
     </div>
   </div>
 </footer>
-<div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
-</div><script src="/script.js"></script>
+<div class="bmc-wrap"><button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button></div>
+<script>(function(){var t=new Date('2026-06-30T00:00:00');var el=document.getElementById('cdDays');if(el){var d=Math.ceil((t-new Date())/86400000);el.textContent=d>0?d:'0';}})();function sbSubmit(){var v=document.getElementById('sbVorname').value.trim();var e=document.getElementById('sbEmail').value.trim();var btn=document.getElementById('sbBtn');if(!v||!e){btn.textContent='Bitte ausfüllen!';return;}btn.textContent='Wird gesendet…';btn.disabled=true;fetch('/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vorname:v,email:e})}).then(function(r){return r.json();}).then(function(){btn.textContent='✓ Fast geschafft – E-Mail bestätigen!';}).catch(function(){btn.textContent='Fehler – bitte nochmal';btn.disabled=false;});}</script>
 </body></html>
