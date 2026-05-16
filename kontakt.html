@@ -1,22 +1,12 @@
 <!DOCTYPE html><html lang="de"><head>
-<link rel="icon" type="image/png" href="/logo.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Kontakt | WirWeitWeg</title><meta name="description" content="Schreib uns – wir freuen uns über jede Nachricht."><meta property="og:title" content="Kontakt | WirWeitWeg"><meta property="og:description" content="Schreib uns – wir freuen uns über jede Nachricht."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.blog/kontakt.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
-/* =====================================================
-   WirWeitWeg – style.css
-   Farben: #1e1e2e | #0e9f6e | #6ee7b7 | #fff9ee | #e2e8f0
-   Fonts: Fraunces (Headlines) | Nunito (Body)
-   ===================================================== */
-:root {
-  --white:#fff; --off:#fff9ee; --ink:#1e1e2e; --mid:#6b7280;
-  --light:#b0b8c8; --border:#e2e8f0; --green:#0e9f6e;
-  --greenlt:#d1fae5; --mint:#6ee7b7; --r:12px; --rLg:20px; --maxW:1280px;
-}
+<link rel="icon" type="image/png" href="/logo.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Kontakt | WirWeitWeg</title><meta name="description" content="Schreib uns – wir freuen uns über jede Nachricht von Gleichgesinnten, Kooperationspartnern und Weltreisenden."><meta property="og:title" content="Kontakt | WirWeitWeg"><meta property="og:description" content="Schreib uns – wir freuen uns über jede Nachricht."><meta property="og:image" content="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80"><link rel="canonical" href="https://wirweitweg.blog/kontakt.html"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
+:root{--white:#fff;--off:#fff9ee;--ink:#1e1e2e;--mid:#6b7280;--light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--r:12px;--rLg:20px;--maxW:1280px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 
-/* NAV */
 .nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
 .logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
@@ -45,7 +35,61 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-mobile a:hover{color:var(--green);}
 .nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
 
-/* ── FOOTER ──────────────────────────────────────────────── */
+/* PAGE HERO */
+.pghero{background:var(--off);padding:3.5rem 1.5rem 2.5rem;border-bottom:1px solid var(--border);}
+.pghero-inner{max-width:860px;margin:0 auto;}
+.pgtitle{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
+.pgtitle em{font-weight:300;font-style:italic;color:var(--green);}
+.pgdesc{font-size:1rem;color:var(--mid);line-height:1.65;max-width:560px;}
+
+/* CONTACT LAYOUT */
+.contact-wrap{max-width:860px;margin:3.5rem auto 5rem;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+
+/* EMAIL CARD */
+.contact-card{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:2rem;}
+.contact-card-icon{width:48px;height:48px;background:var(--greenlt);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
+.contact-card-icon svg{width:22px;height:22px;color:var(--green);}
+.contact-card h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);margin-bottom:.5rem;}
+.contact-card p{font-size:.9rem;color:var(--mid);line-height:1.7;margin-bottom:1.25rem;}
+.contact-email-link{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:white;font-weight:700;font-size:.9rem;padding:.65rem 1.25rem;border-radius:100px;transition:opacity .15s;}
+.contact-email-link:hover{opacity:.88;}
+.contact-note{display:block;margin-top:1rem;font-size:.78rem;color:var(--light);}
+
+/* SOCIAL CARD */
+.social-card{background:var(--ink);border-radius:var(--rLg);padding:2rem;}
+.social-card h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:#fff;margin-bottom:.5rem;}
+.social-card p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:1.5rem;}
+.soc-links{display:flex;flex-direction:column;gap:.75rem;}
+.soc-link{display:flex;align-items:center;gap:.9rem;padding:.75rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.07);transition:background .15s;color:#fff;}
+.soc-link:hover{background:rgba(255,255,255,.14);}
+.soc-link-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.soc-link-icon svg{width:18px;height:18px;}
+.soc-link-text strong{display:block;font-size:.88rem;font-weight:700;}
+.soc-link-text span{font-size:.75rem;color:rgba(255,255,255,.45);}
+.soc-link-arr{margin-left:auto;font-size:.7rem;color:rgba(255,255,255,.3);}
+
+/* TOPICS SECTION */
+.topics{max-width:860px;margin:0 auto 5rem;padding:0 1.5rem;}
+.topics h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:var(--ink);margin-bottom:1.25rem;}
+.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.topic-pill{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1.1rem;font-size:.85rem;font-weight:600;color:var(--mid);}
+.topic-pill strong{display:block;font-size:.92rem;color:var(--ink);margin-bottom:.2rem;}
+
+@media(max-width:680px){
+  .contact-wrap{grid-template-columns:1fr;}
+  .topics-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:480px){
+  .pghero{padding:2.5rem 1rem 2rem;}
+  .contact-wrap{padding:0 1rem;margin-top:2.5rem;}
+  .topics{padding:0 1rem;}
+  .topics-grid{grid-template-columns:1fr;}
+  .nav-menu{display:none;}
+  .nav-burger{display:flex;}
+}
+@media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}}
+
+/* ── FOOTER ── */
 .footer{background:#fff9ee;padding:2.1rem 0 0;}
 .footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.7rem;border-bottom:1px solid rgba(0,0,0,.1);}
@@ -72,21 +116,22 @@ img{display:block;width:100%;object-fit:cover;}
 .bmc-btn:hover{transform:translateY(-3px);}
 @media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
 </style>
-</head><body><nav class="nav">
+</head><body>
+<nav class="nav">
   <div class="nav-inner">
     <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
     <ul class="nav-menu">
       <li class="nav-item">
         <a class="nav-link" href="/weltreise-planung.html">Weltreise planen <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
-          <a href="/idee-zeitplan.html">💡 Idee & Zeitplan</a>
-          <a href="/budget-kosten.html">💰 Budget & Kosten</a>
-          <a href="/job-auto-wohnung.html">🏠 Job, Auto & Wohnung</a>
+          <a href="/idee-zeitplan.html">💡 Idee &amp; Zeitplan</a>
+          <a href="/budget-kosten.html">💰 Budget &amp; Kosten</a>
+          <a href="/job-auto-wohnung.html">🏠 Job, Auto &amp; Wohnung</a>
           <a href="/dokumente.html">📋 Dokumente</a>
           <a href="/auslandskrankenversicherung.html">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten.html">💳 Kreditkarten & Finanzen</a>
-          <a href="/impfungen.html">💉 Gesundheit & Impfungen</a>
-          <a href="/routenplanung-visum.html">🗺️ Route & Visum</a>
+          <a href="/kreditkarten.html">💳 Kreditkarten &amp; Finanzen</a>
+          <a href="/impfungen.html">💉 Gesundheit &amp; Impfungen</a>
+          <a href="/routenplanung-visum.html">🗺️ Route &amp; Visum</a>
           <a href="/packliste.html">🎒 Packliste</a>
           <a href="/technik-auf-reisen.html">📱 Technik</a>
           <a href="/wichtige-apps.html">📲 Apps</a>
@@ -106,7 +151,7 @@ img{display:block;width:100%;object-fit:cover;}
           <a href="/philippinen.html"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
         </div>
       </li>
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/reisetipps.html">Reisetipps <span class="nav-arr">▾</span></a>
         <div class="nav-drop">
           <a href="/sim-karten.html"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
@@ -124,33 +169,121 @@ img{display:block;width:100%;object-fit:cover;}
     </button>
   </div>
 </nav>
-<button class="nav-burger"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="nav-mobile" id="mob"><button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
-<div class="nav-mobile-section">Weltreise Planung</div>
-<a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
-<a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
-<a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
-<a href="/dokumente.html">04 · Dokumente</a>
-<a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
-<a href="/kreditkarten.html">06 · Kreditkarten</a>
-<a href="/impfungen.html">07 · Impfungen</a>
-<a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
-<a href="/packliste.html">09 · Packliste</a>
-<a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
-<a href="/wichtige-apps.html">11 · Wichtige Apps</a>
-<div class="nav-mobile-section">Länderguides</div>
-<a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
-<a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
-<a href="/vietnam.html">Vietnam</a><a href="/kambodscha.html">Kambotscha</a>
-<a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
-<a href="/japan.html">Japan</a>
-<div class="nav-mobile-section">Mehr</div>
-<a href="/reisetipps.html">Reisetipps</a>
-<a href="/reiseblog.html">Reiseblog</a>
-<a href="/ueber-uns.html">Über Uns</a>
-<a href="/newsletter.html">Newsletter</a>
-</div><div class="pghero"><div class="pghero-inner"><h1 class="pgtitle">Kon- <em>takt</em></h1><p class="pgdesc">Schreib uns – wir freuen uns über jede Nachricht.</p></div></div><div style="max-width:760px;margin:3rem auto;padding:0 1.5rem;" class="prose"><div class="infobox green"><div class="ibox-ico">📧</div><div class="ibox-title">E-Mail</div><div class="ibox-body">hallo@wirweitweg.blog – wir antworten in der Regel innerhalb von 2–3 Tagen.</div></div><div class="infobox light"><div class="ibox-ico">📸</div><div class="ibox-title">Social Media</div><div class="ibox-body">Folg uns auf Instagram, Pinterest und TikTok für tägliche Updates.</div></div></div><footer class="footer">
+<div class="nav-mobile" id="mob">
+  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
+  <div class="nav-mobile-section">Weltreise Planung</div>
+  <a href="/idee-zeitplan.html">01 · Idee &amp; Zeitplan</a>
+  <a href="/budget-kosten.html">02 · Budget &amp; Kosten</a>
+  <a href="/job-auto-wohnung.html">03 · Job, Auto &amp; Wohnung</a>
+  <a href="/dokumente.html">04 · Dokumente</a>
+  <a href="/auslandskrankenversicherung.html">05 · Auslandskrankenversicherung</a>
+  <a href="/kreditkarten.html">06 · Kreditkarten</a>
+  <a href="/impfungen.html">07 · Impfungen</a>
+  <a href="/routenplanung-visum.html">08 · Route &amp; Visum</a>
+  <a href="/packliste.html">09 · Packliste</a>
+  <a href="/technik-auf-reisen.html">10 · Technik auf Reisen</a>
+  <a href="/wichtige-apps.html">11 · Wichtige Apps</a>
+  <div class="nav-mobile-section">Länderguides</div>
+  <a href="/indonesien.html">Indonesien</a><a href="/malaysia.html">Malaysia</a>
+  <a href="/singapur.html">Singapur</a><a href="/thailand.html">Thailand</a>
+  <a href="/vietnam.html">Vietnam</a><a href="/kambodscha.html">Kambodscha</a>
+  <a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a>
+  <a href="/japan.html">Japan</a>
+  <div class="nav-mobile-section">Mehr</div>
+  <a href="/reisetipps.html">Reisetipps</a>
+  <a href="/reiseblog.html">Reiseblog</a>
+  <a href="/ueber-uns.html">Über Uns</a>
+  <a href="/newsletter.html">Newsletter</a>
+</div>
+
+<div class="pghero">
+  <div class="pghero-inner">
+    <h1 class="pgtitle">Sag <em>Hallo</em></h1>
+    <p class="pgdesc">Ob Fragen, Kooperationen oder einfach Lust auf Austausch mit Gleichgesinnten – wir freuen uns über jede Nachricht.</p>
+  </div>
+</div>
+
+<div class="contact-wrap">
+  <div class="contact-card">
+    <div class="contact-card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </div>
+    <h2>Per E-Mail</h2>
+    <p>Am schnellsten erreichst du uns per Mail. Wir antworten in der Regel innerhalb von 2–3 Tagen – manchmal schneller, manchmal stecken wir gerade im Dschungel.</p>
+    <a class="contact-email-link" href="mailto:wirweitweg555@gmail.com">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      wirweitweg555@gmail.com
+    </a>
+    <span class="contact-note">Antwortzeit: 2–3 Werktage</span>
+  </div>
+
+  <div class="social-card">
+    <h2>Folg uns</h2>
+    <p>Für tägliche Updates, Stories aus dem Reisealltag und spontane Einblicke hinter die Kulissen.</p>
+    <div class="soc-links">
+      <a class="soc-link" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
+        <div class="soc-link-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
+        </div>
+        <div class="soc-link-text">
+          <strong>Instagram</strong>
+          <span>@_wir_weit_weg_</span>
+        </div>
+        <span class="soc-link-arr">↗</span>
+      </a>
+      <a class="soc-link" href="https://tiktok.com/@wirweitweg" target="_blank" rel="noopener">
+        <div class="soc-link-icon" style="background:#010101">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
+        </div>
+        <div class="soc-link-text">
+          <strong>TikTok</strong>
+          <span>@wirweitweg</span>
+        </div>
+        <span class="soc-link-arr">↗</span>
+      </a>
+      <a class="soc-link" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
+        <div class="soc-link-icon" style="background:#FF0000">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
+        </div>
+        <div class="soc-link-text">
+          <strong>YouTube</strong>
+          <span>@Wirweitweg555</span>
+        </div>
+        <span class="soc-link-arr">↗</span>
+      </a>
+      <a class="soc-link" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
+        <div class="soc-link-icon" style="background:#e60023">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </div>
+        <div class="soc-link-text">
+          <strong>Pinterest</strong>
+          <span>@wirweitweg</span>
+        </div>
+        <span class="soc-link-arr">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="topics">
+  <h2>Wobei können wir helfen?</h2>
+  <div class="topics-grid">
+    <div class="topic-pill">
+      <strong>Fragen &amp; Tipps</strong>
+      Reiseplanung, Visum, Budget, Ausrüstung – frag einfach.
+    </div>
+    <div class="topic-pill">
+      <strong>Kooperationen</strong>
+      Produkte, Hotels, Erlebnisse – wir prüfen gerne Anfragen.
+    </div>
+    <div class="topic-pill">
+      <strong>Erfahrungen teilen</strong>
+      Warst du in einem unserer Reiseländer? Wir freuen uns über Insider-Tipps.
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="f-brand">
@@ -228,5 +361,6 @@ img{display:block;width:100%;object-fit:cover;}
   <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
     ☕ Kaffee spendieren
   </button>
-</div><script src="/script.js"></script>
+</div>
+<script src="/script.js"></script>
 </body></html>
