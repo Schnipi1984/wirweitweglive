@@ -1,4 +1,4 @@
-# WirWeitWeg – Projekt-Zusammenfassung (Stand: 17. Mai 2026)
+# WirWeitWeg – Projekt-Zusammenfassung (Stand: 19. Mai 2026)
 
 ## Anweisung an Claude
 Effizient und tokensparend. Keine Erklärungen, keine Zusammenfassungen. Kurze Statusmeldungen. Einfach machen. Keine Rückfragen ausser bei wirklich kritischen Aktionen.
@@ -13,7 +13,7 @@ Effizient und tokensparend. Keine Erklärungen, keine Zusammenfassungen. Kurze S
 - **Betreiber:** Fabienne & Marc aus Solothurn (Schreibweise: Fabienne immer vor Marc)
 - **Abflug:** 30. Juni 2026, Reise durch Asien
 - **GitHub-Token:** gespeichert unter `/Users/marcammann/.claude/projects/-Users-marcammann/gh_token`
-- **Brevo API-Key:** `[REDACTED – lokal in CHAT-SUMMARY.md gespeichert]`
+- **Brevo API-Key:** In Cloudflare Pages als Umgebungsvariable `BREVO_API_KEY` gesetzt (nicht hier speichern)
 
 ---
 
@@ -52,12 +52,13 @@ print(urllib.request.urlopen(req2).status)  # 200 = OK
 | `index.html` | **GESPERRT** – nur mit expliziter Erlaubnis anfassen |
 | `_worker.js` | Cloudflare Worker – Newsletter-Function. **NIEMALS löschen!** |
 | `functions/newsletter.js` | Backup (wird von _worker.js überschrieben) |
-| `style.css?v=3` | Gemeinsames CSS aller Planungsseiten |
+| `style.css` | Gemeinsames CSS aller Planungsseiten |
 | `script.js` | Gemeinsames JS |
 | `sitemap.xml` | Alle Seiten, bei Google Search Console eingereicht |
 | `robots.txt` | `Allow: /`, zeigt auf sitemap.xml |
 | `CLAUDE.md` | Projektregeln für Claude |
 | `AgodaPartnerVerification.html` | Agoda Partner-Verifizierung |
+| `map-preview.html` | Lokale Preview-Datei (nicht auf GitHub, kann gelöscht werden) |
 
 ### Utility-Seiten
 | Datei | URL | Beschreibung |
@@ -86,7 +87,7 @@ print(urllib.request.urlopen(req2).status)  # 200 = OK
 |---|---|---|---|
 | `--green` | `#3d7a5c` | `#2d6a4f` | `#0e9f6e` |
 | `--ink` | `#1a1611` | `#151210` | `#1e1e2e` |
-| CSS-Quelle | Inline | `style.css?v=3` + inline | `style.css?v=3` + inline |
+| CSS-Quelle | Inline | `style.css` + inline | `style.css` + inline |
 | Vorlage | — | `auslandskrankenversicherung.html` | — |
 
 ### Fonts (alle Seiten ausser index.html)
@@ -111,6 +112,11 @@ Instagram → TikTok → YouTube → Pinterest. Kein Facebook, kein WhatsApp.
 | YouTube | https://www.youtube.com/@Wirweitweg555 |
 | Pinterest | https://pinterest.com/wirweitweg |
 
+### Buy Me a Coffee Button
+- **Hintergrund:** `#6EE7B7`
+- **Schriftfarbe:** `#1E1E2E`
+- Klasse: `.bmc-btn` — in `style.css` und in jedem HTML inline definiert
+
 ---
 
 ## Newsletter (Brevo)
@@ -130,6 +136,34 @@ Instagram → TikTok → YouTube → Pinterest. Kein Facebook, kein WhatsApp.
 
 ### Sidebar-Formular (alle Planungsseiten)
 `id="sbVorname"`, `id="sbEmail"`, `id="sbBtn"` + `onclick="sbSubmit()"`
+
+---
+
+## Interaktive Weltkarte (index.html)
+
+- **Library:** D3.js v7 + TopoJSON
+- **Datensatz:** `countries-50m.json` (world-atlas@2) — 50m für Hongkong-Support
+- **Projektion:** `geoNaturalEarth1`, Scale `w/4.83`, Translate `[w*0.5, h*0.53]`
+- **Höhe:** 650px Desktop / 435px Tablet / 325px Mobile
+- **Zoom:** Scrollen zum Zoomen (1×–10×), Drag zum Verschieben, Doppelklick zum Zurücksetzen
+- **Farben:** Heimat (Schweiz) `#2d6a4f`, Reiseziele `#a8d5b5`, andere `#ddd8d0`
+- **Hover:** Alle Ländernamen auf Deutsch (~170 Länder)
+- **Stecknadel:** Rot (`#e63946`), Spitze zeigt auf Schweiz-Zentroid `[8.2, 46.8]`, bleibt beim Zoomen konstant gross
+- **Legende Reihenfolge:** „Da sind wir jetzt" (Stecknadel) → „Schweiz (Heimat)" → „Geplante Destinationen"
+- **Aktueller Standort:** Schweiz (bis Abflug 30. Juni 2026)
+
+### Reiseziel-IDs (ISO 3166-1 numerisch)
+| Land | ID | Link |
+|------|----|------|
+| Thailand | 764 | /thailand.html |
+| Vietnam | 704 | /vietnam.html |
+| Indonesien | 360 | /indonesien.html |
+| Malaysia | 458 | /malaysia.html |
+| Singapur | 702 | /singapur.html |
+| Kambodscha | 116 | /kambodscha.html |
+| Laos | 418 | /laos.html |
+| Philippinen | 608 | /philippinen.html |
+| Japan | 392 | /japan.html |
 
 ---
 
@@ -212,17 +246,23 @@ Instagram → TikTok → YouTube → Pinterest. Kein Facebook, kein WhatsApp.
 
 ---
 
-## Bereits durchgeführte Korrekturen (Mai 2026)
+## Bereits durchgeführte Korrekturen
 
+### Mai 2026
 - **Singapur im Dropdown-Menü** ergänzt (`index.html` Desktop-Nav + `routenplanung-visum.html` Mobile-Nav)
-- **h3-CSS** nachgepflegt in allen 8 Länderguides (vietnam, indonesien, japan, malaysia, singapur, kambodscha, laos, philippinen): `.art-content h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:var(--ink);margin:2.25rem 0 .75rem;}`
-- **Buy Me a Coffee Button** nachträglich zu `laenderguides.html` + `ueber-uns.html` hinzugefügt
-- **Logo** durch transparente Version ersetzt (`logo.png`, 500×500px, RGBA mit Alpha-Kanal)
-- **Agoda META-Tag** in `index.html` eingefügt: `<meta name="agd-partner-manual-verification" />`
-- **`AgodaPartnerVerification.html`** erstellt und gepusht (live unter /AgodaPartnerVerification.html)
-- **Brevo Double Opt-In Template 2** via API aktualisiert (neues Design mit Fraunces/Nunito)
-- **`.claude/settings.json`** angelegt mit Permission-Allowlist (curl, cp, mkdir, open)
-- **Alle Dateien auf GitHub synchronisiert** – inkl. CHAT-SUMMARY.md, CLAUDE.md, email-doubleoptin.html, alle Logos
+- **h3-CSS** nachgepflegt in allen 8 Länderguides
+- **Buy Me a Coffee Button** Farbe geändert: `#FFDD00`/schwarz → `#6EE7B7`/`#1E1E2E` (alle 36 Dateien)
+- **Logo** durch transparente Version ersetzt (`logo.png`, 500×500px)
+- **Agoda META-Tag** in `index.html` eingefügt
+- **`AgodaPartnerVerification.html`** erstellt und gepusht
+- **Brevo Double Opt-In Template 2** via API aktualisiert
+- **Interaktive Weltkarte** überarbeitet:
+  - Zoom/Pan per Maus (Scrollen, Doppelklick reset)
+  - Karte 25% grösser (650px, Scale w/4.83)
+  - Alle Ländernamen auf Deutsch (~170 Länder) im Hover
+  - Datensatz auf `countries-50m.json` umgestellt (Hongkong sichtbar)
+  - Rote Stecknadel auf Schweiz (aktueller Standort)
+  - Legende: „Da sind wir jetzt" als erstes, grösser
 
 ---
 
@@ -242,3 +282,6 @@ Instagram → TikTok → YouTube → Pinterest. Kein Facebook, kein WhatsApp.
 - [ ] `ueber-uns.html` – wartet auf Fotos von Fabienne & Marc
 - [ ] YouTube Video-IDs – sobald erste Videos live: `loadYT(this,'VIDEO_ID')` in `index.html`
 - [ ] Blog-Artikel – 3× „Bald verfügbar" → echte Artikel während der Reise
+- [ ] `kambotscha.html` löschen (Duplikat von `kambodscha.html`)
+- [ ] `map-preview.html` löschen (lokale Vorschau-Datei, nicht auf GitHub)
+- [ ] Stecknadel-Koordinaten anpassen wenn Reise startet (aktuell: Schweiz `[8.2, 46.8]`)
