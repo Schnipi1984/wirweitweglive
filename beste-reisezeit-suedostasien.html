@@ -134,12 +134,22 @@ strong{font-weight:700;}
 /* Länderkarten */
 .country-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:2rem 0;}
 .country-card{border:1px solid var(--border);border-radius:var(--rLg);overflow:hidden;}
-.country-card-head{padding:1rem 1.25rem .75rem;background:var(--off);display:flex;align-items:center;gap:.75rem;}
+.country-card-img{width:100%;height:175px;object-fit:cover;display:block;}
+.country-card-head{padding:.875rem 1.25rem .65rem;background:var(--off);display:flex;align-items:center;gap:.75rem;}
 .country-card-flag{font-size:1.5rem;}
 .country-card-name{font-family:'Fraunces',serif;font-weight:900;font-size:1rem;color:var(--ink);}
 .country-card-body{padding:.875rem 1.25rem 1.1rem;font-size:.875rem;line-height:1.7;color:var(--mid);}
 .country-card-body strong{color:var(--ink);}
 .country-card-body .tag{display:inline-block;font-size:.68rem;font-weight:700;border-radius:100px;padding:.2rem .6rem;margin:.15rem .15rem .15rem 0;}
+.sc-wrap{margin:2rem 0;border-radius:var(--rLg);overflow:hidden;border:1px solid var(--border);}
+.sc-title{background:var(--ink);color:var(--white);padding:1rem 1.5rem;font-family:'Fraunces',serif;font-weight:900;font-size:1rem;}
+.sc-row{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid var(--border);}
+.sc-row:last-child{border-bottom:none;}
+.sc-month{padding:.7rem 1rem;font-weight:700;font-size:.82rem;color:var(--ink);background:var(--off);display:flex;align-items:flex-start;padding-top:.8rem;}
+.sc-picks{padding:.65rem 1rem;font-size:.8rem;color:var(--mid);display:flex;align-items:center;flex-wrap:wrap;gap:.3rem;}
+.sc-top{background:var(--greenlt);color:#065f46;font-weight:700;font-size:.72rem;padding:.2rem .6rem;border-radius:100px;white-space:nowrap;}
+.sc-ok{background:#fef3c7;color:#92400e;font-weight:700;font-size:.72rem;padding:.2rem .6rem;border-radius:100px;white-space:nowrap;}
+.sc-note{font-size:.75rem;color:var(--light);align-self:center;}
 .tag-top{background:var(--greenlt);color:#065f46;}
 .tag-ok{background:#fef3c7;color:#92400e;}
 .tag-low{background:#fee2e2;color:#991b1b;}
@@ -463,6 +473,35 @@ strong{font-weight:700;}
       <div class="legend-item"><div class="legend-dot" style="background:#fee2e2;"></div> Regenzeit / Taifunsaison</div>
     </div>
 
+    <h3>Wann reist du? — <em>Dein Schnell-Check</em></h3>
+    <div class="sc-wrap">
+      <div class="sc-title">Welche Länder wann top sind — auf einen Blick</div>
+      <div class="sc-row">
+        <div class="sc-month">Jan &amp; Feb</div>
+        <div class="sc-picks"><span class="sc-top">🇹🇭 Thailand</span><span class="sc-top">🇻🇳 Vietnam Süd</span><span class="sc-top">🇰🇭 Kambodscha</span><span class="sc-top">🇱🇦 Laos</span><span class="sc-top">🇵🇭 Philippinen</span><span class="sc-ok">🇲🇾 Malaysia</span><span class="sc-note">Japan: kühl, aber reisbar</span></div>
+      </div>
+      <div class="sc-row">
+        <div class="sc-month">März &amp; April</div>
+        <div class="sc-picks"><span class="sc-top">🇻🇳 Vietnam Süd</span><span class="sc-top">🇯🇵 Japan (Kirschblüte)</span><span class="sc-top">🇵🇭 Philippinen</span><span class="sc-ok">🇲🇾 Malaysia</span><span class="sc-ok">🇸🇬 Singapur</span><span class="sc-note">🇹🇭 Norden: Rauchsaison meiden</span></div>
+      </div>
+      <div class="sc-row">
+        <div class="sc-month">Mai &amp; Juni</div>
+        <div class="sc-picks"><span class="sc-top">🇮🇩 Bali</span><span class="sc-top">🇻🇳 Vietnam Nord</span><span class="sc-ok">🇲🇾 Malaysia</span><span class="sc-ok">🇸🇬 Singapur</span><span class="sc-note">🇹🇭 Thailand: Regenzeit beginnt</span></div>
+      </div>
+      <div class="sc-row">
+        <div class="sc-month">Juli &amp; Aug</div>
+        <div class="sc-picks"><span class="sc-top">🇮🇩 Bali</span><span class="sc-ok">🇻🇳 Vietnam Nord</span><span class="sc-ok">🇸🇬 Singapur</span><span class="sc-note">🇯🇵 Japan: heiss &amp; schwül</span><span class="sc-note">🇵🇭 Philippinen: Taifunsaison</span></div>
+      </div>
+      <div class="sc-row">
+        <div class="sc-month">Sep &amp; Okt</div>
+        <div class="sc-picks"><span class="sc-top">🇮🇩 Bali</span><span class="sc-top">🇯🇵 Japan (Herbstlaub)</span><span class="sc-top">🇻🇳 Vietnam Nord</span><span class="sc-ok">🇸🇬 Singapur</span><span class="sc-note">🇹🇭 Thailand: Übergang</span></div>
+      </div>
+      <div class="sc-row">
+        <div class="sc-month">Nov &amp; Dez</div>
+        <div class="sc-picks"><span class="sc-top">🇹🇭 Thailand</span><span class="sc-top">🇻🇳 Vietnam Süd</span><span class="sc-top">🇰🇭 Kambodscha</span><span class="sc-top">🇱🇦 Laos</span><span class="sc-top">🇯🇵 Japan (Herbst)</span><span class="sc-ok">🇲🇾 Malaysia</span></div>
+      </div>
+    </div>
+
     <div class="infobox sand">
       <div class="ibox-ico">💡</div>
       <div class="ibox-title">So liest du die Tabelle richtig</div>
@@ -474,107 +513,127 @@ strong{font-weight:700;}
     <p>Die Tabelle gibt den Überblick – hier kommen die Details, die den Unterschied machen. Denn Thailand Norden und Thailand Süden sind klimatisch zwei verschiedene Welten.</p>
 
     <div class="country-grid">
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=700&q=80&fit=crop" alt="Goldene Tempel Thailand" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇹🇭</div>
+          <div class="country-card-flag">&#127481;&#127469;</div>
           <div class="country-card-name">Thailand</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Nov – Apr: Trockenzeit</span>
           <span class="tag tag-low">Mai – Okt: Monsun</span>
-          <p><strong>Norden (Chiang Mai, Pai):</strong> November bis Februar ist der Sweetspot – kühl, klar, die Tempel leuchten golden im Morgenlicht. Achtung: März und April bringt die sogenannte "Burning Season". Brandrodungen legen einen dichten Rauchschleier über den Norden. Wer Atemprobleme hat oder einfach klare Bergluft mag: vor März weiterziehen.</p>
-          <p><strong>Süden Westküste (Phuket, Krabi):</strong> Nov–Apr perfekt. Die Ostküste (Koh Samui, Koh Phangan) hat die <em>umgekehrte</em> Saison – dort ist November bis Januar ausgerechnet die Regenzeit.</p>
+          <p><strong>Norden (Chiang Mai, Pai):</strong> November bis Februar ist der absolute Sweetspot. Kühl genug für lange Tempelrunden ohne Schweiss, die Luft ist klar, nachts zieht man sich eine Jacke an. Im März und April kippt das: Brandrodungen legen einen orangen Smogschleier über den Norden, der AQI klettert auf 200+. Einzelne Gästhäuser haben dann Luftfilter in jedem Zimmer – kein Witz. Wer Atemwegsprobleme hat: vor März weiterziehen.</p>
+          <p><strong>Süden Westküste (Phuket, Krabi, Koh Lanta):</strong> November bis April perfekt. Achtung Ostküste: Koh Samui und Koh Phangan haben die <em>umgekehrte</em> Saison – dort regnet es ausgerechnet im November und Dezember.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80&fit=crop" alt="Ha Long Bay Vietnam" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇻🇳</div>
+          <div class="country-card-flag">&#127483;&#127475;</div>
           <div class="country-card-name">Vietnam</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Süd: Nov – Apr</span>
           <span class="tag tag-top">Nord: Apr – Jun &amp; Sep – Nov</span>
-          <p>Vietnam ist klimatisch drei Länder in einem. <strong>Süden (Saigon, Mekong-Delta):</strong> Nov–Apr trocken und warm – ideale Rucksackzeit. <strong>Zentrum (Da Nang, Hoi An):</strong> Feb–Aug am besten, Oktober und November bringen manchmal Taifune. <strong>Norden (Hanoi, Ha Long Bay):</strong> April bis Juni und September bis November top. Januar und Februar sind kühl und diesig – nicht schlimm, aber auch nicht das, was die meisten erwarten.</p>
+          <p>Vietnam ist klimatisch drei verschiedene Länder. <strong>Süden (Saigon, Mekong):</strong> November bis April – trocken, warm, ideal. <strong>Zentrum (Da Nang, Hoi An):</strong> Februar bis August top. Oktober und November sind Taifun-Saison – wir kennen jemanden der 10 Tage auf dem Hotelzimmer festsass. <strong>Norden (Hanoi, Ha Long Bay, Sapa):</strong> April bis Juni und September bis November die besten Monate. Januar und Februar sind kühl und diesig – nicht unbedingt das Vietnam das man sich vorstellt.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80&fit=crop&crop=center" alt="Reisterrassen Ubud Bali" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇮🇩</div>
+          <div class="country-card-flag">&#127470;&#127465;</div>
           <div class="country-card-name">Bali &amp; Indonesien</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Apr – Okt: Trockenzeit</span>
           <span class="tag tag-low">Nov – Mär: Regenzeit</span>
-          <p>Bali tickt umgekehrt zu Nordthailand. Während Chiang Mai im Juli im Monsun versinkt, strahlt Bali im besten Licht. <strong>April bis Oktober</strong> – trocken, sonnig, Surfer-Wetter auf Canggu. Juli und August sind Hochsaison; voller, aber mit gutem Grund. <strong>Mai, Juni und September</strong> sind unser Tipp: Trockenzeit, aber noch oder schon wieder ruhiger. In der Regenzeit (Nov–März) regnet es nachmittags kräftig, dafür leuchten die Reisfelder in Ubud in einem Smaragdgrün, das man so schnell nicht vergisst.</p>
+          <p>Bali hat die umgekehrte Saison zu Nordthailand – das ist kein Zufall, das ist Planungsgrundlage. Wenn Chiang Mai im Juli im Regen versinkt, ist Bali auf dem Höhepunkt seiner Trockenzeit. <strong>April bis Oktober:</strong> trocken, sonnig, Surfer-Wetter. Juli und August sind Hochsaison – ein Café in den Reisfeldern bei Ubud, das sonst leer ist, hat dann 45 Minuten Wartezeit. Unser Tipp: <strong>Mai, Juni oder September</strong> – Trockenzeit, aber die Australier sind in der Schule.</p>
+          <p>In der Regenzeit (November bis März) leuchten die Reisfelder in einem Smaragdgrün, das es in der Trockenzeit einfach nicht gibt.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=700&q=80&fit=crop" alt="Kuala Lumpur Malaysia" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇲🇾</div>
+          <div class="country-card-flag">&#127474;&#127486;</div>
           <div class="country-card-name">Malaysia</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Jan – Apr: Beste Zeit</span>
           <span class="tag tag-ok">Ganzjährig möglich</span>
-          <p>Malaysia ist das Entspannte unter den Reisezielen: kein Monat ist wirklich unmöglich. <strong>KL, Penang, Langkawi:</strong> Januar bis April am trockensten, Langkawi macht dann richtig Spass. <strong>Ostküste (Perhentian, Tioman):</strong> Diese Inselparadiese sind nur von Mai bis September geöffnet. November bis Januar herrscht Monsun, Fähren fahren nicht, Resorts schliessen. Wer die Perhentian-Inseln auf der Liste hat: nur Mai–September einplanen.</p>
+          <p>Malaysia ist das Entspannte der Region – kein Monat ist wirklich unmöglich. <strong>KL, Penang, Langkawi:</strong> Januar bis April am trockensten. Langkawi dann: ruhige Strände, günstiger Duty-Free-Rum, kaum andere Touristen. <strong>Ostküste (Perhentian-Inseln, Tioman):</strong> Diese Inseln sind nur von Mai bis September zugänglich. November bis Januar herrscht Monsun, die Fähren fahren nicht, die Resorts schliessen physisch ab. Wer die Perhentians will, muss seinen Kalender danach richten.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=700&q=80&fit=crop" alt="Angkor Wat Kambodscha" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇰🇭</div>
+          <div class="country-card-flag">&#127472;&#127469;</div>
           <div class="country-card-name">Kambodscha</div>
         </div>
         <div class="country-card-body">
-          <span class="tag tag-top">Nov – Apr: Trockenzeit</span>
+          <span class="tag tag-top">Nov – Feb: Beste Zeit</span>
           <span class="tag tag-low">Mai – Okt: Regenzeit</span>
-          <p>Kambodscha in der Hochsaison (November bis Februar) ist wirklich gut: Angkor Wat im Morgennebel, mit frischer Luft statt Gluthitze. <strong>März und April</strong> werden brutal heiss – über 40°C, die Luft steht. Für Hitzetolerante kein Problem. Das etwas andere Erlebnis gibt es in der Regenzeit: der Mekong fliesst dann rückwärts, der Tonle-Sap-See verdreifacht sein Volumen. Ein Naturphänomen, das die meisten nie zu sehen bekommen.</p>
+          <p>Angkor Wat im Dezember um 5:30 Uhr morgens: kühl genug um stundenlang durch die Tempelanlagen zu laufen, ohne komplett nass geschwitzt zu sein. Das ist der Unterschied zu April, wo man nach 20 Minuten im Schatten steht. <strong>März und April:</strong> brutal heiss, 40°C+, die Luft steht. Das besondere Erlebnis in der Regenzeit: der Tonle-Sap-See verdreifacht sein Volumen, Fischerstädte die normalerweise am Ufer liegen, schwimmen plötzlich auf dem Wasser. Ein Naturphänomen das kaum ein Tourist je gesehen hat.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=700&q=80&fit=crop" alt="Luang Prabang Laos" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇱🇦</div>
+          <div class="country-card-flag">&#127473;&#127462;</div>
           <div class="country-card-name">Laos</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Nov – Feb: Beste Zeit</span>
           <span class="tag tag-ok">Mär – Apr: Heiss, aber trocken</span>
-          <p>Laos ist das stille Geheimnis der Region – und die Reisezeit ähnelt stark Kambodscha. <strong>November bis Februar</strong> ist ideal: Luang Prabang im kühlen Morgennebel, der Mekong glitzert träge, die Mönche ziehen schweigend durch die Gassen. Wer das Wasserfest Bun Pi Mai (April) erleben will, kommt in extreme Hitze – aber auch in pure Fröhlichkeit. Regenzeit (Mai–Oktober) macht Laos satt grün, manche Strecken werden aber unpassierbar.</p>
+          <p>Laos ist das Stille, das Vergessene – und das ist sein Charme. <strong>November bis Februar:</strong> Luang Prabang im Morgennebel, der Mekong zieht träge vorbei, die Mönche ziehen in ihren orangen Roben schweigend durch die Gassen. Bei 22°C. So kühl wird es in ganz Südostasien fast nirgends. April bringt Bun Pi Mai – das Neujahrsfest bei dem die ganze Stadt Wasser verströmt. Bei 42°C ist das weniger Tradition als Überlebensstrategie. In der Regenzeit führen die Kuang-Si-Wasserfälle dreimal so viel Wasser wie sonst – türkisblau und rauschend.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=700&q=80&fit=crop" alt="El Nido Palawan Philippinen" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇵🇭</div>
+          <div class="country-card-flag">&#127477;&#127469;</div>
           <div class="country-card-name">Philippinen</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Nov – Mai: Trockenzeit</span>
-          <span class="tag tag-low">Jun – Nov: Taifunsaison</span>
-          <p>Über 7.600 Inseln – je nach Insel tickt das Klima leicht anders. Grundregel: <strong>November bis Mai</strong> ist die sichere Zeit. Trocken, Sonne, Palawan in seinem besten Licht. Ab Juni beginnt die Taifunsaison, und das ist kein netter Regenschauer – das sind echte Wirbelstürme, die Inseln für Tage abschneiden und Flüge streichen. <strong>Palawan</strong> liegt westlicher und ist damit etwas geschützter – Oktober bis Mai funktioniert dort gut.</p>
+          <span class="tag tag-low">Jun – Nov: Taifunsaison &#x26a0;&#xfe0f;</span>
+          <p>Über 7.600 Inseln – die Grundregel ist trotzdem klar: <strong>November bis Mai</strong> ist die Zeit. Palawan und El Nido dann: Kalksteinfelsen aus türkisem Wasser, Strände die man mit einer Handvoll Leute teilt. <strong>Ab Juni beginnt die Taifunsaison</strong> – und das ist kein romantischer Regenschauer. Taifun Odette hat 2021 Siargao so stark getroffen, dass die Insel zwei Jahre brauchte um sich zu erholen. Fähren stoppen, Flüge werden gestrichen, Inseln sind tagelang nicht erreichbar. Wir planen unsere Philippinen-Zeit fest in der Trockenzeit.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80&fit=crop" alt="Japanischer Tempel Herbstlaub" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇯🇵</div>
+          <div class="country-card-flag">&#127471;&#127477;</div>
           <div class="country-card-name">Japan</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-top">Mär – Mai: Kirschblüte</span>
           <span class="tag tag-top">Sep – Nov: Herbstlaub</span>
           <span class="tag tag-low">Jun – Aug: Heiss &amp; schwül</span>
-          <p>Japan ist das einzige Land in unserer Route mit vier echten Jahreszeiten. <strong>Frühling (März–Mai):</strong> Kirschblüte – die Bilder, die du kennst, sind real. Und genauso überfüllt wie auf diesen Bildern. <strong>Herbst (September–November):</strong> Das Herbstlaub ist mindestens genauso schön, aber weniger bekannt und entsprechend etwas ruhiger. Unser persönlicher Favorit. <strong>Sommer</strong> ist heiss und schwül. <strong>Winter</strong> ist kalt, aber Ski auf Hokkaido ist weltklasse.</p>
+          <p>Japan hat vier echte Jahreszeiten – und zwei davon sind so schön, dass man um sie kämpfen würde. <strong>Kirschblüte (März–Mai):</strong> Die Bilder lügen nicht. Aber 80.000 Menschen täglich im Maruyama Park in Kyoto auch nicht. Man steht mehr im Selfie-Stau als unter den Bäumen. <strong>Herbstlaub (September–November):</strong> Das Orange der Ahorn-bäume vor dem Kiyomizu-dera-Tempel – man versteht sofort warum es auf allen Postkarten ist. Und es ist deutlich weniger voll. Unser persönlicher Favorit. <strong>Sommer:</strong> heiss und schwül. <strong>Winter:</strong> kalt, aber Ski auf Hokkaido ist weltklasse.</p>
         </div>
       </div>
+
       <div class="country-card">
+        <img class="country-card-img" src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=700&q=80&fit=crop" alt="Singapur Skyline Marina Bay" loading="lazy">
         <div class="country-card-head">
-          <div class="country-card-flag">🇸🇬</div>
+          <div class="country-card-flag">&#127480;&#127468;</div>
           <div class="country-card-name">Singapur</div>
         </div>
         <div class="country-card-body">
           <span class="tag tag-ok">Ganzjährig bereisbar</span>
           <span class="tag tag-low">Nov – Jan: Regenzeit</span>
-          <p>Singapur liegt direkt am Äquator. Heiss ist es immer – zwischen 28 und 33 Grad, zwölf Monate im Jahr. Was sich ändert: die Niederschlagsmenge. <strong>Februar bis August</strong> sind die trockeneren Monate. <strong>November bis Januar</strong> bringt tägliche, heftige Gewitter. Als Transitort oder für ein paar Tage Stadttrip spielt das kaum eine Rolle – Singapur ist so klimatisiert, dass die Hitze sowieso meist draussen bleibt.</p>
+          <p>Singapur liegt direkt am Äquator. Heiss ist es immer – 28 bis 33 Grad, zwölf Monate im Jahr. Was sich ändert: ob es nachmittags Starkregen gibt. <strong>Februar bis August</strong> sind die trockeneren Monate. <strong>November bis Januar</strong> bringt tägliche, heftige Gewitter – kurz, aber kräftig. Als Transitort spielt das kaum eine Rolle: vom klimatisierten Flughafen in die klimatisierte MRT ins klimatisierte Hotel – draussen ist man eigentlich nur beim Straßenqueren. Im Dezember hängen in Chinatown Weihnachtsdekorationen neben den Laternen fürs Chinese New Year. Das allein ist schon ein Grund zu kommen.</p>
         </div>
       </div>
+
     </div>
 
     <h2 id="lowseason">Regenzeit – <em>lohnt es sich trotzdem?</em></h2>
