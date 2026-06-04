@@ -342,3 +342,13 @@ img{display:block;width:100%;object-fit:cover;}
 .faq-item:last-child{border-bottom:none;}
 .faq-item h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;}
 .faq-item p{font-size:.92rem;color:var(--mid);margin:0;line-height:1.7;}
+
+/* ── NAV SUB-DROPDOWN (Indonesien) ── */
+.nav-sub-wrap{position:relative;display:block;}
+.nav-sub-wrap>a{display:flex;align-items:center;justify-content:space-between;gap:.55rem;}
+.nav-sub-arr{font-size:.65rem;color:var(--light);margin-left:auto;flex-shrink:0;transition:transform .15s;}
+.nav-sub-drop{position:absolute;left:100%;top:-.5rem;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:190px;box-shadow:0 8px 28px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateX(-6px);transition:all .18s;z-index:999;}
+.nav-sub-wrap:hover .nav-sub-drop{opacity:1;pointer-events:all;transform:translateX(0);}
+.nav-sub-wrap:hover .nav-sub-arr{transform:rotate(90deg);}
+.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
+.nav-sub-drop a:hover{background:var(--off);color:var(--green);}
