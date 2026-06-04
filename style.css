@@ -282,3 +282,63 @@ img{display:block;width:100%;object-fit:cover;}
 .nav-drop a{display:flex;align-items:center;gap:.55rem;}
 .nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
 .ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
+
+/* ═══════════════════════════════════════════
+   AFFILIATE & MONETARISIERUNG
+   ═══════════════════════════════════════════ */
+
+/* Affiliate-Hinweis (klein, unaufdringlich) */
+.affiliate-note{font-size:.74rem;color:var(--light);line-height:1.6;margin:2rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border);}
+.affiliate-note a{color:var(--green);font-weight:700;}
+
+/* Produkt-Empfehlungsbox */
+.aff-box{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.25rem 1.5rem;margin:2rem 0;display:flex;gap:1.25rem;align-items:flex-start;}
+.aff-box-img{width:72px;height:72px;border-radius:var(--r);object-fit:cover;flex-shrink:0;background:var(--border);}
+.aff-box-body{flex:1;}
+.aff-box-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--green);margin-bottom:.3rem;}
+.aff-box-title{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.35rem;}
+.aff-box-desc{font-size:.85rem;color:var(--mid);line-height:1.6;margin-bottom:.75rem;}
+.aff-box-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--green);color:#fff;border-radius:100px;padding:.45rem 1.1rem;font-size:.84rem;font-weight:700;transition:transform .15s;}
+.aff-box-btn:hover{transform:translateY(-1px);}
+
+/* Vergleichstabelle */
+.art-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:1.5rem 0;}
+.art-table th{background:var(--green);color:white;font-weight:700;text-align:left;padding:.65rem 1rem;font-size:.8rem;}
+.art-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);vertical-align:top;}
+.art-table tr:last-child td{border-bottom:none;}
+.art-table tr:nth-child(even) td{background:var(--off);}
+.art-table a{color:var(--green);font-weight:700;}
+.art-table .best{background:var(--greenlt)!important;}
+.art-table .best td{font-weight:700;}
+
+/* Preis-Badge */
+.price-tag{display:inline-block;background:var(--greenlt);color:var(--green);font-size:.78rem;font-weight:700;border-radius:100px;padding:.25rem .7rem;}
+.price-tag--chf::before{content:'CHF ';}
+
+/* Info-Boxen */
+.info-box{border-radius:var(--r);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.91rem;line-height:1.7;}
+.info-box strong{display:block;font-weight:700;margin-bottom:.3rem;}
+.info-box--tip{background:var(--greenlt);border-left:3px solid var(--green);}
+.info-box--tip strong{color:var(--green);}
+.info-box--warn{background:var(--sandlt);border-left:3px solid var(--sand);}
+.info-box--warn strong{color:#8a6020;}
+.info-box--ch{background:#eef2ff;border-left:3px solid #5b7dd8;}
+.info-box--ch strong{color:#3a5cbf;}
+.info-box--cost{background:var(--off);border-left:3px solid var(--border);}
+.info-box--cost strong{color:var(--ink);}
+.info-box--quick{background:var(--off);border:1px solid var(--border);border-radius:var(--r);}
+
+/* Inhaltsverzeichnis */
+.toc{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:1.25rem 1.5rem;margin:2rem 0;}
+.toc-title{font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);margin-bottom:.75rem;}
+.toc ol{padding-left:1.25rem;margin:0;}
+.toc li{margin-bottom:.4rem;font-size:.9rem;}
+.toc a{color:var(--green);font-weight:600;}
+.toc a:hover{text-decoration:underline;}
+
+/* FAQ */
+.faq-section{margin:3rem 0 2rem;}
+.faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-item h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;}
+.faq-item p{font-size:.92rem;color:var(--mid);margin:0;line-height:1.7;}
