@@ -44,6 +44,35 @@
 .bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#6EE7B7;color:#1E1E2E;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}.bmc-btn:hover{transform:translateY(-3px);}
 @media(max-width:1024px){.art-main{grid-template-columns:1fr;}.art-sidebar{position:static;}}@media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}.related-grid{grid-template-columns:1fr 1fr;}.preview-grid{grid-template-columns:1fr;}.num-grid{grid-template-columns:1fr 1fr;}}@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}@media(max-width:600px){.art-main{padding:1.5rem 1.25rem 3rem;}.related-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.num-grid{grid-template-columns:1fr;}}@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
 @media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
+
+.art-img{width:100%;border-radius:var(--rLg);margin:1.5rem 0 .5rem;display:block;object-fit:cover;}
+.art-img-caption{font-size:.78rem;color:var(--mid);text-align:center;margin-bottom:2rem;line-height:1.5;font-style:italic;}
+.art-img-half{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;margin:1.5rem 0;}
+.art-img-half figure{margin:0;}
+.art-img-half img{width:100%;height:220px;object-fit:cover;border-radius:var(--r);display:block;}
+.art-img-half .art-img-caption{margin-bottom:0;margin-top:.35rem;}
+.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+.region-card{border-radius:var(--rLg);overflow:hidden;border:1px solid var(--border);text-decoration:none;display:block;}
+.region-card-img{width:100%;height:160px;object-fit:cover;display:block;}
+.region-card-body{padding:1rem 1.1rem;}
+.region-card-name{font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--ink);margin-bottom:.35rem;}
+.region-card-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem;}
+.region-card-tag{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--green);background:var(--greenlt);border-radius:100px;padding:.15rem .6rem;}
+.region-card-tag.sand{color:#8a6020;background:var(--sandlt);}
+.region-card-desc{font-size:.83rem;color:var(--mid);line-height:1.6;}
+.route-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:2rem 0;}
+.route-card{background:var(--off);border-radius:var(--rLg);padding:1.25rem;border:1px solid var(--border);}
+.route-card-duration{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:var(--green);line-height:1;}
+.route-card-name{font-weight:700;font-size:.85rem;color:var(--ink);margin:.3rem 0 .875rem;}
+.route-card-stop{font-size:.83rem;color:var(--mid);line-height:1.6;padding-left:1rem;position:relative;margin-bottom:.3rem;}
+.route-card-stop::before{content:'→';color:var(--green);font-weight:700;position:absolute;left:0;}
+.rz-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:1.5rem 0;}
+.rz-table th{text-align:left;padding:.5rem .75rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);border-bottom:2px solid var(--border);}
+.rz-table td{padding:.5rem .75rem;border-bottom:1px solid var(--border);vertical-align:middle;}
+.rz-table .good{background:var(--greenlt);color:var(--green);font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
+.rz-table .ok{background:var(--sandlt);color:#8a6020;font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
+.rz-table .rain{background:#f1f5f9;color:var(--mid);border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
+@media(max-width:700px){.region-grid{grid-template-columns:1fr;}.route-cards{grid-template-columns:1fr;}.art-img-half{grid-template-columns:1fr;}}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -63,125 +92,288 @@
 
     <p>Indonesien ist kein Land — es ist ein Kontinent in Inselform. Über 17'000 Inseln, 270 Millionen Menschen, acht Weltreligionen, Hunderte Sprachen. Bali kennt jeder. Aber Lombok, die Komodo-Inseln, Java mit seinen Vulkanen, Sulawesi — das ist das Indonesien, das die meisten nie sehen.</p>
 
-    <p>Wir reisen ab dem 30. Juni 2026 durch Asien, Indonesien steht auf unserer Route. Dieser Guide basiert auf intensiver Recherche aus Schweizer Sicht — und wird laufend mit unseren echten Erfahrungen ergänzt. Was wir bisher wissen: Indonesien ist gross, günstig, und unterschätzt. Hier steht alles was du für die Planung brauchst.</p>
+    <p>Wir reisen ab dem 30. Juni 2026 durch Asien, Indonesien steht auf unserer Route. Dieser Guide basiert auf intensiver Recherche aus Schweizer Sicht — und wird laufend mit unseren echten Erfahrungen ergänzt. Was wir bisher wissen: Indonesien ist gross, günstig und hoffnungslos unterschätzt.</p>
 
-    <div class="infobox sand"><div class="ibox-ico">🇨🇭</div><div class="ibox-title">Schweizer Perspektive</div><div class="ibox-body">Alle Preise in CHF. Infos zu Visa, Versicherung und Einreise aus Schweizer Sicht. Wir ergänzen nach unserer Reise mit echten Zahlen aus dem Alltag.</div></div>
+    <div class="infobox sand"><div class="ibox-ico">🇨🇭</div><div class="ibox-title">Schweizer Perspektive</div><div class="ibox-body">Alle Preise in CHF. Infos zu Visum, Versicherung und Einreise aus Schweizer Sicht. Wir ergänzen nach unserer Reise mit echten Zahlen. <a href="/newsletter.html">Im Newsletter erfährst du es zuerst.</a></div></div>
+
+    <nav class="toc">
+      <p class="toc-title">In diesem Guide</p>
+      <ol>
+        <li><a href="#visum">Visum &amp; Einreise für Schweizer</a></li>
+        <li><a href="#kosten">Was kostet Indonesien? (CHF)</a></li>
+        <li><a href="#regionen">Welche Region passt zu dir?</a></li>
+        <li><a href="#bali">Bali – der Klassiker</a></li>
+        <li><a href="#lombok">Lombok &amp; Gili-Inseln</a></li>
+        <li><a href="#java">Java &amp; Yogyakarta</a></li>
+        <li><a href="#flores">Flores &amp; Komodo</a></li>
+        <li><a href="#routen">Routen-Empfehlungen</a></li>
+        <li><a href="#reisezeit">Beste Reisezeit</a></li>
+        <li><a href="#anreise">Anreise &amp; Transport</a></li>
+        <li><a href="#schweizer">Schweizer Sicht: Versicherung &amp; CHF</a></li>
+      </ol>
+    </nav>
+
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1100&q=85&fit=crop" alt="Reisterrassen Tegalalang Bali Indonesien" class="art-img" loading="lazy">
+    <p class="art-img-caption">Die Reisterrassen von Tegalalang in Ubud — eines der ikonischsten Bilder Balis. [Marc &amp; Fabienne: eigenes Foto folgt]</p>
 
     <div class="num-grid">
       <div class="num-card"><div class="num-value">~30 CHF</div><div class="num-label">Visa on Arrival, 30 Tage</div></div>
       <div class="num-card"><div class="num-value">30–80 CHF</div><div class="num-label">Tagesbudget pro Person</div></div>
-      <div class="num-card"><div class="num-value">~13 h</div><div class="num-label">Flug Zürich → Bali (Denpasar)</div></div>
+      <div class="num-card"><div class="num-value">~13 h</div><div class="num-label">Flug Zürich → Bali</div></div>
     </div>
 
-    <h2 id="visum">Visum & <em>Einreise für Schweizer</em></h2>
+    <h2 id="visum">Visum &amp; <em>Einreise für Schweizer</em></h2>
 
-    <p>Schweizer brauchen für Indonesien ein Visum — aber kein aufwendiges. Es gibt zwei einfache Optionen.</p>
+    <p>Schweizer brauchen für Indonesien ein Visum — aber kein aufwendiges. Es gibt zwei einfache Optionen, beide gleichwertig.</p>
 
-    <h3>Visa on Arrival (VOA) am Flughafen</h3>
-    <p>Die unkomplizierteste Variante: Du kommst am Flughafen an, gehst zum VOA-Schalter, zahlst 500'000 IDR (ca. 30 CHF) und hast dein Visum in 10–15 Minuten. Gültig für 30 Tage, einmal verlängerbar um weitere 30 Tage beim lokalen Immigrationsbüro (Kosten: ca. 35 CHF). Maximal also 60 Tage am Stück in Indonesien.</p>
+    <h3>Option 1: Visa on Arrival (VOA) am Flughafen</h3>
+    <p>Die unkomplizierteste Variante: Du kommst am Flughafen an, gehst zum VOA-Schalter, zahlst 500'000 IDR (ca. 30 CHF, Stand Juni 2026) und hast dein Visum in 10–15 Minuten. Gültig für 30 Tage, einmalig verlängerbar um weitere 30 Tage beim lokalen Immigrationsbüro — macht maximal 60 Tage am Stück. Für Weltreisende, die länger bleiben wollen: Ausreisen und erneut einreisen ist möglich, aber nach mehrfachen Einreisen schauen Grenzbeamte genauer hin.</p>
 
-    <div class="infobox sand"><div class="ibox-ico">💡</div><div class="ibox-title">Tipp: e-VOA vorab online beantragen</div><div class="ibox-body">Wer keine Lust auf Schlangen am Flughafen hat, kann das e-VOA vorab auf <strong>molina.imigrasi.go.id</strong> beantragen. Gleiche Kosten, gleiche Gültigkeit — aber du sparst Zeit bei der Ankunft. Empfehlenswert vor allem für Ankunft nachts oder in der Hochsaison.</div></div>
+    <h3>Option 2: e-VOA vorab online</h3>
+    <p>Seit 2022 gibt es das e-VOA unter <strong>molina.imigrasi.go.id</strong>. Gleiche Kosten, gleiche Gültigkeit — aber du beantragst es bequem von zuhause aus und sparst die Wartezeit am Flughafen. Empfehlenswert besonders bei Ankunft nachts oder in der Hochsaison Juli/August, wenn die VOA-Schlangen länger werden.</p>
 
-    <h3>Was du mitbringen musst</h3>
-    <p>Reisepass mit mindestens 6 Monaten Restgültigkeit, ein Hin- und Rückflug- oder Weiterreiseticket (Onward Ticket), und ausreichend Geld nachweisen zu können. In der Praxis wird das selten kontrolliert — aber bereit sein schadet nicht. Alles zum Onward Ticket erklären wir <a href="/onward-ticket.html">in unserem Artikel dazu</a>.</p>
+    <div class="infobox sand"><div class="ibox-ico">📋</div><div class="ibox-title">Was du für die Einreise brauchst</div><div class="ibox-body">Reisepass mit mindestens 6 Monaten Restgültigkeit. Ein Onward Ticket (Weiterreise- oder Rückflugnachweis) — selten kontrolliert, aber bereit sein schadet nicht. Kreditkarte oder Bargeld für die VOA-Gebühr am Schalter. Alles zum Onward Ticket: <a href="/onward-ticket.html">unser Guide dazu.</a></div></div>
 
     <h2 id="kosten">Was kostet Indonesien — <em>in CHF</em></h2>
 
-    <p>Indonesien ist günstiger als die meisten erwarten — mit einer Ausnahme: Bali. Besonders Canggu und Seminyak haben sich in den letzten Jahren stark verteuert. Wer budgetbewusst reist, kommt auf Java und Lombok deutlich weiter.</p>
+    <p>Indonesien ist günstiger als die meisten erwarten — mit einer Ausnahme: Bali, besonders Canggu und Seminyak. Dort hat sich das Preisniveau in den letzten Jahren stark an westliche Standards angenähert. Wer budgetbewusst reist, kommt auf Java und Lombok deutlich weiter.</p>
 
     <table class="art-table">
-      <thead><tr><th>Kategorie</th><th>Budget (CHF)</th><th>Komfort (CHF)</th></tr></thead>
+      <thead><tr><th>Ausgabe</th><th>Budget (CHF)</th><th>Komfort (CHF)</th><th>Hinweis</th></tr></thead>
       <tbody>
-        <tr><td>Übernachtung (pro Person)</td><td>8–15 CHF (Hostel/Dorm)</td><td>25–55 CHF (Privatzimmer)</td></tr>
-        <tr><td>Mahlzeit im Warung</td><td>1.50–3 CHF</td><td>4–10 CHF</td></tr>
-        <tr><td>Motorroller mieten (pro Tag)</td><td>4–7 CHF</td><td>7–12 CHF</td></tr>
-        <tr><td>Inlandsflug (z.B. Bali→Lombok)</td><td colspan="2">10–30 CHF (Citilink, Lion Air)</td></tr>
-        <tr><td>Visa on Arrival</td><td colspan="2">~30 CHF (einmalig)</td></tr>
-        <tr class="best"><td><strong>Tagesbudget gesamt</strong></td><td><strong>30–50 CHF</strong></td><td><strong>60–100 CHF</strong></td></tr>
+        <tr><td>Übernachtung</td><td>8–15</td><td>30–70</td><td>Hostel Dorm vs. Privatzimmer</td></tr>
+        <tr><td>Mahlzeit im Warung</td><td>1.50–3</td><td>5–12</td><td>Warung = lokales Restaurant</td></tr>
+        <tr><td>Motorroller (pro Tag)</td><td>4–7</td><td>7–12</td><td>Hauptfortbewegungsmittel auf Bali</td></tr>
+        <tr><td>Grab/Gojek (pro Fahrt)</td><td>0.50–3</td><td>0.50–3</td><td>Günstiger als Taxi</td></tr>
+        <tr><td>Eintritt Tempel/Attraktion</td><td>2–6</td><td>2–6</td><td>Bali-Tempel ca. 3–6 CHF</td></tr>
+        <tr><td>Inlandsflug (z.B. Bali→Lombok)</td><td colspan="2">10–35</td><td>Citilink, Lion Air früh buchen</td></tr>
+        <tr><td>Visa on Arrival</td><td colspan="2">~30 (einmalig)</td><td>Stand Juni 2026</td></tr>
+        <tr class="best"><td><strong>Tagesbudget gesamt</strong></td><td><strong>30–50 CHF</strong></td><td><strong>60–100 CHF</strong></td><td>Bali ca. 20–30% teurer</td></tr>
       </tbody>
     </table>
 
-    <p class="affiliate-note">* Preisstand Juni 2026. Bali-Preise ca. 20–30% höher als auf Java oder Lombok.</p>
+    <p class="affiliate-note">Preisstand Juni 2026. Wechselkurs: 1 CHF ≈ 16'500 IDR.</p>
 
-    <p>Wer auf Bali in Canggu frühstückt, findet sich schnell bei 15 CHF für Avocado Toast und Flat White wieder. Das ist kein Witz — Canggu hat inzwischen Café-Preise wie Zürich. Wer das vermeiden will, isst im Warung. Dort: Nasi Goreng für 1.80 CHF. Beides ist Indonesien.</p>
+    <p>Ein Beispieltag auf Budget in Ubud: Overnight-Bus 8 CHF, Nasi Goreng im Warung 2 CHF, Tempelbesuch 5 CHF, Motorroller für den Tag 6 CHF, Abendessen 4 CHF — macht ca. 35 CHF total. Ein Beispieltag in Canggu: Apartment 45 CHF, Frühstück im Café 14 CHF, Mittagessen 9 CHF, Grab-Fahrten 4 CHF — schon 72 CHF und wir haben noch nichts unternommen.</p>
 
-    <h2 id="destinationen">Die wichtigsten <em>Destinationen</em></h2>
+    <h2 id="regionen">Welche Region <em>passt zu dir?</em></h2>
 
-    <h3>Bali — der Klassiker, der seinen Ruf verdient (und nicht verdient)</h3>
+    <div class="region-grid">
+      <a href="#bali" class="region-card">
+        <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=600&q=80&fit=crop" alt="Bali Tempel Tanah Lot" class="region-card-img">
+        <div class="region-card-body">
+          <div class="region-card-name">Bali</div>
+          <div class="region-card-tags"><span class="region-card-tag">Kultur</span><span class="region-card-tag">Strand</span><span class="region-card-tag sand">Teurer</span></div>
+          <div class="region-card-desc">Für: erste Indonesien-Reise, Yoga, Nightlife, Surfen. Ubud ist das Highlight. Canggu/Seminyak für alle die Avocado Toast mögen.</div>
+        </div>
+      </a>
+      <a href="#lombok" class="region-card">
+        <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf4?w=600&q=80&fit=crop" alt="Lombok weisser Strand türkises Wasser" class="region-card-img">
+        <div class="region-card-body">
+          <div class="region-card-name">Lombok &amp; Gili-Inseln</div>
+          <div class="region-card-tags"><span class="region-card-tag">Trekking</span><span class="region-card-tag">Schnorcheln</span><span class="region-card-tag">Ruhig</span></div>
+          <div class="region-card-desc">Für: alle die Bali kennen und Ruhe suchen. Rinjani-Trekking. Gili-Inseln ohne Autos. Deutlich weniger Touristen.</div>
+        </div>
+      </a>
+      <a href="#java" class="region-card">
+        <img src="https://images.unsplash.com/photo-1562599838-8cc871c241a5?w=600&q=80&fit=crop" alt="Borobudur Tempel Java Indonesien" class="region-card-img">
+        <div class="region-card-body">
+          <div class="region-card-name">Java</div>
+          <div class="region-card-tags"><span class="region-card-tag">Geschichte</span><span class="region-card-tag">Vulkane</span><span class="region-card-tag">Günstig</span></div>
+          <div class="region-card-desc">Für: Kulturinteressierte, Tempelruinen, Vulkane. Borobudur und Mount Bromo sind Pflicht. Günstigste Insel Indonesiens.</div>
+        </div>
+      </a>
+      <a href="#flores" class="region-card">
+        <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=600&q=80&fit=crop" alt="Komodo Nationalpark Flores Indonesien" class="region-card-img">
+        <div class="region-card-body">
+          <div class="region-card-name">Flores &amp; Komodo</div>
+          <div class="region-card-tags"><span class="region-card-tag">Abenteuer</span><span class="region-card-tag">Tauchen</span><span class="region-card-tag">Abgelegen</span></div>
+          <div class="region-card-desc">Für: Abenteuerreisende, Taucher, alle die echte Wildnis wollen. Komodo-Warane, Mantarochen, unberührte Natur. Weiter weg, aufwendiger zu erreichen.</div>
+        </div>
+      </a>
+    </div>
 
-    <p>Bali ist das erste Ziel der meisten Indonesien-Reisenden — und das aus gutem Grund. Die Reisterrassen von Tegalalang, die Tempel von Uluwatu und Tanah Lot, die Yoga-Infrastruktur in Ubud: das alles ist real und lohnt sich. Was sich nicht lohnt, ist die Erwartung, dass Bali noch ein Geheimtipp ist. Das ist es seit mindestens 15 Jahren nicht mehr.</p>
+    <h2 id="bali">Bali — <em>der Klassiker, der seinen Ruf verdient (und nicht verdient)</em></h2>
 
-    <p>Die vier Hauptgebiete auf Bali sind unterschiedlicher als man denkt. <strong>Ubud</strong> ist das kulturelle Herz: Reisterrassen, Tempel, Monkey Forest, gute Restaurants und ein annehmbares Preisniveau. Für die meisten Reisenden die beste Basis. <strong>Canggu</strong> ist das neue Kuta: laut, voll, teuer, aber mit guten Surf-Breaks und einer internationalen Café-Szene die ihren Preis hat. <strong>Seminyak</strong> ist glamourös, poliert und für Beach-Clubs zuständig. <strong>Uluwatu</strong> am südlichen Zipfel ist für Surfer und alle die Ruhe suchen — beides gleichzeitig.</p>
+    <p>Bali ist das erste Ziel der meisten Indonesien-Reisenden — und das aus gutem Grund. Die Reisterrassen von Tegalalang, die Tempel von Uluwatu und Tanah Lot, die Küche, die Freundlichkeit der Menschen, das Wetter. Das alles ist real. Was nicht mehr stimmt: die Erwartung, dass Bali noch ein Geheimtipp ist. Das ist es seit mindestens 15 Jahren nicht mehr.</p>
 
-    <div class="infobox sand"><div class="ibox-ico">💡</div><div class="ibox-title">Unser Plan für Bali</div><div class="ibox-body">Wir planen 10–14 Tage auf Bali. Basis in Ubud, Tagesausflüge nach Uluwatu und in den Norden. Canggu: wahrscheinlich 2–3 Tage um zu sehen ob der Hype stimmt. <a href="/newsletter.html">Was wir wirklich erlebt haben, kommt im Newsletter.</a></div></div>
+    <div class="art-img-half">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80&fit=crop" alt="Ubud Reisterrassen Bali Morgennebel">
+        <p class="art-img-caption">Ubud am Morgen — bevor die Tagestouristen kommen.</p>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=500&q=80&fit=crop" alt="Bali Tempel Tanah Lot Abendlicht">
+        <p class="art-img-caption">Tanah Lot — der bekannteste Tempel Balis. Früh gehen.</p>
+      </figure>
+    </div>
 
-    <h3>Lombok & die Gili-Inseln — Bali ohne den Lärm</h3>
+    <h3>Die vier Gesichter Balis</h3>
 
-    <p>Eine kurze Fähre oder ein Kurzflug von Bali entfernt liegt Lombok — und es ist ein anderes Indonesien. Weniger Touristen, weniger Infrastruktur, mehr Natur. Der Rinjani-Vulkan (3'726 m) ist eine der schönsten Trekkingtouren Südostasiens und für Schweizer nach dem Himalaya oder den Alpen eine willkommene Abwechslung. Zwei bis drei Tage sollte man dafür einplanen.</p>
+    <p><strong>Ubud</strong> ist das kulturelle Herz der Insel: Reisterrassen, Tempel, Monkey Forest, gute Restaurants und ein annehmbares Preisniveau. Für die meisten Reisenden die beste Basis auf Bali. 5–7 Tage reichen für die Highlights. Negativ: Ubud liegt im Inland ohne Strand, und die Touristendichte nimmt auch hier zu.</p>
 
-    <p>Die Gili-Inseln — Gili Trawangan, Gili Meno, Gili Air — liegen vor der Nordwestküste Lomoks. Keine Autos, keine Motorräder, türkisfarbenes Wasser, gutes Schnorcheln. Gili T ist das Party-Eiland, Gili Air das ruhigere. Gili Meno ist fast leer. Wer nur eine Woche hat und zwischen Bali und Lombok wählen muss: Lombok, mit Abstecher auf die Gilis.</p>
+    <p><strong>Canggu</strong> ist das neue Kuta — laut, voll, teuer, aber mit echten Surf-Breaks und einer internationalen Café-Szene. Digital Nomads lieben es. Backpacker auf Budget meiden es, weil 15 CHF für ein Frühstück sich schnell summieren. Wer Surfen lernen will: gute Schulen, moderates Niveau, aber keine ruhige Strandatmosphäre.</p>
 
-    <h3>Java & Yogyakarta — das kulturelle Herz</h3>
+    <p><strong>Seminyak und Kerobokan</strong> sind glamouröser und teurer. Beach Clubs, Boutique-Hotels, Spa-Days. Nicht für Budget-Reisende, aber wenn ihr euch mal etwas gönnen wollt: der Sonnenuntergang bei Potato Head Beach Club ist unvergesslich — auch wenn der Cocktail 14 CHF kostet.</p>
 
-    <p>Java ist die bevölkerungsreichste Insel der Erde und trotzdem auf den Reiseradaren der meisten Backpacker untervertreten. Das liegt daran, dass Bali halt schöner ist. Aber wer Kulturgeschichte sucht, kommt an Java nicht vorbei.</p>
+    <p><strong>Uluwatu</strong> am südlichen Zipfel bietet Steilklippen, gute Surf-Spots und den legendären Kecak-Feuertanz im gleichnamigen Tempel bei Sonnenuntergang. Ruhiger als Canggu, wertiger als Seminyak für Naturfreunde. Die Affen vor dem Tempel klauen alles was nicht festgenagelt ist.</p>
 
-    <p><strong>Yogyakarta</strong> ist die Kulturhauptstadt: erschwingliche Unterkunft, lebhafte Altstadt, und in der Nähe die zwei beeindruckendsten Tempelanlagen Südostasiens. <strong>Borobudur</strong> ist ein buddhistisches Stupa-Monument aus dem 8. Jahrhundert — grösste buddhistische Anlage der Welt. Eine Stunde entfernt liegt <strong>Prambanan</strong>, ein hinduistischer Tempelkomplex aus derselben Epoche. Beide zusammen an einem Tag ist möglich, aber anstrengend. Beide zusammen zu erleben und zu verstehen, dass diese Bauten auf einer Insel stehen die heute mehrheitlich muslimisch ist: das ist Java.</p>
+    <div class="infobox sand"><div class="ibox-ico">🌊</div><div class="ibox-title">Nusa Penida — einen Tag unbedingt</div><div class="ibox-body">30 Minuten Schnellboot von Sanur entfernt liegt Nusa Penida: zerklüftete Küsten, türkisfarbenes Wasser, Manta-Schnorcheln, und der berühmteste Aussichtspunkt Balis — Kelingking Beach. Früh starten, es kommen viele Tagestouristen. Tagesausflug ab Bali: 20–30 CHF für Fähre und Transfer, Schnorcheln ca. 30–40 CHF extra.</div></div>
 
-    <p>Weiter östlich liegt der <strong>Bromo-Vulkan</strong>, einer der aktivsten der Welt. Sonnenaufgang über dem Bromo vom Penanjakan-Aussichtspunkt aus ist einer jener Momente, für die man reist.</p>
+    <h2 id="lombok">Lombok &amp; die Gili-Inseln — <em>Bali ohne den Lärm</em></h2>
 
-    <h3>Flores & Komodo — für Abenteuerlustige</h3>
+    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1100&q=85&fit=crop" alt="Gili Trawangan türkises Wasser Lombok Indonesien" class="art-img" loading="lazy">
+    <p class="art-img-caption">Die Gili-Inseln vor Lombok — kein Motorenlärm, nur Pferde und Fahrräder. [Marc &amp; Fabienne: eigenes Foto folgt]</p>
 
-    <p>Flores ist weiter weg, weniger erschlossen und deshalb genau das Richtige für alle die Bali längst kennen. Die Komodo-Nationalpark-Boottour zu den Komodo-Waranen ist teurer geworden — die Parkgebühren wurden 2023 auf 25–30 USD erhöht — aber die Waran-Population ist die einzige wild lebende der Welt. Das rechtfertigt den Preis.</p>
+    <p>Eine kurze Fähre oder ein Kurzflug von Bali entfernt liegt Lombok — und es ist ein anderes Indonesien. Weniger Touristen, weniger Infrastruktur, mehr Natur. Für uns eines der spannendsten Ziele auf unserer Route.</p>
 
-    <p>Flores hat ausserdem einige der besten Tauchspots Indonesiens. Das Manta-Reinigungsstation bei Manta Point gilt als eine der zuverlässigsten Stellen weltweit um Mantarochen zu sehen. [Marc & Fabienne: eigene Tauchartikel folgen nach der Reise]</p>
+    <h3>Mount Rinjani — Trekking für Schweizer Berggewöhnte</h3>
+    <p>Der Rinjani (3'726 m) ist einer der schönsten aktiven Vulkane Asiens. Die klassische Tour führt in 2–3 Tagen auf den Kraterrand mit Blick auf einen smaragdgrünen Kratersee. Für Schweizer, die alpine Touren gewöhnt sind, ist der Rinjani machbar aber nicht zu unterschätzen — die Hitze und Luftfeuchtigkeit sind kein Wandergebiet Graubündens.</p>
+
+    <p>Kosten für eine geführte Rinjani-Tour: 250–400 CHF pro Person für eine 3-Tages-Tour inklusive Guide, Porter, Zelt und Mahlzeiten. Klingt viel für Indonesien — ist es auch. Aber die Tour über den Krater in den Sonnenaufgang zu schauen ist ein Erlebnis das seinen Preis hat.</p>
+
+    <div class="infobox sand"><div class="ibox-ico">⚠️</div><div class="ibox-title">Rinjani: Beste Saison beachten</div><div class="ibox-body">Der Rinjani ist von Oktober bis Dezember wegen Regen und Erdrutschgefahr meist gesperrt. Beste Zeit: Mai bis August. Wir planen die Tour für Sommer 2026 — Bericht folgt.</div></div>
+
+    <h3>Gili-Inseln — drei Inseln, drei Charaktere</h3>
+    <p>Gili Trawangan, Gili Meno, Gili Air liegen vor der Nordwestküste Lomboks. Keine Autos, keine Motorräder — Transport per Pferdekutsche oder Fahrrad. Das Wasser ist türkis, das Schnorcheln direkt vom Strand aus ist besser als auf Bali.</p>
+
+    <p>Gili T ist die Party-Insel: voller Touristen, Bars am Strand, viel junge Backpacker. Gili Air ist ruhiger mit besserer Restaurantszene. Gili Meno ist fast leer und wirkt wie 15 Jahre zurück in der Zeit — für alle die echte Ruhe suchen.</p>
+
+    <h2 id="java">Java &amp; Yogyakarta — <em>das kulturelle Herz</em></h2>
+
+    <div class="art-img-half">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1562599838-8cc871c241a5?w=500&q=80&fit=crop" alt="Borobudur Tempel Java Sonnenaufgang Buddhismus">
+        <p class="art-img-caption">Borobudur im Morgenlicht — der grösste buddhistische Tempel der Welt.</p>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=500&q=80&fit=crop" alt="Mount Bromo Vulkan Java Sonnenaufgang Nebel">
+        <p class="art-img-caption">Sonnenaufgang am Mount Bromo — eines der spektakulärsten Bilder Asiens.</p>
+      </figure>
+    </div>
+
+    <p>Java ist die bevölkerungsreichste Insel der Erde — und trotzdem auf den Reiseradaren vieler Backpacker untervertreten. Das liegt daran, dass Bali halt schöner ist. Aber wer Kulturgeschichte sucht, kommt an Java nicht vorbei.</p>
+
+    <h3>Yogyakarta — Basis für Tempel und Vulkane</h3>
+    <p>Yogyakarta (kurz: Jogja) ist die Kulturhauptstadt Javas. Erschwingliche Unterkunft, lebhafte Altstadt (Malioboro), und in der Nähe die zwei beeindruckendsten Tempelanlagen Südostasiens.</p>
+
+    <p><strong>Borobudur</strong> ist ein buddhistischer Stupa-Komplex aus dem 8. Jahrhundert — grösste buddhistische Anlage der Welt, zum UNESCO-Welterbe erklärt. Frühaufsteher können den Sonnenaufgang über den 504 Buddha-Statuen erleben. Eine Stunde entfernt liegt <strong>Prambanan</strong>, ein hinduistischer Tempelkomplex aus derselben Epoche: drei 47-Meter-Türme die dem Gott Shiva gewidmet sind.</p>
+
+    <p>Beide zusammen an einem Tag ist möglich. Beide zusammen zu erleben und zu verstehen, dass ein buddhistisches und ein hinduistisches Weltwunder auf derselben Insel stehen, die heute mehrheitlich muslimisch ist: das ist Java.</p>
+
+    <h3>Mount Bromo — Ostjava</h3>
+    <p>Der Bromo ist einer der aktivsten Vulkane Indonesiens und bietet eine der surrealistischsten Landschaften Asiens: eine Sandwüste, aus der mehrere Vulkankegel aufragen, eingehüllt in Nebel und Schwefeldämpfe. Der Sonnenaufgang vom Penanjakan-Aussichtspunkt ist einer jener Momente, für die man reist. Frühaufstehen (4 Uhr) ist Pflicht. Jeep-Tour inklusive Sonnenaufgang und Bromo-Wanderung: ca. 40–60 CHF pro Person.</p>
+
+    <h2 id="flores">Flores &amp; Komodo — <em>für Abenteuerlustige</em></h2>
+
+    <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=1100&q=85&fit=crop" alt="Indonesien tropische Insel Blick von oben türkises Wasser" class="art-img" loading="lazy">
+    <p class="art-img-caption">Die Küste rund um Flores — abgeschieden, wild, unvergesslich. [Marc &amp; Fabienne: eigenes Foto folgt]</p>
+
+    <p>Flores ist weiter weg, weniger erschlossen und deshalb genau das Richtige für alle die Bali längst kennen. Die Anreise ist aufwendiger — Inlandsflug nach Labuan Bajo, dann Bootstouren — aber der Aufwand lohnt sich.</p>
+
+    <p>Der <strong>Komodo-Nationalpark</strong> ist UNESCO-Welterbe und beherbergt die einzige wild lebende Population des Komodo-Warans, des grössten Reptils der Erde. Eine Bootsday-Tour zu den Inseln kostet 40–80 CHF pro Person, der Nationalparkeinritt 25–30 USD. Die Waran-Sichtung ist garantiert — die Tiere liegen träge rum, was sie keineswegs ungefährlich macht.</p>
+
+    <p>Flores hat ausserdem <strong>einige der besten Tauchspots Indonesiens</strong>. Manta Point bei Komodo ist einer der zuverlässigsten Orte weltweit um Mantarochen zu sehen. Tauchschulen in Labuan Bajo bieten komplette Kurse und Trips zu fairen Preisen. [Marc &amp; Fabienne: Tauchartikel folgen nach der Reise]</p>
+
+    <h2 id="routen">Routen-Empfehlungen — <em>für verschiedene Zeithorizonte</em></h2>
+
+    <div class="route-cards">
+      <div class="route-card">
+        <div class="route-card-duration">2 Wo.</div>
+        <div class="route-card-name">Bali &amp; Gili-Inseln</div>
+        <div class="route-card-stop">Ankunft Denpasar (Bali)</div>
+        <div class="route-card-stop">3–4 Tage Ubud</div>
+        <div class="route-card-stop">2 Tage Nusa Penida</div>
+        <div class="route-card-stop">2 Tage Uluwatu</div>
+        <div class="route-card-stop">Fähre nach Lombok</div>
+        <div class="route-card-stop">3–4 Tage Gili-Inseln</div>
+        <div class="route-card-stop">Rückflug ab Lombok</div>
+      </div>
+      <div class="route-card">
+        <div class="route-card-duration">4 Wo.</div>
+        <div class="route-card-name">Bali + Java + Lombok</div>
+        <div class="route-card-stop">5–6 Tage Bali (Ubud, Uluwatu)</div>
+        <div class="route-card-stop">Flug nach Yogyakarta</div>
+        <div class="route-card-stop">4 Tage Java (Borobudur, Prambanan)</div>
+        <div class="route-card-stop">2 Tage Mount Bromo</div>
+        <div class="route-card-stop">Fähre oder Flug nach Lombok</div>
+        <div class="route-card-stop">3 Tage Rinjani-Trek</div>
+        <div class="route-card-stop">4 Tage Gili-Inseln</div>
+      </div>
+      <div class="route-card">
+        <div class="route-card-duration">6 Wo.+</div>
+        <div class="route-card-name">Das volle Programm</div>
+        <div class="route-card-stop">Bali (7–10 Tage)</div>
+        <div class="route-card-stop">Java: Jogja + Bromo (7 Tage)</div>
+        <div class="route-card-stop">Lombok + Rinjani (7 Tage)</div>
+        <div class="route-card-stop">Gili-Inseln (4 Tage)</div>
+        <div class="route-card-stop">Flug nach Labuan Bajo</div>
+        <div class="route-card-stop">Flores + Komodo (5 Tage)</div>
+        <div class="route-card-stop">Rückflug ab Flores oder Bali</div>
+      </div>
+    </div>
 
     <h2 id="reisezeit">Beste <em>Reisezeit</em></h2>
 
-    <p>Indonesien hat zwei Jahreszeiten: Trockenzeit (April bis Oktober) und Regenzeit (November bis März). Die Trockenzeit ist klar die bessere Reisezeit — für Bali, Lombok und Java gilt das gleichermassen.</p>
+    <table class="rz-table">
+      <thead><tr><th>Monat</th><th>Bali</th><th>Lombok / Gili</th><th>Java</th><th>Bewertung</th></tr></thead>
+      <tbody>
+        <tr><td>Januar</td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td>Vermeiden</td></tr>
+        <tr><td>Februar</td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td>Vermeiden</td></tr>
+        <tr><td>März</td><td><span class="ok">Übergang</span></td><td><span class="ok">Übergang</span></td><td><span class="ok">Übergang</span></td><td>Bedingt ok</td></tr>
+        <tr><td>April</td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td>Gut</td></tr>
+        <tr><td>Mai</td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td>Sehr gut</td></tr>
+        <tr><td>Juni</td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td>Sehr gut</td></tr>
+        <tr><td>Juli</td><td><span class="good">Hochsaison</span></td><td><span class="good">Hochsaison</span></td><td><span class="good">Hochsaison</span></td><td>Top, aber voll</td></tr>
+        <tr><td>August</td><td><span class="good">Hochsaison</span></td><td><span class="good">Hochsaison</span></td><td><span class="good">Hochsaison</span></td><td>Top, aber voll</td></tr>
+        <tr><td>September</td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td><span class="good">Trockenzeit</span></td><td>Sehr gut</td></tr>
+        <tr><td>Oktober</td><td><span class="ok">Übergang</span></td><td><span class="ok">Übergang</span></td><td><span class="ok">Übergang</span></td><td>Ok</td></tr>
+        <tr><td>November</td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td>Eher vermeiden</td></tr>
+        <tr><td>Dezember</td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td><span class="rain">Regenzeit</span></td><td>Vermeiden</td></tr>
+      </tbody>
+    </table>
 
-    <p><strong>Juli und August</strong> sind Hochsaison: bestes Wetter, aber auch vollste Strände und höchste Preise. Wer ein bisschen Abstand zu europäischen Sommerferien-Touristen haben will, reist im <strong>Mai, Juni oder September</strong> — annähernd gleiches Wetter, deutlich weniger Betrieb.</p>
+    <p>Wir starten Ende Juni — mitten in die Hochsaison. Das war nicht der Plan, aber der Abflug ist der Abflug. Die Preise sind im Juli/August höher, die Strände voller. Wer flexibler ist als wir: Mai, Juni oder September sind die optimalen Monate.</p>
 
-    <p>Wir starten Ende Juni, also mitten in die Hochsaison. Das war nicht die Plan — aber der Abflug ist der Abflug.</p>
-
-    <h2 id="anreise">Anreise & <em>Transport</em></h2>
+    <h2 id="anreise">Anreise &amp; <em>Transport</em></h2>
 
     <h3>Flug von Zürich nach Bali</h3>
-    <p>Direktflüge gibt es nicht. Typische Verbindungen laufen über Singapur, Kuala Lumpur, Dubai oder Bangkok. Flugzeit: 12–15 Stunden je nach Umsteiger. Günstige Optionen: Air Asia, Scoot, Emirates. Frühzeitig buchen lohnt sich — wir haben unsere Tickets rund 4 Monate im Voraus gebucht. Kreditkarte mit Reiseschutz nehmen, die Punkte oder Cashback bringt — mehr dazu in unserem <a href="/kreditkarten.html">Kreditkarten-Guide für Weltreisende</a>.</p>
+    <p>Direktflüge gibt es nicht. Typische Verbindungen laufen über Singapur (Singapore Airlines, Scoot), Kuala Lumpur (Air Asia, Malaysia Airlines) oder Dubai (Emirates). Gesamtflugzeit 12–15 Stunden. Die günstigsten Optionen sind Scoot und Air Asia — dafür mit mehr Gepäck-Kosten aufpassen. Frühzeitig buchen (4–6 Monate voraus) für die besten Preise. Für eine Kreditkarte die Reisepunkte sammelt: unser <a href="/kreditkarten.html">Kreditkarten-Guide</a>.</p>
 
     <h3>Innerhalb Indonesiens</h3>
-    <p>Indonesien ist gross — der Überlandweg von Bali nach Java ist eine Fähre (ca. 45 Min., sehr günstig), von Java nach Flores braucht man einen Inlandsflug oder mehrere Tage Überland. <strong>Citilink und Lion Air</strong> sind die günstigsten Inlandsflüge und oft günstiger als in Europa irgendwo hinzufahren. Buchung über ihre Apps oder über 12Go Asia.</p>
+    <p>Indonesien ist riesig — der Überlandweg allein von Bali nach Lombok geht mit der Fähre (45 Min., ca. 2 CHF), nach Java ebenfalls per Fähre. Für grössere Distanzen (Bali → Flores, Java → Lombok) sind Inlandsflüge die einzige sinnvolle Option. <strong>Citilink und Lion Air</strong> sind die günstigsten Anbieter — Tickets ab 10 CHF wenn man früh bucht, realistisch 20–40 CHF für Strecken unter 90 Minuten.</p>
 
-    <p>Auf Bali und Lombok ist der Motorroller das Hauptfortbewegungsmittel. Ca. 5–7 CHF pro Tag zum Mieten. Internationaler Führerschein ist technisch Pflicht, wird selten kontrolliert — aber fürs Gewissen und die Versicherung sollte man ihn haben. <strong>Grab</strong> funktioniert in den grossen Städten als günstige Taxi-Alternative.</p>
+    <p>Buchung: Direkt über die Airlines-Apps oder über <strong>12Go Asia</strong> für kombinierte Bus/Fähren/Flug-Routen. Motorroller auf Bali und Lombok: ca. 5–7 CHF/Tag, kein Problem wenn man Töfffahren kann. In den grossen Städten: Grab und Gojek als günstige Taxi-Alternative — beide Apps funktionieren ausgezeichnet.</p>
 
-    <h2 id="schweizer-sicht">Aus <em>Schweizer Sicht</em></h2>
+    <h2 id="schweizer">Aus <em>Schweizer Sicht</em></h2>
 
-    <p>Schweizer haben bei der Einreise nach Indonesien keinen Sonderstatus gegenüber anderen EU-Ländern — das Visa on Arrival ist für alle gleich. Was aber einen Unterschied macht: der Schweizer Franken ist stark. In Indonesien bist du gegenüber deutschen oder österreichischen Reisenden kaum im Nachteil, aber der CHF/IDR-Wechselkurs ist in der Regel angenehm. 1 CHF ≈ 16'000–17'000 IDR (Stand Juni 2026).</p>
+    <p>Der Schweizer Franken ist stark, und das macht sich in Indonesien positiv bemerkbar. 1 CHF ≈ 16'500 IDR (Stand Juni 2026) — damit kommt man weit. Kreditkarten werden in touristischen Gebieten akzeptiert, aber Bargeld ist auf kleineren Inseln Pflicht. Wir empfehlen eine gebührenfreie Reisekreditkarte — <a href="/kreditkarten.html">Vergleich aller Optionen für Schweizer hier</a>.</p>
 
-    <p>Zur Versicherung: Für Weltreisende aus der Schweiz empfiehlt sich eine Auslandskrankenversicherung die Indonesien abdeckt — also nicht die KVG, die sistiert ihr vor Abreise. Mehr zu den Schweizer Optionen erklären wir ausführlich in unserem <a href="/auslandskrankenversicherung.html">AKV-Guide für Weltreisende</a>.</p>
+    <p>Zur Versicherung: Die KVG deckt nichts ausserhalb der Schweiz — die sistiert man vor der Abreise sowieso (Kosteneinsparung ca. 400–600 CHF/Monat). Was man braucht: eine Auslandskrankenversicherung (AKV), die Indonesien abdeckt und idealerweise auch Rettungsflüge einschliesst. Auf den abgelegeneren Inseln wie Flores oder Komodo kann ein medizinischer Notfall logistisch sehr aufwendig werden. Mehr dazu in unserem <a href="/auslandskrankenversicherung.html">AKV-Guide für Schweizer Weltreisende</a>.</p>
 
-    <div class="pull-quote"><p>Indonesien ist eines der Länder, auf die ich mich am meisten freue — nicht wegen Bali, sondern wegen allem was dahinter kommt.</p><cite>— Fabienne</cite></div>
+    <div class="pull-quote"><p>Indonesien ist eines der Länder auf die ich mich am meisten freue — nicht wegen Bali, sondern wegen allem was dahinter kommt.</p><cite>— Fabienne</cite></div>
 
-    <section class="faq-section">
+    <section class="faq-section" id="faq">
       <h2>Häufige Fragen zu <em>Indonesien</em></h2>
       <div class="faq-item">
         <h3>Brauchen Schweizer ein Visum für Indonesien?</h3>
-        <p>Ja — aber es gibt ein einfaches Visa on Arrival (VOA) direkt am Flughafen, Kosten ca. 30 CHF. Gültig 30 Tage, einmal verlängerbar um weitere 30 Tage. Alternativ vorab als e-VOA online beantragen.</p>
+        <p>Ja — aber es gibt ein einfaches Visa on Arrival (VOA) direkt am Flughafen. Kosten ca. 30 CHF. Gültig 30 Tage, einmal verlängerbar um weitere 30 Tage. Alternativ vorab als e-VOA online beantragen auf molina.imigrasi.go.id.</p>
       </div>
       <div class="faq-item">
-        <h3>Was kostet ein Tag in Indonesien?</h3>
-        <p>Als Backpacker auf Java oder Lombok: 30–50 CHF pro Person und Tag. Auf Bali, besonders in Canggu und Seminyak, rechne mit 50–80 CHF. Mit Komfort-Standard: 80–120 CHF/Tag.</p>
+        <h3>Was kostet ein Tag in Indonesien in CHF?</h3>
+        <p>Als Backpacker auf Java oder Lombok: 30–50 CHF pro Person und Tag. Auf Bali (Ubud): 40–60 CHF. Canggu oder Seminyak: 60–90 CHF. Mit echtem Komfort (Privatpool-Villa): 100–150 CHF und mehr.</p>
       </div>
       <div class="faq-item">
-        <h3>Wann ist die beste Reisezeit?</h3>
-        <p>Mai bis Oktober (Trockenzeit). Hochsaison ist Juli/August — mehr Touristen, höhere Preise. Mai, Juni und September sind die besten Monate: gutes Wetter, weniger Betrieb.</p>
+        <h3>Wann ist die beste Reisezeit für Indonesien?</h3>
+        <p>Mai bis Oktober (Trockenzeit) ist optimal. Hochsaison Juli/August: bestes Wetter, aber mehr Touristen und höhere Preise. Mai, Juni und September bieten fast dasselbe Wetter bei deutlich weniger Betrieb.</p>
       </div>
       <div class="faq-item">
         <h3>Wie lange sollte man für Indonesien einplanen?</h3>
-        <p>Mindestens 3 Wochen für Bali und Lombok. Wer auch Java und Flores sehen will: 4–6 Wochen. Indonesien ist so gross, dass man in einem Monat nur eine Handvoll Inseln sieht.</p>
+        <p>Mindestens 2 Wochen für Bali und Gili-Inseln. Für Bali + Java + Lombok: 4 Wochen. Das vollständige Programm inklusive Flores und Komodo: 6+ Wochen. Indonesien belohnt Zeit — wer nur eine Woche hat, fährt lieber woanders hin.</p>
       </div>
       <div class="faq-item">
-        <h3>Ist Bali wirklich überlaufen?</h3>
-        <p>In Canggu, Seminyak und Kuta: ja. Ubud ist besser, aber touristisch. Wer Ruhe sucht: Lombok, Gili Air oder Ostjava — dort ist die Dichte an Instagram-Touristen deutlich tiefer.</p>
+        <h3>Ist Bali wirklich so überlaufen?</h3>
+        <p>In Canggu, Seminyak und Kuta: ja, eindeutig. Ubud ist besser, aber ebenfalls touristisch. Wer echte Ruhe sucht, fährt nach Lombok, auf die Gili-Inseln oder nach Ostjava — dort ist die Touristendichte deutlich geringer und die Preise auch.</p>
       </div>
     </section>
     <div class="share-row"><span class="share-label">Folge uns:</span><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg></div><span class="share-icon-label">Instagram</span></a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#010101"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg></div><span class="share-icon-label">TikTok</span></a><a href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#FF0000"><svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg></div><span class="share-icon-label">YouTube</span></a><a href="https://pinterest.com/pin/create/button/?url=https://wirweitweg.blog/indonesien.html&description=Indonesien+Reisef%C3%BChrer+von+WirWeitWeg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#e60023"><svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div><span class="share-icon-label">Pinterest</span></a></div>
