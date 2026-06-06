@@ -7,6 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700&display=swap');
+
+/* Sub-Drop Flyout */
+.nav-sub-wrap{position:relative;display:block;}
+.nav-sub-drop{display:none;position:absolute;left:calc(100% + 4px);top:-4px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px;min-width:185px;box-shadow:0 8px 28px rgba(0,0,0,.12);z-index:9999;}
+.nav-sub-wrap:hover>.nav-sub-drop{display:block;}
+.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:#6b7280;padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
+.nav-sub-drop a:hover{background:#fff9ee;color:#0e9f6e;}
+.nav-sub-arr{font-size:.65rem;color:#b0b8c8;margin-left:auto;padding-left:.3rem;}
 </style>
 </head>
 <body style="margin:0;padding:0;background-color:#f0ede8;">
