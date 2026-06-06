@@ -199,6 +199,14 @@ strong{font-weight:700;}
 @media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand img{height:80px!important;}}
 @media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
 @media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
+
+/* Sub-Drop Flyout */
+.nav-sub-wrap{position:relative;display:block;}
+.nav-sub-drop{display:none;position:absolute;left:calc(100% + 4px);top:-4px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px;min-width:185px;box-shadow:0 8px 28px rgba(0,0,0,.12);z-index:9999;}
+.nav-sub-wrap:hover>.nav-sub-drop{display:block;}
+.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:#6b7280;padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
+.nav-sub-drop a:hover{background:#fff9ee;color:#0e9f6e;}
+.nav-sub-arr{font-size:.65rem;color:#b0b8c8;margin-left:auto;padding-left:.3rem;}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -587,12 +595,7 @@ strong{font-weight:700;}
         <ul>
           <li><a href="/thailand.html">Thailand</a></li>
           <li><a href="/vietnam.html">Vietnam</a></li>
-          <li><a href="/indonesien.html">Indonesien</a>
-  <a href="/bali.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Bali</a>
-  <a href="/lombok.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Lombok &amp; Gili</a>
-  <a href="/java.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Java</a>
-  <a href="/flores.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Flores &amp; Komodo</a>
-  <a href="/sulawesi.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Sulawesi</a></li>
+          <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
