@@ -70,6 +70,14 @@
 .rz-table .ok{background:var(--sandlt);color:#8a6020;font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
 .rz-table .rain{background:#f1f5f9;color:var(--mid);border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
 @media(max-width:700px){.region-grid{grid-template-columns:1fr;}.route-cards{grid-template-columns:1fr;}.art-img-half{grid-template-columns:1fr;}}
+
+/* Sub-Drop Flyout */
+.nav-sub-wrap{position:relative;display:block;}
+.nav-sub-drop{display:none;position:absolute;left:calc(100% + 4px);top:-4px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px;min-width:185px;box-shadow:0 8px 28px rgba(0,0,0,.12);z-index:9999;}
+.nav-sub-wrap:hover>.nav-sub-drop{display:block;}
+.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:#6b7280;padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
+.nav-sub-drop a:hover{background:#fff9ee;color:#0e9f6e;}
+.nav-sub-arr{font-size:.65rem;color:#b0b8c8;margin-left:auto;padding-left:.3rem;}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -96,12 +104,7 @@
   <a href="/java.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Java</a>
   <a href="/flores.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Flores &amp; Komodo</a>
   <a href="/sulawesi.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Sulawesi</a><a href="/japan.html">Japan</a><a href="/malaysia.html">Malaysia</a><a href="/singapur.html">Singapur</a><a href="/kambodscha.html">Kambodscha</a><a href="/laos.html">Laos</a><a href="/philippinen.html">Philippinen</a><div class="nav-mobile-section">Mehr</div><a href="/reisetipps.html">Reisetipps</a><a href="/reiseblog.html">Reiseblog</a><a href="/ueber-uns.html">Über Uns</a><a href="/newsletter.html">Newsletter</a></div>
-<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/laenderguides.html">Länderguides</a><span>›</span><a href="/indonesien.html">Indonesien</a>
-  <a href="/bali.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Bali</a>
-  <a href="/lombok.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Lombok &amp; Gili</a>
-  <a href="/java.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Java</a>
-  <a href="/flores.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Flores &amp; Komodo</a>
-  <a href="/sulawesi.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Sulawesi</a><span>›</span>Flores</div>
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/laenderguides.html">Länderguides</a><span>›</span><a href="/indonesien.html">Indonesien</a><span>›</span>Flores</div>
 <div class="art-hero"><img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=1400&q=85&fit=crop" alt="Flores Indonesien Küste türkises Wasser tropische Insel" loading="eager"><div class="art-hero-overlay"></div><div class="art-hero-content"><div class="art-eyebrow">🇮🇩 Flores · Indonesien</div><h1 class="art-h1">Flores –<br><em>Komodo, Kelimutu &amp; Tauchen</em></h1><div class="art-meta-row"><span class="art-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Fabienne &amp; Marc</span><span class="art-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>ca. 12 Min. Lesezeit</span><span class="art-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Aktualisiert Juni 2026</span><span class="art-meta-item">🇨🇭 Schweizer Perspektive</span></div></div></div>
 <div class="art-main">
   <article class="art-content">
@@ -203,12 +206,7 @@
         <ul>
           <li><a href="/thailand.html">Thailand</a></li>
           <li><a href="/vietnam.html">Vietnam</a></li>
-          <li><a href="/indonesien.html">Indonesien</a>
-  <a href="/bali.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Bali</a>
-  <a href="/lombok.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Lombok &amp; Gili</a>
-  <a href="/java.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Java</a>
-  <a href="/flores.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Flores &amp; Komodo</a>
-  <a href="/sulawesi.html" style="padding-left:1.5rem;font-size:.9rem;">↳ Sulawesi</a></li>
+          <li><a href="/indonesien.html">Indonesien</a></li>
           <li><a href="/japan.html">Japan</a></li>
           <li><a href="/laenderguides.html">Alle Länder →</a></li>
         </ul>
