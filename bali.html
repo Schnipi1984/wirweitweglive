@@ -2,7 +2,7 @@
 <html lang="de-CH">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bali Reiseführer 2026 – Ubud, Canggu, Uluwatu & Kosten | WirWeitWeg</title>
+<title>Bali 2026: Ubud, Canggu, Uluwatu – alles was du wissen musst | WirWeitWeg</title>
 <meta name="description" content="Bali Reiseführer 2026: Ubud, Canggu, Seminyak, Uluwatu, Nusa Penida – Kosten in CHF, Visa, beste Reisezeit. Ehrlich von Fabienne & Marc aus der Schweiz.">
 <meta property="og:title" content="Bali Reiseführer 2026 – Ubud, Canggu, Uluwatu | WirWeitWeg"><meta property="og:description" content="Kosten in CHF, Visa, Ubud vs. Canggu, Nusa Penida – ehrlicher Bali-Guide aus Schweizer Sicht."><meta property="og:type" content="article"><meta property="og:url" content="https://wirweitweg.blog/bali"><meta property="og:image" content="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1400&q=85&fit=crop"><meta property="og:locale" content="de_CH"><meta name="twitter:title" content="Bali Reiseführer 2026 – Ubud, Canggu, Uluwatu | WirWeitWeg">
 <meta name="twitter:description" content="Kosten in CHF, Visa, Ubud vs. Canggu, Nusa Penida – ehrlicher Bali-Guide aus Schweizer Sicht.">
@@ -82,6 +82,157 @@
 .rz-good{background:var(--greenlt);color:var(--green);font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
 .rz-wet{background:#fce7e7;color:#c0392b;font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
 .rz-ok{background:var(--sandlt);color:#8a6020;font-weight:700;border-radius:4px;padding:.2rem .5rem;font-size:.78rem;white-space:nowrap;}
+
+/* ════════════════════════════════════════════
+   WIRWEITWEG DESIGN SYSTEM v3 — GUIDE PAGES
+   ════════════════════════════════════════════ */
+
+/* Quick Facts */
+.qf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:2rem 0;}
+.qf-card{background:#fff;border:1px solid var(--border);border-radius:var(--rLg);padding:1.1rem .75rem;text-align:center;transition:transform .2s;}
+.qf-card:hover{transform:translateY(-2px);}
+.qf-icon{font-size:1.6rem;margin-bottom:.4rem;display:block;}
+.qf-value{font-family:'Fraunces',serif;font-weight:900;font-size:1.35rem;color:var(--green);line-height:1.1;display:block;}
+.qf-label{font-size:.68rem;font-weight:700;color:var(--light);text-transform:uppercase;letter-spacing:.07em;margin-top:.25rem;display:block;}
+
+/* Summary Box */
+.summary-box{background:linear-gradient(135deg,#2d6a4f 0%,#1a4a38 100%);border-radius:var(--rLg);padding:1.75rem 2rem;margin:2rem 0;}
+.summary-title{font-family:'Fraunces',serif;font-weight:900;font-size:1rem;color:var(--mint);margin-bottom:.875rem;text-transform:uppercase;letter-spacing:.05em;}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;}
+.summary-item{display:flex;align-items:flex-start;gap:.5rem;font-size:.88rem;color:rgba(255,255,255,.85);}
+.summary-item::before{content:'✓';color:var(--mint);font-weight:900;flex-shrink:0;margin-top:.1rem;}
+
+/* TOC */
+.g-toc{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.25rem 1.5rem;margin:2rem 0;}
+.g-toc-head{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);margin-bottom:.75rem;}
+.g-toc ol{padding-left:1.25rem;margin:0;columns:2;column-gap:2rem;}
+.g-toc li{font-size:.88rem;margin-bottom:.35rem;break-inside:avoid;}
+.g-toc a{color:var(--green);font-weight:600;}
+.g-toc a:hover{text-decoration:underline;}
+
+/* Climate Calendar */
+.climate-cal{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin:1.5rem 0;}
+.cc-month{border-radius:8px;padding:.7rem .25rem .5rem;text-align:center;}
+.cc-name{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;display:block;}
+.cc-bar{height:5px;border-radius:3px;margin:.3rem auto .25rem;width:75%;}
+.cc-icon{font-size:.8rem;display:block;}
+.cc-best{background:#e6f2ec;}.cc-best .cc-name{color:#1a5c35;}.cc-best .cc-bar{background:#2d6a4f;}
+.cc-good{background:#f0f7f3;}.cc-good .cc-name{color:#2d6a4f;}.cc-good .cc-bar{background:#a8d5b5;}
+.cc-ok{background:#fdf8f0;}.cc-ok .cc-name{color:#8a6020;}.cc-ok .cc-bar{background:#c9a96e;}
+.cc-bad{background:#fdf0f0;}.cc-bad .cc-name{color:#991f1f;}.cc-bad .cc-bar{background:#e74c3c;}
+
+/* Tables */
+.tbl-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--rLg);border:1px solid var(--border);}
+.g-tbl{width:100%;border-collapse:collapse;font-size:.9rem;}
+.g-tbl thead th{background:#2d6a4f;color:#fff;padding:.7rem 1rem;text-align:left;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
+.g-tbl thead th:first-child{border-radius:11px 0 0 0;}.g-tbl thead th:last-child{border-radius:0 11px 0 0;}
+.g-tbl tbody td{padding:.65rem 1rem;border-bottom:1px solid #f0ede6;vertical-align:top;color:#3a3530;}
+.g-tbl tbody tr:last-child td{border-bottom:none;}
+.g-tbl tbody tr:nth-child(even) td{background:var(--off);}
+.g-tbl .hl td{background:#e6f2ec;font-weight:700;color:#1a5c35;}
+.g-tbl a{color:var(--green);font-weight:700;}
+
+/* Tags */
+.tag-best{background:#e6f2ec;color:#1a5c35;font-weight:700;border-radius:4px;padding:.2rem .6rem;font-size:.78rem;white-space:nowrap;display:inline-block;}
+.tag-ok{background:#f5edd8;color:#7a5010;font-weight:700;border-radius:4px;padding:.2rem .6rem;font-size:.78rem;white-space:nowrap;display:inline-block;}
+.tag-bad{background:#fce7e7;color:#991f1f;font-weight:700;border-radius:4px;padding:.2rem .6rem;font-size:.78rem;white-space:nowrap;display:inline-block;}
+.tag-info{background:#e8f4f8;color:#1a5c8a;font-weight:700;border-radius:4px;padding:.2rem .6rem;font-size:.78rem;white-space:nowrap;display:inline-block;}
+
+/* Info Boxes */
+.g-box{display:flex;gap:1rem;padding:1.25rem 1.5rem;margin:1.75rem 0;}
+.g-box-icon{font-size:1.5rem;flex-shrink:0;line-height:1.2;}
+.g-box-title{font-weight:700;font-size:.9rem;margin-bottom:.25rem;}
+.g-box-text{font-size:.9rem;line-height:1.7;}
+.g-box-text a{font-weight:700;}
+.box-green{background:#e6f2ec;border-left:4px solid #2d6a4f;border-radius:0 var(--rLg) var(--rLg) 0;}
+.box-green .g-box-title{color:#1a5c35;}.box-green .g-box-text{color:#2d4a30;}.box-green a{color:#2d6a4f;}
+.box-amber{background:#f5edd8;border-left:4px solid #c9a96e;border-radius:0 var(--rLg) var(--rLg) 0;}
+.box-amber .g-box-title{color:#7a5010;}.box-amber .g-box-text{color:#6b4a20;}
+.box-red{background:#fce7e7;border-left:4px solid #e74c3c;border-radius:0 var(--rLg) var(--rLg) 0;}
+.box-red .g-box-title{color:#991f1f;}.box-red .g-box-text{color:#8a1f1f;}
+.box-ch{background:#f0f0ff;border-left:4px solid #5b7dd8;border-radius:0 var(--rLg) var(--rLg) 0;}
+.box-ch .g-box-title{color:#2a4ab0;}.box-ch .g-box-text{color:#2a3a80;}.box-ch a{color:#2a4ab0;}
+
+/* Budget Cards */
+.budget-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:2rem 0;}
+.budget-card{border-radius:var(--rLg);padding:1.25rem;border:1.5px solid var(--border);}
+.budget-card.featured{border-color:#2d6a4f;box-shadow:0 0 0 1px #2d6a4f;}
+.budget-badge{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#2d6a4f;background:#e6f2ec;border-radius:100px;padding:.2rem .65rem;display:inline-block;margin-bottom:.5rem;}
+.budget-badge.mid{color:#8a6020;background:#f5edd8;}
+.budget-badge.lux{color:#5a5550;background:var(--off);}
+.budget-amount{font-family:'Fraunces',serif;font-weight:900;font-size:1.7rem;color:var(--ink);line-height:1;}
+.budget-unit{font-size:.75rem;color:var(--light);margin-bottom:.875rem;}
+.budget-item{font-size:.84rem;color:var(--mid);padding:.3rem 0;border-bottom:1px solid var(--off);display:flex;justify-content:space-between;gap:.5rem;}
+.budget-item:last-child{border-bottom:none;}
+.budget-item-price{font-weight:700;color:var(--ink);white-space:nowrap;}
+
+/* Image Grid */
+.g-img{width:100%;border-radius:var(--rLg);margin:1.5rem 0 .35rem;display:block;}
+.g-cap{font-size:.78rem;color:var(--light);font-style:italic;text-align:center;margin-bottom:1.75rem;line-height:1.5;}
+.g-img2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1.5rem 0;}
+.g-img2 img{width:100%;height:210px;object-fit:cover;border-radius:10px;display:block;}
+.g-img2 figcaption{font-size:.72rem;color:var(--light);font-style:italic;margin-top:.3rem;text-align:center;}
+.g-img3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1.5rem 0;}
+.g-img3 img{width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;}
+
+/* Tabs */
+.g-tabs-group{margin:2rem 0;}
+.g-tabs{display:flex;gap:0;flex-wrap:wrap;border-bottom:2px solid var(--border);}
+.g-tab{background:none;border:none;padding:.65rem 1.1rem;font-family:'Nunito',sans-serif;font-size:.84rem;font-weight:700;cursor:pointer;color:var(--mid);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .15s;}
+.g-tab.active,.g-tab:hover{color:var(--green);border-bottom-color:var(--green);}
+.g-tabcontent{display:none;padding:1.5rem;background:var(--off);border-radius:0 var(--rLg) var(--rLg) var(--rLg);}
+.g-tabcontent.active{display:block;}
+.g-tabcontent h3{font-family:'Fraunces',serif;font-weight:900;font-size:1.15rem;color:var(--ink);margin-bottom:.75rem;}
+.g-tabcontent p{font-size:.9rem;color:#3a3530;margin-bottom:.75rem;}
+.g-tabcontent .g-img2{margin:.75rem 0 0;}
+
+/* FAQ Accordion */
+.g-faq{margin:2.5rem 0;}
+.g-faq-item{border-bottom:1px solid var(--border);}
+.g-faq-q{width:100%;text-align:left;background:none;border:none;padding:1.1rem 0;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.g-faq-arrow{width:26px;height:26px;border-radius:50%;background:#e6f2ec;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#2d6a4f;flex-shrink:0;transition:transform .25s,background .15s;}
+.g-faq-q.open .g-faq-arrow{transform:rotate(180deg);background:#2d6a4f;color:#fff;}
+.g-faq-a{display:none;padding:.25rem 0 1.25rem;font-size:.92rem;color:var(--mid);line-height:1.75;}
+
+/* Checklist */
+.g-checklist{list-style:none;padding:0;margin:.75rem 0;}
+.g-checklist li{display:flex;align-items:flex-start;gap:.65rem;font-size:.9rem;color:#3a3530;padding:.4rem 0;border-bottom:1px solid var(--off);}
+.g-checklist li:last-child{border-bottom:none;}
+.g-checklist li::before{content:'✓';color:#2d6a4f;font-weight:900;flex-shrink:0;margin-top:.1rem;}
+
+/* Phrase Table */
+.phrase-tbl{width:100%;border-collapse:collapse;font-size:.88rem;margin:1rem 0;}
+.phrase-tbl th{background:var(--off);padding:.5rem .75rem;text-align:left;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mid);border-bottom:2px solid var(--border);}
+.phrase-tbl td{padding:.5rem .75rem;border-bottom:1px solid var(--off);color:#3a3530;}
+.phrase-tbl td:nth-child(2){color:#2d6a4f;font-weight:700;}
+.phrase-tbl td:nth-child(3){color:var(--light);font-style:italic;}
+
+/* Highlight quote */
+.g-quote{border-left:4px solid var(--green);background:#e6f2ec;border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:2rem 0;}
+.g-quote p{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:1.1rem;color:var(--ink);line-height:1.5;margin:0 0 .4rem;}
+.g-quote cite{font-size:.8rem;font-weight:700;color:#2d6a4f;text-transform:uppercase;letter-spacing:.05em;font-style:normal;}
+
+/* Section divider */
+.g-divider{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+
+/* Affiliate note */
+.g-affiliate{font-size:.75rem;color:var(--light);line-height:1.6;margin:1.5rem 0;padding:.75rem 1rem;background:var(--off);border-radius:var(--r);}
+
+/* Responsive */
+@media(max-width:768px){
+  .qf-grid{grid-template-columns:repeat(3,1fr);}
+  .budget-row{grid-template-columns:1fr;}
+  .g-img2{grid-template-columns:1fr;}
+  .g-img3{grid-template-columns:1fr 1fr;}
+  .g-toc ol{columns:1;}
+  .climate-cal{grid-template-columns:repeat(6,1fr);}
+  .summary-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .qf-grid{grid-template-columns:repeat(2,1fr);}
+  .climate-cal{grid-template-columns:repeat(4,1fr);}
+  .g-img3{grid-template-columns:1fr;}
+}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -113,269 +264,404 @@
 <div class="art-main">
   <article class="art-content">
 
-    <p>Bali ist das bekannteste Reiseziel Südostasiens — und gleichzeitig das am meisten missverstandene. Wer Bali als ruhige Spiritualitätsinsel erwartet, findet in Canggu Avocado-Toast-Cafés und Stau. Wer es als Party-Insel erwartet, lernt in Ubud stundenlang in Tempeln zu sitzen. Bali ist beides, und noch viel mehr. Dieser Guide erklärt ehrlich was dich erwartet.</p>
+    <p>Bali ist das meistbesuchte Reiseziel Südostasiens — und gleichzeitig das am meisten missverstandene. Wer eine ruhige Spiritualitätsinsel erwartet, findet Stau und Avocado Toast-Cafés. Wer Party erwartet, lernt in Ubud stundenlang in Tempeln zu sitzen. Bali ist beides — und viel mehr. Dieser Guide erklärt ehrlich, was dich erwartet.</p>
 
-    <div class="infobox sand"><div class="ibox-ico">🇨🇭</div><div class="ibox-title">Schweizer Perspektive</div><div class="ibox-body">Alle Preise in CHF. Wechselkurs Juni 2026: 1 CHF ≈ 16'500 IDR. Bali ist teurer als Java oder Lombok — budgetiere entsprechend. KVG vor Abreise sistieren, AKV abschliessen.</div></div>
-
-    <div class="num-grid">
-      <div class="num-card"><div class="num-value">~30 CHF</div><div class="num-label">Visa on Arrival</div></div>
-      <div class="num-card"><div class="num-value">28°C</div><div class="num-label">Durchschnittstemperatur</div></div>
-      <div class="num-card"><div class="num-value">~13 h</div><div class="num-label">Flug Zürich → Denpasar</div></div>
+    <div class="qf-grid">
+      <div class="qf-card"><span class="qf-icon">💰</span><span class="qf-value">~30</span><span class="qf-label">CHF Visum</span></div>
+      <div class="qf-card"><span class="qf-icon">🌡️</span><span class="qf-value">28°C</span><span class="qf-label">Ø Temperatur</span></div>
+      <div class="qf-card"><span class="qf-icon">✈️</span><span class="qf-value">~13h</span><span class="qf-label">ZRH → Denpasar</span></div>
+      <div class="qf-card"><span class="qf-icon">💵</span><span class="qf-value">35–80</span><span class="qf-label">CHF / Tag</span></div>
+      <div class="qf-card"><span class="qf-icon">📅</span><span class="qf-value">Mai–Okt</span><span class="qf-label">Beste Zeit</span></div>
     </div>
 
-    <nav class="toc"><p class="toc-title">In diesem Guide</p><ol>
-      <li><a href="#bali-klima">Klima &amp; beste Reisezeit</a></li>
-      <li><a href="#bali-visum">Visum &amp; Einreise</a></li>
-      <li><a href="#bali-kosten">Kosten in CHF</a></li>
-      <li><a href="#bali-geld">Geld &amp; Währung</a></li>
-      <li><a href="#bali-anreise">Anreise</a></li>
-      <li><a href="#bali-transport">Transport vor Ort</a></li>
-      <li><a href="#bali-unterkuenfte">Unterkunft</a></li>
-      <li><a href="#bali-essen">Essen &amp; Trinken</a></li>
-      <li><a href="#bali-gebiete">Gebiete auf Bali</a></li>
-      <li><a href="#bali-highlights">Highlights &amp; Aktivitäten</a></li>
-      <li><a href="#bali-gesundheit">Gesundheit &amp; Sicherheit</a></li>
-      <li><a href="#bali-sim">Internet &amp; SIM</a></li>
-      <li><a href="#bali-sprache">Sprache &amp; Kultur</a></li>
-      <li><a href="#bali-packen">Packtipps</a></li>
-    </ol></nav>
+    <div class="summary-box">
+      <div class="summary-title">Das Wichtigste auf einen Blick</div>
+      <div class="summary-grid">
+        <div class="summary-item">Visum on Arrival am Flughafen (~30 CHF, 30 Tage)</div>
+        <div class="summary-item">Motorroller ist das Hauptfortbewegungsmittel</div>
+        <div class="summary-item">Leitungswasser nicht trinkbar — Flaschenwasser kaufen</div>
+        <div class="summary-item">Beste Reisezeit: Mai, Juni &amp; September</div>
+        <div class="summary-item">Dengue-Fieber-Risiko: Repellent konsequent nutzen</div>
+        <div class="summary-item">KVG gilt nicht im Ausland — AKV abschliessen</div>
+      </div>
+    </div>
 
-    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1100&q=85&fit=crop" alt="Reisterrassen Tegalalang Ubud Bali" class="art-img" loading="lazy">
-    <p class="art-img-caption">Tegalalang Rice Terraces — das ikonischste Bild Balis, am Morgen vor den Touristen. [Marc &amp; Fabienne: eigenes Foto folgt]</p>
+    <div class="g-toc">
+      <div class="g-toc-head">In diesem Guide</div>
+      <ol>
+        <li><a href="#bali-klima">Klima &amp; Reisezeit</a></li>
+        <li><a href="#bali-visum">Visum &amp; Einreise</a></li>
+        <li><a href="#bali-kosten">Kosten in CHF</a></li>
+        <li><a href="#bali-geld">Geld &amp; Währung</a></li>
+        <li><a href="#bali-anreise">Anreise</a></li>
+        <li><a href="#bali-transport">Transport vor Ort</a></li>
+        <li><a href="#bali-unterkunft">Unterkunft</a></li>
+        <li><a href="#bali-essen">Essen &amp; Trinken</a></li>
+        <li><a href="#bali-gebiete">Gebiete auf Bali</a></li>
+        <li><a href="#bali-highlights">Highlights</a></li>
+        <li><a href="#bali-gesundheit">Gesundheit &amp; Sicherheit</a></li>
+        <li><a href="#bali-sim">Internet &amp; SIM</a></li>
+        <li><a href="#bali-sprache">Sprache &amp; Kultur</a></li>
+        <li><a href="#bali-packen">Packtipps</a></li>
+      </ol>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1100&q=85&fit=crop" alt="Reisterrassen Tegalalang Ubud Bali" class="g-img" loading="lazy">
+    <p class="g-cap">Tegalalang Rice Terraces in Ubud — das ikonischste Bild Balis. Früh morgens gehen, bevor die Tagestouristen kommen. [Marc &amp; Fabienne: eigenes Foto folgt]</p>
 
     <h2 id="bali-klima">Klima &amp; <em>beste Reisezeit</em></h2>
-    <p>Bali hat zwei Jahreszeiten: Trockenzeit (April–Oktober) und Regenzeit (November–März). Die Temperaturen sind das ganze Jahr nahezu gleich — zwischen 26°C und 32°C an der Küste. Ubud und das Berginnere sind 3–5°C kühler. Luftfeuchtigkeit ist immer hoch, auch in der Trockenzeit.</p>
+    <p>Bali hat zwei Jahreszeiten. Die Trockenzeit von April bis Oktober ist die eindeutig bessere Reisezeit — weniger Regen, mehr Sonne, angenehmere Bedingungen für Outdoor-Aktivitäten. Die Temperaturen bleiben das ganze Jahr konstant warm.</p>
 
-    <table class="art-table">
-      <thead><tr><th>Monat</th><th>Niederschlag</th><th>Sonne</th><th>Touristen</th><th>Empfehlung</th></tr></thead>
-      <tbody>
-        <tr><td>Jan</td><td>350–500 mm</td><td>4–5 h/Tag</td><td>Mittel</td><td><span class="rz-wet">Regenzeit</span></td></tr>
-        <tr><td>Feb</td><td>350–450 mm</td><td>4–5 h/Tag</td><td>Wenig</td><td><span class="rz-wet">Regenzeit</span></td></tr>
-        <tr><td>Mär</td><td>200–300 mm</td><td>6 h/Tag</td><td>Wenig</td><td><span class="rz-ok">Übergang</span></td></tr>
-        <tr><td>Apr</td><td>80–120 mm</td><td>8 h/Tag</td><td>Mittel</td><td><span class="rz-good">Sehr gut</span></td></tr>
-        <tr><td>Mai</td><td>50–80 mm</td><td>9 h/Tag</td><td>Mittel</td><td><span class="rz-good">Sehr gut</span></td></tr>
-        <tr><td>Jun</td><td>40–60 mm</td><td>9 h/Tag</td><td>Viel</td><td><span class="rz-good">Sehr gut</span></td></tr>
-        <tr><td>Jul</td><td>20–40 mm</td><td>10 h/Tag</td><td>Sehr viel</td><td><span class="rz-good">Top, aber voll</span></td></tr>
-        <tr><td>Aug</td><td>20–40 mm</td><td>10 h/Tag</td><td>Sehr viel</td><td><span class="rz-good">Top, aber voll</span></td></tr>
-        <tr><td>Sep</td><td>40–60 mm</td><td>9 h/Tag</td><td>Mittel</td><td><span class="rz-good">Sehr gut</span></td></tr>
-        <tr><td>Okt</td><td>80–120 mm</td><td>8 h/Tag</td><td>Wenig</td><td><span class="rz-good">Gut</span></td></tr>
-        <tr><td>Nov</td><td>180–250 mm</td><td>6 h/Tag</td><td>Wenig</td><td><span class="rz-ok">Bedingt ok</span></td></tr>
-        <tr><td>Dez</td><td>280–380 mm</td><td>5 h/Tag</td><td>Viel (Ferien)</td><td><span class="rz-wet">Regenzeit</span></td></tr>
-      </tbody>
-    </table>
-
-    <div class="infobox sand"><div class="ibox-ico">💡</div><div class="ibox-title">Unser Tipp zur Reisezeit</div><div class="ibox-body">Mai und September sind die goldenen Monate: Trockenzeit, deutlich weniger Touristen als Juli/August, annehmbare Preise. Wer flexibel ist, spart nicht nur Nerven sondern auch Geld.</div></div>
-
-    <h2 id="bali-visum">Visum &amp; <em>Einreise für Schweizer</em></h2>
-    <p>Schweizer Staatsbürger brauchen für Bali (Indonesien) ein Visum — aber kein aufwendiges. Das <strong>Visa on Arrival (VOA)</strong> gibt es direkt am Flughafen Ngurah Rai in Denpasar.</p>
-
-    <table class="art-table">
-      <thead><tr><th>Option</th><th>Preis</th><th>Wo</th><th>Dauer</th><th>Verlängerbar</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Visa on Arrival (VOA)</strong></td><td>~30 CHF</td><td>Flughafen Denpasar</td><td>30 Tage</td><td>+30 Tage (35 CHF)</td></tr>
-        <tr><td><strong>e-VOA (online)</strong></td><td>~30 CHF</td><td>molina.imigrasi.go.id</td><td>30 Tage</td><td>+30 Tage</td></tr>
-      </tbody>
-    </table>
-
-    <p>Verlängerung: beim Immigrationsbüro in Denpasar, Singaraja oder Ubud. Ca. 35 CHF, 1–2 Arbeitstage Bearbeitungszeit. Nach 60 Tagen Pflicht zur Ausreise (Visa-Run nach Singapur, Kuala Lumpur oder Lombok). Wer plant länger zu bleiben: Social/Cultural Visa (B211A) über eine Agentur — 60 Tage, verlängerbar bis 180 Tage.</p>
-
-    <p><strong>Was du bei der Einreise brauchst:</strong> Reisepass mind. 6 Monate gültig. Onward Ticket (Weiter- oder Rückflug). Ausreichend finanzielle Mittel (offiziell 1000 USD, selten geprüft). Mehr zum Onward Ticket: <a href="/onward-ticket.html">unser Guide</a>.</p>
-
-    <h2 id="bali-kosten">Kosten — <em>was Bali wirklich kostet in CHF</em></h2>
-    <p>Bali ist die teuerste Insel Indonesiens — aber im Vergleich zur Schweiz immer noch günstig. Der grösste Kostenfaktor ist die Wahl des Viertels: Canggu kostet 3× mehr als Ubud für ähnliche Unterkünfte.</p>
-
-    <table class="art-table">
-      <thead><tr><th>Ausgabe</th><th>Budget</th><th>Mittelklasse</th><th>Komfort</th></tr></thead>
-      <tbody>
-        <tr><td>Hostel Dorm (pro Person)</td><td>8–14 CHF</td><td>—</td><td>—</td></tr>
-        <tr><td>Guesthouse/Privatzimmer</td><td>18–35 CHF</td><td>35–70 CHF</td><td>—</td></tr>
-        <tr><td>Hotel/Villa</td><td>—</td><td>60–120 CHF</td><td>120–400+ CHF</td></tr>
-        <tr><td>Frühstück Warung</td><td>1.50–3 CHF</td><td>4–8 CHF</td><td>8–15 CHF</td></tr>
-        <tr><td>Mittagessen/Abendessen</td><td>2–5 CHF</td><td>6–14 CHF</td><td>15–45 CHF</td></tr>
-        <tr><td>Kaffee (Warung/Café)</td><td>0.50–1 CHF</td><td>2–5 CHF</td><td>5–12 CHF</td></tr>
-        <tr><td>Bier lokal (Bintang)</td><td>1.50–3 CHF</td><td>3–6 CHF</td><td>6–12 CHF</td></tr>
-        <tr><td>Motorroller/Tag</td><td>5–7 CHF</td><td>7–10 CHF</td><td>—</td></tr>
-        <tr><td>Grab-Fahrt (5 km)</td><td>1–2 CHF</td><td>1–2 CHF</td><td>—</td></tr>
-        <tr><td>Tempel-Eintritt</td><td>3–6 CHF</td><td>3–6 CHF</td><td>—</td></tr>
-        <tr><td>Nusa Penida Tagesausflug</td><td>25–35 CHF</td><td>35–55 CHF</td><td>—</td></tr>
-        <tr><td>Surfstunde</td><td>15–25 CHF</td><td>25–45 CHF</td><td>—</td></tr>
-        <tr class="best"><td><strong>Tagesbudget total</strong></td><td><strong>32–55 CHF</strong></td><td><strong>60–120 CHF</strong></td><td><strong>120–300+ CHF</strong></td></tr>
-      </tbody>
-    </table>
-
-    <p class="affiliate-note">Stand Juni 2026. Canggu und Seminyak ca. 30–50% teurer als Ubud und Amed.</p>
-
-    <h2 id="bali-geld">Geld &amp; <em>Währung</em></h2>
-    <p>Die Währung in Indonesien ist die <strong>Rupiah (IDR)</strong>. Stand Juni 2026: 1 CHF ≈ 16'500 IDR. Scheine gibt es in 1'000, 2'000, 5'000, 10'000, 20'000, 50'000 und 100'000 IDR. Die grossen Scheine sehen sich ähnlich — genau hinschauen, besonders nachts.</p>
-
-    <p><strong>Bargeld:</strong> Auf Bali sind ATMs überall in touristischen Gebieten. Empfohlene ATMs: BCA, Mandiri, BNI (zuverlässig, wenige Probleme mit ausländischen Karten). Fremde ATMs (oft an Strandkiosken) verlangen manchmal Extragebühren von 50'000–100'000 IDR. Limit pro Abhebung: 1'500'000–3'000'000 IDR je nach Maschine.</p>
-
-    <p><strong>Kreditkarte:</strong> In grossen Restaurants, Hotels und Shops akzeptiert. In Warungs, lokalen Märkten und kleinen Unterkünften: Bargeld Pflicht. Empfehlung: eine <a href="/kreditkarten.html">gebührenfreie Reisekreditkarte</a> (Neon, Wise oder Revolut) und immer genug Bargeld dabei haben.</p>
-
-    <div class="infobox sand"><div class="ibox-ico">⚠️</div><div class="ibox-title">Geldwechsel: Vorsicht vor Wechselstuben</div><div class="ibox-body">Viele Wechselstuben an touristischen Orten haben schlechte Kurse oder zählen falsch. Vertrauenswürdig: offizielle Banken (BCA, Mandiri), Wechselstuben der Kette "Central Kuta Money Exchange" oder direkt am ATM abheben.</div></div>
-
-    <h2 id="bali-anreise">Anreise <em>von der Schweiz</em></h2>
-    <p>Direktflüge von Zürich nach Bali (Ngurah Rai International Airport, DPS) gibt es nicht. Typische Verbindungen:</p>
-
-    <table class="art-table">
-      <thead><tr><th>Route</th><th>Airline</th><th>Dauer</th><th>Preis (CHF)</th></tr></thead>
-      <tbody>
-        <tr><td>ZRH → SIN → DPS</td><td>Singapore Airlines / Scoot</td><td>~14 h</td><td>600–1'100</td></tr>
-        <tr><td>ZRH → KUL → DPS</td><td>Malaysia Airlines / Air Asia</td><td>~15 h</td><td>500–900</td></tr>
-        <tr><td>ZRH → DXB → DPS</td><td>Emirates</td><td>~16 h</td><td>650–1'200</td></tr>
-        <tr><td>ZRH → BKK → DPS</td><td>Thai Airways / Bangkok Air</td><td>~16 h</td><td>550–950</td></tr>
-      </tbody>
-    </table>
-
-    <p>Frühzeitig buchen (4–6 Monate voraus) für günstigere Preise. Mit einer <a href="/kreditkarten.html">Reise-Kreditkarte mit Meilen/Cashback</a> lassen sich die Flugkosten teilweise kompensieren. Kein Gepäck zu viel — auf Bali kauft man sowieso zu viel.</p>
-
-    <h2 id="bali-transport">Transport <em>vor Ort</em></h2>
-    <p>Auf Bali gibt es kein zuverlässiges öffentliches Transportsystem. Die Optionen:</p>
-
-    <p><strong>Motorroller</strong> — das Hauptfortbewegungsmittel. Ca. 5–8 CHF pro Tag zum Mieten, Benzin extrem günstig (ca. 0.50 CHF/Liter). Linksverkehr, holprige Strassen, aggressiver Stadtverkehr in Denpasar und Kuta. Internationaler Führerschein technisch Pflicht, in der Praxis selten kontrolliert. Vorsicht: Bali hat eine hohe Unfallrate unter Touristen.</p>
-
-    <p><strong>Grab / Gojek</strong> — Ride-Hailing-Apps wie Uber. Günstig (1–4 CHF für kurze Fahrten), zuverlässig, kein Preisfeilschen. Tipp: App vor Ankunft herunterladen und mit ausländischer Karte registrieren. In einigen Gebieten (besonders Kuta) werden Grab-Fahrer von lokalen Taxifahrern schikaniert — vom Strassenrand aufsteigen, nicht direkt am Ziel.</p>
-
-    <p><strong>Private Fahrer</strong> — für Tagesausflüge oder Transfers zwischen Gebieten. Ca. 35–55 CHF für 8–10 Stunden mit Auto und Fahrer. Klarer Vorteil gegenüber Motorroller: Klimaanlage, kein Navigieren, kann alles einladen. Buchung über Unterkunft oder direkt mit Fahrern verhandeln.</p>
-
-    <p><strong>Blue Bird Taxi</strong> — einzige vertrauenswürdige Taxifirma auf Bali mit Taxameter. Erkennbar am blauen Vogel-Logo. Andere Taxis nehmen oft willkürliche Preise — immer Taxameter verlangen oder vorher Preis aushandeln.</p>
-
-    <h2 id="bali-unterkuenfte">Unterkunft — <em>wo und wie buchen</em></h2>
-    <p>Das Angebot reicht von 5-CHF-Dorm-Betten bis zu 2'000-CHF-Villen mit privatem Pool. Drei Buchungsplattformen dominieren: <strong>Booking.com</strong>, <strong>Airbnb</strong> (für Villen ideal) und <strong>Hostelworld</strong> (Backpacker).</p>
-
-    <table class="art-table">
-      <thead><tr><th>Unterkunftstyp</th><th>Preis/Nacht pro Person</th><th>Am besten in</th></tr></thead>
-      <tbody>
-        <tr><td>Hostel Dorm (6–10 Betten)</td><td>8–18 CHF</td><td>Canggu, Kuta, Ubud</td></tr>
-        <tr><td>Guesthouse / Losmen</td><td>18–45 CHF</td><td>Ubud, Amed, Lovina</td></tr>
-        <tr><td>Boutique-Hotel</td><td>45–120 CHF</td><td>Seminyak, Ubud, Uluwatu</td></tr>
-        <tr><td>Private Villa (Airbnb)</td><td>60–250+ CHF</td><td>Canggu, Seminyak, Ubud</td></tr>
-        <tr><td>Luxusresort</td><td>250–800+ CHF</td><td>Jimbaran, Nusa Dua, Seminyak</td></tr>
-      </tbody>
-    </table>
-
-    <p>Wichtig: In der Hochsaison (Juli/August, Dezember/Januar) frühzeitig buchen — Bali ist dann oft ausgebucht. Ausserhalb der Saison: Walk-in-Preise oft deutlich günstiger als online.</p>
-
-    <h2 id="bali-essen">Essen &amp; <em>Trinken</em></h2>
-    <p>Die balinesische und indonesische Küche gehört zu den besten Südostasiens — und die günstigsten Gerichte sind oft die besten. Im Warung (lokales Restaurant) isst man ab 1.50–3 CHF satt und gut.</p>
-
-    <div class="art-img-half">
-      <figure><img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=500&q=80&fit=crop" alt="Nasi Goreng indonesisches Essen Bali"><p class="art-img-caption">Nasi Goreng — das Nationalgericht Indonesiens</p></figure>
-      <figure><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80&fit=crop" alt="Bali Ubud Café Frühstück"><p class="art-img-caption">Café-Kultur in Ubud — westlich und teurer</p></figure>
+    <div class="climate-cal">
+      <div class="cc-month cc-bad"><span class="cc-name">Jan</span><span class="cc-bar"></span><span class="cc-icon">🌧</span></div>
+      <div class="cc-month cc-bad"><span class="cc-name">Feb</span><span class="cc-bar"></span><span class="cc-icon">🌧</span></div>
+      <div class="cc-month cc-ok"><span class="cc-name">Mär</span><span class="cc-bar"></span><span class="cc-icon">🌤</span></div>
+      <div class="cc-month cc-good"><span class="cc-name">Apr</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-best"><span class="cc-name">Mai</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-best"><span class="cc-name">Jun</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-good"><span class="cc-name">Jul</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-good"><span class="cc-name">Aug</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-best"><span class="cc-name">Sep</span><span class="cc-bar"></span><span class="cc-icon">☀️</span></div>
+      <div class="cc-month cc-ok"><span class="cc-name">Okt</span><span class="cc-bar"></span><span class="cc-icon">🌤</span></div>
+      <div class="cc-month cc-bad"><span class="cc-name">Nov</span><span class="cc-bar"></span><span class="cc-icon">🌧</span></div>
+      <div class="cc-month cc-bad"><span class="cc-name">Dez</span><span class="cc-bar"></span><span class="cc-icon">🌧</span></div>
     </div>
 
-    <p><strong>Lokale Gerichte die man probieren muss:</strong> Nasi Goreng (gebratener Reis), Mie Goreng (gebratene Nudeln), Gado-Gado (Gemüse mit Erdnusssauce), Satay (Fleissspiesse), Babi Guling (Spanferkel — Bali-Spezialität, nur auf Bali erhältlich da die Insel mehrheitlich hinduistisch ist), Bebek Betutu (langsam gegarter Ente), Lawar (Mischgericht aus gehacktem Fleisch, Gemüse und Gewürzen).</p>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Monat</th><th>Regen</th><th>Sonne</th><th>Touristen</th><th>Bewertung</th></tr></thead>
+        <tbody>
+          <tr><td>Jan–Feb</td><td>350–500 mm</td><td>4–5 h/Tag</td><td>Wenig</td><td><span class="tag-bad">Regenzeit</span></td></tr>
+          <tr><td>Mär</td><td>200–300 mm</td><td>6 h/Tag</td><td>Wenig</td><td><span class="tag-ok">Übergang</span></td></tr>
+          <tr><td>Apr</td><td>80–120 mm</td><td>8 h/Tag</td><td>Mittel</td><td><span class="tag-best">Sehr gut</span></td></tr>
+          <tr><td>Mai</td><td>50–80 mm</td><td>9 h/Tag</td><td>Mittel</td><td><span class="tag-best">Sehr gut</span></td></tr>
+          <tr><td>Jun</td><td>40–60 mm</td><td>9 h/Tag</td><td>Viel</td><td><span class="tag-best">Sehr gut</span></td></tr>
+          <tr><td>Jul–Aug</td><td>20–40 mm</td><td>10 h/Tag</td><td>Sehr viel</td><td><span class="tag-best">Top, aber voll</span></td></tr>
+          <tr><td>Sep</td><td>40–60 mm</td><td>9 h/Tag</td><td>Mittel</td><td><span class="tag-best">Sehr gut</span></td></tr>
+          <tr><td>Okt</td><td>80–120 mm</td><td>8 h/Tag</td><td>Wenig</td><td><span class="tag-ok">Gut</span></td></tr>
+          <tr><td>Nov–Dez</td><td>180–380 mm</td><td>5–6 h/Tag</td><td>Wenig–Viel</td><td><span class="tag-bad">Regenzeit</span></td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <p><strong>Wasser:</strong> Leitungswasser auf Bali ist nicht trinkbar. Abgefülltes Wasser kaufen (0.50–1 CHF/Liter) oder Wasserfilter mitbringen (Sawyer Squeeze oder LifeStraw). Viele Unterkünfte bieten kostenloses Trinkwasser an.</p>
+    <div class="g-box box-green">
+      <div class="g-box-icon">💡</div>
+      <div><div class="g-box-title">Geheimtipp Reisezeit</div><div class="g-box-text">Mai und September sind die goldenen Monate auf Bali: fast perfektes Wetter, deutlich weniger Touristen als Juli/August, günstigere Preise. Wer flexibel ist, spart Nerven und Geld.</div></div>
+    </div>
 
-    <div class="infobox sand"><div class="ibox-ico">⚠️</div><div class="ibox-title">Arak: Finger weg</div><div class="ibox-body">Lokale Schnäpse ("Arak") wurden in der Vergangenheit mit Methanol-Vergiftungen in Verbindung gebracht. Nur in seriösen Bars trinken, niemals von Strassenständen. Im Zweifel: Bintang-Bier oder nichtalkoholische Getränke.</div></div>
+    <h2 id="bali-visum">Visum &amp; <em>Einreise für Schweizer</em></h2>
+    <p>Schweizer brauchen für Bali (Indonesien) ein Visum — aber kein aufwendiges. Zwei einfache Optionen:</p>
+
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Option</th><th>Preis</th><th>Wo</th><th>Dauer</th><th>Verlängerbar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Visa on Arrival (VOA)</strong></td><td>~30 CHF</td><td>Flughafen Denpasar</td><td>30 Tage</td><td>+30 Tage (~35 CHF)</td></tr>
+          <tr><td><strong>e-VOA (online)</strong></td><td>~30 CHF</td><td>molina.imigrasi.go.id</td><td>30 Tage</td><td>+30 Tage (~35 CHF)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="g-box box-ch">
+      <div class="g-box-icon">🇨🇭</div>
+      <div><div class="g-box-title">Schweizer Reisepass</div><div class="g-box-text">Reisepass mind. 6 Monate gültig. Onward Ticket (Weiter- oder Rückflug) bereithalten — wird selten kontrolliert, aber technisch Pflicht. Mehr zum Onward Ticket: <a href="/onward-ticket.html">unser Guide</a>.</div></div>
+    </div>
+
+    <h2 id="bali-kosten">Kosten — <em>was Bali wirklich kostet</em></h2>
+    <p>Bali ist die teuerste Insel Indonesiens. Aber im Vergleich zur Schweiz immer noch erschwinglich. Der grösste Kostenfaktor ist das Viertel: Canggu kostet 3× mehr als Ubud für ähnliche Unterkünfte.</p>
+
+    <div class="budget-row">
+      <div class="budget-card">
+        <div class="budget-badge">Budget</div>
+        <div class="budget-amount">32–55</div>
+        <div class="budget-unit">CHF / Person / Tag</div>
+        <div class="budget-item"><span>Hostel Dorm</span><span class="budget-item-price">8–14 CHF</span></div>
+        <div class="budget-item"><span>Warung-Essen</span><span class="budget-item-price">2–4 CHF</span></div>
+        <div class="budget-item"><span>Motorroller</span><span class="budget-item-price">5–7 CHF</span></div>
+        <div class="budget-item"><span>Aktivitäten</span><span class="budget-item-price">5–15 CHF</span></div>
+      </div>
+      <div class="budget-card featured">
+        <div class="budget-badge">Mittelklasse</div>
+        <div class="budget-amount">65–120</div>
+        <div class="budget-unit">CHF / Person / Tag</div>
+        <div class="budget-item"><span>Guesthouse</span><span class="budget-item-price">30–60 CHF</span></div>
+        <div class="budget-item"><span>Restaurant</span><span class="budget-item-price">8–18 CHF</span></div>
+        <div class="budget-item"><span>Grab/Fahrer</span><span class="budget-item-price">5–15 CHF</span></div>
+        <div class="budget-item"><span>Aktivitäten</span><span class="budget-item-price">20–40 CHF</span></div>
+      </div>
+      <div class="budget-card">
+        <div class="budget-badge lux">Komfort</div>
+        <div class="budget-amount">120–300+</div>
+        <div class="budget-unit">CHF / Person / Tag</div>
+        <div class="budget-item"><span>Pool-Villa</span><span class="budget-item-price">80–200 CHF</span></div>
+        <div class="budget-item"><span>Restaurant</span><span class="budget-item-price">20–60 CHF</span></div>
+        <div class="budget-item"><span>Privatfahrer</span><span class="budget-item-price">35–55 CHF/Tag</span></div>
+        <div class="budget-item"><span>Spa &amp; Touren</span><span class="budget-item-price">30–80 CHF</span></div>
+      </div>
+    </div>
+
+    <p class="g-affiliate">* Preisstand Juni 2026. Wechselkurs: 1 CHF ≈ 16'500 IDR. Canggu und Seminyak ca. 30–50% teurer als Ubud.</p>
+
+    <h2 id="bali-geld">Geld &amp; <em>Währung</em></h2>
+    <p>Die Währung ist die <strong>indonesische Rupiah (IDR)</strong>. 1 CHF ≈ 16'500 IDR (Stand Juni 2026). Grösste Scheine: 100'000 IDR (ca. 6 CHF). Achtung: Viele Scheine sehen sich ähnlich — genau hinschauen, besonders nachts.</p>
+
+    <div class="g-box box-amber">
+      <div class="g-box-icon">⚠️</div>
+      <div><div class="g-box-title">Vorsicht vor Wechselstuben</div><div class="g-box-text">Viele Wechselstuben an touristischen Orten haben schlechte Kurse oder zählen falsch. Vertrauenswürdig: BCA, Mandiri und Lippo Bank ATMs. Empfehlung: direkt am ATM in IDR abheben mit einer <a href="/kreditkarten.html">gebührenfreien Reisekarte</a> (Wise, Neon, Revolut).</div></div>
+    </div>
+
+    <h2 id="bali-anreise">Anreise <em>von der Schweiz</em></h2>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Route</th><th>Airline</th><th>Dauer</th><th>Preis (CHF)</th></tr></thead>
+        <tbody>
+          <tr><td>ZRH → SIN → DPS</td><td>Singapore Airlines / Scoot</td><td>~14h</td><td>600–1'100</td></tr>
+          <tr><td>ZRH → KUL → DPS</td><td>Malaysia Airlines / Air Asia</td><td>~15h</td><td>500–900</td></tr>
+          <tr><td>ZRH → DXB → DPS</td><td>Emirates</td><td>~16h</td><td>650–1'200</td></tr>
+          <tr class="hl"><td>Tipp: 4–6 Monate voraus buchen</td><td colspan="3">Günstigste Preise, mehr Auswahl</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="bali-transport">Transport <em>vor Ort</em></h2>
+    <div class="g-box box-green">
+      <div class="g-box-icon">🛵</div>
+      <div><div class="g-box-title">Motorroller — das wichtigste Transportmittel</div><div class="g-box-text">5–8 CHF pro Tag zum Mieten. Linksverkehr, holprige Strassen, aggressiver Stadtverkehr. Internationaler Führerschein technisch Pflicht. Bali hat eine hohe Unfallrate unter Touristen — vorsichtig sein.</div></div>
+    </div>
+    <div class="g-box box-green">
+      <div class="g-box-icon">📱</div>
+      <div><div class="g-box-title">Grab &amp; Gojek — Ride-Hailing-Apps</div><div class="g-box-text">Wie Uber — günstig (1–4 CHF für kurze Fahrten), zuverlässig, kein Preisfeilschen. App vor Ankunft herunterladen. In Kuta: vom Strassenrand aufsteigen, nicht direkt am Ziel (lokale Taxifahrer-Konkurrenz).</div></div>
+    </div>
+    <div class="g-box box-green">
+      <div class="g-box-icon">🚗</div>
+      <div><div class="g-box-title">Privatfahrer — für Tagesausflüge</div><div class="g-box-text">35–55 CHF für 8–10 Stunden mit Auto und Fahrer. Ideal für Borobudur, Bromo oder lange Strecken. Buchung über Unterkunft oder direkt verhandeln.</div></div>
+    </div>
+
+    <h2 id="bali-unterkunft">Unterkunft — <em>von Dorm bis Villa</em></h2>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Typ</th><th>Preis/Nacht</th><th>Beste Lage</th><th>Buchen via</th></tr></thead>
+        <tbody>
+          <tr><td>Hostel Dorm (6–10 Betten)</td><td>8–18 CHF</td><td>Canggu, Kuta, Ubud</td><td>Hostelworld</td></tr>
+          <tr><td>Guesthouse / Losmen</td><td>18–45 CHF</td><td>Ubud, Amed, Lovina</td><td>Booking.com</td></tr>
+          <tr><td>Boutique-Hotel</td><td>45–120 CHF</td><td>Seminyak, Ubud, Uluwatu</td><td>Booking.com</td></tr>
+          <tr><td>Private Pool-Villa</td><td>60–250+ CHF</td><td>Canggu, Seminyak, Ubud</td><td>Airbnb</td></tr>
+          <tr><td>Luxusresort</td><td>250–800+ CHF</td><td>Jimbaran, Nusa Dua</td><td>Direkt/Booking</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="g-box box-amber">
+      <div class="g-box-icon">📅</div>
+      <div><div class="g-box-title">Hochsaison: Frühzeitig buchen</div><div class="g-box-text">Juli/August und Dezember/Januar: Bali ist oft ausgebucht. Mindestens 2–3 Monate im Voraus buchen. Ausserhalb der Hochsaison: Walk-in-Preise teils deutlich günstiger als online.</div></div>
+    </div>
+
+    <h2 id="bali-essen">Essen &amp; <em>Trinken</em></h2>
+    <div class="g-img2">
+      <figure><img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=500&q=80&fit=crop" alt="Nasi Goreng Bali Indonesien"><figcaption>Nasi Goreng — das Nationalgericht</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&q=80&fit=crop" alt="Café Ubud Bali Frühstück"><figcaption>Café-Kultur in Ubud</figcaption></figure>
+    </div>
+    <p>Im Warung (lokales Restaurant) isst man ab 1.50–3 CHF satt und gut. Das sind oft die besten Mahlzeiten auf Bali.</p>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Gericht</th><th>Beschreibung</th><th>Preis (CHF)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nasi Goreng</strong></td><td>Gebratener Reis, Ei, Kecap Manis</td><td>1.50–3</td></tr>
+          <tr><td><strong>Mie Goreng</strong></td><td>Gebratene Nudeln mit Gemüse/Fleisch</td><td>1.50–3</td></tr>
+          <tr><td><strong>Gado-Gado</strong></td><td>Gemüse mit Erdnusssauce</td><td>2–4</td></tr>
+          <tr><td><strong>Satay</strong></td><td>Grillspiesse mit Erdnusssauce</td><td>2–5</td></tr>
+          <tr><td><strong>Babi Guling</strong></td><td>Bali-Spezialität: Spanferkel (nur Bali!)</td><td>4–8</td></tr>
+          <tr><td><strong>Bebek Betutu</strong></td><td>Langsam gegarte Ente in Bananenblatt</td><td>5–10</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="g-box box-red">
+      <div class="g-box-icon">🚫</div>
+      <div><div class="g-box-title">Arak: Finger weg</div><div class="g-box-text">Lokale Schnäpse ("Arak") wurden mit tödlichen Methanol-Vergiftungen in Verbindung gebracht. Nur in seriösen Bars trinken, niemals von Strassenständen oder billigen Angeboten. Im Zweifel: Bintang-Bier.</div></div>
+    </div>
+    <div class="g-box box-amber">
+      <div class="g-box-icon">💧</div>
+      <div><div class="g-box-title">Wasser: Nur abgefüllt oder gefiltert</div><div class="g-box-text">Leitungswasser auf Bali ist nicht trinkbar. Abgefülltes Wasser: 0.50–1 CHF/Liter. Viele Unterkünfte bieten kostenlose Nachfüllstationen an. Wasserfilter (Sawyer Squeeze, LifeStraw) sparen auf Dauer viel Plastik und Geld.</div></div>
+    </div>
 
     <h2 id="bali-gebiete">Gebiete auf Bali — <em>welches passt zu dir?</em></h2>
 
-    <p><strong>Ubud</strong> — kulturelles Herz der Insel. Reisterrassen, Tempel, Galerien, Yoga-Studios, die beste Restaurantszene. Kein Strand. Motorroller nötig für Ausflüge. Budget-freundlicher als die Südküste. Ideale Basis für 5–8 Tage.</p>
+    <div class="g-tabs-group">
+      <div class="g-tabs">
+        <button class="g-tab active" data-tab="tab-ubud">Ubud</button>
+        <button class="g-tab" data-tab="tab-canggu">Canggu</button>
+        <button class="g-tab" data-tab="tab-seminyak">Seminyak</button>
+        <button class="g-tab" data-tab="tab-uluwatu">Uluwatu</button>
+        <button class="g-tab" data-tab="tab-nusapenida">Nusa Penida</button>
+        <button class="g-tab" data-tab="tab-amed">Amed &amp; Ostbali</button>
+      </div>
 
-    <p><strong>Canggu</strong> — Surf, Cafés, digitale Nomaden, Nachtleben. Beste Wellen für Anfänger und mittlere Level. Teuer, voll, laut — aber mit Energie. Schlechteste Wahl fürs Budget, beste für Soziales.</p>
+      <div class="g-tabcontent active" id="tab-ubud">
+        <h3>Ubud — das kulturelle Herz Balis</h3>
+        <div class="g-img2">
+          <figure><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80&fit=crop" alt="Ubud Reisterrassen"><figcaption>Tegalalang Rice Terraces</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&q=80&fit=crop" alt="Ubud Tempel Bali"><figcaption>Einer der vielen Tempel in Ubud</figcaption></figure>
+        </div>
+        <p>Kein Strand, dafür Reisterrassen, Tempel, Galerien, Yoga-Studios und die beste Restaurantszene der Insel. Für die meisten die <strong>beste Basis auf Bali</strong> — zentraler als Seminyak, authentischer als Canggu, günstiger als die Südküste.</p>
+        <p><strong>Für wen:</strong> Kulturtouristen, Yogis, Langzeitreisende, alle die Bali wirklich kennenlernen wollen.<br><strong>Budget:</strong> 35–65 CHF/Tag<br><strong>Highlight:</strong> Tegalalang Reisterrassen, Monkey Forest, Mount Batur-Sonnenaufgang</p>
+      </div>
 
-    <p><strong>Seminyak</strong> — gehobener als Canggu, mehr Beach Clubs, Shopping, Spa. Sunset-Atmosphäre. Für Paare oder alle die sich nach günstigen Wochen mal etwas gönnen wollen.</p>
+      <div class="g-tabcontent" id="tab-canggu">
+        <h3>Canggu — Surf, Cafés &amp; digitale Nomaden</h3>
+        <p>Laut, voll, international, teuer — aber mit echten Surf-Breaks und einer Café-Szene die ihresgleichen sucht. Digital Nomads lieben es. Budget-Reisende meiden es wegen der Preise.</p>
+        <p><strong>Für wen:</strong> Surfer, digitale Nomaden, alle die gute Cafés und Nightlife wollen.<br><strong>Budget:</strong> 65–130 CHF/Tag<br><strong>Highlight:</strong> Echo Beach Surf, Finn's Beach Club, Canggu Cafés</p>
+      </div>
 
-    <p><strong>Uluwatu</strong> — südlicher Zipfel, spektakuläre Klippen, gute Surf-Breaks (für Fortgeschrittene), berühmter Tempel mit Kecak-Feuertanz. Isolierter als die anderen Gebiete — Roller Pflicht.</p>
+      <div class="g-tabcontent" id="tab-seminyak">
+        <h3>Seminyak — Glamour &amp; Beach Clubs</h3>
+        <p>Gehobener als Canggu, mehr Beach Clubs, Boutique-Shopping, Spa. Sunset-Atmosphäre. Für Paare oder alle die sich nach günstigen Wochen mal etwas gönnen wollen.</p>
+        <p><strong>Für wen:</strong> Paare, alle die Luxus-Flair suchen, Spa-Liebhaber.<br><strong>Budget:</strong> 80–200 CHF/Tag<br><strong>Highlight:</strong> Potato Head Beach Club, Ku De Ta, Petitenget Tempel</p>
+      </div>
 
-    <p><strong>Amed &amp; Ostbali</strong> — ruhig, authentisch, exzellentes Tauchen und Schnorcheln (Liberty Wreck in Tulamben!). Wenig Touristen, günstig. Für alle die das "alte Bali" suchen.</p>
+      <div class="g-tabcontent" id="tab-uluwatu">
+        <h3>Uluwatu — Klippen, Surf &amp; Kecak-Tanz</h3>
+        <p>Südlicher Zipfel Balis. Steilklippen, weltberühmter Links-Break (für erfahrene Surfer), dramatischer Sonnenuntergang am Uluwatu-Tempel mit täglichem Kecak-Feuertanz.</p>
+        <p><strong>Für wen:</strong> Fortgeschrittene Surfer, Sonnenuntergangs-Liebhaber, alle die Ruhe mit Atmosphäre suchen.<br><strong>Budget:</strong> 50–100 CHF/Tag<br><strong>Highlight:</strong> Uluwatu Tempel, Kecak Dance, Padang Padang Beach</p>
+      </div>
 
-    <p><strong>Lovina (Nordbali)</strong> — Delfinbeobachtungen am Morgen, ruhige Schwarzsandstrände, kaum Touristen. Stundenlange Fahrt vom Süden — für mindestens 2–3 Übernachtungen lohnenswert.</p>
+      <div class="g-tabcontent" id="tab-nusapenida">
+        <h3>Nusa Penida — Tagesausflug Pflicht</h3>
+        <p>30 Minuten Schnellboot von Sanur. Zerklüftete Steilküsten, türkisfarbenes Wasser, Kelingking Beach-Aussichtspunkt, Manta-Schnorcheln. Früh starten — ab 10 Uhr sehr voll.</p>
+        <p><strong>Anreise:</strong> Schnellboot ab Sanur, 20–30 CHF hin und zurück<br><strong>Budget:</strong> 25–50 CHF für Tagesausflug<br><strong>Highlight:</strong> Kelingking Beach, Angel's Billabong, Manta-Schnorcheln</p>
+      </div>
+
+      <div class="g-tabcontent" id="tab-amed">
+        <h3>Amed &amp; Ostbali — ruhig &amp; authentisch</h3>
+        <p>Ruhig, authentisch, exzellentes Tauchen und Schnorcheln. Liberty Wreck in Tulamben: gesunkenes US-Kriegsschiff direkt vom Strand zugänglich! Wenig Touristen, günstig.</p>
+        <p><strong>Für wen:</strong> Taucher, alle die das "alte Bali" suchen, Ruhesuchende.<br><strong>Budget:</strong> 28–55 CHF/Tag<br><strong>Highlight:</strong> USS Liberty Wreck (Tulamben), Mount Agung, Tirta Gangga Wasserpalast</p>
+      </div>
+    </div>
 
     <h2 id="bali-highlights">Highlights &amp; <em>Aktivitäten</em></h2>
-
-    <p><strong>Tegalalang Rice Terraces (Ubud)</strong> — die Ikonik-Reisterrassen Balis. Früh morgens (vor 8 Uhr) gehen, bevor die Tagestouristen ankommen. Eintritt ca. 1–2 CHF. Der Kaffeeplantagentour-Cafés entlang des Wegs: nett anzuschauen, aber die "Kopi Luwak"-Verkostungen sind oft Betrug.</p>
-
-    <p><strong>Tanah Lot</strong> — Meerestempel auf Felsvorsprung, nur bei Ebbe zu Fuss erreichbar. Berühmtester Sonnenuntergangs-Spot Balis. Eintritt ca. 4 CHF. Komm 1 Stunde vor Sonnenuntergang an.</p>
-
-    <p><strong>Uluwatu Tempel + Kecak-Feuertanz</strong> — Tempel auf 70-Meter-Klippe über dem Meer. Täglich Kecak-Aufführung bei Sonnenuntergang, ca. 10 CHF. Taschen im Auto lassen oder gut festhalten — die Affen klauen alles.</p>
-
-    <p><strong>Nusa Penida</strong> — Tagesausflug per Schnellboot (20–30 CHF Fähre). Kelingking Beach, Angel's Billabong, Broken Beach, Manta-Schnorcheln. Früh starten — ab 10 Uhr sehr voll.</p>
-
-    <p><strong>Mount Batur</strong> — aktiver Vulkan (1'717 m), Sonnenaufgangswanderung (2 Stunden Aufstieg, Guide Pflicht). Geführte Tour ab ca. 35–55 CHF. Oben frühstücken mit Blick über die Caldera.</p>
-
-    <p><strong>Tauchen / Schnorcheln</strong> — Bester Tauchspot: USS Liberty Wreck in Tulamben (gesunkenes US-Kriegsschiff, direkt vom Strand zugänglich!). Nusa Penida für Mantarochen-Schnorcheln. Tauchkurse: ab 250 CHF für PADI Open Water.</p>
-
-    <p><strong>Traditionelle Küche kochen</strong> — Kochkurse in Ubud: halber Tag inklusive Marktbesuch und 5–8 Gerichte kochen, ab 35 CHF. Sehr empfehlenswert.</p>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Attraktion</th><th>Lage</th><th>Eintritt</th><th>Hinweis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tegalalang Rice Terraces</strong></td><td>Ubud</td><td>1–2 CHF</td><td>Früh morgens gehen (vor 8 Uhr)</td></tr>
+          <tr><td><strong>Tanah Lot Tempel</strong></td><td>Tabanan</td><td>4 CHF</td><td>1h vor Sonnenuntergang ankommen</td></tr>
+          <tr><td><strong>Uluwatu + Kecak Dance</strong></td><td>Uluwatu</td><td>3–10 CHF</td><td>Täglich bei Sonnenuntergang</td></tr>
+          <tr><td><strong>Monkey Forest</strong></td><td>Ubud</td><td>5 CHF</td><td>Achtung: Affen klauen alles</td></tr>
+          <tr><td><strong>Mount Batur Sonnenaufgang</strong></td><td>Kintamani</td><td>35–55 CHF (geführt)</td><td>Abfahrt 2:30 Uhr morgens</td></tr>
+          <tr><td><strong>Liberty Wreck Tauchen</strong></td><td>Tulamben</td><td>30–50 CHF</td><td>Bestes Bali-Tauchen, für alle Levels</td></tr>
+          <tr><td><strong>Nusa Penida Tagesausflug</strong></td><td>Nusa Penida</td><td>25–45 CHF</td><td>Kelingking, Manta-Schnorcheln</td></tr>
+          <tr><td><strong>Kochkurs in Ubud</strong></td><td>Ubud</td><td>35–55 CHF</td><td>Inkl. Marktbesuch, sehr empfehlenswert</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <h2 id="bali-gesundheit">Gesundheit &amp; <em>Sicherheit</em></h2>
-
-    <p><strong>Impfungen:</strong> Hepatitis A und B, Typhus werden empfohlen. Tollwut (Bali hat Tollwutfälle — Affenbisse ernst nehmen!). Tetanus auffrischen. Japanische Enzephalitis für Langzeitaufenthalte im Reisanbaugebiet. Malaria-Risiko auf Bali ist sehr gering (kaum vorhanden), aber auf anderen Inseln Indonesiens höher.</p>
-
-    <p><strong>Dengue-Fieber</strong> — das grösste Gesundheitsrisiko auf Bali. Mücken die Dengue übertragen sind tagaktiv. Repellent mit DEET konsequent nutzen, Langarm bei Dämmerung, Mückenspiralen im Zimmer. Kein Impfstoff erhältlich für Nicht-Endemische.</p>
-
-    <p><strong>Bali Belly</strong> — Durchfall durch Essen oder Wasser. Fast jeder Langzeitreisende hat es einmal. Gegenmittel: nur gefiltertes/abgefülltes Wasser, kein Salat in einfachen Warungs, Essen das frisch zubereitet und heiss serviert wird. Loperamid und Elektrolyt-Pulver in der Reiseapotheke.</p>
-
-    <p><strong>Tollwut:</strong> Hunde und Affen können Tollwut übertragen — jede Bisswunde sofort sauber waschen (mindestens 15 Minuten mit Seife) und sofort ärztliche Behandlung suchen. Ohne Tollwut-Präventivimpfung: Immunoglobulin-Injektion in den nächsten 24 Stunden. Nächste gut ausgestattete Klinik: BIMC Hospital Kuta oder Siloam Hospital Denpasar.</p>
-
-    <p><strong>Versicherung:</strong> Zwingend nötig. Als Schweizer ohne AKV bist du auf Bali nicht versichert (KVG gilt nur in der Schweiz). Mehr dazu: <a href="/auslandskrankenversicherung.html">unser AKV-Guide für Weltreisende aus der Schweiz</a>.</p>
-
-    <div class="infobox sand"><div class="ibox-ico">🏥</div><div class="ibox-title">Beste Kliniken auf Bali</div><div class="ibox-body">BIMC Hospital Kuta (internationaler Standard, teuer). Siloam Hospital Denpasar. Prima Medika Hospital. Für Zahnbehandlungen: Bali 911 Dental. Notfall: 119 (Ambulanz), 110 (Polizei).</div></div>
+    <div class="g-box box-red">
+      <div class="g-box-icon">🦟</div>
+      <div><div class="g-box-title">Dengue-Fieber — das grösste Gesundheitsrisiko</div><div class="g-box-text">Die Dengue-übertragenden Mücken sind tagaktiv (nicht nur abends!). Repellent mit DEET 30%+ konsequent nutzen, Langarmhemden bei Dämmerung, Mückenspiralen im Zimmer. Kein Impfstoff für Nicht-Endemische verfügbar.</div></div>
+    </div>
+    <div class="g-box box-red">
+      <div class="g-box-icon">🐕</div>
+      <div><div class="g-box-title">Tollwut — jede Bisswunde ernst nehmen</div><div class="g-box-text">Hunde und Affen können Tollwut übertragen. Jede Bisswunde sofort 15 Min. mit Seife waschen, dann sofort Arzt aufsuchen. Ohne Präventivimpfung: Immunoglobulin innerhalb 24h nötig. Nächste Klinik: BIMC Hospital Kuta.</div></div>
+    </div>
+    <div class="g-box box-amber">
+      <div class="g-box-icon">🤢</div>
+      <div><div class="g-box-title">Bali Belly — Magen-Darm</div><div class="g-box-text">Fast jeder Langzeitreisende hat es einmal. Gegenmittel: nur gefiltertes Wasser, kein Salat in einfachen Warungs, heiss serviertes Essen. Loperamid und Elektrolyt-Pulver in der Reiseapotheke.</div></div>
+    </div>
+    <div class="g-box box-ch">
+      <div class="g-box-icon">🏥</div>
+      <div><div class="g-box-title">Versicherung — zwingend nötig</div><div class="g-box-text">Die KVG gilt nicht im Ausland — vor Abreise sistieren. Auslandskrankenversicherung (AKV) mit Rettungskosten abschliessen. Mehr: <a href="/auslandskrankenversicherung.html">unser AKV-Guide für Schweizer</a>. Beste Klinik auf Bali: BIMC Hospital Kuta, Siloam Hospital Denpasar.</div></div>
+    </div>
 
     <h2 id="bali-sim">Internet &amp; <em>SIM-Karte</em></h2>
-    <p>Bali hat ausgezeichnete 4G/LTE-Abdeckung in touristischen Gebieten. Abgelegen Orte (Bergdörfer, Nordostküste) können schlechter sein.</p>
-
-    <p><strong>Lokale SIM kaufen:</strong> Am Flughafen direkt nach der Ankunft bei offiziellen Telkomsel/XL-Ständen. Preise: 15'000–50'000 IDR (1–3 CHF) für SIM-Karte, Datenpakete ab 50'000 IDR für 5–10 GB. Beste Netze: <strong>Telkomsel</strong> (grösste Abdeckung, teurer), <strong>XL</strong> (günstiger, fast gleich gut auf Bali).</p>
-
-    <p><strong>eSIM:</strong> Für Schweizer empfehlenswert — Airalo, Holafly oder Nomad bieten Indonesien-eSIMs ab ca. 5–12 CHF für 1–3 GB. Vorab einrichten, erspart die SIM-Kauf-Schlange am Flughafen. Mehr dazu: <a href="/sim-karten.html">unser SIM-Karten Guide</a>.</p>
-
-    <p>WLAN: In Cafés, Restaurants und den meisten Unterkünften gratis. Passwort immer fragen. Qualität: sehr unterschiedlich — von schnell (20+ Mbps) bis kaum nutzbar.</p>
+    <p>Bali hat ausgezeichnete 4G/LTE-Abdeckung in touristischen Gebieten. Abgelegene Orte und das Berginnere können schlechter sein.</p>
+    <div class="tbl-wrap">
+      <table class="g-tbl">
+        <thead><tr><th>Option</th><th>Kosten</th><th>Daten</th><th>Empfehlung</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Telkomsel SIM</strong></td><td>1–3 CHF SIM + ab 3 CHF Daten</td><td>5–30 GB</td><td>Beste Abdeckung, etwas teurer</td></tr>
+          <tr><td><strong>XL Axiata SIM</strong></td><td>1–2 CHF SIM + ab 2 CHF Daten</td><td>5–30 GB</td><td>Günstig, fast gleich gut auf Bali</td></tr>
+          <tr class="hl"><td><strong>eSIM (Airalo, Nomad)</strong></td><td>5–12 CHF für 1–5 GB</td><td>1–10 GB</td><td>Vorab einrichten, keine Schlange am Flughafen</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Mehr zum Thema: <a href="/sim-karten.html">unser SIM-Karten Guide für Weltreisende</a>.</p>
 
     <h2 id="bali-sprache">Sprache &amp; <em>Kultur</em></h2>
-    <p>Bali ist mehrheitlich hinduistisch — eine Besonderheit in Indonesien, das das grösste muslimische Land der Welt ist. Das prägt Kultur, Essen, Feste und Alltag stark.</p>
+    <p>Bali ist mehrheitlich hinduistisch — eine Besonderheit in Indonesien, dem weltweit grössten muslimischen Land. Das prägt Kultur, Essen, Feste und Alltag enorm.</p>
 
-    <p><strong>Sprachen:</strong> Bahasa Indonesia (Amtssprache), Balinesisch (Regionalsprache). In touristischen Gebieten wird Englisch fast überall verstanden. Deutsch: vereinzelt in Ubud.</p>
+    <div class="g-img2">
+      <figure><img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=400&q=80&fit=crop" alt="Balinesischer Tempel Zeremonie"><figcaption>Tempelzeremonie auf Bali</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=80&fit=crop" alt="Bali Kultur Angebot"><figcaption>Tägliche Opfergaben (Canang Sari)</figcaption></figure>
+    </div>
 
-    <p><strong>Nützliche Wörter:</strong></p>
-    <table class="art-table">
+    <table class="phrase-tbl">
       <thead><tr><th>Deutsch</th><th>Bahasa Indonesia</th><th>Aussprache</th></tr></thead>
       <tbody>
-        <tr><td>Hallo</td><td>Halo / Selamat</td><td>hah-lo</td></tr>
-        <tr><td>Danke</td><td>Terima kasih</td><td>te-ri-ma kah-sih</td></tr>
-        <tr><td>Bitte</td><td>Tolong / Silakan</td><td>to-long</td></tr>
+        <tr><td>Hallo / Guten Tag</td><td>Halo / Selamat</td><td>hah-lo / se-lah-mat</td></tr>
+        <tr><td>Danke (sehr)</td><td>Terima kasih (banyak)</td><td>te-ri-ma kah-sih</td></tr>
+        <tr><td>Bitte / Gern geschehen</td><td>Tolong / Sama-sama</td><td>to-long / sah-ma</td></tr>
         <tr><td>Wie viel kostet das?</td><td>Berapa harganya?</td><td>be-ra-pa har-ga-nya</td></tr>
-        <tr><td>Zu teuer</td><td>Terlalu mahal</td><td>ter-la-lu ma-hal</td></tr>
+        <tr><td>Zu teuer!</td><td>Terlalu mahal!</td><td>ter-la-lu ma-hal</td></tr>
         <tr><td>Lecker</td><td>Enak</td><td>e-nak</td></tr>
         <tr><td>Wo ist...?</td><td>Di mana...?</td><td>di mah-na</td></tr>
         <tr><td>Ich verstehe nicht</td><td>Saya tidak mengerti</td><td>sa-ya ti-dak</td></tr>
       </tbody>
     </table>
 
-    <p><strong>Kulturelle Regeln:</strong> Beim Besuch von Tempeln immer einen Sarong (Umstandstuch) umwickeln — meist kostenlos ausleihbar am Eingang. Linke Hand gilt als unrein — Objekte immer mit rechts überreichen. Kopf ist heilig — niemandem auf den Kopf hauen oder tippen. Füsse zeigen in Tempeln gilt als respektlos. Während Opfergaben-Prozessionen aus dem Weg gehen.</p>
+    <div class="g-box box-ch">
+      <div class="g-box-icon">🛕</div>
+      <div><div class="g-box-title">Kulturelle Regeln bei Tempelbesuchen</div><div class="g-box-text">Sarong (Wickeltuch) bei Tempelbesuchen Pflicht — meist kostenlos ausleihbar. Objekte immer mit rechts überreichen (linke Hand gilt als unrein). Während Opfergaben-Prozessionen Abstand halten. Kopf anderer Leute niemals berühren.</div></div>
+    </div>
 
     <h2 id="bali-packen">Packtipps <em>für Bali</em></h2>
-    <p>Bali ist warm, feucht und touristisch gut ausgestattet — fast alles was du vergisst lässt sich kaufen. Trotzdem:</p>
-    <table class="art-table">
-      <thead><tr><th>Was</th><th>Warum</th></tr></thead>
-      <tbody>
-        <tr><td>Leichter Rucksack (max. 15 kg)</td><td>Motorroller erlaubt kein Grossgepäck</td></tr>
-        <tr><td>Sarong</td><td>Tempelbesuche, Strand, Handtuch</td></tr>
-        <tr><td>Repellent (DEET 30%+)</td><td>Dengue-Mücken tagaktiv</td></tr>
-        <tr><td>Sonnenschutz</td><td>Auf Bali kaufen — oft teurer und schwächer</td></tr>
-        <tr><td>Wasserfilter oder LifeStraw</td><td>Leitungswasser nicht trinkbar</td></tr>
-        <tr><td>Magenmittel + Elektrolyte</td><td>Bali Belly vorbeugen/behandeln</td></tr>
-        <tr><td>Powerbank</td><td>Für lange Ausflugstage</td></tr>
-        <tr><td>Regen-Cape oder leichter Poncho</td><td>Motorroller + Regenzeit</td></tr>
-        <tr><td>Schloss für Rucksack/Hostelschrank</td><td>Sicherheit in Hostels</td></tr>
-        <tr><td>Flipflops und feste Schuhe</td><td>Beides nötig</td></tr>
-      </tbody>
-    </table>
-
+    <ul class="g-checklist">
+      <li>Leichter Rucksack (max. 15 kg) — Motorroller erlaubt kein Grossgepäck</li>
+      <li>Sarong (Wickeltuch) — Tempelbesuche, Strand, Handtuch</li>
+      <li>Repellent mit DEET 30%+ — Dengue-Mücken sind tagaktiv</li>
+      <li>Sonnenschutz — lieber aus der Schweiz mitbringen (auf Bali teurer)</li>
+      <li>Wasserfilter (Sawyer Squeeze) — Leitungswasser nicht trinkbar</li>
+      <li>Magenmittel + Elektrolyte — Bali Belly ist häufig</li>
+      <li>Regen-Cape — für Motorroller in der Regenzeit</li>
+      <li>Powerbank — für lange Ausflugstage ohne Steckdose</li>
+      <li>Koppelschloss — für Hostels und Rucksack unterwegs</li>
+      <li>Sandalen + feste Schuhe — beides wird gebraucht</li>
+    </ul>
     <p>Komplette Packliste für die ganze Weltreise: <a href="/packliste.html">unser Packlisten-Guide</a>.</p>
 
-    <section class="faq-section">
+    <div class="g-box box-ch">
+      <div class="g-box-icon">🇨🇭</div>
+      <div><div class="g-box-title">Vor der Abreise</div><div class="g-box-text">KVG sistieren (spart 400–600 CHF/Monat), AKV abschliessen, Reisekreditkarte besorgen, e-VOA online beantragen, Impfungen checken. Alle Checklisten in unserer <a href="/weltreise-planung.html">Weltreise-Planung</a>.</div></div>
+    </div>
+
+    <hr class="g-divider">
+
+    <div class="g-faq">
       <h2>Häufige Fragen zu <em>Bali</em></h2>
-      <div class="faq-item"><h3>Wie teuer ist Bali wirklich?</h3><p>Als Backpacker in Ubud: 32–55 CHF/Tag. In Canggu oder Seminyak: 70–130 CHF/Tag. Luxusvillen starten ab 120 CHF/Person. Bali ist deutlich teurer als Java oder Lombok — aber im Vergleich zur Schweiz immer noch sehr günstig.</p></div>
-      <div class="faq-item"><h3>Ist Bali sicher?</h3><p>Ja, im Vergleich zu anderen Destinationen sehr sicher. Grösste Risiken: Motorrad-Unfälle, Dengue-Fieber, Taschendiebstahl in vollen Gebieten. Keine politische Instabilität, kein nennenswertes Gewaltproblem für Touristen.</p></div>
-      <div class="faq-item"><h3>Wie viel Bargeld soll ich mitnehmen?</h3><p>Kein CHF mitbringen — in IDR wechseln vor Ort. CHF wird in Bali akzeptiert (Kurs oft schlechter), EUR und USD besser. Besser: am ATM direkt in IDR abheben. 200'000–500'000 IDR (12–30 CHF) als tägliche Reserve.</p></div>
-      <div class="faq-item"><h3>Muss man auf Bali Indonesisch sprechen?</h3><p>Nein. In touristischen Gebieten (Ubud, Canggu, Seminyak, Uluwatu, Amed) wird Englisch fast überall gesprochen. Ein paar indonesische Grundwörter werden immer mit Freude quittiert, sind aber nicht nötig.</p></div>
-      <div class="faq-item"><h3>Wie lange sollte man für Bali einplanen?</h3><p>Mindestens 10–14 Tage für Ubud + Süden + Nusa Penida. 3 Wochen für einen entspannten Eindruck inkl. Ostbali oder Nordbali. Wer nur 1 Woche hat: lieber tief als breit — eine Region richtig erleben statt alles hetzen.</p></div>
-    </section>
-    <div class="share-row"><span class="share-label">Folge uns:</span><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg></div><span class="share-icon-label">Instagram</span></a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#010101"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg></div><span class="share-icon-label">TikTok</span></a><a href="https://www.youtube.com/@Wirweitweg555" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#FF0000"><svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg></div><span class="share-icon-label">YouTube</span></a><a href="https://pinterest.com/pin/create/button/?url=https://wirweitweg.blog/indonesien.html&description=Indonesien+Reisef%C3%BChrer+von+WirWeitWeg" target="_blank" rel="noopener" class="share-icon"><div class="share-icon-box" style="background:#e60023"><svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div><span class="share-icon-label">Pinterest</span></a></div>
-    <div class="author-box"><div class="author-avatar">F+M</div><div class="author-info"><div class="author-name">Fabienne &amp; Marc</div><div class="author-role">WirWeitWeg · Solothurn, Schweiz</div><div class="author-bio">Wir sind ein Paar aus Solothurn, das am 30. Juni 2026 zu einer Open-End-Weltreise aufbricht. Indonesien ist eines der Länder auf die wir uns am meisten freuen — dieser Guide wächst mit unserer Reise.</div></div></div>
-    <section class="related-section"><h2 class="related-title">Weitere <em>Indonesien-Guides</em></h2><div class="related-grid"><a href="/lombok.html" class="related-card"><img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf4?w=500&q=75&fit=crop" alt="Lombok Gili-Inseln" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Indonesien</div><div class="related-rtitle">Lombok</div></div></a><a href="/java.html" class="related-card"><img src="https://images.unsplash.com/photo-1562599838-8cc871c241a5?w=500&q=75&fit=crop" alt="Java Borobudur" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Indonesien</div><div class="related-rtitle">Java</div></div></a><a href="/indonesien.html" class="related-card"><img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=500&q=75&fit=crop" alt="Indonesien" class="related-img" loading="lazy"><div class="related-body"><div class="related-tag">Indonesien</div><div class="related-rtitle">Indonesien Übersicht</div></div></a></div></section>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Wie teuer ist Bali wirklich?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Als Backpacker in Ubud: 32–55 CHF/Tag. In Canggu oder Seminyak: 70–130 CHF/Tag. Luxusvillen starten ab 120 CHF/Person. Bali ist deutlich teurer als Java oder Lombok — aber im Vergleich zur Schweiz immer noch sehr günstig.</div>
+      </div>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Ist Bali sicher für Alleinreisende?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Ja — Bali ist eine der sichersten Destinationen Asiens. Grösste Risiken: Motorrad-Unfälle (Hauptursache für Touristenunfälle), Dengue-Fieber und Taschendiebstahl in vollen Gebieten. Keine politische Instabilität, kein nenenswertes Gewaltproblem.</div>
+      </div>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Wann ist die beste Reisezeit für Bali?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Mai bis Oktober (Trockenzeit). Juli und August sind Hochsaison mit bestem Wetter aber vollen Stränden und höheren Preisen. Mai, Juni und September sind optimal: gutes Wetter, deutlich weniger Betrieb, günstigere Preise.</div>
+      </div>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Wie viel Bargeld soll ich mitnehmen?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Kein CHF oder EUR mitbringen — am ATM direkt in IDR abheben. 200'000–500'000 IDR (12–30 CHF) als tägliche Reserve. Empfehlung: Wise oder Revolut-Karte für günstige ATM-Abhebungen weltweit.</div>
+      </div>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Wie lange sollte man für Bali einplanen?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Mindestens 10–14 Tage für Ubud + Süden + Nusa Penida. 3 Wochen für einen entspannten Eindruck inkl. Ostbali oder Nordbali. Wer nur 1 Woche hat: lieber eine Region richtig erleben statt alles hetzen.</div>
+      </div>
+      <div class="g-faq-item">
+        <button class="g-faq-q">Muss man Indonesisch sprechen?<span class="g-faq-arrow">▾</span></button>
+        <div class="g-faq-a">Nein. In touristischen Gebieten (Ubud, Canggu, Seminyak, Uluwatu, Amed) wird Englisch fast überall gesprochen. Ein paar indonesische Grundwörter werden immer mit Freude quittiert, sind aber nicht nötig.</div>
+      </div>
+    </div>
+
   </article>
   <aside class="art-sidebar">
     <div class="sidebar-countdown"><div class="cd-label">Abflug in</div><span class="cd-num" id="cdDays">—</span><div class="cd-sub">Tagen</div><div class="cd-date">30. Juni 2026</div></div>
@@ -461,4 +747,33 @@
 </footer>
 <div class="bmc-wrap"><button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button></div>
 <script>(function(){var t=new Date('2026-06-30T00:00:00');var el=document.getElementById('cdDays');if(el){var d=Math.ceil((t-new Date())/86400000);el.textContent=d>0?d:'0';}})();function sbSubmit(){var v=document.getElementById('sbVorname').value.trim();var e=document.getElementById('sbEmail').value.trim();var btn=document.getElementById('sbBtn');if(!v||!e){btn.textContent='Bitte ausfüllen!';return;}btn.textContent='Wird gesendet…';btn.disabled=true;fetch('/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vorname:v,email:e})}).then(function(r){return r.json();}).then(function(){btn.textContent='✓ Fast geschafft – E-Mail bestätigen!';}).catch(function(){btn.textContent='Fehler – bitte nochmal';btn.disabled=false;});}</script>
+
+<script>
+(function(){
+  // FAQ Accordion
+  document.querySelectorAll('.g-faq-q').forEach(function(btn){
+    btn.onclick=function(){
+      var a=this.nextElementSibling;
+      var open=this.classList.contains('open');
+      document.querySelectorAll('.g-faq-q').forEach(function(b){
+        b.classList.remove('open');
+        if(b.nextElementSibling) b.nextElementSibling.style.display='none';
+      });
+      if(!open){this.classList.add('open');a.style.display='block';}
+    };
+  });
+  // Tabs
+  document.querySelectorAll('.g-tab').forEach(function(tab){
+    tab.onclick=function(){
+      var grp=this.closest('.g-tabs-group');
+      grp.querySelectorAll('.g-tab').forEach(function(t){t.classList.remove('active');});
+      grp.querySelectorAll('.g-tabcontent').forEach(function(c){c.classList.remove('active');});
+      this.classList.add('active');
+      var t=grp.querySelector('#'+this.dataset.tab);
+      if(t) t.classList.add('active');
+    };
+  });
+})();
+</script>
+
 </body></html>
