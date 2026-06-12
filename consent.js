@@ -39,7 +39,7 @@
 
     var banner = document.createElement('div');
     banner.id = 'wwwconsent';
-    banner.innerHTML = '<p>Wir nutzen Google Analytics um zu verstehen, welche Inhalte euch helfen. Kein Tracking ohne dein OK. <a href="/datenschutz.html">Mehr erfahren</a></p><div id="wwwconsent-btns"><button id="wwwconsent-decline">Ablehnen</button><button id="wwwconsent-accept">OK, einverstanden</button></div>';
+    banner.innerHTML = '<p>Wir nutzen Google Analytics um zu verstehen, welche Inhalte euch helfen. Kein Tracking ohne dein OK. <a href="/datenschutz">Mehr erfahren</a></p><div id="wwwconsent-btns"><button id="wwwconsent-decline">Ablehnen</button><button id="wwwconsent-accept">OK, einverstanden</button></div>';
     document.body.appendChild(banner);
 
     document.getElementById('wwwconsent-accept').onclick = function(){

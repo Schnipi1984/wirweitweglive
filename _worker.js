@@ -1,3 +1,20 @@
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+};
+
+async function serveAssets(request, env) {
+  const res = await env.ASSETS.fetch(request);
+  const out = new Response(res.body, res);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
+    out.headers.set(k, v);
+  }
+  return out;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -56,12 +73,12 @@ export default {
       }
 
       if (request.method !== 'POST') {
-        return env.ASSETS.fetch(request);
+        return serveAssets(request, env);
       }
 
       return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: corsHeaders });
     }
 
-    return env.ASSETS.fetch(request);
+    return serveAssets(request, env);
   }
 };
