@@ -101,6 +101,15 @@ strong{font-weight:700;}
 /* ─── DIVIDER ─── */
 .divider{max-width:var(--maxW);margin:0 auto;border:none;border-top:1px solid var(--border);}
 
+/* ─── PROMO BOX (betterbeyond-Stil: gestrichelte Box, Text + Bild) ─── */
+.promo-box{display:flex;align-items:center;gap:1.5rem;border:2px dashed var(--border);border-radius:var(--rLg);padding:1.25rem 1.75rem;max-width:640px;margin:2rem auto 0;}
+.promo-txt{flex:1;text-align:center;}
+.promo-txt p{font-size:.9rem;color:var(--mid);margin-bottom:.75rem;line-height:1.6;}
+.promo-txt strong{display:block;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.4rem;}
+.promo-box .promo-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--green);color:#fff!important;font-weight:700;font-size:.82rem;padding:.55rem 1.2rem;border-radius:100px;}
+.promo-img{width:110px;height:110px;border-radius:var(--r);object-fit:cover;flex-shrink:0;}
+@media(max-width:600px){.promo-box{flex-direction:column;}}
+
 /* ─── PAGE LAYOUT ─── */
 .page{max-width:1060px;margin:0 auto;padding:0 1.5rem;}
 .page.wide{max-width:1280px;}
@@ -137,6 +146,7 @@ strong{font-weight:700;}
 
 /* ─── SPLIT ─── */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.split>.split-img,.split>.carousel{position:sticky;top:90px;}
 .split.rev{direction:rtl;}.split.rev>*{direction:ltr;}
 .split-img{border-radius:var(--rLg);overflow:hidden;}
 .split-img img{width:100%;height:380px;object-fit:cover;display:block;}
@@ -343,6 +353,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 @media(max-width:768px){
   .nav-menu{display:none;}.nav-burger{display:flex;}
   .split{grid-template-columns:1fr;gap:2rem;}.split.rev{direction:ltr;}
+  .split>.split-img,.split>.carousel{position:static;}
   .split-img img{height:280px;}
   .related-grid{grid-template-columns:1fr 1fr;}
   .route-cards{grid-template-columns:1fr;}
@@ -527,6 +538,14 @@ function carouselMove(btn,dir){
         <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=85&fit=crop&crop=center" alt="Palmen am Strand von Gili Air" loading="lazy">
       </div>
     </div>
+    <div class="promo-box">
+      <div class="promo-txt">
+        <strong>Noch unsicher, was in den Rucksack muss?</strong>
+        <p>Unsere komplette Packliste fürs Inselhopping – von Schnorchel-Ausrüstung bis Reef-safe Sonnencreme.</p>
+        <a href="/packliste" class="promo-btn">Zur Packliste →</a>
+      </div>
+      <img class="promo-img" src="https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=300&q=80&fit=crop&crop=center" alt="Reiserucksack gepackt">
+    </div>
   </div>
 </div>
 
@@ -545,7 +564,7 @@ function carouselMove(btn,dir){
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ostküste Gili Air mit Booten" loading="lazy"></div>
     </div>
-    <div class="hl-row rev">
+    <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Nordseite – die stille Bucht</h3>
         <p>Schmaler Sandweg, kaum Schatten, aber das klarste Wasser der Insel. Kaum ein anderer Tourist verirrt sich hierher – ideal für den frühen Morgen oder wenn man einfach seine Ruhe will.</p>
@@ -559,7 +578,7 @@ function carouselMove(btn,dir){
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1679583759056-2b7f6c09e080?w=700&q=80&fit=crop&crop=center" alt="Boot vor Gili Air bei Sonnenuntergang" loading="lazy"></div>
     </div>
-    <div class="hl-row rev">
+    <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ausflug: Unterwasser-Statuen</h3>
         <p>Ein Bootsausflug zu den umliegenden Gili-Inseln bringt dich zu einer versunkenen Skulpturen-Installation – ein Highlight jeder Schnorcheltour und ein beliebtes Fotomotiv unter Wasser.</p>
@@ -740,7 +759,7 @@ function carouselMove(btn,dir){
 <hr class="divider">
 <div class="sec" id="unterkunft">
   <div class="page wide">
-    <div class="split rev">
+    <div class="split">
       <div>
         <span class="sec-eyebrow">Unterkunft</span>
         <h2 class="sec-h2">Wo wir <em>geschlafen haben</em></h2>
@@ -987,7 +1006,7 @@ function carouselMove(btn,dir){
 <hr class="divider">
 <div class="sec" id="menschen">
   <div class="page wide">
-    <div class="split rev">
+    <div class="split">
       <div>
         <span class="sec-eyebrow">Menschen</span>
         <h2 class="sec-h2">Die Menschen –<br><em>was uns bewegt hat</em></h2>
@@ -996,7 +1015,6 @@ function carouselMove(btn,dir){
         <p>Im <strong>Flavornesia</strong> kamen wir mit dem Besitzer über die Unterschiede zwischen Indonesien und der Schweiz ins Gespräch – und es ist erstaunlich, wie schnell so ein Austausch den eigenen Blick verrückt. Die Dinge, über die wir uns daheim aufregen, wirken plötzlich klein. Und Dinge, die wir für selbstverständlich halten – sauberes Leitungswasser, ein Bus, der pünktlich kommt – sind es überhaupt nicht.</p>
         <p>Die Bevölkerung von Gili Air ist <strong>mehrheitlich muslimisch</strong> – Lombok ist eine der wenigen Inseln in Indonesien, wo der Islam tiefe Wurzeln hat. Man hört den <strong>Azan</strong> (Gebetsruf) mehrmals täglich. Das ist Teil des Insel-Charakters, und man begegnet ihm mit Respekt. Kleidung beim Verlassen des Strandbereichs: T-Shirt und kurze Hose reichen vollkommen, kein Sarong nötig.</p>
         <div class="callout"><strong>🗣️ Der beste Tipp für Gili Air steht in keinem Reiseführer:</strong> Bleib lang genug, dass die Leute dich wiedererkennen. Ab da wird aus einer Insel ein Ort.</div>
-        <div class="callout"><strong>🗣️ Lern ein paar Worte Indonesisch.</strong> Nicht als Strategie, nicht um beliebt zu wirken – einfach weil es richtig ist, wenn man in einem Land zu Gast ist. Der Effekt ist trotzdem enorm.</div>
       </div>
       <div class="carousel carousel-sm">
         <div class="carousel-track">
