@@ -75,8 +75,15 @@ strong{font-weight:700;}
 .hero-h1 em{font-weight:300;font-style:italic;color:var(--mint);}
 .hero-meta{display:flex;flex-wrap:wrap;gap:1.75rem;align-items:center;}
 .hero-meta span{font-size:.82rem;color:rgba(255,255,255,.65);font-weight:600;}
-.hero-flag{width:52px;height:52px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.9);box-shadow:0 4px 18px rgba(0,0,0,.35);margin-bottom:1rem;background:#fff;}
+.hero-flag{width:84px;height:84px;border-radius:50%;overflow:hidden;border:4px solid #fff;box-shadow:0 6px 24px rgba(0,0,0,.4);margin-bottom:1.25rem;background:#fff;}
 .hero-flag img{width:100%;height:100%;object-fit:cover;}
+
+/* ─── BACK TO TOP ─── */
+.totop{position:fixed;bottom:5.5rem;right:1.5rem;z-index:998;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s,transform .2s;}
+.totop.show{opacity:1;pointer-events:all;}
+.totop:hover{transform:translateY(-3px);}
+.totop svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+@media(max-width:480px){.totop{bottom:5rem;right:1rem;width:38px;height:38px;}}
 
 /* ─── ANCHOR NAV (betterbeyond-Stil: schlichte Text-Zeile, kein Balken) ─── */
 .anav{padding:.5rem 1.5rem 0;}
@@ -190,11 +197,11 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 
 /* ─── DAYBOX (Tagesablauf) ─── */
 .daybox{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem 1.75rem;margin:1.5rem 0;box-shadow:0 2px 14px rgba(0,0,0,.05);}
-.daybox-hed{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.75rem;}
+.daybox-hed{font-family:'Fraunces',serif;font-weight:900;font-size:1.15rem;color:var(--ink);margin-bottom:.9rem;}
 .day-row{display:flex;gap:1.25rem;padding:.6rem 0;border-top:1px solid var(--border);}
 .day-row:first-of-type{border-top:none;}
-.day-time{flex:0 0 88px;font-weight:700;font-size:.82rem;color:var(--green);}
-.day-txt{font-size:.88rem;color:var(--mid);}
+.day-time{flex:0 0 96px;font-weight:800;font-size:.85rem;color:var(--green);}
+.day-txt{font-size:.92rem;font-weight:600;color:var(--ink);}
 
 /* ─── CALLOUT / INFOBOX ─── */
 .callout{background:var(--greenlt);border-left:5px solid var(--green);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1rem;line-height:1.65;color:var(--ink);box-shadow:0 2px 14px rgba(0,0,0,.05);}
@@ -238,9 +245,10 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .akk-item summary:hover{color:var(--green);}
 .akk-body{
   padding:0 0 1.4rem 2.9rem;
-  font-size:.94rem;
+  font-size:.96rem;
+  font-weight:500;
   line-height:1.68;
-  color:var(--mid);
+  color:#4a4640;
 }
 .akk-body p{margin-bottom:.85rem;}.akk-body p:last-child{margin-bottom:0;}
 .akk-body ul{padding-left:1.2rem;margin-bottom:.8rem;}
@@ -567,32 +575,28 @@ function carouselMove(btn,dir){
     <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ostküste – Leben pur</h3>
-        <p>Cafés, Tauchschulen und Restaurants reihen sich aneinander. Hier ist tagsüber und abends am meisten los – die Ostküste ist das Zentrum der Insel, mit dem Hauptanleger im Süden und dem grössten Teil der Infrastruktur.</p>
-        <p>Wer ankommt, landet fast automatisch hier: Die Boote legen im Süden der Ostseite an, und von dort reiht sich ein Warung ans nächste. Morgens Kaffee und Frühstück direkt am Wasser, mittags Schatten unter den Bäumen am Weg, abends die höchste Dichte an Restaurants der ganzen Insel. Wer schnell ein SIM-Karten-Update, einen Geldwechsel oder eine Schnorchelausrüstung braucht, findet hier alles innerhalb weniger Gehminuten.</p>
+        <p>Cafés, Tauchschulen und Restaurants reihen sich aneinander. Hier ist tagsüber und abends am meisten los – die Ostküste ist das Zentrum der Insel, mit dem Hauptanleger im Süden und dem grössten Teil der Infrastruktur. Wer schnell ein SIM-Karten-Update oder eine Schnorchelausrüstung braucht, findet hier alles innerhalb weniger Gehminuten.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ostküste Gili Air mit Booten" loading="lazy"></div>
     </div>
     <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Nordseite – die stille Bucht</h3>
-        <p>Schmaler Sandweg, kaum Schatten, aber das klarste Wasser der Insel. Kaum ein anderer Tourist verirrt sich hierher – ideal für den frühen Morgen oder wenn man einfach seine Ruhe will.</p>
-        <p>Der Weg wird hier merklich schmaler, die Bebauung hört fast komplett auf, und man hat oft hundert Meter Strand ganz für sich. Genau hier war unser bevorzugter Ort zum Schnorcheln vor dem Frühstück – das Wasser ist morgens spiegelglatt, und man sieht schon von Weitem, wo sich das Riff unter der Oberfläche abzeichnet. Sonnencreme und Wasser mitnehmen, denn hier gibt es keine Bar, kein Warung, nichts – nur Insel.</p>
+        <p>Schmaler Sandweg, kaum Schatten, aber das klarste Wasser der Insel. Kaum ein anderer Tourist verirrt sich hierher – ideal für den frühen Morgen, wenn das Wasser spiegelglatt ist und man seine Ruhe will. Sonnencreme und Wasser mitnehmen, denn hier gibt es keine Bar, kein Warung, nichts – nur Insel.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1694637173869-72c51857c6e9?w=700&q=80&fit=crop&crop=center" alt="Nordseite Gili Air, ruhige Bucht" loading="lazy"></div>
     </div>
     <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Westseite – Sonnenuntergang</h3>
-        <p>Jeden Abend füllen sich die paar Bars an der Westküste, wenn die Sonne ins Meer sinkt. Breiter Strand, Palmen, keine Hektik – der feste Programmpunkt jedes Tages auf der Insel.</p>
-        <p>Ab etwa 17 Uhr füllen sich die Liegestühle und Sitzkissen im Sand, jemand bestellt ein Bintang, jemand anders schneidet eine frische Kokosnuss auf. Es ist kein lautes Beach-Club-Programm wie auf Gili Trawangan, sondern eher das ruhige Sammeln der ganzen Insel an einem Ort – man trifft dieselben Gesichter wieder, mit denen man morgens beim Schnorcheln war. Bali liegt bei klarer Sicht als Silhouette am Horizont, und genau dahinter verschwindet die Sonne.</p>
+        <p>Jeden Abend füllen sich die paar Bars an der Westküste, wenn die Sonne ins Meer sinkt. Breiter Strand, Palmen, keine Hektik – man trifft dieselben Gesichter wieder, mit denen man morgens beim Schnorcheln war. Bali liegt bei klarer Sicht als Silhouette am Horizont, und genau dahinter verschwindet die Sonne.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1679583759056-2b7f6c09e080?w=700&q=80&fit=crop&crop=center" alt="Boot vor Gili Air bei Sonnenuntergang" loading="lazy"></div>
     </div>
     <div class="hl-row">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ausflug: Unterwasser-Statuen</h3>
-        <p>Ein Bootsausflug zu den umliegenden Gili-Inseln bringt dich zu einer versunkenen Skulpturen-Installation – ein Highlight jeder Schnorcheltour und ein beliebtes Fotomotiv unter Wasser.</p>
-        <p>Die Figuren stehen seit einigen Jahren in wenigen Metern Tiefe vor Gili Meno und dienen inzwischen selbst als künstliches Riff – Korallen wachsen auf den Schultern und Köpfen, kleine Fische ziehen zwischen den Beinen hindurch. Die meisten Bootstouren kombinieren den Stopp mit ein bis zwei weiteren Schnorchel-Spots rund um die drei Gili-Inseln, sodass ein halber Tag reicht, um alles zu sehen. Unterwasserkamera oder wasserdichte Handyhülle lohnt sich hier besonders.</p>
+        <p>Ein Bootsausflug zu den umliegenden Gili-Inseln bringt dich zu einer versunkenen Skulpturen-Installation vor Gili Meno – ein Highlight jeder Schnorcheltour. Die Figuren dienen inzwischen selbst als künstliches Riff, Korallen wachsen auf den Schultern, kleine Fische ziehen zwischen den Beinen hindurch – ein beliebtes Fotomotiv unter Wasser.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1697552518117-28b9699171c7?w=700&q=80&fit=crop&crop=center" alt="Unterwasser-Skulpturen bei den Gili-Inseln" loading="lazy"></div>
     </div>
@@ -1188,6 +1192,14 @@ function carouselMove(btn,dir){
 </footer>
 
 <div class="bmc-wrap"><button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button></div>
+<button class="totop" id="totopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben">
+  <svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
+<script>
+window.addEventListener('scroll', function(){
+  document.getElementById('totopBtn').classList.toggle('show', window.scrollY > 600);
+});
+</script>
 
 </body>
 </html>
