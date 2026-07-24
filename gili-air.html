@@ -591,71 +591,52 @@ function carouselMove(btn,dir){
 <!-- ANKOMMEN -->
 <hr class="divider">
 <div class="sec" id="ankommen">
-  <div class="page wide">
-    <div class="split">
-      <div>
-        <span class="sec-eyebrow">Erster Eindruck</span>
-        <h2 class="sec-h2">Ankommen <em>und bleiben</em></h2>
-        <p class="sec-lead">Die erste halbe Stunde ist Umstellung. Nach dem Verkehrslärm von Bali oder Lombok trifft einen die Stille fast körperlich – man bemerkt das Fehlen von etwas, bevor man merkt was es ist.</p>
-        <p>Kein Hupen, kein Motorengeräusch. Nur das Meer, das sanfte Klappern der Palmen und ab und zu ein <strong>Cidomo</strong>, der vorbeizieht – die traditionelle Pferdekutsche, die hier seit Generationen das einzige öffentliche Transportmittel ist. Wenn man an der Anlegestelle ankommt, wird man von einer Handvoll freundlicher Gesichter empfangen, die einen zu ihrer Unterkunft bringen wollen. Kein Aufdrängen, kein Druck. Man nickt dem richtigen zu und geht.</p>
-        <p>Die <strong>Ostseite der Insel</strong> ist am lebendigsten: Hier reihen sich Cafés, Tauchschulen und Restaurants entlang des Weges. Abends füllt sich die Ostküste, Tags schwimmt man direkt vom Strand ins Riff. Die <strong>Nordseite</strong> dagegen ist fast menschenleer – schmaler Sandweg, kein Schatten, klares Wasser. Die <strong>Westseite</strong> gehört den Sonnenuntergängen und ein paar Bars, die man sich für den Abend merkt.</p>
-        <p>Wir haben schnell einen Rhythmus gefunden. Morgens zwischen <strong>7 und 9 Uhr</strong> schnorcheln – das ist die beste Zeit, das Wasser ist noch klarer, die Sonne tief genug, um durch die Oberfläche zu brechen. Tagsüber: lesen, dösen, im Café sitzen, einen Kaffee trinken, der viel zu lang geht. Abends an die Westseite. Zwei Wochen lang mehr oder weniger dasselbe. Es klingt nach wenig. Es war genau das Richtige.</p>
-        <div class="daybox">
-          <div class="daybox-hed">Ein typischer Tag auf Gili Air</div>
-          <div class="day-row"><span class="day-time">7–9 Uhr</span><span class="day-txt">Schnorcheln, solange das Wasser noch klar ist</span></div>
-          <div class="day-row"><span class="day-time">9–11 Uhr</span><span class="day-txt">Frühstück im Warung oder Café an der Ostküste</span></div>
-          <div class="day-row"><span class="day-time">11–15 Uhr</span><span class="day-txt">Lesen, dösen, Mittagshitze aussitzen</span></div>
-          <div class="day-row"><span class="day-time">15–17 Uhr</span><span class="day-txt">Inselrundgang zu Fuss oder einfach nichts</span></div>
-          <div class="day-row"><span class="day-time">17–19 Uhr</span><span class="day-txt">Westseite für den Sonnenuntergang</span></div>
-          <div class="day-row"><span class="day-time">ab 19 Uhr</span><span class="day-txt">Abendessen im Warung, früh schlafen</span></div>
-        </div>
-        <div class="callout"><strong>🌴 Unser Tipp für den ersten Tag:</strong> Keinen Plan. Keine gebuchten Aktivitäten. Einmal um die Insel laufen, ein gutes Warung finden, ein bisschen ins Wasser, früh schlafen. Die Insel erklärt sich von selbst – man braucht ihr nur Zeit zu geben.</div>
-      </div>
-      <div class="carousel carousel-sm">
-        <div class="carousel-track">
-          <img src="https://images.unsplash.com/photo-1590117270064-59a817831e05?w=700&q=85&fit=crop&crop=center" alt="Ruhige Bucht auf den Gili-Inseln bei Sonnenuntergang" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80&fit=crop&crop=center" alt="Weisser Sand an der Nordseite" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80&fit=crop&crop=center" alt="Palmen am Strand" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1717872444107-9a608d61167b?w=700&q=80&fit=crop&crop=center" alt="Bootsanleger Gili-Inseln" loading="lazy">
-        </div>
-        <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
-        <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Bild 3"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Bild 4"></button>
-        </div>
-      </div>
+  <div class="page">
+    <span class="sec-eyebrow">Erster Eindruck</span>
+    <h2 class="sec-h2">Ankommen <em>und bleiben</em></h2>
+    <p class="sec-lead">Die erste halbe Stunde ist Umstellung. Nach dem Verkehrslärm von Bali oder Lombok trifft einen die Stille fast körperlich – man bemerkt das Fehlen von etwas, bevor man merkt was es ist.</p>
+    <p>Kein Hupen, kein Motorengeräusch. Nur das Meer, das sanfte Klappern der Palmen und ab und zu ein <strong>Cidomo</strong>, der vorbeizieht – die traditionelle Pferdekutsche, die hier seit Generationen das einzige öffentliche Transportmittel ist. Wenn man an der Anlegestelle ankommt, wird man von einer Handvoll freundlicher Gesichter empfangen, die einen zu ihrer Unterkunft bringen wollen. Kein Aufdrängen, kein Druck. Man nickt dem richtigen zu und geht.</p>
+  </div>
+  <div class="page wide" style="margin:1.5rem auto;">
+    <div class="img-trio">
+      <figure><img src="https://images.unsplash.com/photo-1590117270064-59a817831e05?w=700&q=85&fit=crop&crop=center" alt="Ruhige Bucht auf den Gili-Inseln bei Sonnenuntergang" loading="lazy"><figcaption>Ankunft am späten Nachmittag</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80&fit=crop&crop=center" alt="Weisser Sand an der Nordseite" loading="lazy"><figcaption>Nordseite – fast menschenleer</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1717872444107-9a608d61167b?w=700&q=80&fit=crop&crop=center" alt="Bootsanleger Gili-Inseln" loading="lazy"><figcaption>So kommt man an – und wieder weg</figcaption></figure>
     </div>
+  </div>
+  <div class="page">
+    <p>Die <strong>Ostseite der Insel</strong> ist am lebendigsten: Hier reihen sich Cafés, Tauchschulen und Restaurants entlang des Weges. Abends füllt sich die Ostküste, Tags schwimmt man direkt vom Strand ins Riff. Die <strong>Nordseite</strong> dagegen ist fast menschenleer – schmaler Sandweg, kein Schatten, klares Wasser. Die <strong>Westseite</strong> gehört den Sonnenuntergängen und ein paar Bars, die man sich für den Abend merkt.</p>
+    <p>Wir haben schnell einen Rhythmus gefunden. Morgens zwischen <strong>7 und 9 Uhr</strong> schnorcheln – das ist die beste Zeit, das Wasser ist noch klarer, die Sonne tief genug, um durch die Oberfläche zu brechen. Tagsüber: lesen, dösen, im Café sitzen, einen Kaffee trinken, der viel zu lang geht. Abends an die Westseite. Zwei Wochen lang mehr oder weniger dasselbe. Es klingt nach wenig. Es war genau das Richtige.</p>
+    <div class="daybox">
+      <div class="daybox-hed">Ein typischer Tag auf Gili Air</div>
+      <div class="day-row"><span class="day-time">7–9 Uhr</span><span class="day-txt">Schnorcheln, solange das Wasser noch klar ist</span></div>
+      <div class="day-row"><span class="day-time">9–11 Uhr</span><span class="day-txt">Frühstück im Warung oder Café an der Ostküste</span></div>
+      <div class="day-row"><span class="day-time">11–15 Uhr</span><span class="day-txt">Lesen, dösen, Mittagshitze aussitzen</span></div>
+      <div class="day-row"><span class="day-time">15–17 Uhr</span><span class="day-txt">Inselrundgang zu Fuss oder einfach nichts</span></div>
+      <div class="day-row"><span class="day-time">17–19 Uhr</span><span class="day-txt">Westseite für den Sonnenuntergang</span></div>
+      <div class="day-row"><span class="day-time">ab 19 Uhr</span><span class="day-txt">Abendessen im Warung, früh schlafen</span></div>
+    </div>
+    <div class="callout"><strong>🌴 Unser Tipp für den ersten Tag:</strong> Keinen Plan. Keine gebuchten Aktivitäten. Einmal um die Insel laufen, ein gutes Warung finden, ein bisschen ins Wasser, früh schlafen. Die Insel erklärt sich von selbst – man braucht ihr nur Zeit zu geben.</div>
   </div>
 </div>
 
 <!-- ANREISE -->
 <hr class="divider">
 <div class="sec" id="anreise">
-  <div class="page wide">
-    <div class="split">
-      <div>
-        <span class="sec-eyebrow">Anreise</span>
-        <h2 class="sec-h2">Wie man <em>hinkommt</em></h2>
-        <p class="sec-lead">Es gibt zwei Wege auf die Insel – von Bali oder von Lombok. Eins vorweg: Die letzten Meter zum Boot läuft man am Strand knietief durchs Wasser. <strong>Sandalen sind Pflicht</strong>, keine festen Schuhe, kein Gepäck das nass werden darf.</p>
-        <p>Gili Air hat keinen richtigen Hafen. Alle Boote ankern etwas vor der Küste, man watet an Bord und an Land. Das klingt charmanter als es im Moment ist – mit einem Rucksack auf dem Rücken und schweissigen Händen. Wer grossen Koffer hat: vorher umpacken. Trotzdem: Der erste Schritt ins warme türkisfarbene Wasser ist unvergesslich.</p>
-        <p>Wir empfehlen die <strong>Anreise via Lombok</strong> für alle, die flexibel sind. Der Preis ist ein Bruchteil des Schnellboots ab Bali, die Überfahrt dauert nur 20 Minuten, und man sieht dabei noch etwas von Lombok. Wer aber direkt von Bali kommt (Flug oder Aufenthalt), nimmt das Schnellboot – es ist bequemer und spart eine ganze Reiseetappe.</p>
-      </div>
-      <div class="carousel carousel-sm">
-        <div class="carousel-track">
-          <img src="https://images.unsplash.com/photo-1581773683009-11e0e759e9ad?w=700&q=85&fit=crop&crop=center" alt="Boot am Strand der Gili-Inseln" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ankunft mit dem Boot an der Ostküste" loading="lazy">
-        </div>
-        <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
-        <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
-        </div>
-      </div>
+  <div class="page">
+    <span class="sec-eyebrow">Anreise</span>
+    <h2 class="sec-h2">Wie man <em>hinkommt</em></h2>
+    <p class="sec-lead">Es gibt zwei Wege auf die Insel – von Bali oder von Lombok. Eins vorweg: Die letzten Meter zum Boot läuft man am Strand knietief durchs Wasser. <strong>Sandalen sind Pflicht</strong>, keine festen Schuhe, kein Gepäck das nass werden darf.</p>
+    <p>Gili Air hat keinen richtigen Hafen. Alle Boote ankern etwas vor der Küste, man watet an Bord und an Land. Das klingt charmanter als es im Moment ist – mit einem Rucksack auf dem Rücken und schweissigen Händen. Wer grossen Koffer hat: vorher umpacken. Trotzdem: Der erste Schritt ins warme türkisfarbene Wasser ist unvergesslich.</p>
+  </div>
+  <div class="page wide" style="margin:1.5rem auto;">
+    <div class="img-duo">
+      <figure><img src="https://images.unsplash.com/photo-1581773683009-11e0e759e9ad?w=700&q=85&fit=crop&crop=center" alt="Boot am Strand der Gili-Inseln" loading="lazy"><figcaption>Ankunft am Strand – die letzten Meter watet man</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ankunft mit dem Boot an der Ostküste" loading="lazy"><figcaption>Anlegestelle an der Ostküste</figcaption></figure>
     </div>
+  </div>
+  <div class="page">
+    <p>Wir empfehlen die <strong>Anreise via Lombok</strong> für alle, die flexibel sind. Der Preis ist ein Bruchteil des Schnellboots ab Bali, die Überfahrt dauert nur 20 Minuten, und man sieht dabei noch etwas von Lombok. Wer aber direkt von Bali kommt (Flug oder Aufenthalt), nimmt das Schnellboot – es ist bequemer und spart eine ganze Reiseetappe.</p>
   </div>
   <div class="page wide">
     <div class="route-cards">
@@ -1005,30 +986,22 @@ function carouselMove(btn,dir){
 <!-- MENSCHEN -->
 <hr class="divider">
 <div class="sec" id="menschen">
-  <div class="page wide">
-    <div class="split">
-      <div>
-        <span class="sec-eyebrow">Menschen</span>
-        <h2 class="sec-h2">Die Menschen –<br><em>was uns bewegt hat</em></h2>
-        <p class="sec-lead">Am Ende sind es nicht die Strände, an die wir am meisten zurückdenken. Es sind die Leute. Gili Air ist klein genug, dass man nach ein paar Tagen dieselben Gesichter wiedersieht, gegrüsst wird, dazugehört – ein bisschen zumindest.</p>
-        <p>Neben dem <strong>Warung Hat</strong> gibt es einen kleinen Kiosk, und mit dem Besitzer sind wir über die zwei Wochen richtig ins Reden gekommen. Erst über das Übliche – woher, wie lange, wohin. Dann über alles Mögliche: das Leben auf einer Insel ohne eigenen Süsswasserbrunnen, die Touristen, die kommen und gehen, was er von der Welt da draussen hält und was nicht. Es waren die Gespräche, für die man zu Hause nie Zeit findet, weil immer noch irgendwas dringender ist. Hier war nichts dringender.</p>
-        <p>Im <strong>Flavornesia</strong> kamen wir mit dem Besitzer über die Unterschiede zwischen Indonesien und der Schweiz ins Gespräch – und es ist erstaunlich, wie schnell so ein Austausch den eigenen Blick verrückt. Die Dinge, über die wir uns daheim aufregen, wirken plötzlich klein. Und Dinge, die wir für selbstverständlich halten – sauberes Leitungswasser, ein Bus, der pünktlich kommt – sind es überhaupt nicht.</p>
-        <p>Die Bevölkerung von Gili Air ist <strong>mehrheitlich muslimisch</strong> – Lombok ist eine der wenigen Inseln in Indonesien, wo der Islam tiefe Wurzeln hat. Man hört den <strong>Azan</strong> (Gebetsruf) mehrmals täglich. Das ist Teil des Insel-Charakters, und man begegnet ihm mit Respekt. Kleidung beim Verlassen des Strandbereichs: T-Shirt und kurze Hose reichen vollkommen, kein Sarong nötig.</p>
-        <div class="callout"><strong>🗣️ Der beste Tipp für Gili Air steht in keinem Reiseführer:</strong> Bleib lang genug, dass die Leute dich wiedererkennen. Ab da wird aus einer Insel ein Ort.</div>
-      </div>
-      <div class="carousel carousel-sm">
-        <div class="carousel-track">
-          <img src="https://images.unsplash.com/photo-1768654040238-8ca1a9588340?w=700&q=85&fit=crop&crop=center" alt="Lokales Restaurant am Meer" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1578160112054-954a67602b88?w=700&q=80&fit=crop&crop=center" alt="Warung-Essen mit Einheimischen" loading="lazy">
-        </div>
-        <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
-        <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
-        </div>
-      </div>
+  <div class="page">
+    <span class="sec-eyebrow">Menschen</span>
+    <h2 class="sec-h2">Die Menschen –<br><em>was uns bewegt hat</em></h2>
+    <p class="sec-lead">Am Ende sind es nicht die Strände, an die wir am meisten zurückdenken. Es sind die Leute. Gili Air ist klein genug, dass man nach ein paar Tagen dieselben Gesichter wiedersieht, gegrüsst wird, dazugehört – ein bisschen zumindest.</p>
+    <p>Neben dem <strong>Warung Hat</strong> gibt es einen kleinen Kiosk, und mit dem Besitzer sind wir über die zwei Wochen richtig ins Reden gekommen. Erst über das Übliche – woher, wie lange, wohin. Dann über alles Mögliche: das Leben auf einer Insel ohne eigenen Süsswasserbrunnen, die Touristen, die kommen und gehen, was er von der Welt da draussen hält und was nicht. Es waren die Gespräche, für die man zu Hause nie Zeit findet, weil immer noch irgendwas dringender ist. Hier war nichts dringender.</p>
+  </div>
+  <div class="page wide" style="margin:1.5rem auto;">
+    <div class="img-duo">
+      <figure><img src="https://images.unsplash.com/photo-1768654040238-8ca1a9588340?w=700&q=85&fit=crop&crop=center" alt="Lokales Restaurant am Meer" loading="lazy"><figcaption>Flavornesia – gute Gespräche inklusive</figcaption></figure>
+      <figure><img src="https://images.unsplash.com/photo-1578160112054-954a67602b88?w=700&q=80&fit=crop&crop=center" alt="Warung-Essen mit Einheimischen" loading="lazy"><figcaption>Warung-Essen mit Einheimischen</figcaption></figure>
     </div>
+  </div>
+  <div class="page">
+    <p>Im <strong>Flavornesia</strong> kamen wir mit dem Besitzer über die Unterschiede zwischen Indonesien und der Schweiz ins Gespräch – und es ist erstaunlich, wie schnell so ein Austausch den eigenen Blick verrückt. Die Dinge, über die wir uns daheim aufregen, wirken plötzlich klein. Und Dinge, die wir für selbstverständlich halten – sauberes Leitungswasser, ein Bus, der pünktlich kommt – sind es überhaupt nicht.</p>
+    <p>Die Bevölkerung von Gili Air ist <strong>mehrheitlich muslimisch</strong> – Lombok ist eine der wenigen Inseln in Indonesien, wo der Islam tiefe Wurzeln hat. Man hört den <strong>Azan</strong> (Gebetsruf) mehrmals täglich. Das ist Teil des Insel-Charakters, und man begegnet ihm mit Respekt. Kleidung beim Verlassen des Strandbereichs: T-Shirt und kurze Hose reichen vollkommen, kein Sarong nötig.</p>
+    <div class="callout"><strong>🗣️ Der beste Tipp für Gili Air steht in keinem Reiseführer:</strong> Bleib lang genug, dass die Leute dich wiedererkennen. Ab da wird aus einer Insel ein Ort.</div>
   </div>
 </div>
 
