@@ -75,6 +75,8 @@ strong{font-weight:700;}
 .hero-h1 em{font-weight:300;font-style:italic;color:var(--mint);}
 .hero-meta{display:flex;flex-wrap:wrap;gap:1.75rem;align-items:center;}
 .hero-meta span{font-size:.82rem;color:rgba(255,255,255,.65);font-weight:600;}
+.hero-flag{width:52px;height:52px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.9);box-shadow:0 4px 18px rgba(0,0,0,.35);margin-bottom:1rem;background:#fff;}
+.hero-flag img{width:100%;height:100%;object-fit:cover;}
 
 /* ─── ANCHOR NAV (betterbeyond-Stil: schlichte Text-Zeile, kein Balken) ─── */
 .anav{padding:.5rem 1.5rem 0;}
@@ -111,7 +113,7 @@ strong{font-weight:700;}
 @media(max-width:600px){.promo-box{flex-direction:column;}}
 
 /* ─── PAGE LAYOUT ─── */
-.page{max-width:1060px;margin:0 auto;padding:0 1.5rem;}
+.page{max-width:1280px;margin:0 auto;padding:0 1.5rem;}
 .page.wide{max-width:1280px;}
 
 /* ─── SECTION ─── */
@@ -187,7 +189,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 @media(max-width:768px){.hl-row{grid-template-columns:1fr;}.hl-row.rev{direction:ltr;}}
 
 /* ─── DAYBOX (Tagesablauf) ─── */
-.daybox{border:1px solid var(--border);border-radius:var(--rLg);padding:1.25rem 1.5rem;margin:1.25rem 0;}
+.daybox{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem 1.75rem;margin:1.5rem 0;box-shadow:0 2px 14px rgba(0,0,0,.05);}
 .daybox-hed{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.75rem;}
 .day-row{display:flex;gap:1.25rem;padding:.6rem 0;border-top:1px solid var(--border);}
 .day-row:first-of-type{border-top:none;}
@@ -195,20 +197,23 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .day-txt{font-size:.88rem;color:var(--mid);}
 
 /* ─── CALLOUT / INFOBOX ─── */
-.callout{background:var(--greenlt);border-left:3px solid var(--green);border-radius:0 var(--r) var(--r) 0;padding:.85rem 1.25rem;margin:1.25rem 0;font-size:.94rem;line-height:1.6;color:var(--ink);}
+.callout{background:var(--greenlt);border-left:5px solid var(--green);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1rem;line-height:1.65;color:var(--ink);box-shadow:0 2px 14px rgba(0,0,0,.05);}
 .callout strong{color:var(--green);}
-.warn{background:var(--sandlt);border-left:3px solid var(--sand);border-radius:0 var(--r) var(--r) 0;padding:.85rem 1.25rem;margin:1.25rem 0;font-size:.9rem;color:var(--mid);line-height:1.6;}
+.warn{background:var(--sandlt);border-left:5px solid var(--sand);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:.95rem;color:var(--mid);line-height:1.65;box-shadow:0 2px 14px rgba(0,0,0,.05);}
 .warn strong{color:#92400e;}
 
 /* ─── ACCORDION (betterbeyond style, WirWeitWeg fonts) ─── */
-.akk{margin:1.25rem 0;}
+.akk{margin:1.5rem 0;display:flex;flex-direction:column;gap:.75rem;}
+.akk-item{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:0 1.5rem;transition:box-shadow .2s,border-color .2s;}
+.akk-item:hover{box-shadow:0 4px 20px rgba(0,0,0,.06);border-color:var(--green);}
+.akk-item[open]{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.08);}
 .akk-item summary{
   list-style:none;
-  padding:.85rem 0;
+  padding:1.1rem 0;
   cursor:pointer;
   display:flex;
   align-items:center;
-  gap:.75rem;
+  gap:1rem;
   font-family:'Fraunces',serif;
   font-weight:700;
   font-size:1.05rem;
@@ -220,17 +225,19 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:22px;
-  height:22px;
+  width:30px;
+  height:30px;
   flex-shrink:0;
+  background:var(--greenlt);
   color:var(--green);
+  border-radius:50%;
   font-size:1rem;
-  transition:transform .25s;
+  transition:transform .25s,background .2s,color .2s;
 }
-.akk-item[open] .akk-chevron{transform:rotate(90deg);}
+.akk-item[open] .akk-chevron{transform:rotate(90deg);background:var(--green);color:#fff;}
 .akk-item summary:hover{color:var(--green);}
 .akk-body{
-  padding:.15rem 0 1rem 2rem;
+  padding:0 0 1.4rem 2.9rem;
   font-size:.94rem;
   line-height:1.68;
   color:var(--mid);
@@ -265,10 +272,11 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 
 /* ─── ROUTE CARDS ─── */
 .route-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0;}
-.route-card{border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem;}
-.route-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;}
-.route-ico{width:44px;height:44px;background:var(--greenlt);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
-.route-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;color:var(--ink);}
+.route-card{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.06);}
+.route-head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem;}
+.route-ico{width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(14,159,110,.3);}
+.route-ico svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.route-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--ink);}
 .route-sub{font-size:.75rem;color:var(--light);font-weight:600;}
 .route-dl dt{font-weight:700;font-size:.71rem;text-transform:uppercase;letter-spacing:.06em;color:var(--light);margin-top:.65rem;}
 .route-dl dd{color:var(--ink);font-weight:600;font-size:.9rem;margin-left:0;}
@@ -400,12 +408,11 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
     <img src="https://images.unsplash.com/photo-1781479871113-7f5298ddb8ac?w=1400&q=85&fit=crop" alt="Türkisblaues Wasser vor Gili Trawangan, im Hintergrund die Berge Lomboks" loading="eager">
     <div class="hero-overlay"></div>
     <div class="hero-inner">
+      <div class="hero-flag"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" alt="Indonesien"></div>
       <div class="hero-tag">Indonesien · Gili-Inseln</div>
       <h1 class="hero-h1">Gili Air –<br><em>zwei Wochen auf der kleinen Insel</em></h1>
       <div class="hero-meta">
-        <span>⏱ 12 Min. Lesezeit</span>
-        <span>Fabienne &amp; Marc</span>
-        <span>Selbst vor Ort · 2 Wochen</span>
+        <span>12 Min. Lesezeit</span>
       </div>
     </div>
   </div>
@@ -561,6 +568,7 @@ function carouselMove(btn,dir){
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ostküste – Leben pur</h3>
         <p>Cafés, Tauchschulen und Restaurants reihen sich aneinander. Hier ist tagsüber und abends am meisten los – die Ostküste ist das Zentrum der Insel, mit dem Hauptanleger im Süden und dem grössten Teil der Infrastruktur.</p>
+        <p>Wer ankommt, landet fast automatisch hier: Die Boote legen im Süden der Ostseite an, und von dort reiht sich ein Warung ans nächste. Morgens Kaffee und Frühstück direkt am Wasser, mittags Schatten unter den Bäumen am Weg, abends die höchste Dichte an Restaurants der ganzen Insel. Wer schnell ein SIM-Karten-Update, einen Geldwechsel oder eine Schnorchelausrüstung braucht, findet hier alles innerhalb weniger Gehminuten.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ostküste Gili Air mit Booten" loading="lazy"></div>
     </div>
@@ -568,6 +576,7 @@ function carouselMove(btn,dir){
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Nordseite – die stille Bucht</h3>
         <p>Schmaler Sandweg, kaum Schatten, aber das klarste Wasser der Insel. Kaum ein anderer Tourist verirrt sich hierher – ideal für den frühen Morgen oder wenn man einfach seine Ruhe will.</p>
+        <p>Der Weg wird hier merklich schmaler, die Bebauung hört fast komplett auf, und man hat oft hundert Meter Strand ganz für sich. Genau hier war unser bevorzugter Ort zum Schnorcheln vor dem Frühstück – das Wasser ist morgens spiegelglatt, und man sieht schon von Weitem, wo sich das Riff unter der Oberfläche abzeichnet. Sonnencreme und Wasser mitnehmen, denn hier gibt es keine Bar, kein Warung, nichts – nur Insel.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1694637173869-72c51857c6e9?w=700&q=80&fit=crop&crop=center" alt="Nordseite Gili Air, ruhige Bucht" loading="lazy"></div>
     </div>
@@ -575,6 +584,7 @@ function carouselMove(btn,dir){
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Westseite – Sonnenuntergang</h3>
         <p>Jeden Abend füllen sich die paar Bars an der Westküste, wenn die Sonne ins Meer sinkt. Breiter Strand, Palmen, keine Hektik – der feste Programmpunkt jedes Tages auf der Insel.</p>
+        <p>Ab etwa 17 Uhr füllen sich die Liegestühle und Sitzkissen im Sand, jemand bestellt ein Bintang, jemand anders schneidet eine frische Kokosnuss auf. Es ist kein lautes Beach-Club-Programm wie auf Gili Trawangan, sondern eher das ruhige Sammeln der ganzen Insel an einem Ort – man trifft dieselben Gesichter wieder, mit denen man morgens beim Schnorcheln war. Bali liegt bei klarer Sicht als Silhouette am Horizont, und genau dahinter verschwindet die Sonne.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1679583759056-2b7f6c09e080?w=700&q=80&fit=crop&crop=center" alt="Boot vor Gili Air bei Sonnenuntergang" loading="lazy"></div>
     </div>
@@ -582,6 +592,7 @@ function carouselMove(btn,dir){
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ausflug: Unterwasser-Statuen</h3>
         <p>Ein Bootsausflug zu den umliegenden Gili-Inseln bringt dich zu einer versunkenen Skulpturen-Installation – ein Highlight jeder Schnorcheltour und ein beliebtes Fotomotiv unter Wasser.</p>
+        <p>Die Figuren stehen seit einigen Jahren in wenigen Metern Tiefe vor Gili Meno und dienen inzwischen selbst als künstliches Riff – Korallen wachsen auf den Schultern und Köpfen, kleine Fische ziehen zwischen den Beinen hindurch. Die meisten Bootstouren kombinieren den Stopp mit ein bis zwei weiteren Schnorchel-Spots rund um die drei Gili-Inseln, sodass ein halber Tag reicht, um alles zu sehen. Unterwasserkamera oder wasserdichte Handyhülle lohnt sich hier besonders.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1697552518117-28b9699171c7?w=700&q=80&fit=crop&crop=center" alt="Unterwasser-Skulpturen bei den Gili-Inseln" loading="lazy"></div>
     </div>
@@ -642,6 +653,7 @@ function carouselMove(btn,dir){
     <div class="route-cards">
       <div class="route-card">
         <div class="route-head">
+          <div class="route-ico"><svg viewBox="0 0 24 24"><path d="M2 20a2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1"></path><path d="M4 18l-1-6h18l-2 6"></path><path d="M12 12V4"></path><path d="M12 4l5 4H9z"></path></svg></div>
           <div><div class="route-title">Von Bali</div><div class="route-sub">Schnellboot · Direktverbindung</div></div>
         </div>
         <dl class="route-dl">
@@ -653,6 +665,7 @@ function carouselMove(btn,dir){
       </div>
       <div class="route-card">
         <div class="route-head">
+          <div class="route-ico"><svg viewBox="0 0 24 24"><path d="M22 12c0 5-4.48 9-10 9S2 17 2 12"></path><path d="M2 12l2-8h16l2 8"></path><path d="M6 12h12"></path><path d="M12 4v0"></path></svg></div>
           <div><div class="route-title">Von Lombok</div><div class="route-sub">Öffentliches Boot · günstig</div></div>
         </div>
         <dl class="route-dl">
