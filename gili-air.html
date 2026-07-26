@@ -160,6 +160,9 @@ strong{font-weight:700;}
 .split.rev{direction:rtl;}.split.rev>*{direction:ltr;}
 .split-img{border-radius:var(--rLg);overflow:hidden;}
 .split-img img{width:100%;height:380px;object-fit:cover;display:block;}
+.split-fill{align-items:stretch;}
+.split-fill .split-img{height:100%;}
+.split-fill .split-img img{height:100%;}
 
 /* ─── INTRO BANNER ─── */
 
@@ -381,6 +384,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   .split{grid-template-columns:1fr;gap:2rem;}.split.rev{direction:ltr;}
   .split>.split-img,.split>.carousel{position:static;}
   .split-img img{height:280px;}
+  .split-fill .split-img,.split-fill .split-img img{height:280px;}
   .related-grid{grid-template-columns:1fr 1fr;}
   .route-cards{grid-template-columns:1fr;}
   .img-trio{grid-template-columns:1fr 1fr;}
@@ -530,7 +534,7 @@ function carouselMove(btn,dir){
     <h2 class="sec-h2">Gili Air – <em>wichtige Infos</em></h2>
   </div>
   <div class="page wide" style="margin-top:1rem;">
-    <div class="split">
+    <div class="split split-fill">
       <div class="akk akk-lg">
         <details class="akk-item">
           <summary><span class="akk-chevron">›</span>Wann ist die beste Reisezeit?</summary>
