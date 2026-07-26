@@ -105,6 +105,7 @@ strong{font-weight:700;}
 .carousel-dots{position:absolute;bottom:1rem;left:0;right:0;display:flex;justify-content:center;gap:.4rem;}
 .carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);border:none;cursor:pointer;padding:0;}
 .carousel-dot.active{background:#fff;}
+.carousel-caption{font-size:.76rem;color:var(--light);margin-top:.6rem;font-style:italic;text-align:center;}
 @media(max-width:600px){.carousel-track img{height:300px;}}
 
 /* ─── DIVIDER ─── */
@@ -463,10 +464,10 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 <div class="page wide" style="margin:1.25rem auto;">
   <div class="carousel" id="introCarousel">
     <div class="carousel-track">
-      <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1400&q=85&fit=crop&crop=center" alt="Kleine Holzboote im türkisfarbenen Wasser vor den Gili-Inseln" loading="lazy">
-      <img src="/img/gili-air/sonnenuntergang-boot-berg.jpg" alt="Sonnenuntergang bei Gili Air mit Boot und Lombok im Hintergrund" loading="lazy" style="object-position:center 68%">
-      <img src="https://images.unsplash.com/photo-1590117270064-59a817831e05?w=1400&q=85&fit=crop&crop=center" alt="Ruhige Bucht auf den Gili-Inseln bei Sonnenuntergang" loading="lazy">
-      <img src="/img/gili-air/sonnenuntergang-agung.jpg" alt="Sonnenuntergang bei Gili Air mit Vulkan Agung am Horizont" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1400&q=85&fit=crop&crop=center" alt="Kleine Holzboote im türkisfarbenen Wasser vor den Gili-Inseln" loading="lazy" data-caption="Kleine Boote im türkisfarbenen Wasser">
+      <img src="/img/gili-air/sonnenuntergang-boot-berg.jpg" alt="Sonnenuntergang bei Gili Air mit Boot und Lombok im Hintergrund" loading="lazy" style="object-position:center 68%" data-caption="Sonnenuntergang mit Blick nach Lombok">
+      <img src="https://images.unsplash.com/photo-1590117270064-59a817831e05?w=1400&q=85&fit=crop&crop=center" alt="Ruhige Bucht auf den Gili-Inseln bei Sonnenuntergang" loading="lazy" data-caption="Ruhige Bucht bei Sonnenuntergang">
+      <img src="/img/gili-air/sonnenuntergang-agung.jpg" alt="Sonnenuntergang bei Gili Air mit Vulkan Agung am Horizont" loading="lazy" data-caption="Vulkan Agung am Horizont">
     </div>
     <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
     <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
@@ -477,6 +478,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
       <button class="carousel-dot" onclick="carouselGo(this,3)" aria-label="Bild 4"></button>
     </div>
   </div>
+  <p class="carousel-caption">Kleine Boote im türkisfarbenen Wasser</p>
 </div>
 <script>
 function carouselGo(btn,i){
@@ -485,6 +487,11 @@ function carouselGo(btn,i){
   car.dataset.idx=i;
   car.querySelector('.carousel-track').style.transform='translateX('+(-100*i)+'%)';
   dots.forEach((d,n)=>d.classList.toggle('active',n===i));
+  const cap=car.nextElementSibling;
+  if(cap&&cap.classList.contains('carousel-caption')){
+    const slide=car.querySelectorAll('.carousel-track > *')[i];
+    cap.textContent=slide?(slide.dataset.caption||''):'';
+  }
 }
 function carouselMove(btn,dir){
   const car=btn.closest('.carousel');
@@ -766,9 +773,9 @@ function carouselMove(btn,dir){
       </div>
       <div class="carousel carousel-sm">
         <div class="carousel-track">
-          <img src="/img/gili-air/pool-sonnenuntergang.jpg" alt="Pool bei Sonnenuntergang, Segar Village Gili Air" loading="lazy">
-          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="/img/gili-air/segar-village-zimmer.jpg" alt="Zimmer mit Himmelbett im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
-          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="/img/gili-air/segar-village-bad.jpg" alt="Badezimmer mit Fliesen im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
+          <img src="/img/gili-air/pool-sonnenuntergang.jpg" alt="Pool bei Sonnenuntergang, Segar Village Gili Air" loading="lazy" data-caption="Pool bei Sonnenuntergang, Segar Village">
+          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Unser Zimmer mit Himmelbett"><img src="/img/gili-air/segar-village-zimmer.jpg" alt="Zimmer mit Himmelbett im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
+          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Das Badezimmer im Segar Village"><img src="/img/gili-air/segar-village-bad.jpg" alt="Badezimmer mit Fliesen im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
         </div>
         <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
         <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
@@ -778,6 +785,7 @@ function carouselMove(btn,dir){
           <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Bild 3"></button>
         </div>
       </div>
+      <p class="carousel-caption" style="grid-column:2;margin-top:-.5rem;">Pool bei Sonnenuntergang, Segar Village</p>
     </div>
     <div class="page wide" style="padding:0;margin-top:1.75rem;">
       <table class="cost-tbl">
@@ -888,8 +896,8 @@ function carouselMove(btn,dir){
       </div>
       <div class="carousel carousel-sm">
         <div class="carousel-track">
-          <img src="/img/gili-air/schildkroete.jpg" alt="Meeresschildkröte im Riff vor Gili Air" loading="lazy">
-          <img src="/img/gili-air/marc-schnorcheln.jpg" alt="Mit Schnorchelausrüstung am Strand von Gili Air" loading="lazy" style="object-position:bottom">
+          <img src="/img/gili-air/schildkroete.jpg" alt="Meeresschildkröte im Riff vor Gili Air" loading="lazy" data-caption="Meeresschildkröte im Riff">
+          <img src="/img/gili-air/marc-schnorcheln.jpg" alt="Mit Schnorchelausrüstung am Strand von Gili Air" loading="lazy" style="object-position:bottom" data-caption="Bereit zum Schnorcheln">
         </div>
         <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
         <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
@@ -898,6 +906,7 @@ function carouselMove(btn,dir){
           <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
         </div>
       </div>
+      <p class="carousel-caption" style="grid-column:2;margin-top:-.5rem;">Meeresschildkröte im Riff</p>
     </div>
     <div class="akk" style="margin-top:2rem;">
       <details class="akk-item">
