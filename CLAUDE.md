@@ -296,9 +296,13 @@ Vor dem Erstellen einer neuen Seite:
 
 ## Offene To-dos
 
-- `kambotscha.html` löschen (identisches Duplikat von `kambodscha.html`)
 - `ueber-uns.html` — wartet auf Fotos von Fabienne & Marc
 - Blog-Karten — 3× „Bald verfügbar" → echte Artikel während der Reise
 - YouTube Video-IDs — sobald erste Videos online: `loadYT(this,'VIDEO_ID')` in `index.html` eintragen (erst nach Marcs Erlaubnis!)
 - Favicon: transparente Version bevorzugt (aktuell schwarzes PNG)
 - Alle anderen Planungsseiten: Social-Buttons, Typografie und Nav an `idee-zeitplan.html` angleichen
+- Weitere Insel-Guides (Bali, Lombok, Java, Flores, Sulawesi) nach dem Muster von `gili-air.html` aufbauen (betterbeyond-Struktur + echte Fotos)
+
+## Gili Air — Stand 26. Juli 2026
+
+`gili-air.html` komplett neu aufgebaut: Struktur wie betterbeyond.de (Karussells nur bei Intro/Highlights, sonst Fliesstext + Bildreihen mit Bildunterschrift, Divider zwischen Sektionen, Card-Akkordeons), Farben/Fonts weiterhin WirWeitWeg. 21 echte Fotos in `img/gili-air/` ersetzen die Stock-Bilder. Fakt bestätigt: Gili Air war **von Anfang an 2 Wochen gebucht** (nicht "3 Nächte, dann verlängert"). Dient als Pilot-Template für die restlichen Insel-Guides.
