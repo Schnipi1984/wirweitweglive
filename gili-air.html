@@ -194,6 +194,15 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .hl-row-txt p{font-size:.95rem;color:var(--mid);line-height:1.7;}
 .hl-row-img{border-radius:var(--rLg);overflow:hidden;}
 .hl-row-img img{width:100%;height:230px;object-fit:cover;display:block;}
+
+/* ─── CHEVRON JUMP LIST (betterbeyond-Stil: fette Stichpunkte mit Pfeil, Sprung zu Unterabschnitten) ─── */
+.chev-list{list-style:none;padding:0;margin:1.1rem 0 1.75rem;display:flex;flex-direction:column;gap:.55rem;}
+.chev-list li{display:flex;align-items:center;}
+.chev-list a{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:.92rem;letter-spacing:.01em;color:var(--green);}
+.chev-list a:hover{text-decoration:underline;}
+.chev-ico{color:var(--green);font-size:.8rem;flex-shrink:0;transform:translateY(1px);}
+.chev-target{scroll-margin-top:130px;}
+.chev-h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin:2rem 0 .5rem;}
 @media(max-width:768px){.hl-row{grid-template-columns:1fr;}.hl-row.rev{direction:ltr;}}
 
 /* ─── DAYBOX (Tagesablauf) ─── */
@@ -579,28 +588,35 @@ function carouselMove(btn,dir){
     <h2 class="sec-h2">Die schönsten <em>Ecken der Insel</em></h2>
     <p class="sec-lead">Vier Orte, an denen Gili Air am besten zeigt, was sie kann – und die man in 90 Gehminuten alle selbst abklappern kann.</p>
 
-    <div class="hl-row">
+    <ul class="chev-list">
+      <li><a href="#ostkueste"><span class="chev-ico">»</span>Ostküste – Leben pur</a></li>
+      <li><a href="#nordseite"><span class="chev-ico">»</span>Nordseite – die stille Bucht</a></li>
+      <li><a href="#westseite"><span class="chev-ico">»</span>Westseite – Sonnenuntergang</a></li>
+      <li><a href="#statuen"><span class="chev-ico">»</span>Ausflug: Unterwasser-Statuen</a></li>
+    </ul>
+
+    <div class="hl-row chev-target" id="ostkueste">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ostküste – Leben pur</h3>
         <p>Cafés, Tauchschulen und Restaurants reihen sich aneinander. Hier ist tagsüber und abends am meisten los – die Ostküste ist das Zentrum der Insel, mit dem Hauptanleger im Süden und dem grössten Teil der Infrastruktur. Wer schnell ein SIM-Karten-Update oder eine Schnorchelausrüstung braucht, findet hier alles innerhalb weniger Gehminuten.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1583022846753-83a4eba54ac1?w=700&q=80&fit=crop&crop=center" alt="Ostküste Gili Air mit Booten" loading="lazy"></div>
     </div>
-    <div class="hl-row">
+    <div class="hl-row chev-target" id="nordseite">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Nordseite – die stille Bucht</h3>
         <p>Schmaler Sandweg, kaum Schatten, aber das klarste Wasser der Insel. Kaum ein anderer Tourist verirrt sich hierher – ideal für den frühen Morgen, wenn das Wasser spiegelglatt ist und man seine Ruhe will. Sonnencreme und Wasser mitnehmen, denn hier gibt es keine Bar, kein Warung, nichts – nur Insel.</p>
       </div>
       <div class="hl-row-img"><img src="https://images.unsplash.com/photo-1694637173869-72c51857c6e9?w=700&q=80&fit=crop&crop=center" alt="Nordseite Gili Air, ruhige Bucht" loading="lazy"></div>
     </div>
-    <div class="hl-row">
+    <div class="hl-row chev-target" id="westseite">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Westseite – Sonnenuntergang</h3>
         <p>Jeden Abend füllen sich die paar Bars an der Westküste, wenn die Sonne ins Meer sinkt. Breiter Strand, Palmen, keine Hektik – man trifft dieselben Gesichter wieder, mit denen man morgens beim Schnorcheln war. Bali liegt bei klarer Sicht als Silhouette am Horizont, und genau dahinter verschwindet die Sonne.</p>
       </div>
       <div class="hl-row-img"><img src="/img/gili-air/beachbar-herz.jpg" alt="Beach-Lounge an der Westseite von Gili Air in der Abenddämmerung" loading="lazy"></div>
     </div>
-    <div class="hl-row">
+    <div class="hl-row chev-target" id="statuen">
       <div class="hl-row-txt">
         <h3 class="hl-row-title">Ausflug: Unterwasser-Statuen</h3>
         <p>Ein Bootsausflug zu den umliegenden Gili-Inseln bringt dich zu einer versunkenen Skulpturen-Installation vor Gili Meno – ein Highlight jeder Schnorcheltour. Die Figuren dienen inzwischen selbst als künstliches Riff, Korallen wachsen auf den Schultern, kleine Fische ziehen zwischen den Beinen hindurch – ein beliebtes Fotomotiv unter Wasser.</p>
@@ -945,6 +961,13 @@ function carouselMove(btn,dir){
     <h2 class="sec-h2">Einmal um die <em>ganze Insel</em></h2>
     <p class="sec-lead"><strong>Ganz ehrlich?</strong> Der Rundweg ist der schönste Spaziergang auf Gili Air – und kein Guide nötig, kein Plan. Den Sandweg immer am Wasser entlang, <strong>in 90 Minuten</strong> ist man einmal komplett herum.</p>
     <p>Wir sind die Runde mehrmals gelaufen – jedes Mal leicht anders, weil Tageszeit, Licht und Tide die Insel verändern. Die <strong>Ostküste</strong> ist lebendig und bebaut. Die <strong>Nordseite</strong> ist wild, fast menschenleer, der Sandweg wird schmaler und das Wasser ist besonders klar. Die <strong>Westküste</strong> gehört den Sonnenuntergängen – breite Strände, Palmen, ein paar Bars, die von 16 Uhr an voller werden. Die <strong>Südseite</strong> führt zurück zur Anlegestelle.</p>
+
+    <ul class="chev-list">
+      <li><a href="#ostkueste"><span class="chev-ico">»</span>Ostküste im Detail</a></li>
+      <li><a href="#nordseite"><span class="chev-ico">»</span>Nordseite im Detail</a></li>
+      <li><a href="#westseite"><span class="chev-ico">»</span>Westseite im Detail</a></li>
+    </ul>
+
     <p><strong>Beste Zeit für den Rundgang:</strong> Früh morgens (7–9 Uhr) – kühler, ruhiger, das Licht ist schöner. Oder direkt vor Sonnenuntergang starten und an der Westküste ankommen, wenn die Sonne ins Meer sinkt. <strong>Mittagshitze unbedingt meiden</strong> – der Weg hat kaum Schatten, die Hitze ab 11 Uhr ist heftig. Genug Wasser mitnehmen, mindestens 1 Liter.</p>
   </div>
   <div class="page wide" style="margin-bottom:1.5rem;">
@@ -1091,9 +1114,20 @@ function carouselMove(btn,dir){
     <span class="sec-eyebrow">Ohne Filter</span>
     <h2 class="sec-h2">Was wir <em>ehrlich sagen müssen</em></h2>
     <p class="sec-lead">Jetzt der Teil, den die Hochglanz-Guides gern weglassen. Gili Air wird überall als autofreies, unberührtes Paradies verkauft. Das stimmt so nicht mehr, und wir würden uns komisch fühlen, das zu verschweigen. Vier Dinge, die du wissen solltest, bevor du kommst.</p>
-    <p><strong>Erstens: die E-Roller.</strong> Und zwar nicht ein, zwei vereinzelte – es sind viele. Autofrei heisst hier längst nicht mehr motorfrei. Überall surren Elektroroller durch die Sandwege, leise zwar, aber ständig, und die vielbeschworene totale Stille, mit der jeder Guide wirbt, ist damit schlicht vorbei. Uns hat das ehrlich gestört. Man kommt für die Ruhe – und weicht dann doch dauernd Rollern aus.</p>
-    <p><strong>Zweitens, und das wiegt schwerer: der Müll.</strong> An einigen Abschnitten, vor allem dort, wo die Strömung ihn anspült, liegt deutlich mehr herum, als einem lieb ist. Angeschwemmtes Plastik, das liegen bleibt und dem türkisen Postkartenbild einen Strich durch die Rechnung macht. Das ist kein reines Gili-Air-Problem, sondern eines der ganzen Region und letztlich der ganzen Welt – aber wer die makellose Trauminsel im Kopf hat, sollte es vorher wissen.</p>
-    <p><strong>Und dann die Korallen</strong>, ein eigenes Kapitel. Direkt vor unserer Unterkunft, ein Stück weiter draussen, waren die Riffe noch richtig schön und lebendig – dafür kommt man her. An anderen Stellen rund um die Insel aber ist vieles kaputt, ausgeblichen, tot. Am meisten wehgetan hat uns etwas anderes: Wir haben mehrmals Touristen gesehen, die im flachen Wasser einfach auf den lebenden Korallen herumstiegen. Ob aus Unwissen oder Gleichgültigkeit – kaputt ist kaputt, und jeder Schritt zählt. Wer schnorchelt: Flossen hoch, Füsse weg vom Riff. Immer.</p>
+
+    <ul class="chev-list">
+      <li><a href="#eroller"><span class="chev-ico">»</span>Die E-Roller</a></li>
+      <li><a href="#muell"><span class="chev-ico">»</span>Der Müll</a></li>
+      <li><a href="#korallen"><span class="chev-ico">»</span>Die Korallen</a></li>
+      <li><a href="#cidomo"><span class="chev-ico">»</span>Die Cidomo-Pferdekutschen</a></li>
+    </ul>
+
+    <h3 class="chev-h3 chev-target" id="eroller">Die E-Roller</h3>
+    <p>Und zwar nicht ein, zwei vereinzelte – es sind viele. Autofrei heisst hier längst nicht mehr motorfrei. Überall surren Elektroroller durch die Sandwege, leise zwar, aber ständig, und die vielbeschworene totale Stille, mit der jeder Guide wirbt, ist damit schlicht vorbei. Uns hat das ehrlich gestört. Man kommt für die Ruhe – und weicht dann doch dauernd Rollern aus.</p>
+    <h3 class="chev-h3 chev-target" id="muell">Der Müll</h3>
+    <p>An einigen Abschnitten, vor allem dort, wo die Strömung ihn anspült, liegt deutlich mehr herum, als einem lieb ist. Angeschwemmtes Plastik, das liegen bleibt und dem türkisen Postkartenbild einen Strich durch die Rechnung macht. Das ist kein reines Gili-Air-Problem, sondern eines der ganzen Region und letztlich der ganzen Welt – aber wer die makellose Trauminsel im Kopf hat, sollte es vorher wissen.</p>
+    <h3 class="chev-h3 chev-target" id="korallen">Die Korallen</h3>
+    <p>Ein eigenes Kapitel. Direkt vor unserer Unterkunft, ein Stück weiter draussen, waren die Riffe noch richtig schön und lebendig – dafür kommt man her. An anderen Stellen rund um die Insel aber ist vieles kaputt, ausgeblichen, tot. Am meisten wehgetan hat uns etwas anderes: Wir haben mehrmals Touristen gesehen, die im flachen Wasser einfach auf den lebenden Korallen herumstiegen. Ob aus Unwissen oder Gleichgültigkeit – kaputt ist kaputt, und jeder Schritt zählt. Wer schnorchelt: Flossen hoch, Füsse weg vom Riff. Immer.</p>
   </div>
   <div class="page wide" style="margin:1.5rem auto;">
     <div class="img-duo">
@@ -1102,7 +1136,8 @@ function carouselMove(btn,dir){
     </div>
   </div>
   <div class="page">
-    <p><strong>Ein vierter Punkt, den wir nicht verschweigen wollen: die Cidomo-Pferdekutschen.</strong> Sie gehören zum Inselbild, sind für viele ein Foto wert – aber wie es den Pferden bei Hitze und schwerer Last geht, fanden wir schwer mitanzusehen. Wir sind gelaufen. Die Insel ist klein genug, dass man kein Pferd dafür braucht.</p>
+    <h3 class="chev-h3 chev-target" id="cidomo" style="margin-top:0;">Die Cidomo-Pferdekutschen</h3>
+    <p>Sie gehören zum Inselbild, sind für viele ein Foto wert – aber wie es den Pferden bei Hitze und schwerer Last geht, fanden wir schwer mitanzusehen. Wir sind gelaufen. Die Insel ist klein genug, dass man kein Pferd dafür braucht.</p>
     <p>Uns hat all das die zwei Wochen nicht vermiest, nicht einmal ansatzweise. Aber ehrlich ist ehrlich, und wir schreiben lieber, wie es ist, als wie es sich besser verkaufen würde.</p>
     <div class="warn"><strong>Kurz gesagt:</strong> Gili Air ist schön, aber nicht das unberührte Paradies der Bilder. Wer das weiss und damit rechnet, hat zwei wunderbare Wochen. Wer die perfekte, leere Trauminsel ohne jeden Makel erwartet, wird enttäuscht – und ist auf einer der abgelegeneren Inseln besser aufgehoben.</div>
   </div>
