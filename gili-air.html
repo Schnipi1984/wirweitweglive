@@ -273,6 +273,8 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .akk-lg .akk-item summary{font-size:1.15rem;}
 
 /* ─── VOCABULARY TABLE ─── */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.1rem 0;}
+.tbl-wrap table{margin:0;}
 .voc-table{width:100%;border-collapse:collapse;margin:1.1rem 0;font-size:.93rem;}
 .voc-table thead th{
   background:var(--green);
@@ -394,7 +396,8 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   .day-row{flex-direction:column;gap:.2rem;}
   .day-time{flex:none;}
   .anav-item{font-size:.66rem;}
-  .anav-inner{gap:1.25rem;}
+  .anav-inner{gap:1.25rem;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.15rem;}
+  .anav-inner::-webkit-scrollbar{display:none;}
   .winfo-grid{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
@@ -412,6 +415,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   .footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}
   .bmc-wrap{bottom:1rem;right:1rem;}
   .fact-item{flex:0 0 100%;border-right:none;}
+  .img-trio{grid-template-columns:1fr;}
 }
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1HJNKXTYYZ');</script>
@@ -744,7 +748,7 @@ function carouselMove(btn,dir){
     <p>Was die Sprache wirklich wert ist: Man spürt sofort, wie die Atmosphäre sich ändert, wenn man ein paar Worte sagt. Ein „<strong>Terima kasih</strong>" (Danke) mit echtem Lächeln zieht mehr als jedes grosszügige Trinkgeld. Auf Gili Air, wo viele Leute den ganzen Tag Touristen sehen, die kaum ein Wort sagen, fällt man sofort positiv auf.</p>
     <p style="font-size:.88rem;color:var(--mid);margin-bottom:.5rem;"><strong>Gili Air</strong> bedeutet übrigens „Wasser-Insel" – <em>gili</em> = Insel, <em>air</em> = Wasser. Die Inseln wurden von Fischern nach ihrer Lage benannt.</p>
 
-    <table class="voc-table">
+    <div class="tbl-wrap"><table class="voc-table">
       <thead><tr><th>Deutsch</th><th>Bahasa Indonesia</th></tr></thead>
       <tbody>
         <tr><td>Guten Morgen</td><td>Selamat pagi</td></tr>
@@ -774,7 +778,7 @@ function carouselMove(btn,dir){
         <tr><td>Langsam</td><td>Pelan-pelan</td></tr>
         <tr><td>Achtung!</td><td>Hati hati!</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
 </div>
 
@@ -808,7 +812,7 @@ function carouselMove(btn,dir){
       <p class="carousel-caption" style="grid-column:2;margin-top:-.5rem;">Pool bei Sonnenuntergang, Segar Village</p>
     </div>
     <div class="page wide" style="padding:0;margin-top:1.75rem;">
-      <table class="cost-tbl">
+      <div class="tbl-wrap"><table class="cost-tbl">
         <thead><tr><th>Kategorie</th><th>Name</th><th style="text-align:right;">CHF/Nacht/Person</th></tr></thead>
         <tbody>
           <tr><td><strong>Budget</strong></td><td>Segar Village</td><td>8–15</td></tr>
@@ -817,7 +821,7 @@ function carouselMove(btn,dir){
           <tr><td><strong>Mittelklasse</strong></td><td>Gili Air Santay</td><td>20–50</td></tr>
           <tr><td><strong>Boutique</strong></td><td>Scallywags Resort</td><td>60+</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
     <div class="akk akk-lg" style="margin-top:1rem;">
       <details class="akk-item" open>
@@ -1017,7 +1021,7 @@ function carouselMove(btn,dir){
     <p>Alle Preise in der Tabelle sind in CHF und basieren auf unserem eigenen Aufenthalt, Stand <strong>Juli 2026</strong>.</p>
   </div>
   <div class="page wide">
-    <table class="cost-tbl">
+    <div class="tbl-wrap"><table class="cost-tbl">
       <thead><tr><th>Was</th><th>Details</th><th style="text-align:right;">Preis (CHF)</th></tr></thead>
       <tbody>
         <tr><td><strong>Unterkunft Budget</strong></td><td>Einfacher Bungalow, Ventilator, Bad</td><td>8–15 / Nacht / Person</td></tr>
@@ -1034,7 +1038,7 @@ function carouselMove(btn,dir){
         <tr><td><strong>Tagesbudget Budget</strong></td><td>Warung, einfache Unterkunft</td><td><strong>30–45</strong></td></tr>
         <tr><td><strong>Tagesbudget Komfort</strong></td><td>Restaurant, Mittelklasse, Aktivitäten</td><td><strong>70–110</strong></td></tr>
       </tfoot>
-    </table>
+    </table></div>
     <p style="font-size:.78rem;color:var(--light);">* Alle Preise in CHF, Stand Juli 2026.</p>
   </div>
 </div>
