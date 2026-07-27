@@ -388,7 +388,9 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   .img-trio{grid-template-columns:1fr 1fr;}
   .fazit-cols{grid-template-columns:1fr;}
   .fazit-scores-row{grid-template-columns:repeat(3,1fr);}
+  .fazit-scores-row>*:last-child{grid-column:span 2;}
   .stat-row{grid-template-columns:repeat(3,1fr);}
+  .stat-row>*:last-child{grid-column:span 2;}
   .day-row{flex-direction:column;gap:.2rem;}
   .day-time{flex:none;}
   .anav-item{font-size:.66rem;}
@@ -782,21 +784,23 @@ function carouselMove(btn,dir){
         <p>Unsere Empfehlung: <strong>Nicht zu viel für die Unterkunft ausgeben</strong> – man ist die meiste Zeit draussen. Das Geld lieber in mehr Nächte auf der Insel investieren als in ein teureres Zimmer. Die beste Lage ist der Ostküstenstreifen für lebhaftes Ambiente, die Nordküste für Ruhe.</p>
         <div class="warn"><strong>Achtung Hochsaison (Juli–August und Weihnachten):</strong> Unbedingt im Voraus buchen. Die Insel ist klein, Betten sind begrenzt, und gute Unterkünfte in der Mittelklasse sind schnell ausgebucht. Manchmal monatelang im Voraus.</div>
       </div>
-      <div class="carousel carousel-sm">
-        <div class="carousel-track">
-          <img src="/img/gili-air/pool-sonnenuntergang.jpg" alt="Pool bei Sonnenuntergang, Segar Village Gili Air" loading="lazy" data-caption="Pool bei Sonnenuntergang, Segar Village">
-          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Unser Zimmer mit Himmelbett"><img src="/img/gili-air/segar-village-zimmer.jpg" alt="Zimmer mit Himmelbett im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
-          <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Das Badezimmer im Segar Village"><img src="/img/gili-air/segar-village-bad.jpg" alt="Badezimmer mit Fliesen im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
+      <div>
+        <div class="carousel carousel-sm">
+          <div class="carousel-track">
+            <img src="/img/gili-air/pool-sonnenuntergang.jpg" alt="Pool bei Sonnenuntergang, Segar Village Gili Air" loading="lazy" data-caption="Pool bei Sonnenuntergang, Segar Village">
+            <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Unser Zimmer mit Himmelbett"><img src="/img/gili-air/segar-village-zimmer.jpg" alt="Zimmer mit Himmelbett im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
+            <div style="flex:0 0 100%;height:380px;background:var(--off);display:flex;align-items:center;justify-content:center;overflow:hidden;" data-caption="Das Badezimmer im Segar Village"><img src="/img/gili-air/segar-village-bad.jpg" alt="Badezimmer mit Fliesen im Segar Village, Gili Air" loading="lazy" style="width:auto;max-width:100%;height:100%;object-fit:contain;"></div>
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
+          <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Bild 3"></button>
+          </div>
         </div>
-        <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
-        <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,2)" aria-label="Bild 3"></button>
-        </div>
+        <p class="carousel-caption">Pool bei Sonnenuntergang, Segar Village</p>
       </div>
-      <p class="carousel-caption" style="grid-column:2;margin-top:-.5rem;">Pool bei Sonnenuntergang, Segar Village</p>
     </div>
     <div class="page wide" style="padding:0;margin-top:1.75rem;">
       <div class="tbl-wrap"><table class="cost-tbl">
@@ -905,19 +909,21 @@ function carouselMove(btn,dir){
         <p>Was wir gesehen haben: <strong>Meeresschildkröten</strong> fast täglich – manchmal mehrere auf einmal, die am Riff fressen. <strong>Blaugestreifte Schnapper</strong>, <strong>Papageienfische</strong>, <strong>Trompetenfische</strong>, <strong>Oktopusse</strong> (wenn man genau schaut), gelegentlich <strong>Rochen</strong> flach auf dem Sand und auf der Ostseite sogar <strong>Schwarzspitzen-Riffhai-Welpen</strong> – völlig harmlos, ca. 60–80 cm gross, aber ein unvergesslicher Moment.</p>
         <div class="callout"><strong>Kein Tauchschein nötig.</strong> Flossen und Maske leihen reicht vollkommen. Schnorcheln auf eigene Faust ist hier einfacher als fast überall in Südostasien. Flossen machen einen grossen Unterschied – unbedingt dazuleihen.</div>
       </div>
-      <div class="carousel carousel-sm">
-        <div class="carousel-track">
-          <img src="/img/gili-air/schildkroete.jpg" alt="Meeresschildkröte im Riff vor Gili Air" loading="lazy" data-caption="Meeresschildkröte im Riff">
-          <img src="/img/gili-air/marc-schnorcheln.jpg" alt="Mit Schnorchelausrüstung am Strand von Gili Air" loading="lazy" style="object-position:bottom" data-caption="Bereit zum Schnorcheln">
+      <div>
+        <div class="carousel carousel-sm">
+          <div class="carousel-track">
+            <img src="/img/gili-air/schildkroete.jpg" alt="Meeresschildkröte im Riff vor Gili Air" loading="lazy" data-caption="Meeresschildkröte im Riff">
+            <img src="/img/gili-air/marc-schnorcheln.jpg" alt="Mit Schnorchelausrüstung am Strand von Gili Air" loading="lazy" style="object-position:bottom" data-caption="Bereit zum Schnorcheln">
+          </div>
+          <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
+          <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
+            <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
+          </div>
         </div>
-        <button class="carousel-btn carousel-prev" onclick="carouselMove(this,-1)" aria-label="Vorheriges Bild">‹</button>
-        <button class="carousel-btn carousel-next" onclick="carouselMove(this,1)" aria-label="Nächstes Bild">›</button>
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="carouselGo(this,0)" aria-label="Bild 1"></button>
-          <button class="carousel-dot" onclick="carouselGo(this,1)" aria-label="Bild 2"></button>
-        </div>
+        <p class="carousel-caption">Meeresschildkröte im Riff</p>
       </div>
-      <p class="carousel-caption" style="grid-column:2;margin-top:-.5rem;">Meeresschildkröte im Riff</p>
     </div>
     <div class="akk" style="margin-top:2rem;">
       <details class="akk-item">
