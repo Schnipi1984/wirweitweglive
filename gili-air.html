@@ -223,20 +223,21 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .warn strong{color:#92400e;}
 
 /* ─── ACCORDION (betterbeyond style, WirWeitWeg fonts) ─── */
-.akk{margin:1.5rem 0;display:flex;flex-direction:column;}
-.akk-item{background:transparent;border:none;border-radius:0;padding:0;}
+.akk{margin:1.5rem 0;display:flex;flex-direction:column;gap:.75rem;}
+.akk-item{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:0 1.5rem;transition:box-shadow .2s,border-color .2s;}
+.akk-item:hover{box-shadow:0 4px 20px rgba(0,0,0,.06);border-color:var(--green);}
+.akk-item[open]{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.08);}
 .akk-item summary{
   list-style:none;
-  padding:.9rem 0;
+  padding:1.1rem 0;
   cursor:pointer;
   display:flex;
   align-items:flex-start;
   gap:.85rem;
-  max-width:500px;
   font-family:'Fraunces',serif;
   font-weight:900;
-  font-size:1.35rem;
-  line-height:1.25;
+  font-size:1.2rem;
+  line-height:1.3;
   text-transform:uppercase;
   color:var(--ink);
   transition:color .15s;
@@ -249,7 +250,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
   width:16px;
   height:16px;
   flex-shrink:0;
-  margin-top:.3rem;
+  margin-top:.35rem;
   color:var(--green);
   transition:transform .25s;
 }
@@ -271,7 +272,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .akk-body a{color:var(--green);font-weight:700;}
 
 /* Larger accordion variant */
-.akk-lg .akk-item summary{font-size:1.55rem;}
+.akk-lg .akk-item summary{font-size:1.3rem;}
 
 /* ─── VOCABULARY TABLE ─── */
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.1rem 0;}
@@ -539,7 +540,7 @@ function carouselMove(btn,dir){
   <div class="page wide" style="margin-top:1rem;">
     <div class="split split-fill">
       <div class="akk akk-lg">
-        <details class="akk-item" open>
+        <details class="akk-item">
           <summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Wann ist die beste Reisezeit?</summary>
           <div class="akk-body"><img src="/img/gili-air/strandweg-palmen.jpg" alt="Palmen am Strandweg von Gili Air in der Trockenzeit" loading="lazy" class="akk-img"><p><strong>Trockenzeit Mai–Oktober</strong> ist die beste Zeit: Sonne, ruhiges Meer, gute Sicht beim Schnorcheln. Hochsaison ist Juli und August – mehr Touristen, höhere Preise, aber immer noch schön. <strong>Regenzeit November–April</strong>: Kurze intensive Schauer, weniger Trubel, günstigere Preise. Wir waren im Juli da – perfekt.</p></div>
         </details>
@@ -1188,7 +1189,7 @@ function carouselMove(btn,dir){
     <span class="sec-eyebrow">FAQ</span>
     <h2 class="sec-h2">Häufige <em>Fragen</em></h2>
     <div class="akk" style="margin-top:1.75rem;">
-      <details class="akk-item" open><summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Wie kommt man nach Gili Air?</summary><div class="akk-body"><img src="/img/gili-air/welcome-anleger.jpg" alt="Anlegestelle auf Gili Air, hier kommen die Boote an" loading="lazy" class="akk-img">Von Bali per Schnellboot: 2–3 Stunden, ca. 45 CHF. Von Lombok ab Bangsal: 15–20 Minuten, wenige Franken – wartet bis es voll ist.</div></details>
+      <details class="akk-item"><summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Wie kommt man nach Gili Air?</summary><div class="akk-body"><img src="/img/gili-air/welcome-anleger.jpg" alt="Anlegestelle auf Gili Air, hier kommen die Boote an" loading="lazy" class="akk-img">Von Bali per Schnellboot: 2–3 Stunden, ca. 45 CHF. Von Lombok ab Bangsal: 15–20 Minuten, wenige Franken – wartet bis es voll ist.</div></details>
       <details class="akk-item"><summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Gibt es wirklich keine Autos?</summary><div class="akk-body"><img src="/img/gili-air/pool-sonnenuntergang.jpg" alt="Ruhiger Sonnenuntergang auf Gili Air ohne Verkehrslärm" loading="lazy" class="akk-img"><p>Motorisierte Fahrzeuge sind offiziell verboten – das gilt seit Jahrzehnten und ist Teil der Inselidentität. Fortbewegung läuft zu Fuss, mit dem Fahrrad oder im <strong>Cidomo</strong>, der traditionellen Pferdekutsche.</p><p>Inzwischen sieht man aber auch <strong>Elektro-Roller</strong>, die offiziell nur für den Gütertransport gedacht sind, in der Praxis aber zunehmend auch von Touristen gemietet werden. Das Grundflair ist trotzdem noch da: kein Motorenlärm, keine Abgase, ein Tempo, das sich sofort anders anfühlt als auf dem Festland.</p></div></details>
       <details class="akk-item"><summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Wie viele Tage sollte man einplanen?</summary><div class="akk-body"><img src="/img/gili-air/sonnenuntergang-wolken.jpg" alt="Langer Aufenthalt auf Gili Air, Sonnenuntergang über Wolken" loading="lazy" class="akk-img"><p>3–4 Tage reichen für einen ersten Eindruck: einmal um die Insel laufen, schnorcheln, die Ostküste erkunden. Wer schnorcheln und die Insel wirklich fühlen will, sollte <strong>mindestens eine Woche</strong> einplanen.</p><p>Wir hatten von Anfang an <strong>2 Wochen gebucht</strong> – nicht spontan verlängert, sondern von Beginn weg so geplant – und hätten problemlos noch länger bleiben können. Der Grund: Gili Air entfaltet sich erst, wenn man den Touristen-Modus ablegt, dieselben Gesichter wiedererkennt und einen eigenen Tagesrhythmus findet.</p></div></details>
       <details class="akk-item"><summary><span class="akk-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline><polyline points="6 3 12 9 18 3"></polyline></svg></span>Was kostet ein Tag auf Gili Air?</summary><div class="akk-body"><img src="/img/gili-air/segar-village-zimmer.jpg" alt="Einfaches Zimmer im Segar Village auf Gili Air" loading="lazy" class="akk-img"><p>Budget: <strong>30–45 CHF/Tag</strong> (Warung-Essen für 1.50–3.50 CHF pro Gericht, einfache Unterkunft ab ca. 8–18 CHF pro Nacht und Person). Mit Komfort und Restaurantessen: <strong>70–110 CHF</strong>.</p><p>Zum Vergleich: Wir haben für unsere zwei Wochen im Segar Village <strong>345 CHF total für zwei Personen</strong> bezahlt, also rund 24 CHF pro Nacht für zwei – einfache Bungalows, sauber, direkt hinter dem Strand. Wer will, kann auch deutlich mehr ausgeben: Boutique-Resorts mit Pool und Meerblick kosten schnell 60 CHF und mehr pro Nacht.</p></div></details>
