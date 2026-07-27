@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://wirweitweg.blog/gili-air">
 <link rel="icon" type="image/png" href="/logo.png"><link rel="apple-touch-icon" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 [
   {"@context":"https://schema.org","@type":"TravelGuide","headline":"Gili Air Inselguide 2026 – 2 Wochen vor Ort | WirWeitWeg","description":"Gili Air aus erster Hand: Fabienne & Marc waren 2 Wochen auf der kleinen Insel – Schnorcheln, Kosten in CHF, Anreise ab Bali & Lombok.","url":"https://wirweitweg.blog/gili-air","author":[{"@type":"Person","name":"Fabienne"},{"@type":"Person","name":"Marc"}],"publisher":{"@type":"Organization","name":"WirWeitWeg","url":"https://wirweitweg.blog"},"datePublished":"2026-07-01","dateModified":"2026-07-22","inLanguage":"de-CH"},
@@ -109,7 +109,7 @@ strong{font-weight:700;}
 @media(max-width:600px){.carousel-track img{height:300px;}}
 
 /* ─── DIVIDER ─── */
-.divider{max-width:var(--maxW);margin:0 auto;border:none;border-top:1px solid var(--border);}
+.divider{max-width:var(--maxW);margin:0 auto;border:none;border-top:1px solid #c7c7c7;}
 
 /* ─── PROMO BOX (betterbeyond-Stil: gestrichelte Box, Text + Bild) ─── */
 .promo-box{display:flex;align-items:center;gap:1.5rem;border:2px dashed var(--border);border-radius:var(--rLg);padding:1.25rem 1.75rem;max-width:640px;margin:2rem auto 0;}
@@ -138,7 +138,7 @@ strong{font-weight:700;}
 .split .sec-h2,.split .sec-eyebrow,.split .sec-lead{text-align:left;max-width:none;margin-left:0;margin-right:0;}
 
 /* Body text */
-.sec p{margin-bottom:1.05rem;line-height:1.8;font-size:1.05rem;color:var(--ink);}
+.sec p{margin-bottom:1.05rem;line-height:1.8;font-size:1.05rem;font-weight:500;color:#3a3a3a;}
 .sec p:last-child{margin-bottom:0;}
 .sec a{color:var(--green);font-weight:700;}
 
@@ -187,23 +187,17 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .qa-item{margin-bottom:1.3rem;}
 .qa-item:last-child{margin-bottom:0;}
 .qa-q{font-family:'Fraunces',serif;font-weight:700;font-size:.98rem;color:var(--ink);margin-bottom:.3rem;}
-.qa-a{font-size:1.05rem;color:var(--ink);line-height:1.8;}
+.qa-a{font-size:1.05rem;font-weight:500;color:#3a3a3a;line-height:1.8;}
 .qa-a strong{color:var(--ink);}
 
 /* ─── HIGHLIGHT ROWS (betterbeyond-Stil: Text + Bild gestapelt) ─── */
 .hl-row{display:grid;grid-template-columns:1.2fr 1fr;gap:1.5rem;align-items:center;margin-top:1.5rem;}
 .hl-row.rev{direction:rtl;}.hl-row.rev>*{direction:ltr;}
 .hl-row-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:.6rem;}
-.hl-row-txt p{font-size:1.05rem;color:var(--ink);line-height:1.8;}
+.hl-row-txt p{font-size:1.05rem;font-weight:500;color:#3a3a3a;line-height:1.8;}
 .hl-row-img{border-radius:var(--rLg);overflow:hidden;}
 .hl-row-img img{width:100%;height:230px;object-fit:cover;display:block;}
 
-/* ─── CHEVRON JUMP LIST (betterbeyond-Stil: fette Stichpunkte mit Pfeil, Sprung zu Unterabschnitten) ─── */
-.chev-list{list-style:none;padding:0;margin:1.1rem 0 1.75rem;display:flex;flex-direction:column;gap:.55rem;}
-.chev-list li{display:flex;align-items:center;}
-.chev-list a{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:.92rem;letter-spacing:.01em;color:var(--green);}
-.chev-list a:hover{text-decoration:underline;}
-.chev-ico{color:var(--green);font-size:.8rem;flex-shrink:0;transform:translateY(1px);}
 .chev-target{scroll-margin-top:130px;}
 .chev-h3{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin:2rem 0 .5rem;}
 @media(max-width:768px){.hl-row{grid-template-columns:1fr;}.hl-row.rev{direction:ltr;}}
@@ -214,12 +208,12 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .day-row{display:flex;gap:1.25rem;padding:.6rem 0;border-top:1px solid var(--border);}
 .day-row:first-of-type{border-top:none;}
 .day-time{flex:0 0 96px;font-weight:800;font-size:.85rem;color:var(--green);}
-.day-txt{font-size:.92rem;font-weight:600;color:var(--ink);}
+.day-txt{font-size:.92rem;font-weight:500;color:var(--ink);}
 
 /* ─── CALLOUT / INFOBOX ─── */
-.callout{background:var(--greenlt);border-left:5px solid var(--green);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1.05rem;line-height:1.8;color:var(--ink);box-shadow:0 2px 14px rgba(0,0,0,.05);}
+.callout{background:var(--greenlt);border-left:5px solid var(--green);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1.05rem;font-weight:500;line-height:1.8;color:#3a3a3a;box-shadow:0 2px 14px rgba(0,0,0,.05);}
 .callout strong{color:var(--green);}
-.warn{background:var(--sandlt);border-left:5px solid var(--sand);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1.05rem;color:var(--ink);line-height:1.8;box-shadow:0 2px 14px rgba(0,0,0,.05);}
+.warn{background:var(--sandlt);border-left:5px solid var(--sand);border-radius:0 var(--rLg) var(--rLg) 0;padding:1.25rem 1.5rem;margin:1.75rem 0;font-size:1.05rem;font-weight:500;color:#3a3a3a;line-height:1.8;box-shadow:0 2px 14px rgba(0,0,0,.05);}
 .warn strong{color:#92400e;}
 
 /* ─── ACCORDION (betterbeyond style, WirWeitWeg fonts) ─── */
@@ -260,9 +254,9 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .akk-body{
   padding:0 0 1.5rem 1.85rem;
   font-size:1.05rem;
-  font-weight:400;
+  font-weight:500;
   line-height:1.8;
-  color:var(--ink);
+  color:#3a3a3a;
 }
 .akk-img{display:block;width:100%;max-width:340px;height:220px;object-fit:cover;border-radius:var(--rLg);margin-bottom:1.1rem;}
 .akk-body p{margin-bottom:.85rem;}.akk-body p:last-child{margin-bottom:0;}
@@ -304,7 +298,7 @@ figcaption{font-size:.76rem;color:var(--light);margin-top:.55rem;font-style:ital
 .route-title{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;color:var(--ink);}
 .route-sub{font-size:.75rem;color:var(--light);font-weight:600;}
 .route-dl dt{font-weight:700;font-size:.71rem;text-transform:uppercase;letter-spacing:.06em;color:var(--light);margin-top:.65rem;}
-.route-dl dd{color:var(--ink);font-weight:600;font-size:.9rem;margin-left:0;}
+.route-dl dd{color:var(--ink);font-weight:500;font-size:.9rem;margin-left:0;}
 .route-price{color:var(--green);font-weight:700;}
 
 /* ─── COST TABLE ─── */
@@ -595,13 +589,6 @@ function carouselMove(btn,dir){
     <span class="sec-eyebrow">Übersicht</span>
     <h2 class="sec-h2">Die schönsten <em>Ecken der Insel</em></h2>
     <p class="sec-lead">Vier Orte, an denen Gili Air am besten zeigt, was sie kann – und die man in 90 Gehminuten alle selbst abklappern kann.</p>
-
-    <ul class="chev-list">
-      <li><a href="#ostkueste"><span class="chev-ico">»</span>Ostküste – Leben pur</a></li>
-      <li><a href="#nordseite"><span class="chev-ico">»</span>Nordseite – die stille Bucht</a></li>
-      <li><a href="#westseite"><span class="chev-ico">»</span>Westseite – Sonnenuntergang</a></li>
-      <li><a href="#statuen"><span class="chev-ico">»</span>Ausflug: Unterwasser-Statuen</a></li>
-    </ul>
 
     <div class="hl-row chev-target" id="ostkueste">
       <div class="hl-row-txt">
@@ -970,12 +957,6 @@ function carouselMove(btn,dir){
     <p class="sec-lead"><strong>Ganz ehrlich?</strong> Der Rundweg ist der schönste Spaziergang auf Gili Air – und kein Guide nötig, kein Plan. Den Sandweg immer am Wasser entlang, <strong>in 90 Minuten</strong> ist man einmal komplett herum.</p>
     <p>Wir sind die Runde mehrmals gelaufen – jedes Mal leicht anders, weil Tageszeit, Licht und Tide die Insel verändern. Die <strong>Ostküste</strong> ist lebendig und bebaut. Die <strong>Nordseite</strong> ist wild, fast menschenleer, der Sandweg wird schmaler und das Wasser ist besonders klar. Die <strong>Westküste</strong> gehört den Sonnenuntergängen – breite Strände, Palmen, ein paar Bars, die von 16 Uhr an voller werden. Die <strong>Südseite</strong> führt zurück zur Anlegestelle.</p>
 
-    <ul class="chev-list">
-      <li><a href="#ostkueste"><span class="chev-ico">»</span>Ostküste im Detail</a></li>
-      <li><a href="#nordseite"><span class="chev-ico">»</span>Nordseite im Detail</a></li>
-      <li><a href="#westseite"><span class="chev-ico">»</span>Westseite im Detail</a></li>
-    </ul>
-
     <p><strong>Beste Zeit für den Rundgang:</strong> Früh morgens (7–9 Uhr) – kühler, ruhiger, das Licht ist schöner. Oder direkt vor Sonnenuntergang starten und an der Westküste ankommen, wenn die Sonne ins Meer sinkt. <strong>Mittagshitze unbedingt meiden</strong> – der Weg hat kaum Schatten, die Hitze ab 11 Uhr ist heftig. Genug Wasser mitnehmen, mindestens 1 Liter.</p>
   </div>
   <div class="page wide" style="margin-bottom:1.5rem;">
@@ -1122,13 +1103,6 @@ function carouselMove(btn,dir){
     <span class="sec-eyebrow">Ohne Filter</span>
     <h2 class="sec-h2">Was wir <em>ehrlich sagen müssen</em></h2>
     <p class="sec-lead">Jetzt der Teil, den die Hochglanz-Guides gern weglassen. Gili Air wird überall als autofreies, unberührtes Paradies verkauft. Das stimmt so nicht mehr, und wir würden uns komisch fühlen, das zu verschweigen. Vier Dinge, die du wissen solltest, bevor du kommst.</p>
-
-    <ul class="chev-list">
-      <li><a href="#eroller"><span class="chev-ico">»</span>Die E-Roller</a></li>
-      <li><a href="#muell"><span class="chev-ico">»</span>Der Müll</a></li>
-      <li><a href="#korallen"><span class="chev-ico">»</span>Die Korallen</a></li>
-      <li><a href="#cidomo"><span class="chev-ico">»</span>Die Cidomo-Pferdekutschen</a></li>
-    </ul>
 
     <h3 class="chev-h3 chev-target" id="eroller">Die E-Roller</h3>
     <p>Und zwar nicht ein, zwei vereinzelte – es sind viele. Autofrei heisst hier längst nicht mehr motorfrei. Überall surren Elektroroller durch die Sandwege, leise zwar, aber ständig, und die vielbeschworene totale Stille, mit der jeder Guide wirbt, ist damit schlicht vorbei. Uns hat das ehrlich gestört. Man kommt für die Ruhe – und weicht dann doch dauernd Rollern aus.</p>
