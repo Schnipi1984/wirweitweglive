@@ -588,10 +588,11 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:128px}
 /* Nur was die Guides nicht haben */
 .hey{display:inline-block;position:relative;background:var(--coral);color:#0f2b2b;font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;margin-bottom:16px}
 .hey:after{content:'';position:absolute;left:14px;bottom:-7px;border:7px solid transparent;border-bottom:0;border-top-color:var(--coral)}
-.vorstellung .section-title{margin-bottom:46px}
+.vorstellung .section-title{margin-bottom:32px}
+.vorstellung{padding-top:72px}
 .vorstellung-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,6vw,6rem);align-items:center}
 .vorstellung-photo{margin:0;position:relative}
-.vorstellung-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.vorstellung-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%}
 .vorstellung-photo figcaption{position:absolute;right:18px;bottom:22px;color:#fff9e9;font:700 clamp(1.7rem,2.6vw,2.3rem)/1 Caveat,cursive;transform:rotate(-5deg);text-shadow:0 2px 14px #173c3c99}
 .hallo-links{list-style:none;margin:26px 0 8px;padding:0}
 .hallo-links li{position:relative;padding:6px 0 6px 22px;line-height:1.6;color:#315256}
@@ -672,9 +673,12 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:128px}
   .fact+.fact{border-left:1px solid #3c6265!important;padding-left:10px!important}
   .fact strong{font-size:1.02rem!important}
   .fact span{font-size:.7rem!important;line-height:1.35}
-  .vorstellung .section-title{margin-bottom:24px}
-  .vorstellung-photo img{aspect-ratio:4/3;object-position:50% 45%}
-  .vorstellung-grid{gap:22px}
+  .vorstellung{padding-top:40px!important}
+  .hey{margin-bottom:10px}
+  .vorstellung .section-title{margin-bottom:16px}
+  .vorstellung-grid{gap:18px}
+  .vorstellung-photo img{aspect-ratio:4/3;object-position:50% 30%}
+  .vorstellung .intro-side p{margin-bottom:12px}
   .cards{grid-template-columns:minmax(0,1fr)!important;gap:22px}
   .card{display:grid;grid-template-columns:118px minmax(0,1fr);column-gap:14px;row-gap:3px;align-items:start}
   .card-photo{grid-row:1/span 3;aspect-ratio:1/1;margin:0}
@@ -685,13 +689,14 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:128px}
   .plan-steps{columns:2!important;column-gap:18px;margin-top:30px}
   .plan-steps a{font-size:.98rem;gap:8px;padding:8px 0}
   .plan-steps span{width:20px;font-size:.66rem}
-  #travel-map{height:300px}
+  #travel-map{height:auto;aspect-ratio:2/1.02}
   .tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}
   .tile{aspect-ratio:1/1}
   .tile:last-child:nth-child(odd){grid-column:1/-1;aspect-ratio:2/1}
   .tile-name{font-size:1.05rem;left:12px;right:10px;bottom:10px;gap:7px}
 }
-@media(max-width:360px){.plan-steps{columns:1!important}.card{grid-template-columns:96px minmax(0,1fr)}}
+@media(max-width:430px){.plan-steps{columns:1!important}}
+@media(max-width:360px){.card{grid-template-columns:96px minmax(0,1fr)}}
 </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -731,7 +736,7 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:128px}
   <span class="hey">Hallo!</span>
   <h2 class="section-title" id="hallo-title">Wir sind Fabienne &amp; Marc!</h2>
   <div class="vorstellung-grid">
-    <figure class="vorstellung-photo"><img src="img/start/hallo-fabienne-marc-800.webp" srcset="img/start/hallo-fabienne-marc-480.webp 480w, img/start/hallo-fabienne-marc-640.webp 640w, img/start/hallo-fabienne-marc-800.webp 800w, img/start/hallo-fabienne-marc-960.webp 960w, img/start/hallo-fabienne-marc-1200.webp 1200w" sizes="(max-width:760px) calc(100vw - 32px), 42vw" width="1200" height="1600" alt="Fabienne und Marc bei einer Wanderung in den Cameron Highlands" loading="lazy" decoding="async"></figure>
+    <figure class="vorstellung-photo"><img src="img/start/hallo-fabienne-marc-800.webp" srcset="img/start/hallo-fabienne-marc-480.webp 480w, img/start/hallo-fabienne-marc-640.webp 640w, img/start/hallo-fabienne-marc-800.webp 800w, img/start/hallo-fabienne-marc-960.webp 960w, img/start/hallo-fabienne-marc-1200.webp 1200w, img/start/hallo-fabienne-marc-1536.webp 1536w" sizes="(max-width:760px) calc(100vw - 32px), 42vw" width="1536" height="2048" alt="Fabienne und Marc" loading="lazy" decoding="async"></figure>
     <div class="intro-side">
       <p>Zwei aus Solothurn, die im Juni 2026 ihre Jobs gekündigt haben und in Zürich ins Flugzeug gestiegen sind. Seither sind wir unterwegs, ein Enddatum gibt es nicht.</p>
       <p>Marc plant und schreibt, Fabienne fotografiert und filmt. Wir reisen günstig und lieber langsam, ein eigenes Zimmer muss aber sein.</p>
@@ -883,7 +888,7 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:128px}
     function draw(){
       const w=W.offsetWidth||900,h=W.offsetHeight||650;
       svg.attr('viewBox','0 0 '+w+' '+h);
-      const proj=w<600?d3.geoNaturalEarth1().fitExtent([[6,6],[w-6,h-6]],{type:'MultiPoint',coordinates:[[-4,54],[146,46],[146,-11],[-4,-11]]}):d3.geoNaturalEarth1().scale(w/4.83).translate([w*.5,h*.53]);
+      const proj=w<600?d3.geoNaturalEarth1().fitExtent([[2,2],[w-2,h-2]],{type:'Sphere'}):d3.geoNaturalEarth1().scale(w/4.83).translate([w*.5,h*.53]);
       const path=d3.geoPath().projection(proj);
       const countries=topojson.feature(world,world.objects.countries);
       g.selectAll('path').remove();
