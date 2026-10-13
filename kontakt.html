@@ -1,339 +1,59 @@
-<!DOCTYPE html><html lang="de"><head>
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Kontakt – Schreib Fabienne & Marc | WirWeitWeg</title><meta name="description" content="Fragen zur Weltreise, Kooperationen oder einfach Hallo? Wir freuen uns über jede Nachricht von Gleichgesinnten und Reisebegeisterten."><meta property="og:title" content="Kontakt | WirWeitWeg"><meta property="og:description" content="Schreib uns – wir freuen uns über jede Nachricht."><meta property="og:image" content="https://wirweitweg.blog/og-default.png"><link rel="canonical" href="https://wirweitweg.blog/kontakt"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/style.css?v=3"><style>
-:root{--white:#fff;--off:#fff9ee;--ink:#1e1e2e;--mid:#6b7280;--light:#b0b8c8;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--r:12px;--rLg:20px;--maxW:1280px;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
-
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;}
-.logo span{color:var(--green);}
-.nav-menu{display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;}
-.nav-item{position:relative;list-style:none;}
-.nav-link{font-size:.84rem;font-weight:700;color:var(--mid);padding:.45rem .85rem;border-radius:9px;transition:all .15s;display:flex;align-items:center;gap:.25rem;white-space:nowrap;}
-.nav-link:hover,.nav-link.active{background:var(--off);color:var(--ink);}
-.nav-arr{font-size:.6rem;transition:transform .2s;}
-.nav-item:hover .nav-arr{transform:rotate(180deg);}
-.nav-drop{position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:var(--r);padding:.5rem;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.1);opacity:0;pointer-events:none;transform:translateY(-8px);transition:all .2s;}
-.nav-item:hover .nav-drop{opacity:1;pointer-events:all;transform:translateY(0);}
-.nav-item::after{content:"";position:absolute;height:8px;bottom:-8px;left:0;right:0;display:block;}
-.nav-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--mid);padding:.45rem .75rem;border-radius:8px;}
-.nav-drop a:hover{background:var(--off);color:var(--green);}
-.nav-drop img{width:20px;height:20px;flex-shrink:0;object-fit:contain;}
-.ndrop-ico{font-size:.95rem;width:22px;text-align:center;flex-shrink:0;}
-.nav-cta{background:var(--green);color:white!important;border-radius:100px;padding:.45rem 1.15rem;font-size:.84rem;font-weight:700;transition:background .15s;}
-.nav-cta:hover{background:var(--green);}
-.nav-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:.4rem;}
-.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;}
-.nav-mobile{display:none;position:fixed;inset:0;background:white;z-index:999;padding:5rem 1.5rem 2rem;overflow-y:auto;}
-.nav-mobile.open{display:block;}
-.nav-mobile-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;}
-.nav-mobile a{display:block;font-size:1rem;font-weight:700;color:var(--ink);padding:.7rem 0;border-bottom:1px solid var(--border);}
-.nav-mobile a:hover{color:var(--green);}
-.nav-mobile-section{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:.85rem 0 .25rem;margin-top:.5rem;}
-
-/* PAGE HERO */
-.pghero{background:var(--off);padding:3.5rem 1.5rem 2.5rem;border-bottom:1px solid var(--border);}
-.pghero-inner{max-width:860px;margin:0 auto;}
-.pgtitle{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem;}
-.pgtitle em{font-weight:300;font-style:italic;color:var(--green);}
-.pgdesc{font-size:1rem;color:var(--mid);line-height:1.65;max-width:560px;}
-
-/* CONTACT LAYOUT */
-.contact-wrap{max-width:860px;margin:3.5rem auto 5rem;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
-
-/* EMAIL CARD */
-.contact-card{background:var(--off);border:1px solid var(--border);border-radius:var(--rLg);padding:2rem;}
-.contact-card-icon{width:48px;height:48px;background:var(--greenlt);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
-.contact-card-icon svg{width:22px;height:22px;color:var(--green);}
-.contact-card h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--ink);margin-bottom:.5rem;}
-.contact-card p{font-size:.9rem;color:var(--mid);line-height:1.7;margin-bottom:1.25rem;}
-.contact-email-link{display:inline-flex;align-items:center;gap:.5rem;background:var(--green);color:white;font-weight:700;font-size:.9rem;padding:.65rem 1.25rem;border-radius:100px;transition:opacity .15s;}
-.contact-email-link:hover{opacity:.88;}
-.contact-note{display:block;margin-top:1rem;font-size:.78rem;color:var(--light);}
-
-/* SOCIAL CARD */
-.social-card{background:var(--ink);border-radius:var(--rLg);padding:2rem;}
-.social-card h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:#fff;margin-bottom:.5rem;}
-.social-card p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:1.5rem;}
-.soc-links{display:flex;flex-direction:column;gap:.75rem;}
-.soc-link{display:flex;align-items:center;gap:.9rem;padding:.75rem 1rem;border-radius:var(--r);background:rgba(255,255,255,.07);transition:background .15s;color:#fff;}
-.soc-link:hover{background:rgba(255,255,255,.14);}
-.soc-link-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.soc-link-icon svg{width:18px;height:18px;}
-.soc-link-text strong{display:block;font-size:.88rem;font-weight:700;}
-.soc-link-text span{font-size:.75rem;color:rgba(255,255,255,.45);}
-.soc-link-arr{margin-left:auto;font-size:.7rem;color:rgba(255,255,255,.3);}
-
-/* TOPICS SECTION */
-.topics{max-width:860px;margin:0 auto 5rem;padding:0 1.5rem;}
-.topics h2{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:var(--ink);margin-bottom:1.25rem;}
-.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
-.topic-pill{background:var(--off);border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1.1rem;font-size:.85rem;font-weight:600;color:var(--mid);}
-.topic-pill strong{display:block;font-size:.92rem;color:var(--ink);margin-bottom:.2rem;}
-
-@media(max-width:680px){
-  .contact-wrap{grid-template-columns:1fr;}
-  .topics-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:480px){
-  .pghero{padding:2.5rem 1rem 2rem;}
-  .contact-wrap{padding:0 1rem;margin-top:2.5rem;}
-  .topics{padding:0 1rem;}
-  .topics-grid{grid-template-columns:1fr;}
-  .nav-menu{display:none;}
-  .nav-burger{display:flex;}
-}
-@media(max-width:768px){.nav-menu{display:none;}.nav-burger{display:flex;}}
-
-/* ── FOOTER ── */
-.footer{background:#fff9ee;padding:2.1rem 0 0;}
-.footer-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.7rem;border-bottom:1px solid rgba(0,0,0,.1);}
-.f-brand p{font-size:.82rem;line-height:1.65;color:#6b7280;margin-bottom:1rem;}
-.f-social{display:flex;gap:.5rem;}
-.f-soc{width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;color:#6b7280;transition:all .15s;text-decoration:none;}
-.f-soc:hover{background:#0e9f6e;color:white;border-color:#0e9f6e;}
-.f-col h4{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#b0b8c8;margin-bottom:.75rem;}
-.f-col ul{list-style:none;}
-.f-col li{margin-bottom:.35rem;}
-.f-col a{font-size:.82rem;color:#6b7280;transition:color .15s;}
-.f-col a:hover{color:#0e9f6e;}
-.f-affiliate{border-top:1px solid rgba(0,0,0,.08);padding:.85rem 0;}
-.f-affiliate p{font-size:.73rem;color:#b0b8c8;line-height:1.6;text-align:center;max-width:700px;margin:0 auto;}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.85rem 0;font-size:.74rem;color:#b0b8c8;}
-.footer-bottom a{color:#b0b8c8;}
-.footer-bottom a:hover{color:#0e9f6e;}
-.footer-bottom-links{display:flex;gap:1rem;}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr 1fr;}}
-@media(max-width:640px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand img{height:80px!important;}}
-@media(max-width:480px){.footer-top{grid-template-columns:1fr 1fr;}.f-brand{grid-column:1/-1;}.f-brand img{height:60px!important;}}
-.bmc-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}
-.bmc-btn{display:flex;align-items:center;gap:.6rem;background:#6EE7B7;color:#1E1E2E;border-radius:100px;padding:.75rem 1.25rem;font-weight:700;font-size:.85rem;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .2s;border:none;cursor:pointer;}
-.bmc-btn:hover{transform:translateY(-3px);}
-@media(max-width:480px){.bmc-wrap{bottom:1rem;right:1rem;}.bmc-btn{padding:.5rem .875rem;font-size:.78rem;gap:.4rem;}}
-
-/* Sub-Drop Flyout */
-.nav-sub-wrap{position:relative;display:block;}
-.nav-sub-drop{display:none;position:absolute;left:calc(100% + 4px);top:-4px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px;min-width:185px;box-shadow:0 8px 28px rgba(0,0,0,.12);z-index:9999;}
-.nav-sub-wrap:hover>.nav-sub-drop{display:block;}
-.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:#6b7280;padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
-.nav-sub-drop a:hover{background:#fff9ee;color:#0e9f6e;}
-.nav-sub-arr{font-size:1rem;color:#0e9f6e;margin-left:auto;padding-left:.5rem;font-weight:700;line-height:1;}
+<!doctype html>
+<html lang="de-CH"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf7f0">
+<title>Kontakt: Schreib Fabienne und Marc | WirWeitWeg</title>
+<meta name="description" content="Eine Frage zu unseren Reisen oder zu WirWeitWeg? Schreib Fabienne und Marc per E-Mail. Hier findest du unsere Kontaktadresse und Social-Media-Kanäle.">
+<link rel="canonical" href="https://wirweitweg.blog/kontakt"><link rel="icon" type="image/png" href="logo.png">
+<meta property="og:type" content="website"><meta property="og:locale" content="de_CH"><meta property="og:site_name" content="WirWeitWeg"><meta property="og:title" content="Kontakt | WirWeitWeg"><meta property="og:description" content="Schreib Fabienne und Marc – wir freuen uns über deine Nachricht.">
+<link rel="preload" href="fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Sans';src:url('fonts/dm-sans-latin-wght-normal.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:Manrope;src:url('fonts/manrope-latin-wght-normal.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
+:root{--ink:#253d3a;--ink-deep:#163c3a;--sea:#257c76;--sea-light:#e8f1e9;--sand:#f3ece1;--sky:#faf7f0;--coral:#d87859;--line:#d8d3c7;--muted:#536a64;--white:#fffdf8;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--sky);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit}a:hover{color:var(--sea)}:focus-visible{outline:3px solid var(--coral);outline-offset:4px}.skip{position:absolute;left:1rem;top:-100px;z-index:100;background:white;padding:.7rem 1rem}.skip:focus{top:1rem}
+.header{position:relative;z-index:30;background:var(--white);border-bottom:1px solid #e9e4d9}.header-inner{max-width:var(--max);margin:auto;min-height:76px;padding:0 28px;display:flex;align-items:center;gap:clamp(2rem,5vw,5rem)}.brand{font-family:Manrope,Arial,sans-serif;font-size:1.55rem;font-weight:800;letter-spacing:-.075em;white-space:nowrap}.brand span{color:var(--sea)}
+.nav{display:flex;align-items:center;gap:clamp(.2rem,1vw,.9rem);margin-left:auto;font-family:Manrope,Arial,sans-serif}.nav-item{position:relative}.nav-link{display:flex;align-items:center;gap:.4rem;padding:.7rem .75rem;font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap;transition:color .15s}.nav-link:hover,.nav-item:hover>.nav-link,.nav-item:focus-within>.nav-link,.nav-link[aria-current=page]{color:var(--sea)}.nav-arr{width:9px;height:9px;flex:none;transition:transform .2s}.nav-item:hover .nav-arr,.nav-item:focus-within .nav-arr,.nav-item.open .nav-arr{transform:rotate(180deg)}.nav-cta{margin-left:.6rem;background:var(--ink-deep);color:#fff!important;padding:15px 22px!important;transition:background .2s}.nav-cta:hover{background:var(--sea);color:#fff!important}
+.nav-drop{position:absolute;top:100%;left:-14px;min-width:260px;padding:10px;background:var(--white);border-top:3px solid var(--sea);box-shadow:0 14px 34px #253d3a24;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:50}.nav-item::after{content:'';position:absolute;left:0;right:0;bottom:-10px;height:10px}.nav-item:hover>.nav-drop,.nav-item:focus-within>.nav-drop,.nav-item.open>.nav-drop{opacity:1;visibility:visible;transform:none}.nav-drop a,.nav-sub-wrap>a{display:flex;align-items:center;gap:.8rem;padding:.7rem .85rem;font-size:.9rem;font-weight:600;color:var(--ink);white-space:nowrap;line-height:1.3}.nav-drop a:hover,.nav-sub-wrap:hover>a,.nav-drop a[aria-current=page]{background:var(--sea-light);color:var(--sea)}.nav-drop svg.ic{width:19px;height:19px;flex:none;fill:none;stroke:var(--sea);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.nav-drop img{width:22px;height:22px;flex:none}.nav-sub-wrap{position:relative}.nav-sub-arr{margin-left:auto;color:var(--sea);font-size:1.2rem;line-height:1}.nav-sub-drop{position:absolute;left:calc(100% + 8px);top:-13px;min-width:210px;padding:10px;background:var(--white);border-top:3px solid var(--sea);box-shadow:0 14px 34px #253d3a24;opacity:0;visibility:hidden;transition:opacity .18s,visibility .18s}.nav-sub-wrap:hover>.nav-sub-drop,.nav-sub-wrap:focus-within>.nav-sub-drop,.nav-sub-wrap.open>.nav-sub-drop{opacity:1;visibility:visible}.nav-sub-wrap:before{content:'';position:absolute;left:100%;top:0;bottom:0;width:10px}.header-social{display:flex;gap:12px;margin-left:1rem}.header-social a{width:38px;height:38px;display:grid;place-items:center}.header-social svg{width:19px;height:19px}.menu-toggle{display:none;border:0;background:none;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+@media(max-width:1240px){.header-inner{gap:1rem}.nav-link{padding:.6rem .5rem;font-size:.72rem;letter-spacing:.08em}.nav-cta{padding:13px 16px!important;margin-left:.2rem}.header-social{margin-left:.2rem}.header-social a{width:32px}}
+@media(max-width:1020px){.menu-toggle{display:block;margin-left:auto}.header-social{margin-left:0}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);box-shadow:0 12px 28px #253d3a16;margin:0;padding:22px 28px 28px;flex-direction:column;align-items:stretch;gap:2px;max-height:calc(100vh - 80px);overflow:auto}.nav.is-open{display:flex}.nav-link{padding:.95rem .2rem;font-size:.82rem;justify-content:space-between;border-bottom:1px solid var(--line)}.nav-link:hover,.nav-item:hover>.nav-link,.nav-item:focus-within>.nav-link{background:none}.nav-item::after,.nav-sub-wrap:before{display:none}.nav-drop,.nav-sub-drop{position:static;min-width:0;border:0;box-shadow:none;padding:4px 0 8px 6px;background:transparent;opacity:1;visibility:visible;transform:none;display:none}.nav-item.open>.nav-drop,.nav-sub-wrap.open>.nav-sub-drop{display:block}.nav-item:hover>.nav-drop{display:none}.nav-item.open:hover>.nav-drop{display:block}.nav-sub-drop{padding-left:14px}.nav-sub-arr{display:none}.nav-drop a{white-space:normal}.nav-cta{margin:14px 0 0;text-align:center;justify-content:center;border-bottom:0!important}.menu-toggle{min-height:44px;min-width:56px;padding:0 6px;font-size:.88rem}.nav-link{min-height:48px}.nav-drop a,.nav-sub-drop a{min-height:44px}.nav{padding-bottom:max(28px,env(safe-area-inset-bottom))}}
+@media(max-width:760px){.header-inner{min-height:66px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}.brand{font-size:1.38rem;display:inline-flex;align-items:center;min-height:44px}.menu-toggle{display:block;margin-left:auto}.header-social{margin-left:0}.header-social a{width:44px!important;height:44px!important}}
+@media(max-width:580px){.header-inner{gap:9px}.header-social{gap:4px}}
+@media(max-width:400px){.brand{font-size:1.25rem}.menu-toggle{font-size:.72rem}.header-inner{gap:5px}.header-social a{width:27px!important}}
+@media(hover:none){.nav-link:hover{background:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.contact-hero{max-width:var(--max);margin:auto;padding:95px 28px 95px;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(55px,8vw,130px);align-items:end}.eyebrow{display:block;color:var(--sea);font:800 .72rem Manrope,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}.contact-hero h1{margin:24px 0 0;color:var(--ink-deep);font:800 clamp(4.1rem,8vw,8rem)/.98 Manrope,Arial,sans-serif;letter-spacing:-.085em}.contact-hero h1 span{color:var(--sea)}.contact-intro{max-width:590px;color:#315256;font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.55}.contact-intro p{margin:0 0 16px}.contact-intro p:last-child{margin-bottom:0}
+.contact-main{background:#e5efe9}.contact-grid{max-width:var(--max);margin:auto;padding:100px 28px 110px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(60px,10vw,145px)}.contact-main h2{margin:20px 0 24px;color:var(--ink-deep);font:800 clamp(2.7rem,4.7vw,4.7rem)/1.07 Manrope,Arial,sans-serif;letter-spacing:-.065em}.contact-main p{max-width:540px;color:#315256;font-size:1.06rem;line-height:1.75}.email-link{display:inline-block;max-width:100%;margin:14px 0 25px;padding-bottom:8px;border-bottom:2px solid var(--sea);color:var(--ink-deep);font:800 clamp(1.15rem,2vw,1.55rem) Manrope,Arial,sans-serif;overflow-wrap:anywhere}.email-link:hover{color:var(--sea)}.contact-fine{font-size:.87rem!important;color:var(--muted)!important}.social-list{margin-top:18px;border-top:1px solid #adc7be}.social-list a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid #adc7be;color:var(--ink-deep);font-weight:800}.social-list a:hover{color:var(--sea)}.social-list span{color:var(--sea)}
+.contact-help{max-width:var(--max);margin:auto;padding:90px 28px 100px;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(55px,8vw,130px)}.contact-help h2{margin:20px 0 0;color:var(--ink-deep);font:800 clamp(2.7rem,4.6vw,4.5rem)/1.08 Manrope,Arial,sans-serif;letter-spacing:-.065em}.contact-help p{margin:0 0 18px;color:#315256;font-size:1.08rem;line-height:1.8}.contact-help p:last-child{margin-bottom:0}.contact-help a{color:var(--sea);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.contact-hero,.contact-grid,.contact-help{display:block;padding-left:24px;padding-right:24px}.contact-hero{padding-top:75px;padding-bottom:75px}.contact-intro{margin-top:35px}.contact-grid{padding-top:75px;padding-bottom:85px}.contact-social{margin-top:65px}.contact-help{padding-top:75px;padding-bottom:80px}.contact-help>div:last-child{margin-top:35px}}
+@media(max-width:480px){.contact-hero,.contact-grid,.contact-help{padding-left:20px;padding-right:20px}.contact-hero h1{font-size:clamp(3.65rem,14vw,5rem)}}
 </style>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"WirWeitWeg","item":"https://wirweitweg.blog/"},
-    {"@type":"ListItem","position":2,"name":"Kontakt","item":"https://wirweitweg.blog/kontakt.html"}
-  ]
-}
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1HJNKXTYYZ');
-</script>
-<script src="/consent.js" defer></script>
-<link rel="stylesheet" href="/footer-unified.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WirWeitWeg","item":"https://wirweitweg.blog/"},{"@type":"ListItem","position":2,"name":"Kontakt","item":"https://wirweitweg.blog/kontakt"}]}</script>
+<script src="consent.js" defer></script><link rel="stylesheet" href="footer-unified.css">
 </head><body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a class="nav-link" href="/weltreise-planung">Weltreise planen <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/idee-zeitplan">💡 Idee &amp; Zeitplan</a>
-          <a href="/budget-kosten">💰 Budget &amp; Kosten</a>
-          <a href="/job-auto-wohnung">🏠 Job, Auto &amp; Wohnung</a>
-          <a href="/dokumente">📋 Dokumente</a>
-          <a href="/auslandskrankenversicherung">🏥 Krankenversicherung</a>
-          <a href="/kreditkarten">💳 Kreditkarten &amp; Finanzen</a>
-          <a href="/impfungen">💉 Gesundheit &amp; Impfungen</a>
-          <a href="/routenplanung-visum">🗺️ Route &amp; Visum</a>
-          <a href="/packliste">🎒 Packliste</a>
-          <a href="/technik-auf-reisen">📱 Technik</a>
-          <a href="/wichtige-apps">📲 Apps</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/laenderguides">Länderguides <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/thailand"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f9-1f1ed.svg" width="20" height="20" alt="">Thailand</a>
-          <a href="/vietnam"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fb-1f1f3.svg" width="20" height="20" alt="">Vietnam</a>
-          <div class="nav-sub-wrap">
-          <a href="/indonesien"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" width="20" height="20" alt="">Indonesien<span class="nav-sub-arr">›</span></a>
-          <div class="nav-sub-drop">
-            <a href="/bali">Bali</a>
-            <a href="/lombok">Lombok</a>
-<a href="/gili-air">Gili Air</a>
-            <a href="/java">Java</a>
-            <a href="/flores">Flores &amp; Komodo</a>
-            <a href="/sulawesi">Sulawesi</a>
-          </div>
-        </div>
-          <a href="/japan"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ef-1f1f5.svg" width="20" height="20" alt="">Japan</a>
-          <div class="nav-sub-wrap"><a href="/malaysia"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" width="20" height="20" alt="">Malaysia<span class="nav-sub-arr">›</span></a><div class="nav-sub-drop"><a href="/kuala-lumpur">Kuala Lumpur</a><a href="/cameron-highlands">Cameron Highlands</a></div></div>
-          <a href="/singapur"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ec.svg" width="20" height="20" alt="">Singapur</a>
-          <a href="/kambodscha"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ed.svg" width="20" height="20" alt="">Kambodscha</a>
-          <a href="/laos"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1e6.svg" width="20" height="20" alt="">Laos</a>
-          <a href="/philippinen"><img decoding="async" loading="lazy" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" width="20" height="20" alt="">Philippinen</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/reisetipps">Reisetipps <span class="nav-arr">▾</span></a>
-        <div class="nav-drop">
-          <a href="/sim-karten"><span class="ndrop-ico">📶</span>SIM-Karten &amp; Internet</a>
-          <a href="/transport"><span class="ndrop-ico">🚌</span>Transport &amp; Weiterreisen</a>
-          <a href="/unterkuenfte"><span class="ndrop-ico">🛏️</span>Unterkünfte finden</a>
-          <a href="/lifehacks"><span class="ndrop-ico">⚡</span>Lifehacks</a>
-          <a href="/onward-ticket"><span class="ndrop-ico">✈️</span>Onward Ticket</a>
-          <a href="/beste-reisezeit-suedostasien"><span class="ndrop-ico">🌤️</span>Beste Reisezeit</a>
-        </div>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="/reiseblog">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="/ueber-uns">Über uns</a></li>
-      <li class="nav-item"><a class="nav-link nav-cta" href="/newsletter">Newsletter</a></li>
-    </ul>
-    <button class="nav-burger" onclick="document.getElementById('mob').classList.add('open')">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile" id="mob">
-  <button class="nav-mobile-close" onclick="document.getElementById('mob').classList.remove('open')">✕</button>
-  <div class="nav-mobile-section">Weltreise Planung</div>
-  <a href="/idee-zeitplan">01 · Idee &amp; Zeitplan</a>
-  <a href="/budget-kosten">02 · Budget &amp; Kosten</a>
-  <a href="/job-auto-wohnung">03 · Job, Auto &amp; Wohnung</a>
-  <a href="/dokumente">04 · Dokumente</a>
-  <a href="/auslandskrankenversicherung">05 · Auslandskrankenversicherung</a>
-  <a href="/kreditkarten">06 · Kreditkarten</a>
-  <a href="/impfungen">07 · Impfungen</a>
-  <a href="/routenplanung-visum">08 · Route &amp; Visum</a>
-  <a href="/packliste">09 · Packliste</a>
-  <a href="/technik-auf-reisen">10 · Technik auf Reisen</a>
-  <a href="/wichtige-apps">11 · Wichtige Apps</a>
-  <div class="nav-mobile-section">Länderguides</div>
-  <a href="/indonesien">Indonesien</a>
-  <a href="/bali" style="padding-left:1.5rem;font-size:.9rem;">↳ Bali</a>
-  <a href="/lombok" style="padding-left:1.5rem;font-size:.9rem;">↳ Lombok</a>
-<a href="/gili-air" style="padding-left:1.5rem;font-size:.9rem;">↳ Gili Air</a>
-  <a href="/java" style="padding-left:1.5rem;font-size:.9rem;">↳ Java</a>
-  <a href="/flores" style="padding-left:1.5rem;font-size:.9rem;">↳ Flores &amp; Komodo</a>
-  <a href="/sulawesi" style="padding-left:1.5rem;font-size:.9rem;">↳ Sulawesi</a><a href="/malaysia">Malaysia</a><a href="/kuala-lumpur" style="padding-left:1.5rem;font-size:.9rem;">↳ Kuala Lumpur</a><a href="/cameron-highlands" style="padding-left:1.5rem;font-size:.9rem;">↳ Cameron Highlands</a>
-  <a href="/singapur">Singapur</a><a href="/thailand">Thailand</a>
-  <a href="/vietnam">Vietnam</a><a href="/kambodscha">Kambodscha</a>
-  <a href="/laos">Laos</a><a href="/philippinen">Philippinen</a>
-  <a href="/japan">Japan</a>
-  <div class="nav-mobile-section">Mehr</div>
-  <a href="/reisetipps">Reisetipps</a>
-  <a href="/onward-ticket">Onward Ticket</a>
-  <a href="/beste-reisezeit-suedostasien">Beste Reisezeit</a>
-  <a href="/reiseblog">Reiseblog</a>
-  <a href="/ueber-uns">Über Uns</a>
-  <a href="/newsletter">Newsletter</a>
-</div>
-
-<div class="pghero">
-  <div class="pghero-inner">
-    <h1 class="pgtitle">Sag <em>Hallo</em></h1>
-    <p class="pgdesc">Ob Fragen, Kooperationen oder einfach Lust auf Austausch mit Gleichgesinnten – wir freuen uns über jede Nachricht.</p>
-  </div>
-</div>
-
-<div class="contact-wrap">
-  <div class="contact-card">
-    <div class="contact-card-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-    </div>
-    <h2>Per E-Mail</h2>
-    <p>Am schnellsten erreichst du uns per Mail. Wir antworten in der Regel innerhalb von 2–3 Tagen – manchmal schneller, manchmal stecken wir gerade im Dschungel.</p>
-    <a class="contact-email-link" href="mailto:wirweitweg555@gmail.com">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      wirweitweg555@gmail.com
-    </a>
-    <span class="contact-note">Antwortzeit: 2–3 Werktage</span>
-  </div>
-
-  <div class="social-card">
-    <h2>Folg uns</h2>
-    <p>Für tägliche Updates, Stories aus dem Reisealltag und spontane Einblicke hinter die Kulissen.</p>
-    <div class="soc-links">
-      <a class="soc-link" href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener">
-        <div class="soc-link-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>
-        </div>
-        <div class="soc-link-text">
-          <strong>Instagram</strong>
-          <span>@_wir_weit_weg_</span>
-        </div>
-        <span class="soc-link-arr">↗</span>
-      </a>
-      <a class="soc-link" href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener">
-        <div class="soc-link-icon" style="background:#010101">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.28 8.28 0 004.84 1.55V7.07a4.85 4.85 0 01-1.07-.38z"/></svg>
-        </div>
-        <div class="soc-link-text">
-          <strong>TikTok</strong>
-          <span>@wirweitweg</span>
-        </div>
-        <span class="soc-link-arr">↗</span>
-      </a>
-      <a class="soc-link" href="https://youtube.com/@Wirweitweg555" target="_blank" rel="noopener">
-        <div class="soc-link-icon" style="background:#FF0000">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.83 12l-6.08 3.52z"/></svg>
-        </div>
-        <div class="soc-link-text">
-          <strong>YouTube</strong>
-          <span>@Wirweitweg555</span>
-        </div>
-        <span class="soc-link-arr">↗</span>
-      </a>
-      <a class="soc-link" href="https://pinterest.com/wirweitweg" target="_blank" rel="noopener">
-        <div class="soc-link-icon" style="background:#e60023">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
-        </div>
-        <div class="soc-link-text">
-          <strong>Pinterest</strong>
-          <span>@wirweitweg</span>
-        </div>
-        <span class="soc-link-arr">↗</span>
-      </a>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="WirWeitWeg Startseite">Wir<span>Weit</span>Weg</a>
+    <button class="menu-toggle" type="button" aria-controls="nav" aria-expanded="false">Menü</button>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation"><div class="nav-item"><a class="nav-link" href="weltreise-planung.html" data-parent>Weltreise planen<svg class="nav-arr" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></a><div class="nav-drop"><a href="idee-zeitplan.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21.5h4M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.8.6 1.3 1.5 1.3 2.2h5c0-.7.5-1.6 1.3-2.2A6.5 6.5 0 0 0 12 2.5z"/></svg>Idee &amp; Zeitplan</a><a href="budget-kosten.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.7 9.2c-.4-.9-1.4-1.4-2.7-1.4-1.6 0-2.7.8-2.7 2s1 1.7 2.7 2.1c1.7.4 2.7.9 2.7 2.1s-1.1 2-2.7 2c-1.3 0-2.3-.5-2.7-1.5M12 6v1.8M12 16.2V18"/></svg>Budget &amp; Kosten</a><a href="job-auto-wohnung.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 3.5l8.5 7.5M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/></svg>Job, Auto &amp; Wohnung</a><a href="dokumente.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17.5" rx="2"/><path d="M9 3.5h6v3H9zM8.5 11.5h7M8.5 15.5h7"/></svg>Dokumente</a><a href="auslandskrankenversicherung.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.7 3.1 8 7.5 9.5 4.4-1.5 7.5-4.8 7.5-9.5V6z"/><path d="M12 9v6M9 12h6"/></svg>Krankenversicherung</a><a href="kreditkarten.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6.5 15h3"/></svg>Kreditkarten &amp; Finanzen</a><a href="impfungen.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4A4.8 4.8 0 0 1 12 6.3a4.8 4.8 0 0 1 7.5 6.3z"/><path d="M7 12h2.5l1.5-2.5 2 5 1.5-2.5H17"/></svg>Gesundheit &amp; Impfungen</a><a href="routenplanung-visum.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6z"/><path d="M9 4v14M15 6v14"/></svg>Route &amp; Visum</a><a href="packliste.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="8" width="12" height="13" rx="3.5"/><path d="M9 8V6a3 3 0 0 1 6 0v2M9.5 14h5"/></svg>Packliste</a><a href="technik-auf-reisen.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Technik</a><a href="wichtige-apps.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg>Apps</a></div></div><div class="nav-item"><a class="nav-link" href="laenderguides.html" data-parent>Länderguides<svg class="nav-arr" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></a><div class="nav-drop"><a href="thailand.html"><img src="flags/1f1f9-1f1ed.svg" alt="" width="22" height="22" loading="lazy">Thailand</a><a href="vietnam.html"><img src="flags/1f1fb-1f1f3.svg" alt="" width="22" height="22" loading="lazy">Vietnam</a><div class="nav-sub-wrap"><a href="indonesien.html" data-parent><img src="flags/1f1ee-1f1e9.svg" alt="" width="22" height="22" loading="lazy">Indonesien<span class="nav-sub-arr">›</span></a><div class="nav-sub-drop"><a href="bali.html">Bali</a><a href="lombok.html">Lombok</a><a href="gili-air.html">Gili Air</a><a href="java.html">Java</a><a href="flores.html">Flores &amp; Komodo</a><a href="sulawesi.html">Sulawesi</a></div></div><a href="japan.html"><img src="flags/1f1ef-1f1f5.svg" alt="" width="22" height="22" loading="lazy">Japan</a><div class="nav-sub-wrap"><a href="malaysia.html" data-parent><img src="flags/1f1f2-1f1fe.svg" alt="" width="22" height="22" loading="lazy">Malaysia<span class="nav-sub-arr">›</span></a><div class="nav-sub-drop"><a href="kuala-lumpur.html">Kuala Lumpur</a><a href="cameron-highlands.html">Cameron Highlands</a></div></div><a href="singapur.html"><img src="flags/1f1f8-1f1ec.svg" alt="" width="22" height="22" loading="lazy">Singapur</a><a href="kambodscha.html"><img src="flags/1f1f0-1f1ed.svg" alt="" width="22" height="22" loading="lazy">Kambodscha</a><a href="laos.html"><img src="flags/1f1f1-1f1e6.svg" alt="" width="22" height="22" loading="lazy">Laos</a><a href="philippinen.html"><img src="flags/1f1f5-1f1ed.svg" alt="" width="22" height="22" loading="lazy">Philippinen</a></div></div><div class="nav-item"><a class="nav-link" href="reisetipps.html" data-parent>Reisetipps<svg class="nav-arr" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></a><div class="nav-drop"><a href="sim-karten.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/></svg>SIM-Karten &amp; Internet</a><a href="transport.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3.5" width="16" height="13" rx="2.5"/><path d="M4 11h16M7.5 16.5v3M16.5 16.5v3M8 14h.01M16 14h.01"/></svg>Transport</a><a href="unterkuenfte.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19V6M3 15h18v4M21 15v-2.5A3 3 0 0 0 18 9.5h-7V15"/><circle cx="7" cy="11.5" r="1.8"/></svg>Unterkünfte</a><a href="lifehacks.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.5 4.5 14H11l-1 7.5L19.5 10H13z"/></svg>Lifehacks</a><a href="onward-ticket.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5c1.5-1.5 2-3.5 1.5-4.5-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Onward Ticket</a><a href="beste-reisezeit-suedostasien.html"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>Beste Reisezeit</a></div></div><div class="nav-item"><a class="nav-link" href="reiseblog.html">Blog</a></div><div class="nav-item"><a class="nav-link" href="ueber-uns.html">Über uns</a></div><a class="nav-link nav-cta" href="newsletter.html">Newsletter</a></nav>
+    <div class="header-social">
+      <a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 2.3c.3 2.4 1.6 3.8 4.1 4V9.8a9 9 0 0 1-4.1-1.1v6.5a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.1.1v3.5a2.8 2.8 0 1 0 1.7 2.6V2.3h3.4Z"/></svg></a>
     </div>
   </div>
-</div>
-
-<div class="topics">
-  <h2>Wobei können wir helfen?</h2>
-  <div class="topics-grid">
-    <div class="topic-pill">
-      <strong>Fragen &amp; Tipps</strong>
-      Reiseplanung, Visum, Budget, Ausrüstung – frag einfach.
-    </div>
-    <div class="topic-pill">
-      <strong>Kooperationen</strong>
-      Produkte, Hotels, Erlebnisse – wir prüfen gerne Anfragen.
-    </div>
-    <div class="topic-pill">
-      <strong>Erfahrungen teilen</strong>
-      Warst du in einem unserer Reiseländer? Wir freuen uns über Insider-Tipps.
-    </div>
-  </div>
-</div>
-
+</header>
+<main id="main">
+<section class="contact-hero" aria-labelledby="page-title"><div><span class="eyebrow">Kontakt</span><h1 id="page-title">Schreib<br><span>uns.</span></h1></div><div class="contact-intro"><p>Du hast eine Frage zu unserer Reise, eine Anmerkung zu einem Beitrag oder möchtest mit uns zusammenarbeiten? Schreib uns gern.</p><p>Am besten erreichst du uns per E-Mail. Wir lesen jede Nachricht selbst und antworten, sobald es unterwegs passt.</p></div></section>
+<section class="contact-main" aria-label="Kontaktmöglichkeiten"><div class="contact-grid"><div><span class="eyebrow">Direkt zu uns</span><h2>Eine Mail<br>genügt.</h2><p>Schreib uns, worum es geht. Bei Fragen zu einem Reisebericht hilft es, wenn du den Ort oder den Artikel nennst.</p><a class="email-link" href="mailto:wirweitweg555@gmail.com">wirweitweg555@gmail.com ↗</a></div><div class="contact-social"><span class="eyebrow">Anderswo unterwegs</span><h2>Folge der<br>Reise.</h2><p>Neue Fotos und kurze Einblicke teilen wir auf unseren Kanälen. Für längere Nachrichten ist E-Mail der beste Weg.</p><div class="social-list"><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="contact-help" aria-labelledby="help-title"><div><span class="eyebrow">Schon auf dem Blog?</span><h2 id="help-title">Vielleicht steht es schon <span style="color:var(--sea)">hier.</span></h2></div><div><p>Du planst selbst eine längere Reise? In unserer <a href="weltreise-planung.html">Weltreise-Planung</a> sammeln wir praktische Schritte und Entscheidungen.</p><p>Für Fragen zu einem Reiseziel findest du unsere Erfahrungen bei den <a href="laenderguides.html">Länderguides</a>. Wenn etwas fehlt oder sich vor Ort geändert hat, freuen wir uns über deinen Hinweis per E-Mail.</p></div></section>
+</main>
 <footer id="site-footer" aria-label="Seitenabschluss"><div class="sf-inner"><div class="sf-main"><div><a class="sf-brand" href="index.html" aria-label="WirWeitWeg Startseite">Wir<span>Weit</span>Weg</a><p class="sf-about">Weltreise-Blog von Fabienne &amp; Marc aus Solothurn. Persönliche Reisegeschichten und praktische Tipps aus eigener Erfahrung.</p></div><div class="sf-right"><a class="sf-coffee" href="https://buymeacoffee.com/wirweitweg" target="_blank" rel="noopener noreferrer">Kaffee spendieren</a><nav class="sf-nav" aria-label="Footer-Navigation"><a href="laenderguides.html">Länderguides</a><a href="indonesien.html">Indonesien</a><a href="malaysia.html">Malaysia</a><a href="weltreise-planung.html">Weltreise planen</a><a href="reisetipps.html">Reisetipps</a><a href="reiseblog.html">Blog</a><a href="ueber-uns.html">Über uns</a><a href="newsletter.html">Newsletter</a></nav><div class="sf-social"><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener noreferrer">TikTok</a></div></div></div><details class="sf-credit"><summary>Bildnachweis</summary><p>Diese Seite enthält keine Fotos. Flaggen-Symbole: Twemoji von Twitter/X und Mitwirkenden (<a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).</p></details><p class="sf-affiliate"><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p><div class="sf-bottom"><span>© 2026 WirWeitWeg · Fabienne &amp; Marc</span><nav class="sf-legal" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kontakt.html">Kontakt</a></nav></div></div></footer>
-<div class="bmc-wrap">
-  <button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">
-    ☕ Kaffee spendieren
-  </button>
-</div>
-<script src="/script.js"></script>
+<script>
+const menuToggle=document.querySelector('.menu-toggle');
+const nav=document.getElementById('nav');
+menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'Schliessen':'Menü'});
+const mobileNav=()=>getComputedStyle(menuToggle).display!=='none'||matchMedia('(hover:none)').matches;
+nav.querySelectorAll('[data-parent]').forEach(a=>a.addEventListener('click',e=>{if(!mobileNav())return;const host=a.parentElement;if(!host.classList.contains('open')){e.preventDefault();e.stopPropagation();host.parentElement.querySelectorAll(':scope>.open').forEach(x=>x.classList.remove('open'));host.classList.add('open')}}));
+nav.querySelectorAll('a:not([data-parent])').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='Menü'}));
+</script>
 </body></html>
