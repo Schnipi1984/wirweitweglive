@@ -30,9 +30,33 @@
 @media(max-width:760px){.hero{display:flex;flex-direction:column}.hero-copy{padding:75px 24px 60px}.hero h1{font-size:clamp(3.8rem,11vw,6rem)}.hero-photo{width:100%;min-height:580px}.statement,.method-grid{display:block}.statement{padding-top:75px;padding-bottom:80px}.statement .prose,.method .principles{margin-top:38px}.people,.method{padding:75px 0 85px}.people-grid{gap:35px}}
 @media(max-width:560px){.header-inner,.container,.footer-inner{padding-left:20px;padding-right:20px}.hero-copy{padding-left:20px;padding-right:20px}.hero-photo{min-height:470px}.hero h1{font-size:clamp(3.55rem,13vw,5rem)}.people-grid{display:block}.person+.person{margin-top:42px}.section-title{font-size:clamp(2.6rem,10vw,3.65rem)}.closing{padding:75px 20px 85px}.closing-links{flex-direction:column}.button{justify-content:space-between}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Einheitlicher Footer für die neuen Seiten */
+.footer{background:#0d3034;color:#e9f5f3}
+.footer-inner{max-width:1240px;margin:auto;padding:70px 28px 28px}
+.footer-main{display:grid;grid-template-columns:minmax(260px,390px) 1fr;gap:clamp(45px,7vw,105px);padding-bottom:80px}
+.footer .brand{color:#fff;font-size:2.2rem}
+.footer .brand span{color:#8bd1ca}
+.footer-main p{max-width:390px;margin:16px 0 0;color:#b5d2ce;font-size:1rem;line-height:1.65}
+.footer-right{display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.footer .coffee{display:inline-block;background:#d87859;color:#0f2b2b;padding:14px 21px;font:800 .78rem Manrope,Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase}
+.footer .coffee:hover{background:#f5a986;color:#0f2b2b}
+.footer .footer-links{display:flex;align-items:center;gap:16px 24px;flex-wrap:wrap;max-width:none;color:#c8d8d1;font-size:.81rem;font-weight:500}
+.footer .footer-links a{padding:3px 0}
+.footer .footer-links a:hover{color:#8bd1ca}
+.footer-social{display:flex;gap:30px;margin-top:5px;color:#c8d8d1;font-size:.81rem}
+.footer-social a:hover{color:#8bd1ca}
+.footer-affiliate{padding:0 0 22px;color:#a9c8c5;font-size:.74rem;line-height:1.65}
+.footer-affiliate strong{color:#c6dad6}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #45696b;padding-top:20px;color:#a9c8c5;font-size:.74rem}
+.footer-bottom-links{display:flex;gap:28px;flex-wrap:wrap}
+.footer-bottom a:hover{color:#e9f5f3}
+@media(max-width:760px){.footer-main{grid-template-columns:1fr;gap:35px;padding-bottom:55px}.footer-right{gap:25px}.footer-bottom{flex-direction:column;gap:16px}}
+@media(max-width:480px){.footer-inner{padding:55px 20px 25px}.footer .brand{font-size:1.9rem}.footer .footer-links{gap:13px 20px}.footer-bottom-links{gap:20px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"AboutPage","name":"Über uns – Fabienne und Marc","url":"https://wirweitweg.blog/ueber-uns","inLanguage":"de-CH","about":{"@type":"Organization","name":"WirWeitWeg","url":"https://wirweitweg.blog/","founder":[{"@type":"Person","name":"Fabienne Schär"},{"@type":"Person","name":"Marc Ammann"}]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"WirWeitWeg","item":"https://wirweitweg.blog/"},{"@type":"ListItem","position":2,"name":"Über uns","item":"https://wirweitweg.blog/ueber-uns"}]}]}</script>
 <script src="consent.js" defer></script>
+<link rel="stylesheet" href="footer-unified.css">
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
@@ -44,6 +68,6 @@
 <section class="method" aria-labelledby="method-title"><div class="container method-grid"><div><span class="eyebrow">So entsteht dieser Blog</span><h2 class="section-title" id="method-title">Unsere Tipps sollen <span>etwas taugen.</span></h2></div><div><div class="principles"><div class="principle"><b>01 /</b><div><h3>Selbst erlebt bleibt selbst erlebt.</h3><p>Wir kennzeichnen, was wir vor Ort ausprobiert haben. Empfehlungen aus zweiter Hand geben wir nicht als eigene Erfahrung aus.</p></div></div><div class="principle"><b>02 /</b><div><h3>Auch Nachteile stehen im Text.</h3><p>Ein schöner Strand kann voller Müll sein. Eine günstige Verbindung kann einen ganzen Tag kosten. Beides gehört zur Entscheidung.</p></div></div><div class="principle"><b>03 /</b><div><h3>Kosten und Wege gehören dazu.</h3><p>Wir halten Preise, Fahrten und Buchungen fest, soweit wir sie selbst nachvollziehen können. Angaben, die sich schnell ändern, solltest du vor deiner Reise nochmals prüfen.</p></div></div></div><p class="method-note">Einige Links auf WirWeitWeg sind Affiliate-Links. Wenn du darüber buchst, können wir eine Provision erhalten; für dich ändert sich der Preis dadurch nicht. Empfehlungen sollen dadurch nicht schöner klingen.</p></div></div></section>
 <section class="closing" aria-labelledby="closing-title"><span class="eyebrow">Bleib ein Stück dabei</span><h2 class="section-title" id="closing-title">Die nächste Geschichte ist <span>noch unterwegs.</span></h2><p>Im Newsletter schreiben wir ungefähr einmal im Monat, was wir erlebt haben und welche Tipps wirklich geholfen haben.</p><div class="closing-links"><a class="button" href="newsletter.html">Zum Newsletter <span aria-hidden="true">↗</span></a><a class="button secondary" href="kontakt.html">Kontakt aufnehmen <span aria-hidden="true">↗</span></a></div></section>
 </main>
-<footer class="footer"><div class="footer-inner"><div class="footer-main"><div><a class="brand" href="index.html">Wir<span>Weit</span>Weg</a><p>Reiseblog von Fabienne Schär und Marc Ammann. Persönliche Reisegeschichten und praktische Tipps aus eigener Erfahrung.</p></div><div class="footer-links"><a href="laenderguides.html">Länderguides</a><a href="weltreise-planung.html">Weltreise planen</a><a href="reisetipps.html">Reisetipps</a><a href="reiseblog.html">Blog</a><a href="newsletter.html">Newsletter</a><a href="kontakt.html">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div><div class="footer-bottom">© 2026 WirWeitWeg · Fabienne Schär &amp; Marc Ammann</div></div></footer>
+<footer id="site-footer" aria-label="Seitenabschluss"><div class="sf-inner"><div class="sf-main"><div><a class="sf-brand" href="index.html" aria-label="WirWeitWeg Startseite">Wir<span>Weit</span>Weg</a><p class="sf-about">Weltreise-Blog von Fabienne &amp; Marc aus Solothurn. Persönliche Reisegeschichten und praktische Tipps aus eigener Erfahrung.</p></div><div class="sf-right"><a class="sf-coffee" href="https://buymeacoffee.com/wirweitweg" target="_blank" rel="noopener noreferrer">Kaffee spendieren</a><nav class="sf-nav" aria-label="Footer-Navigation"><a href="laenderguides.html">Länderguides</a><a href="indonesien.html">Indonesien</a><a href="malaysia.html">Malaysia</a><a href="weltreise-planung.html">Weltreise planen</a><a href="reisetipps.html">Reisetipps</a><a href="reiseblog.html">Blog</a><a href="ueber-uns.html">Über uns</a><a href="newsletter.html">Newsletter</a></nav><div class="sf-social"><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener noreferrer">TikTok</a></div></div></div><details class="sf-credit"><summary>Bildnachweis</summary><p>Eigene Fotos: Fabienne und Marc. Weitere Bildquellen sind, wo verwendet, direkt auf der jeweiligen Seite angegeben.</p></details><p class="sf-affiliate"><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p><div class="sf-bottom"><span>© 2026 WirWeitWeg · Fabienne &amp; Marc</span><nav class="sf-legal" aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kontakt.html">Kontakt</a></nav></div></div></footer>
 </body>
 </html>
