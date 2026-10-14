@@ -19,6 +19,11 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Interne Arbeitsdateien (CLAUDE.md, Leitfäden, README) nicht öffentlich ausliefern
+    if (url.pathname.toLowerCase().endsWith('.md')) {
+      return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', ...SECURITY_HEADERS } });
+    }
+
     if (url.pathname === '/functions/newsletter' || url.pathname === '/newsletter') {
       const corsHeaders = {
         'Access-Control-Allow-Origin': '*',
