@@ -24,6 +24,11 @@ export default {
       return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', ...SECURITY_HEADERS } });
     }
 
+    // Länderseiten im alten Design vorübergehend gesperrt (im Menü ausgegraut)
+    if (/^\/(vietnam|japan|singapur|kambodscha|laos|philippinen)(\.html)?\/?$/i.test(url.pathname)) {
+      return new Response(null, { status: 302, headers: { 'Location': '/laenderguides', 'Cache-Control': 'no-store', ...SECURITY_HEADERS } });
+    }
+
     if (url.pathname === '/functions/newsletter' || url.pathname === '/newsletter') {
       const corsHeaders = {
         'Access-Control-Allow-Origin': '*',
