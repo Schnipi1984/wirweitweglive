@@ -76,7 +76,11 @@ export default {
             })
           });
 
-          return new Response(JSON.stringify({ status: brevoRes.status }), { status: 200, headers: corsHeaders });
+          let message = '';
+          if (brevoRes.status >= 400) {
+            try { message = (await brevoRes.json()).message || ''; } catch (_) {}
+          }
+          return new Response(JSON.stringify({ status: brevoRes.status, message }), { status: 200, headers: corsHeaders });
         } catch (e) {
           return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: corsHeaders });
         }
