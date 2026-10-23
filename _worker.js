@@ -6,11 +6,19 @@ const SECURITY_HEADERS = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
 };
 
+class NewsletterScript {
+  element(el) { el.append('<script src="/newsletter-kit.js"></script>', { html: true }); }
+}
+
 async function serveAssets(request, env) {
   const res = await env.ASSETS.fetch(request);
-  const out = new Response(res.body, res);
+  let out = new Response(res.body, res);
   for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
     out.headers.set(k, v);
+  }
+  // Kit-Anmeldung in alle HTML-Seiten einbauen
+  if ((out.headers.get('content-type') || '').includes('text/html')) {
+    out = new HTMLRewriter().on('head', new NewsletterScript()).transform(out);
   }
   return out;
 }
