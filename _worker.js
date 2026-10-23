@@ -32,6 +32,11 @@ export default {
       return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', ...SECURITY_HEADERS } });
     }
 
+    // Sulawesi bleibt vorerst in der Länderguides-Übersicht, bis wir selbst dort waren
+    if (/^\/sulawesi(?:\.html)?\/?$/i.test(url.pathname)) {
+      return new Response(null, { status: 301, headers: { "Location": "/laenderguides", "Cache-Control": "public, max-age=3600", ...SECURITY_HEADERS } });
+    }
+
     // Länderseiten im alten Design vorübergehend gesperrt (im Menü ausgegraut)
     if (/^\/(vietnam|japan|singapur|kambodscha|laos|philippinen)(\.html)?\/?$/i.test(url.pathname)) {
       return new Response(null, { status: 302, headers: { 'Location': '/laenderguides', 'Cache-Control': 'no-store', ...SECURITY_HEADERS } });
