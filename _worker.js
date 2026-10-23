@@ -68,7 +68,8 @@ export default {
             body: params.toString()
           });
           let ok = false, message = '';
-          try { const d = await kitRes.json(); ok = d.status === 'success'; message = d.message || ''; } catch (_) {}
+          const raw = await kitRes.text();
+          try { const d = JSON.parse(raw); ok = d.status === 'success'; message = d.message || d.error || ''; } catch (_) { message = raw.slice(0, 200); }
 
           // status 201 bleibt das Erfolgssignal, auf das die Formulare auf den Seiten warten
           return new Response(JSON.stringify({ status: ok ? 201 : kitRes.status, message }), { status: 200, headers: corsHeaders });
