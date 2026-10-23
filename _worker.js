@@ -57,21 +57,21 @@ export default {
           }
 
           const isPdf = quelle === 'packliste';
-          // Anmeldung über die Brevo-Formulare mit Double-Opt-in (Bestätigungsmail und Weiterleitung sind dort eingestellt)
-          const formUrl = isPdf
-            ? 'https://ba178a4e.sibforms.com/serve/MUIFAGRoVCgZjWveO584eiJaJNZhSs_QxlkpczLhJnd2Y3UMVxKBf-1ne6uHNIeJFVOVobaq3c89qrsqyKvJjZJNqb4yT0zxcJ68CEZxrs831oZZkKl7apVMeBGqzR0okEJ-UiLHWOx-7bcjnidisTbJqhqdAtBnGNWu-tkgQBFD2a4Hdouf8VhbO4gJZrwmlMci3bxQePoEAObphQ=='
-            : 'https://ba178a4e.sibforms.com/serve/MUIFAKCvcmrmBn6mVyiHyiOnT9yIb12nFVfqtxizRQ7Em4XpcyowPOyZoYLSYn97wPW7WvOogHhMpwQZZ7Q3Gn4DNy4eaucbE_g4IufwxBwHF1O36qhY0NEBGw0GyZ8Gp8kVS5lnr1Yqhq84iny3lC-VUKY-WoVf3GlixKjUFN67CaCzDzdK0ksEdAV7a6tcj9Orwxb3mXZ5kUtFew==';
+          // Anmeldung über Kit-Formulare mit Double-Opt-in (Bestätigungsmail und Weiterleitung sind in Kit eingestellt)
+          const formId = isPdf ? '10084896' : '10084905';
+          const params = new URLSearchParams({ email_address: email });
+          if (vorname) params.set('fields[first_name]', vorname);
 
-          const formRes = await fetch(formUrl + '?isAjax=1', {
+          const kitRes = await fetch('https://app.kit.com/forms/' + formId + '/subscriptions', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
-            body: new URLSearchParams({ EMAIL: email, email_address_check: '', locale: 'de' }).toString()
+            body: params.toString()
           });
           let ok = false, message = '';
-          try { const d = await formRes.json(); ok = !!d.success; message = d.message || ''; } catch (_) {}
+          try { const d = await kitRes.json(); ok = d.status === 'success'; message = d.message || ''; } catch (_) {}
 
           // status 201 bleibt das Erfolgssignal, auf das die Formulare auf den Seiten warten
-          return new Response(JSON.stringify({ status: ok ? 201 : formRes.status, message }), { status: 200, headers: corsHeaders });
+          return new Response(JSON.stringify({ status: ok ? 201 : kitRes.status, message }), { status: 200, headers: corsHeaders });
         } catch (e) {
           return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: corsHeaders });
         }
