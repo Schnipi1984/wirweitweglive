@@ -1,72 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de-CH">
-<head><meta name="robots" content="noindex,nofollow, max-image-preview:large">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Deine Packliste – WirWeitWeg</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Nunito:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{--ink:#1e1e2e;--off:#fff9ee;--white:#fff;--mid:#6b7280;--border:#e2e8f0;--green:#0e9f6e;--greenlt:#d1fae5;--mint:#6ee7b7;--r:12px;--rLg:20px;--maxW:1280px;}
-body{font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.84;color:var(--ink);background:var(--off);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh;}
-a{text-decoration:none;color:inherit;}
-.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:var(--maxW);margin:0 auto;padding:0 1.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:-.04em;color:var(--ink);}
-.logo span{color:var(--green);}
-.wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem;}
-.card{background:var(--white);border-radius:var(--rLg);padding:2.5rem 2rem;max-width:480px;width:100%;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.07);}
-.icon{font-size:3rem;margin-bottom:1rem;}
-h1{font-family:'Fraunces',serif;font-weight:900;font-size:1.8rem;color:var(--ink);margin-bottom:.75rem;line-height:1.2;}
-h1 em{font-weight:300;font-style:italic;color:var(--green);}
-.sub{color:var(--mid);font-size:.95rem;margin-bottom:2rem;line-height:1.6;}
-.dl-btn{display:inline-block;background:var(--green);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:100px;transition:background .2s;}
-.dl-btn:hover{background:#0b875e;}
-.back{margin-top:1.5rem;font-size:.85rem;color:var(--mid);}
-.back a{color:var(--green);font-weight:700;}
-
-/* Sub-Drop Flyout */
-.nav-sub-wrap{position:relative;display:block;}
-.nav-sub-drop{display:none;position:absolute;left:calc(100% + 4px);top:-4px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px;min-width:185px;box-shadow:0 8px 28px rgba(0,0,0,.12);z-index:9999;}
-.nav-sub-wrap:hover>.nav-sub-drop{display:block;}
-.nav-sub-drop a{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:#6b7280;padding:.4rem .7rem;border-radius:8px;white-space:nowrap;}
-.nav-sub-drop a:hover{background:#fff9ee;color:#0e9f6e;}
-.nav-sub-arr{font-size:1rem;color:#0e9f6e;margin-left:auto;padding-left:.5rem;font-weight:700;line-height:1;}
-</style>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"WirWeitWeg","item":"https://wirweitweg.blog/"},
-    {"@type":"ListItem","position":2,"name":"Danke","item":"https://wirweitweg.blog/danke-packliste"}
-  ]
-}
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1HJNKXTYYZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1HJNKXTYYZ');
-</script>
-<style id="links-ohne-unterstrich">a{text-decoration:none!important}p a:not([class]),li a:not([class]),td a:not([class]),dd a:not([class]){border-bottom:0!important}a[href]{cursor:pointer}main p a:not([class]):hover,main li a:not([class]):hover,main td a:not([class]):hover,article p a:not([class]):hover{color:#d87859!important}.budget-links a,.post-next a{border-bottom:0!important}</style></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, max-image-preview:large">
+  <title>Deine Packliste ist bereit | WirWeitWeg</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/footer-unified.css">
+  <script src="/consent.js" defer></script>
+  <style>
+    @font-face{font-family:"DM Sans";font-style:normal;font-weight:100 1000;font-display:swap;src:url("/fonts/dm-sans-latin-wght-normal.woff2") format("woff2")}
+    @font-face{font-family:Manrope;font-style:normal;font-weight:200 800;font-display:swap;src:url("/fonts/manrope-latin-wght-normal.woff2") format("woff2")}
+    :root{--ink:#253d3a;--deep:#163c3a;--sea:#257c76;--coral:#d87859;--sand:#f3ece1;--sky:#faf7f0;--white:#fffdf8;--line:#d8d3c7;--muted:#536a64;--measure:1184px}
+    *{box-sizing:border-box}
+    html{min-width:320px;background:var(--sky)}
+    body{margin:0;background:var(--sky);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none;cursor:pointer}
+    a:hover{color:var(--sea)}
+    :focus-visible{outline:3px solid var(--coral);outline-offset:4px}
+    .site-head{background:var(--white);border-bottom:1px solid #e9e4d9}
+    .site-head-inner{max-width:1240px;min-height:76px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font:800 1.55rem/1 Manrope,Arial,sans-serif;letter-spacing:-.075em;white-space:nowrap}
+    .brand span{color:var(--sea)}
+    .head-link{font:800 .72rem Manrope,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--sea)}
+    main{min-height:calc(100svh - 76px);display:flex;flex-direction:column}
+    .thanks-hero{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.82fr);align-items:center;gap:clamp(36px,6vw,88px);padding-left:max(28px,calc((100vw - 1240px)/2 + 28px));background:var(--sky);color:var(--ink)}
+    .thanks-inner{width:100%;max-width:620px;margin:0;padding:86px 0 94px}
+    .thanks-photo{width:100%;height:min(70vh,720px);min-height:520px;object-fit:cover;object-position:center 56%;align-self:stretch}
+    h1{max-width:920px;margin:0;font:800 clamp(3.5rem,9vw,7.6rem)/.98 Manrope,Arial,sans-serif;letter-spacing:-.08em;text-wrap:balance}
+    h1 span{color:#a8dfcb}
+    .thanks-copy{max-width:600px;margin:28px 0 0;color:var(--muted);font-size:clamp(1.05rem,1.7vw,1.25rem);line-height:1.65}
+    .download-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:38px}
+    .download-button{min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 24px;background:var(--coral);color:#fff;font:800 .78rem Manrope,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;transition:background .18s,transform .18s}
+    .download-button:hover{background:#bd6548;color:#fff;transform:translateY(-2px)}
+    .file-note{max-width:220px;color:var(--muted);font-size:.86rem;line-height:1.45}
+    .thanks-foot{background:var(--sky)}
+    .thanks-foot-inner{max-width:1240px;margin:auto;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;border-bottom:1px solid var(--line);font-size:.9rem}
+    .thanks-foot-inner p{margin:0;color:var(--muted)}
+    .thanks-foot-inner a{font-weight:800;color:var(--sea)}
+    @media(max-width:700px){.site-head-inner{min-height:66px;padding:0 20px}.brand{font-size:1.4rem}.head-link{font-size:.66rem}.thanks-hero{grid-template-columns:minmax(0,1fr);gap:0;padding:0}.thanks-inner{max-width:none;padding:76px 20px 36px}h1{font-size:clamp(3.15rem,13vw,5rem);letter-spacing:-.075em}.thanks-copy{margin-top:22px;font-size:1.03rem}.download-row{align-items:flex-start;gap:14px;margin-top:30px}.download-button{width:100%;min-height:54px}.file-note{max-width:none}.thanks-photo{height:clamp(300px,100vw,440px);min-height:0;object-position:center 78%}.thanks-foot-inner{padding:19px 20px;align-items:flex-start;flex-direction:column;gap:8px;font-size:.84rem}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
 <body>
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="/">Wir<span>Weit</span>Weg</a>
-  </div>
-</nav>
-<div class="wrap">
-  <div class="card">
-    <div class="icon">📄</div>
-    <h1>Deine <em>Packliste</em> ist bereit</h1>
-    <p class="sub">Danke für deine Anmeldung! Hier kannst du die komplette Weltreise-Packliste als PDF herunterladen.</p>
-    <a class="dl-btn" href="/dl/packliste-16bfb8bed2d0.pdf" download>Packliste herunterladen →</a>
-    <p class="back">Zurück zum Blog: <a href="/">wirweitweg.blog</a></p>
-  </div>
-</div>
+  <header class="site-head">
+    <div class="site-head-inner">
+      <a class="brand" href="/" aria-label="WirWeitWeg – Startseite">Wir<span>Weit</span>Weg</a>
+      <a class="head-link" href="/packliste">Zur Packliste</a>
+    </div>
+  </header>
+  <main>
+    <section class="thanks-hero" aria-labelledby="page-title">
+      <div class="thanks-inner">
+        <h1 id="page-title">Deine Packliste <span>ist bereit.</span></h1>
+        <p class="thanks-copy">Danke für deine Anmeldung. Hier kannst du die Packliste als PDF herunterladen und in Ruhe durchgehen.</p>
+        <div class="download-row">
+          <a class="download-button" href="/dl/packliste-16bfb8bed2d0.pdf" download>Packliste herunterladen</a>
+          <span class="file-note">Der Download startet direkt im Browser.</span>
+        </div>
+      </div>
+      <img class="thanks-photo" src="/img/ueber-uns/fabienne-marc-kuta-sonnenuntergang-1500.webp" width="1500" height="2000" alt="Fabienne und Marc am Strand von Kuta bei Sonnenuntergang">
+    </section>
+    <div class="thanks-foot">
+      <div class="thanks-foot-inner">
+        <p>Du suchst noch etwas für deine Reiseplanung?</p>
+        <a href="/weltreise-planung">Unsere Planungsschritte ansehen</a>
+      </div>
+    </div>
+  </main>
+  <footer id="site-footer" aria-label="Seitenabschluss">
+    <div class="sf-inner">
+      <div class="sf-main">
+        <div><a class="sf-brand" href="/" aria-label="WirWeitWeg Startseite">Wir<span>Weit</span>Weg</a><p class="sf-about">Weltreise-Blog von Fabienne &amp; Marc aus Solothurn. Persönliche Reisegeschichten und praktische Tipps aus eigener Erfahrung.</p></div>
+        <div class="sf-right">
+          <a class="sf-coffee" href="https://buymeacoffee.com/wirweitweg" target="_blank" rel="noopener noreferrer">Kaffee spendieren</a>
+          <nav class="sf-nav" aria-label="Footer-Navigation"><a href="/laenderguides">Länderguides</a><a href="/indonesien">Indonesien</a><a href="/malaysia">Malaysia</a><a href="/weltreise-planung">Weltreise planen</a><a href="/reisetipps">Reisetipps</a><a href="/reiseblog">Blog</a><a href="/ueber-uns">Über uns</a><a href="/newsletter">Newsletter</a></nav>
+          <div class="sf-social"><a href="https://www.instagram.com/_wir_weit_weg_/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@wir_weit_weg" target="_blank" rel="noopener noreferrer">TikTok</a></div>
+        </div>
+      </div>
+      <p class="sf-affiliate"><strong>*Affiliatehinweis:</strong> Einige unserer Texte enthalten Affiliate-Links, mit denen wir eine kleine Provision bekommen, wenn du über diesen Link ein Produkt kaufst.</p>
+      <div class="sf-bottom"><span>© 2026 WirWeitWeg · Fabienne &amp; Marc</span><nav class="sf-legal" aria-label="Rechtliches"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a><a href="/kontakt">Kontakt</a></nav></div>
+    </div>
+  </footer>
 </body>
 </html>
