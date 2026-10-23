@@ -57,30 +57,21 @@ export default {
           }
 
           const isPdf = quelle === 'packliste';
+          // Anmeldung über die Brevo-Formulare mit Double-Opt-in (Bestätigungsmail und Weiterleitung sind dort eingestellt)
+          const formUrl = isPdf
+            ? 'https://ba178a4e.sibforms.com/serve/MUIFAGRoVCgZjWveO584eiJaJNZhSs_QxlkpczLhJnd2Y3UMVxKBf-1ne6uHNIeJFVOVobaq3c89qrsqyKvJjZJNqb4yT0zxcJ68CEZxrs831oZZkKl7apVMeBGqzR0okEJ-UiLHWOx-7bcjnidisTbJqhqdAtBnGNWu-tkgQBFD2a4Hdouf8VhbO4gJZrwmlMci3bxQePoEAObphQ=='
+            : 'https://ba178a4e.sibforms.com/serve/MUIFAKCvcmrmBn6mVyiHyiOnT9yIb12nFVfqtxizRQ7Em4XpcyowPOyZoYLSYn97wPW7WvOogHhMpwQZZ7Q3Gn4DNy4eaucbE_g4IufwxBwHF1O36qhY0NEBGw0GyZ8Gp8kVS5lnr1Yqhq84iny3lC-VUKY-WoVf3GlixKjUFN67CaCzDzdK0ksEdAV7a6tcj9Orwxb3mXZ5kUtFew==';
 
-          const brevoRes = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
+          const formRes = await fetch(formUrl + '?isAjax=1', {
             method: 'POST',
-            headers: {
-              'api-key': env.BREVO_KEY || env.BREVO_API_KEY,
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              email: email,
-              attributes: { VORNAME: vorname },
-              includeListIds: [isPdf ? 5 : 2],
-              templateId: 2,
-              redirectionUrl: isPdf
-                ? 'https://wirweitweg.blog/danke-packliste.html'
-                : 'https://wirweitweg.blog/danke.html'
-            })
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+            body: new URLSearchParams({ EMAIL: email, email_address_check: '', locale: 'de' }).toString()
           });
+          let ok = false, message = '';
+          try { const d = await formRes.json(); ok = !!d.success; message = d.message || ''; } catch (_) {}
 
-          let message = '';
-          if (brevoRes.status >= 400) {
-            try { message = (await brevoRes.json()).message || ''; } catch (_) {}
-          }
-          return new Response(JSON.stringify({ status: brevoRes.status, message }), { status: 200, headers: corsHeaders });
+          // status 201 bleibt das Erfolgssignal, auf das die Formulare auf den Seiten warten
+          return new Response(JSON.stringify({ status: ok ? 201 : formRes.status, message }), { status: 200, headers: corsHeaders });
         } catch (e) {
           return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: corsHeaders });
         }
