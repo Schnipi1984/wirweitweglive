@@ -1,0 +1,5 @@
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
+/img/gili-air/*
+  Cache-Control: public, max-age=2592000
