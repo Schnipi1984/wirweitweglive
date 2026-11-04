@@ -7,7 +7,7 @@ const SECURITY_HEADERS = {
 };
 
 class NewsletterScript {
-  element(el) { el.append('<script src="/newsletter-kit.js"></script>', { html: true }); }
+  element(el) { el.append('<script defer src="/newsletter-kit.js"></script>', { html: true }); }
 }
 
 async function serveAssets(request, env) {
