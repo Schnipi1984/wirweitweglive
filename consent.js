@@ -26,6 +26,21 @@
     gtag('config', GA_ID);
   }
 
+  function loadTP(){
+    if(window._tpLoaded) return;
+    window._tpLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.setAttribute('data-cmp-ab', '2');
+    s.src = 'https://tp-em.com/NTk2MjIy.js?t=596222';
+    document.head.appendChild(s);
+  }
+
+  function loadAll(){
+    loadGA();
+    loadTP();
+  }
+
   function removeBanner(){
     var b = document.getElementById('wwwconsent');
     if(b) b.remove();
@@ -49,12 +64,12 @@
 
     var banner = document.createElement('div');
     banner.id = 'wwwconsent';
-    banner.innerHTML = '<p>Wir nutzen Google Analytics um zu verstehen, welche Inhalte euch helfen. Google Analytics laden wir erst nach deinem OK. <a href="/datenschutz.html">Mehr erfahren</a></p><div id="wwwconsent-btns"><button id="wwwconsent-decline">Ablehnen</button><button id="wwwconsent-accept">OK, einverstanden</button></div>';
+    banner.innerHTML = '<p>Wir nutzen Google Analytics, um zu verstehen, welche Inhalte euch helfen, und Travelpayouts, damit unsere Partner-Links funktionieren. Beides laden wir erst nach deinem OK. <a href="/datenschutz.html">Mehr erfahren</a></p><div id="wwwconsent-btns"><button id="wwwconsent-decline">Ablehnen</button><button id="wwwconsent-accept">OK, einverstanden</button></div>';
     document.body.appendChild(banner);
 
     document.getElementById('wwwconsent-accept').onclick = function(){
       setCookie(COOKIE, 'yes', 365);
-      loadGA();
+      loadAll();
       removeBanner();
     };
     document.getElementById('wwwconsent-decline').onclick = function(){
@@ -65,7 +80,7 @@
 
   var consent = getCookie(COOKIE);
   if(consent === 'yes'){
-    loadGA();
+    loadAll();
   } else if(consent !== 'no'){
     if(document.readyState === 'loading'){
       document.addEventListener('DOMContentLoaded', showBanner);
