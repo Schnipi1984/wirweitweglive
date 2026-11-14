@@ -37,6 +37,11 @@ export default {
       return new Response(null, { status: 301, headers: { "Location": "/laenderguides", "Cache-Control": "public, max-age=3600", ...SECURITY_HEADERS } });
     }
 
+    // Reisezeit Südostasien (alte Fassung) nicht öffentlich, bis die neue Seite freigegeben ist
+    if (/^\/beste-reisezeit-suedostasien(?:\.html)?\/?$/i.test(url.pathname)) {
+      return new Response(null, { status: 301, headers: { "Location": "/reisetipps", "Cache-Control": "public, max-age=3600", ...SECURITY_HEADERS } });
+    }
+
     // Länderseiten im alten Design vorübergehend gesperrt (im Menü ausgegraut)
     if (/^\/(vietnam|japan|singapur|kambodscha|laos|philippinen)(\.html)?\/?$/i.test(url.pathname)) {
       return new Response(null, { status: 302, headers: { 'Location': '/laenderguides', 'Cache-Control': 'no-store', ...SECURITY_HEADERS } });
