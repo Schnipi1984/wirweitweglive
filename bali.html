@@ -97,7 +97,7 @@
   if('IntersectionObserver' in window){const activeObserver=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible){jumpLinks.forEach(link=>link.classList.toggle('is-active',link.hash==='#'+visible.target.id))}},{rootMargin:'-85px 0px -65% 0px',threshold:0});jumpLinks.forEach(link=>{const target=document.querySelector(link.hash);if(target)activeObserver.observe(target)})}
   let scrollQueued=false;
   function updateReadingProgress(){const available=document.documentElement.scrollHeight-window.innerHeight;const percent=available>0?Math.min(100,Math.max(0,window.scrollY/available*100)):0;document.documentElement.style.setProperty('--reading-progress',percent+'%');scrollQueued=false}
-  window.addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(updateReadingProgress)}},{passive:true});updateReadingProgress();
+  window.addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(updateReadingProgress)}},{passive:true});if(window.scrollY>0)requestAnimationFrame(updateReadingProgress);
 
   document.querySelectorAll('[data-slider]').forEach(box=>{const track=box.querySelector('.slider-track'),slides=[...track.children],cap=box.querySelector('.slider-cap'),count=box.querySelector('.slider-count'),prev=box.querySelector('.prev'),next=box.querySelector('.next');let i=0;
     const show=()=>{prev.hidden=i===0;next.hidden=i===slides.length-1;count.textContent=(i+1)+' / '+slides.length;cap.textContent=slides[i].dataset.cap};
