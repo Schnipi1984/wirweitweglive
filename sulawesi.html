@@ -321,6 +321,6 @@
     </div>
   </div>
 </footer>
-<div class="bmc-wrap"><button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee spendieren</button></div>
+<div class="bmc-wrap"><button class="bmc-btn" onclick="window.open('https://buymeacoffee.com/wirweitweg','_blank')">☕ Kaffee ausgeben (Trinkgeld)</button></div>
 <script>(function(){var t=new Date('2026-06-30T00:00:00');var el=document.getElementById('cdDays');if(el){var d=Math.ceil((t-new Date())/86400000);el.textContent=d>0?d:'0';}})();function sbSubmit(){var v=document.getElementById('sbVorname').value.trim();var e=document.getElementById('sbEmail').value.trim();var btn=document.getElementById('sbBtn');if(!v||!e){btn.textContent='Bitte ausfüllen!';return;}btn.textContent='Wird gesendet…';btn.disabled=true;fetch('/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({vorname:v,email:e})}).then(function(r){return r.json();}).then(function(){btn.textContent='✓ Fast geschafft – E-Mail bestätigen!';}).catch(function(){btn.textContent='Fehler – bitte nochmal';btn.disabled=false;});}</script>
 </body></html>
