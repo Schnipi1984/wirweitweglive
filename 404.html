@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf7f0">
   <meta name="description" content="Diese Seite gibt es nicht. Hier geht es weiter zu unseren Reiseguides.">
-  <title>Seite nicht gefunden | WirWeitWeg</title>
+  <title>Seite nicht gefunden | WirWeitWeg</title><link rel="preload" href="/fonts/Tajawal-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Tajawal-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="alternate" hreflang="de-CH" href="https://wirweitweg.blog/404">
   <link rel="alternate" hreflang="x-default" href="https://wirweitweg.blog/404">
   <meta property="og:type" content="website">
@@ -660,9 +662,9 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   .gh, .gh-lead, .g-text, .g-intro > *, .g-intro p, .minor-lead, body .lex-details, body .lex-intro { max-width: none !important; }
   .g-intro h1 { max-width: none; }
 }
-@font-face { font-family: "Bebas Neue"; src: url("/fonts/BebasNeue-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Bebas Neue"; src: url("/fonts/BebasNeue-Regular.woff2") format("woff2"); font-display: swap; }
 @media (min-width: 1001px) {
-  body .hero .hero-h, .g-intro h1, .gh-title, body #fragen .useful-intro h2, .minor-title, body .newsletter-invite h2, body .ww-author h2, .numrow dt { text-transform: none; font-family: "Bebas Neue", Manrope, Arial, sans-serif !important; font-weight: 400 !important; letter-spacing: 0.01em !important; word-spacing: normal !important; }
+  body .hero .hero-h, .g-intro h1, .gh-title, body #fragen .useful-intro h2, .minor-title, body .newsletter-invite h2, body .ww-author h2, .numrow dt { text-transform: none; font-family: "Bebas Neue", "Bebas Neue Fallback", Manrope, Arial, sans-serif !important; font-weight: 400 !important; letter-spacing: 0.01em !important; word-spacing: normal !important; }
   body .hero .hero-h { font-size: 10rem !important; line-height: 0.85 !important; letter-spacing: 0.005em !important; }
   .g-intro h1 { font-size: 4rem; line-height: 1; }
   .gh-title, body #fragen .useful-intro h2 { font-size: 3.5rem !important; line-height: 1 !important; }
@@ -678,7 +680,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   .g-intro h1 { font-size: 3.5rem; }
   body .newsletter-invite h2, body .ww-author h2 { font-size: 2.8125rem; }
   .minor-title { font-size: 2.125rem; }
-  body .hero .hero-h { font-family: "Bebas Neue", Arial, sans-serif !important; font-weight: 400 !important; text-transform: uppercase !important; letter-spacing: 0.01em !important; word-spacing: 0.05em !important; font-size: 9rem !important; line-height: 0.9 !important; }
+  body .hero .hero-h { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; text-transform: uppercase !important; letter-spacing: 0.01em !important; word-spacing: 0.05em !important; font-size: 9rem !important; line-height: 0.9 !important; }
 }
 @media (min-width: 1001px) {
   body .hero .hero-h { word-spacing: -0.18em !important; }
@@ -692,7 +694,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
 }
 @media (min-width: 1001px) {
   .acc, .acc-list, body #fragen .useful-list details { border: 0px !important; }
-  .acc summary, body #fragen .useful-list summary { align-items: center; font-family: "Bebas Neue", Arial, sans-serif !important; font-weight: 400 !important; font-size: 1.5625rem !important; line-height: 1 !important; letter-spacing: normal !important; color: rgb(134, 169, 164) !important; -webkit-font-smoothing: auto !important; justify-content: flex-start !important; gap: 14px !important; padding: 15px 0px !important; }
+  .acc summary, body #fragen .useful-list summary { align-items: center; font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; font-size: 1.5625rem !important; line-height: 1 !important; letter-spacing: normal !important; color: rgb(134, 169, 164) !important; -webkit-font-smoothing: auto !important; justify-content: flex-start !important; gap: 14px !important; padding: 15px 0px !important; }
   .acc summary:hover, body #fragen .useful-list summary:hover { color: var(--w-sea); }
   .acc summary::after, body #fragen .useful-list summary::after { display: none !important; }
   .acc summary::before, body #fragen .useful-list summary::before { content: ""; flex: 0 0 auto; width: 12px; height: 13px; order: -1; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 13'%3E%3Cpath d='M1.5 1.5 6 6l4.5-4.5M1.5 7 6 11.5 10.5 7' fill='none' stroke='%231E3431' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center center / 12px 13px no-repeat; transition: transform 0.25s; }
@@ -722,7 +724,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   body #fragen .faq-group { padding-left: 29px; font: 600 0.95rem / 1.3 "DM Sans", Arial, sans-serif !important; color: rgb(107, 124, 120) !important; margin: 40px 0px 4px !important; }
   body #fragen .faq-group:first-child { margin-top: 8px !important; }
   .acc-more { padding-left: 29px; }
-  .acc-more a { font: 400 1.375rem / 1 "Bebas Neue", Arial, sans-serif; letter-spacing: 0.02em; color: var(--w-sea); border-bottom: 1.5px solid rgba(37, 124, 118, 0.35); padding-bottom: 2px; -webkit-font-smoothing: auto; text-decoration: none !important; }
+  .acc-more a { font: 400 1.375rem / 1 "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif; letter-spacing: 0.02em; color: var(--w-sea); border-bottom: 1.5px solid rgba(37, 124, 118, 0.35); padding-bottom: 2px; -webkit-font-smoothing: auto; text-decoration: none !important; }
   .acc-more a:hover { border-bottom-color: currentcolor; }
   .acc-a p, body #fragen .useful-list .answer p { max-width: 760px; }
 }
@@ -747,7 +749,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   .hnav { margin-top: 22px; border-top: 0px; border-bottom: 0px; }
   .hnav ul { justify-content: space-between; }
   .hnav li + li::before { width: 1.5px; height: 30px; background: rgb(201, 211, 209); margin: 0px 18px; }
-  body .hnav a { font-synthesis: weight; font-family: "Bebas Neue", Manrope, Arial, sans-serif !important; font-weight: 600 !important; -webkit-font-smoothing: auto !important; font-size: 1.2rem !important; letter-spacing: 0.01em !important; line-height: 1 !important; gap: 8px !important; padding: 14px 0px !important; color: var(--w-ink) !important; }
+  body .hnav a { font-synthesis: weight; font-family: "Bebas Neue", "Bebas Neue Fallback", Manrope, Arial, sans-serif !important; font-weight: 600 !important; -webkit-font-smoothing: auto !important; font-size: 1.2rem !important; letter-spacing: 0.01em !important; line-height: 1 !important; gap: 8px !important; padding: 14px 0px !important; color: var(--w-ink) !important; }
   body .hnav a:hover { color: var(--w-sea); }
   body .hnav svg { width: 19px; height: 19px; stroke: rgb(134, 169, 164); stroke-width: 2.4; opacity: 1; }
   body .hnav a.is-active svg { stroke: var(--w-coral); }
@@ -1087,10 +1089,12 @@ main { overflow-x: clip; }
   html body main .band-s .cost-cols > div:not(#_) { background: rgb(255, 255, 255) !important; }
   html body main .band-s .table-scroll:not(#_), html body main .band-s .table-scroll table:not(#_) { background: none !important; }
 }
-@font-face { font-family: Tajawal; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/Tajawal-Regular.ttf") format("truetype"); }
-@font-face { font-family: Tajawal; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/Tajawal-Bold.ttf") format("truetype"); }
+@font-face { font-family: Tajawal; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/Tajawal-Regular.woff2") format("woff2"); }
+@font-face { font-family: Tajawal; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/Tajawal-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Bebas Neue Fallback"; src: local("Arial"), local("ArialMT"), local("Helvetica"); size-adjust: 57.5%; ascent-override: 156.5%; descent-override: 52.2%; line-gap-override: 0%; }
+@font-face { font-family: "Tajawal Fallback"; src: local("Arial"), local("ArialMT"), local("Helvetica"); size-adjust: 92.5%; ascent-override: 69.5%; descent-override: 38.6%; line-gap-override: 21.6%; }
 @media (min-width: 1001px) {
-  html body main :is(p, li, td, th, dt, dd, figcaption, small, h3, h4, .g-note, .gh-lead, .slider-cap, .slider-count, summary.lex-sum, .lex-sum-t, .lex-sum-h, .ml-title, .ml-list li, .map-key a, .map-key small, .map-key em, .faq-group, .table-note, .acc-more, .acc-a p, .answer p):not(#_):not(.hero-h):not(.minor-title) { font-family: Tajawal, "DM Sans", Arial, sans-serif !important; }
+  html body main :is(p, li, td, th, dt, dd, figcaption, small, h3, h4, .g-note, .gh-lead, .slider-cap, .slider-count, summary.lex-sum, .lex-sum-t, .lex-sum-h, .ml-title, .ml-list li, .map-key a, .map-key small, .map-key em, .faq-group, .table-note, .acc-more, .acc-a p, .answer p):not(#_):not(.hero-h):not(.minor-title) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; }
   html body main p:not(#_):not(.table-note):not(.slider-cap):not(.hero-deck):not(.hero-h), html body main li:not(#_):not(.ml-list li) { font-weight: 400 !important; }
   html body main :is(strong, b, th):not(#_) { font-weight: 700 !important; }
   html body main :is(h3, h4):not(#_) { font-weight: 700 !important; letter-spacing: 0px !important; }
@@ -1098,8 +1102,8 @@ main { overflow-x: clip; }
   html body main .duo-pic figcaption { font-weight: 400; }
 }
 html body main, html body main :not(#_) { -webkit-font-smoothing: auto !important; }
-html body .hero .hero-h:not(#_) { font-family: "Bebas Neue", Arial, sans-serif !important; }
-html body main .minor-title { font-family: "Bebas Neue", Manrope, Arial, sans-serif; }
+html body .hero .hero-h:not(#_) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; }
+html body main .minor-title { font-family: "Bebas Neue", "Bebas Neue Fallback", Manrope, Arial, sans-serif; }
 @media (min-width: 1001px) {
   html body main .walk:not(#_) { display: block; }
   html body main .walk .pr-list:not(#_) { margin-top: 0px !important; gap: 56px !important; }
@@ -1147,9 +1151,9 @@ html body main#main:not(#_):not(#__) { position: relative !important; isolation:
 }
 html body main .wx:not(#_):not(#__) { list-style: none; margin: 0px 0px 20px; padding: 0px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; }
 html body main .wx li:not(#_):not(#__) { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 16px 4px 14px; border-radius: 4px; text-align: center; color: var(--ed-ink); }
-.wx .wx-m { font: 700 0.82rem / 1 Tajawal, Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.wx .wx-m { font: 700 0.82rem / 1 Tajawal, "Tajawal Fallback", Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
 .wx svg, .wx-key svg { width: 30px; height: 30px; fill: none; stroke: currentcolor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.wx strong { font: 700 1.05rem / 1.1 Tajawal, Arial, sans-serif; }
+.wx strong { font: 700 1.05rem / 1.1 Tajawal, "Tajawal Fallback", Arial, sans-serif; }
 .wx .wx-d { font-size: 0.82rem; line-height: 1.2; color: rgb(74, 85, 87); }
 .wx-dry { background: rgb(248, 238, 221); }
 .wx-dry svg { color: rgb(217, 144, 43); }
@@ -1167,13 +1171,13 @@ html body main .wx li:not(#_):not(#__) { display: flex; flex-direction: column; 
 html body main .climate:not(#_):not(#__):not(#___) { background: none !important; border-radius: 0px !important; padding: 0px !important; box-shadow: none !important; }
 @media (max-width: 1000px) {
   html body .hero .hero-h:not(#_):not(#__) { font-weight: 400 !important; font-synthesis: none !important; text-transform: uppercase !important; font-size: clamp(4.6rem, 24vw, 6.4rem) !important; letter-spacing: 0.01em !important; word-spacing: -0.1em !important; line-height: 0.9 !important; margin: 16px 0px 18px !important; }
-  html body .hero .hero-deck:not(#_):not(#__) { font-family: Tajawal, "DM Sans", Arial, sans-serif !important; font-size: 1.2rem !important; line-height: 1.5 !important; }
-  html body main :is(.gh-title, .g-intro h1, .minor-title, .useful-intro h2):not(#_):not(#__) { font-family: "Bebas Neue", Arial, sans-serif !important; font-weight: 400 !important; text-transform: uppercase !important; letter-spacing: 0.01em !important; line-height: 1.02 !important; }
+  html body .hero .hero-deck:not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-size: 1.2rem !important; line-height: 1.5 !important; }
+  html body main :is(.gh-title, .g-intro h1, .minor-title, .useful-intro h2):not(#_):not(#__) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; text-transform: uppercase !important; letter-spacing: 0.01em !important; line-height: 1.02 !important; }
   html body main .gh-title:not(#_):not(#__) { font-size: 2.7rem !important; }
   html body main .g-intro h1 { font-size: 2.4rem; }
-  html body main :is(p, li, td, th, dd, figcaption, .gh-lead):not(.hero-h):not(.hero-deck):not(#_):not(#__) { font-family: Tajawal, "DM Sans", Arial, sans-serif !important; font-size: 17px !important; line-height: 1.7 !important; }
-  html body main :is(h3, h4, .pr .place-heading h3):not(#_):not(#__) { font-family: Tajawal, "DM Sans", Arial, sans-serif !important; font-weight: 700 !important; font-size: 1.35rem !important; letter-spacing: 0px !important; }
-  html body main .hnav a:not(#_):not(#__) { font-family: "Bebas Neue", Arial, sans-serif !important; font-weight: 400 !important; font-size: 1.15rem !important; letter-spacing: 0.03em !important; text-transform: uppercase !important; }
+  html body main :is(p, li, td, th, dd, figcaption, .gh-lead):not(.hero-h):not(.hero-deck):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-size: 17px !important; line-height: 1.7 !important; }
+  html body main :is(h3, h4, .pr .place-heading h3):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-weight: 700 !important; font-size: 1.35rem !important; letter-spacing: 0px !important; }
+  html body main .hnav a:not(#_):not(#__) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; font-size: 1.15rem !important; letter-spacing: 0.03em !important; text-transform: uppercase !important; }
   html body main .ml-ic { flex: 0 0 auto; display: inline-grid; width: 28px; height: 28px; }
   html body main :is(.ml-ic, .area-ic) svg { stroke-linecap: round; stroke-linejoin: round; width: 18px; height: 18px; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; }
   html body main .ml-list li { display: flex; align-items: center; gap: 10px; }
@@ -1214,7 +1218,7 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
 details.m-fold > summary h3 { margin: 0px; }
 @media (max-width: 760px) {
   details.m-fold > summary { cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 48px; padding: 6px 0px; }
-  details.m-fold > summary::after { content: "+"; flex: 0 0 auto; font: 400 1.7rem / 1 Tajawal, Arial, sans-serif; color: var(--ed-sea); }
+  details.m-fold > summary::after { content: "+"; flex: 0 0 auto; font: 400 1.7rem / 1 Tajawal, "Tajawal Fallback", Arial, sans-serif; color: var(--ed-sea); }
   details.m-fold[open] > summary::after { content: "−"; }
   details.m-fold > summary:focus-visible { outline: rgb(127, 209, 199) solid 3px; outline-offset: 2px; }
   details.m-fold .m-fold-body { padding: 4px 0px 10px; }
@@ -1236,14 +1240,14 @@ html body main #schnorcheln strong.k:not(#_):not(#__):not(#___) { color: rgb(255
 .band-foto { margin: 0px; position: relative; width: 100%; }
 .band-foto img { display: block; width: 100%; height: clamp(240px, 42vw, 560px); object-fit: cover; }
 html body main .band-foto figcaption:not(#_):not(#__) { position: absolute; left: max(20px, 50% - 592px); bottom: 18px; margin: 0px; padding: 6px 12px; border-radius: 3px; background: rgba(15, 45, 52, 0.62); line-height: 1.3; color: rgb(255, 255, 255) !important; font-size: 15px !important; }
-html body .hero .hero-h:not(#_):not(#__):not(#___) { font-family: "Bebas Neue", Arial, sans-serif !important; font-weight: 400 !important; letter-spacing: 0.01em !important; word-spacing: 0.04em !important; font-size: clamp(5.2rem, 11vw, 10rem) !important; line-height: 0.88 !important; }
+html body .hero .hero-h:not(#_):not(#__):not(#___) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; letter-spacing: 0.01em !important; word-spacing: 0.04em !important; font-size: clamp(5.2rem, 11vw, 10rem) !important; line-height: 0.88 !important; }
 .island-map { margin: 0px; }
 .island-map img { width: 100%; height: auto; border-radius: 3px; display: block; }
 .map-credit { font-size: 13px; color: rgb(82, 97, 93); margin-top: 6px; }
 .map-key { counter-reset: k 0; }
 .map-key a { counter-increment: k 1; }
 html body main .map-key .area-ic svg { display: none; }
-html body main .map-key .area-ic:not(#_):not(#__)::before { content: "0" counter(k); color: rgb(255, 255, 255); font: 700 0.95rem / 1 Tajawal, Arial, sans-serif; letter-spacing: 0.02em; }
+html body main .map-key .area-ic:not(#_):not(#__)::before { content: "0" counter(k); color: rgb(255, 255, 255); font: 700 0.95rem / 1 Tajawal, "Tajawal Fallback", Arial, sans-serif; letter-spacing: 0.02em; }
 html body main .map-key .area-ic:not(#_):not(#__) { display: inline-grid; place-items: center; }
 html body .hnav:not(#_):not(#__) a:not(#_):not(#__):not(#___) { color: rgb(15, 45, 52) !important; text-decoration: none !important; border: 0px !important; }
 html body .hnav a:hover { color: rgb(15, 124, 119); }
@@ -1263,9 +1267,9 @@ footer a, footer summary { display: inline-block; min-height: 24px; padding-bloc
   html body main .g-intro p:not(#_):not(#__) { grid-column: 2; max-width: none; text-align: left !important; font-size: 19px !important; line-height: 1.75 !important; margin: 0px 0px 18px !important; }
 }
 .pull { margin: 34px 0px 8px; padding: 6px 0px 6px 26px; border-left: 4px solid rgb(15, 124, 119); }
-html body main .pull p:not(#_):not(#__) { letter-spacing: 0.01em; max-width: 22ch; font-family: "Bebas Neue", Arial, sans-serif !important; font-size: clamp(2.2rem, 3.6vw, 3.2rem) !important; line-height: 1.05 !important; color: rgb(15, 45, 52) !important; margin: 0px !important; }
+html body main .pull p:not(#_):not(#__) { letter-spacing: 0.01em; max-width: 22ch; font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-size: clamp(2.2rem, 3.6vw, 3.2rem) !important; line-height: 1.05 !important; color: rgb(15, 45, 52) !important; margin: 0px !important; }
 html body main blockquote.pull:not(#_):not(#__):not(#___) { max-width: none; margin: 36px 0px 12px !important; padding: 4px 0px 4px 28px !important; border-width: 0px 0px 0px 5px !important; border-style: none none none solid !important; border-color: currentcolor currentcolor currentcolor rgb(15, 124, 119) !important; border-image: none !important; background: none !important; }
-html body main blockquote.pull p:not(#_):not(#__):not(#___):not(#____) { font-family: "Bebas Neue", Arial, sans-serif !important; font-size: clamp(2.6rem, 4.4vw, 4rem) !important; line-height: 1.02 !important; font-weight: 400 !important; letter-spacing: 0.01em !important; color: rgb(15, 45, 52) !important; max-width: 20ch !important; }
+html body main blockquote.pull p:not(#_):not(#__):not(#___):not(#____) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-size: clamp(2.6rem, 4.4vw, 4rem) !important; line-height: 1.02 !important; font-weight: 400 !important; letter-spacing: 0.01em !important; color: rgb(15, 45, 52) !important; max-width: 20ch !important; }
 html body main #fazit a:not(.ww-btn) { color: rgb(10, 95, 90); }
 html body main #fazit a:not(.ww-btn):hover { color: rgb(15, 45, 52); }
 .slider-count{background:rgba(15,45,52,.72)!important;color:#fff!important;padding:3px 9px;border-radius:3px}
@@ -1383,8 +1387,6 @@ html body main .kz-einzeln .kz-b p:last-child:not(#_):not(#__){margin-bottom:0!i
   <script src="/consent.js" defer></script>
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
 <link rel="stylesheet" href="/footer-unified.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="/footer-unified.css"></noscript>
-<link rel="preload" href="/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="preload" href="/fonts/Tajawal-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <style id="gili-extra">
 .table-wrap{overflow:visible;margin-top:28px}html body main .ort-table:not(#_):not(#__):not(#___){min-width:0!important;width:100%!important;max-width:100%}.ort-table{width:100%;border-collapse:separate;border-spacing:0;text-align:left}
 html body main .ort-table :is(th,td):not(#_):not(#__){text-align:left!important;white-space:normal!important;overflow-wrap:anywhere;vertical-align:top}
@@ -1400,6 +1402,26 @@ html body main img:not([aria-hidden="true"]):not(#_):not(#__):not(#___):not(#___
 
 @media (min-width: 1001px) { html body main #essen .duo-pics:not(#_):not(#__) { grid-template-rows: none; grid-template-columns: repeat(2, minmax(0, 1fr)); align-self: center; } }
 .gh .kick{margin:0 0 6px;font:800 .8rem 'DM Sans',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1f6b66}.cards{margin-top:28px}html body main .card a.go:not(#_):not(#__):not(#___):not(#____):not(#_____){display:inline-block;margin-top:10px;font:800 .82rem 'DM Sans',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#147b76;text-decoration:none!important}.mail-line{margin:34px 0 0;font-size:1.08rem;line-height:1.7;color:#1d3a36}html body main .mail-line a:not(#_):not(#__):not(#___):not(#____):not(#_____){color:#147b76;font-weight:700;text-decoration:underline;text-underline-offset:3px}html body main#main{position:relative;overflow:hidden}html body main .gh-404 h1.gh-title:not(#_):not(#__):not(#___):not(#____):not(#_____){font:400 clamp(5rem,14vw,9rem)/.9 'Bebas Neue',Arial,sans-serif!important;color:#0f2d34;margin:0 0 14px}.gh-404 .gh-lead{font-size:1.25rem;max-width:620px}#weiter{padding-top:84px}.tbl-h{margin:44px 0 12px;font:400 1.9rem/1.05 'Bebas Neue',Arial,sans-serif;letter-spacing:.02em;color:#0f2d34}.lead2{margin:0;font-size:1.08rem;line-height:1.7;color:#1d3a36}</style>
+<style id="gestaltung-1">
+/* Handy (bis 760 px) wie die mobile Startseite; Desktop und Tablet unverändert */
+@media(max-width:760px){
+html body main .hero:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){min-height:0!important;height:auto!important}
+html body main .hero .hero-content:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){padding:56px 20px 22px!important}
+html body main .hero .hero-h:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){font-size:clamp(2.2rem,10.5vw,3rem)!important;line-height:.95!important;margin:0 0 10px!important}
+html body main .hero .hero-deck:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){font-size:1rem!important;line-height:1.42!important;margin:0 0 6px!important}
+html body main .hero .hero-cta:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){margin-top:3px!important;padding-top:19px!important}
+html body main .g-sec:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){padding-top:32px!important;padding-bottom:32px!important}
+html body main .gh:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){margin-bottom:12px!important}
+html body main .gh-title:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){font-size:2.3rem!important;line-height:1.02!important;margin-bottom:6px!important}
+html body main .g-sec p:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______),html body main .gh-lead:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){font-size:16px!important;line-height:1.55!important}
+html body main .band-s:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______)::before,html body main .ed-shapes:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){background:transparent!important;display:none!important}
+}
+@media(max-width:760px),(pointer:coarse){html body main .nextlinks:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){gap:0 24px!important}html body main .nextlinks a:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______),html body main .pj-src a:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){display:inline-flex!important;align-items:center!important;min-height:44px!important;box-sizing:border-box}html body main .pl-form input:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______),html body main .pl-form button:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){min-height:44px!important;box-sizing:border-box}}
+@media(pointer:coarse){html body main details>summary:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){min-height:44px!important;box-sizing:border-box}}
+@media(pointer:coarse) and (min-width:761px){html body main .hero .hero-cta:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){padding-top:19px!important;margin-top:3px!important}}
+@media(max-width:760px),(pointer:coarse){html body .hnav li a:not(#_):not(#__):not(#___):not(#____){min-height:44px!important;box-sizing:border-box;display:inline-flex!important;align-items:center!important}}
+@media(max-width:760px),(pointer:coarse){html body main .ort-table tbody th a:not(#_):not(#__):not(#___):not(#____){display:inline-flex!important;align-items:center!important;min-height:44px!important;box-sizing:border-box}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
