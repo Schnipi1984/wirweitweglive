@@ -10,6 +10,13 @@ class NewsletterScript {
   element(el) { el.append('<script defer src="/newsletter-kit.js"></script>', { html: true }); }
 }
 
+// Cloudflare Web Analytics: Beacon erst nach dem vollständigen Laden einbinden (statt automatisch im Kopf der Seite)
+class AnalyticsBeacon {
+  element(el) {
+    el.append('<script>addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.defer=true;s.src="https://static.cloudflareinsights.com/beacon.min.js";s.setAttribute("data-cf-beacon",\'{"token":"20d572534a0f46c4bfb54b18988ed1af"}\');document.head.appendChild(s)},3000)})</script>', { html: true });
+  }
+}
+
 async function serveAssets(request, env) {
   const res = await env.ASSETS.fetch(request);
   let out = new Response(res.body, res);
@@ -18,7 +25,7 @@ async function serveAssets(request, env) {
   }
   // Kit-Anmeldung in alle HTML-Seiten einbauen
   if ((out.headers.get('content-type') || '').includes('text/html')) {
-    out = new HTMLRewriter().on('head', new NewsletterScript()).transform(out);
+    out = new HTMLRewriter().on('head', new NewsletterScript()).on('head', new AnalyticsBeacon()).transform(out);
   }
   return out;
 }
