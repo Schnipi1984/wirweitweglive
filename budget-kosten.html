@@ -1574,6 +1574,21 @@ html body main p.swipe-hint:not(#_):not(#__):not(#___){display:none!important}
 html body main .kurz .kurz-b:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______){display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;background:#163c3a;color:#fff!important;font:800 .84rem Manrope,Arial,sans-serif;letter-spacing:.03em;text-decoration:none!important;text-align:center}
 }
 </style>
+<style id="titelbild-gleich">
+/* Handy: Titelbild auf jeder Seite gleich gross (240 px = Platzbedarf des laengsten Titelbild-Textes: budget-kosten und dokumente bei 430 px Breite). Desktop unveraendert. */
+@media(max-width:760px){
+html body main .hero:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){height:240px!important;min-height:240px!important;max-height:240px!important;display:flex!important;align-items:flex-end!important;overflow:hidden!important}
+html body main .hero .hero-content:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){padding:16px 20px 18px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;position:relative!important;z-index:1!important}
+html body main .hero .hero-h:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){font-size:clamp(2.2rem,10.5vw,3rem)!important;line-height:.95!important;margin:0 0 8px!important}
+html body main .hero .hero-deck:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){font-size:1rem!important;line-height:1.42!important;margin:0 0 4px!important}
+html body main .hero .hero-cta:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){margin-top:2px!important;padding-top:10px!important}
+}
+@media(max-width:350px){
+html body main .hero .hero-h:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){font-size:clamp(1.9rem,9.5vw,2.2rem)!important;margin:0 0 6px!important}
+html body main .hero .hero-deck:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){font-size:.9rem!important;line-height:1.33!important}
+html body main .hero .hero-content:not(#_):not(#__):not(#___):not(#____):not(#_____):not(#______):not(#_______):not(#________){padding:12px 16px 14px!important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
