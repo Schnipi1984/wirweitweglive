@@ -25,7 +25,10 @@ async function serveAssets(request, env) {
   }
   // Kit-Anmeldung in alle HTML-Seiten einbauen
   if ((out.headers.get('content-type') || '').includes('text/html')) {
-    out = new HTMLRewriter().on('head', new NewsletterScript()).on('head', new AnalyticsBeacon()).transform(out);
+    // Wie bisher in Cloudflare eingestellt: Beacon nicht für Besucher aus der EU
+    const rewriter = new HTMLRewriter().on('head', new NewsletterScript());
+    if (!(request.cf && request.cf.isEUCountry)) rewriter.on('head', new AnalyticsBeacon());
+    out = rewriter.transform(out);
   }
   return out;
 }
