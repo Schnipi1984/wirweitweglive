@@ -1,0 +1,20 @@
+# WirWeitWeg
+
+> Weltreise-Blog von Fabienne und Marc aus Solothurn. Seit dem 30. Juni 2026 ohne Rückflugticket unterwegs in Südostasien. Reiseguides mit Preisen in Franken, Planungsschritte und Tipps aus eigener Erfahrung.
+
+## Planung
+- [Weltreise planen](https://wirweitweg.blog/weltreise-planung): neun Schritte vom ersten Gedanken bis zum Abflug
+- [Budget und Kosten](https://wirweitweg.blog/budget-kosten)
+- [Packliste](https://wirweitweg.blog/packliste)
+- [Reisetipps](https://wirweitweg.blog/reisetipps): SIM-Karte, VPN, Onward Ticket, Lifehacks
+
+## Länderguides
+- [Länderguides](https://wirweitweg.blog/laenderguides)
+- [Indonesien](https://wirweitweg.blog/indonesien), [Malaysia](https://wirweitweg.blog/malaysia), [Thailand](https://wirweitweg.blog/thailand)
+
+## Reiseblog
+- [Reiseblog](https://wirweitweg.blog/reiseblog): Geschichten von unterwegs
+
+## Über uns
+- [Über uns](https://wirweitweg.blog/ueber-uns)
+- [Kontakt](https://wirweitweg.blog/kontakt)
