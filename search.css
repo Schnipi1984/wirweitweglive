@@ -1,0 +1,35 @@
+.search-btn{background:0 0;border:0;padding:0;cursor:pointer;color:inherit;font:inherit;width:38px;height:38px;display:grid;place-items:center}
+.search-btn svg{width:19px;height:19px}
+.search-btn:hover{color:var(--sea,#257c76)}
+@media (max-width:1240px){.header-social .search-btn{width:32px}}
+@media (max-width:580px){.header-social .search-btn{width:34px;height:38px}}
+@media (max-width:760px){.header-social .search-btn{width:44px;height:44px}}
+@media (max-width:400px){.header-social .search-btn{width:27px}}
+.ws-overlay{position:fixed;inset:0;z-index:200;background:rgba(22,60,58,.62);display:none;align-items:flex-start;justify-content:center;padding:6vh 16px 16px}
+.ws-overlay.is-open{display:flex}
+.ws-box{width:100%;max-width:760px;max-height:calc(100vh - 6vh - 32px);max-height:calc(100dvh - 6vh - 32px);background:#fff;color:var(--ink,#253d3a);box-shadow:rgba(16,47,51,.44) 0 25px 70px;display:flex;flex-direction:column;overflow:hidden;font-family:Tajawal,"Tajawal Fallback","DM Sans",Arial,sans-serif}
+.ws-head{display:flex;align-items:center;gap:12px;padding:12px 24px;border-bottom:1px solid var(--line,#d8d3c7)}
+.ws-head svg{width:20px;height:20px;flex:none;color:var(--ink-deep,#163c3a)}
+.ws-input{flex:1;min-width:0;border:0;background:0 0;font-family:"Bebas Neue","Bebas Neue Fallback",Manrope,Arial,sans-serif;font-weight:400;font-size:1.4rem;letter-spacing:.03em;line-height:1.2;color:var(--ink-deep,#163c3a);outline:0;padding:6px 0;border-radius:0;-webkit-appearance:none;appearance:none}
+.ws-input::placeholder{color:#8a9a95;opacity:1}
+.ws-input::-webkit-search-cancel-button{display:none}
+.ws-close{border:0;background:0 0;color:var(--ink,#253d3a);font-family:Manrope,Arial,sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:10px 0 10px 8px;cursor:pointer;white-space:nowrap}
+.ws-close:hover{color:var(--sea,#257c76)}
+.ws-list{overflow:auto;padding:0;margin:0;list-style:none;overscroll-behavior:contain}
+.ws-hint{padding:24px 24px 30px;color:var(--muted,#536a64);font-size:1.12rem;line-height:1.5}
+.ws-item+.ws-item{border-top:1px solid #e9e4d9}
+.ws-item a{display:block;padding:16px 24px 17px;text-decoration:none;color:inherit;border-left:4px solid transparent}
+.ws-item a:hover,.ws-item a.is-active{background:var(--sea-light,#e8f1e9);color:inherit;border-left-color:var(--coral,#d87859)}
+.ws-page{display:block;font-family:Manrope,Arial,sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--sea,#257c76)}
+.ws-title{display:block;font-family:"Bebas Neue","Bebas Neue Fallback",Manrope,Arial,sans-serif;font-weight:400;font-size:1.12rem;line-height:1.2;letter-spacing:.01em;color:var(--ink-deep,#163c3a);margin:4px 0 5px}
+.ws-snip{display:block;font-size:1.05rem;line-height:1.45;color:var(--muted,#536a64)}
+.ws-snip mark,.ws-title mark{background:rgba(216,120,89,.22);color:inherit;border-radius:0;padding:0 1px}
+@media (max-width:600px){.ws-overlay{padding:0}.ws-box{max-width:none;max-height:100dvh;height:100dvh}.ws-head{padding:12px 16px;gap:10px}.ws-input{font-size:1.3rem}.ws-item a{padding:14px 16px 15px}.ws-hint{padding:20px 16px}}
+body.ws-lock{overflow:hidden}
+@media (min-width:1021px){.header-inner{gap:clamp(.8rem,2.2vw,2.4rem)}}
+@media (min-width:1021px) and (max-width:1200px){.header-inner{padding:0 14px;gap:.5rem}.nav{gap:0}.nav-link{padding:.6rem .32rem!important;font-size:.66rem!important;letter-spacing:.05em!important}.nav-cta{margin-left:.1rem!important;padding:12px 11px!important}.header-social{margin-left:0!important;gap:0!important}.header-social a,.header-social .search-btn{width:28px!important}}
+@media (max-width:400px){.header-inner{gap:4px!important}.brand{font-size:1.15rem!important}.menu-toggle{font-size:.68rem!important;padding:0 2px!important}.header-social a,.header-social .search-btn{width:26px!important}}
+@media (max-width:370px){.header-inner{padding-left:12px!important;padding-right:12px!important;gap:2px!important}.brand{font-size:1.05rem!important}.header-social{gap:0!important}.header-social a,.header-social .search-btn{width:25px!important}.header-social svg{width:17px!important;height:17px!important}}
+.header-social svg[stroke]{stroke-width:2.4}
+.header-social a[href*="pinterest"] svg{width:17px;height:17px}
+@media (max-width:370px){.header-social a[href*="pinterest"] svg{width:16px!important;height:16px!important}}
