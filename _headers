@@ -15,3 +15,9 @@
 
 /data/search-index.json
   Cache-Control: public, max-age=3600
+
+/email-doubleoptin
+  X-Robots-Tag: noindex, nofollow
+
+/email-doubleoptin.html
+  X-Robots-Tag: noindex, nofollow
