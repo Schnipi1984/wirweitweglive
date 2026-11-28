@@ -7,7 +7,7 @@
 @media (max-width:400px){.header-social .search-btn{width:27px}}
 .ws-overlay{position:fixed;inset:0;z-index:200;background:rgba(22,60,58,.62);display:none;align-items:flex-start;justify-content:center;padding:6vh 16px 16px}
 .ws-overlay.is-open{display:flex}
-.ws-box{width:100%;max-width:760px;max-height:calc(100vh - 6vh - 32px);max-height:calc(100dvh - 6vh - 32px);background:#fff;color:var(--ink,#253d3a);box-shadow:rgba(16,47,51,.44) 0 25px 70px;display:flex;flex-direction:column;overflow:hidden;font-family:Tajawal,"Tajawal Fallback","DM Sans",Arial,sans-serif}
+.ws-box{width:100%;max-width:760px;max-height:calc(100vh - 6vh - 32px);max-height:calc(100dvh - 6vh - 32px);background:#fff;color:var(--ink,#253d3a);box-shadow:rgba(16,47,51,.44) 0 25px 70px;display:flex;flex-direction:column;overflow:hidden;font-family:Tajawal,"Tajawal Fallback",Arial,sans-serif}
 .ws-head{display:flex;align-items:center;gap:12px;padding:12px 24px;border-bottom:1px solid var(--line,#d8d3c7)}
 .ws-head svg{width:20px;height:20px;flex:none;color:var(--ink-deep,#163c3a)}
 .ws-input{flex:1;min-width:0;border:0;background:0 0;font-family:"Bebas Neue","Bebas Neue Fallback",Manrope,Arial,sans-serif;font-weight:400;font-size:1.4rem;letter-spacing:.03em;line-height:1.2;color:var(--ink-deep,#163c3a);outline:0;padding:6px 0;border-radius:0;-webkit-appearance:none;appearance:none}
@@ -33,3 +33,4 @@ body.ws-lock{overflow:hidden}
 .header-social svg[stroke]{stroke-width:2.4}
 .header-social a[href*="pinterest"] svg{width:17px;height:17px}
 @media (max-width:370px){.header-social a[href*="pinterest"] svg{width:16px!important;height:16px!important}}
+html body :where(button,label,caption,.skip,.menu-toggle){font-family:Manrope,Arial,sans-serif}

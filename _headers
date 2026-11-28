@@ -12,3 +12,6 @@
 
 /css/*
   Cache-Control: public, max-age=2592000
+
+/data/search-index.json
+  Cache-Control: public, max-age=3600

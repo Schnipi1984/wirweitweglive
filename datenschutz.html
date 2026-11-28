@@ -31,13 +31,12 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "Datenschutz: Daten, Cookies und deine Rechte | WirWeitWeg", "url": "https://wirweitweg.blog/datenschutz", "description": "Datenschutzerklärung von WirWeitWeg: Hosting, Newsletter, Analyse, externe Inhalte und deine Rechte.", "inLanguage": "de-CH", "isPartOf": {"@type": "WebSite", "name": "WirWeitWeg", "url": "https://wirweitweg.blog/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "WirWeitWeg", "item": "https://wirweitweg.blog/"}, {"@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://wirweitweg.blog/datenschutz"}]}]}</script>
   <style id="site">
 /* Gili Air Reiseführer. Eine zusammengeführte Datei, Reihenfolge = Kaskade. */
-@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 100 1000; font-display: swap; src: url("/fonts/dm-sans-latin-wght-normal.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: Manrope; font-style: normal; font-weight: 200 800; font-display: swap; src: url("/fonts/manrope-latin-wght-normal.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: Caveat; font-style: normal; font-weight: 400 700; font-display: swap; src: url("/fonts/caveat-latin-wght-normal.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root { --ink: #253d3a; --ink-deep: #163c3a; --sea: #257c76; --sea-light: #e8f1e9; --sand: #f3ece1; --sky: #faf7f0; --coral: #d87859; --line: #d8d3c7; --muted: #536a64; --white: #fffdf8; --max: 1240px; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0px; background: var(--sky); color: var(--ink); font-family: "DM Sans", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; background: var(--sky); color: var(--ink); font-family: Tajawal,"Tajawal Fallback", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
@@ -354,7 +353,7 @@ main p a:not([class]):hover, main li a:not([class]):hover, main td a:not([class]
 .map-layout .island-map { min-width: 0px; }
 .map-layout .island-map img { display: block; width: 100%; height: auto; background: rgb(205, 229, 227); }
 .map-key { display: flex; flex-direction: column; padding-top: 7px; }
-.map-key a { display: grid; grid-template-columns: 40px minmax(0px, 1fr); align-items: center; gap: 16px; min-height: 59px; padding: 8px 0px; color: rgb(41, 71, 68); font: 600 1rem / 1.4 "DM Sans", Arial, sans-serif; border-bottom: 1px solid rgb(214, 212, 200); }
+.map-key a { display: grid; grid-template-columns: 40px minmax(0px, 1fr); align-items: center; gap: 16px; min-height: 59px; padding: 8px 0px; color: rgb(41, 71, 68); font: 600 1rem / 1.4 Manrope, Arial, sans-serif; border-bottom: 1px solid rgb(214, 212, 200); }
 .map-key a:hover { color: rgb(20, 123, 118); }
 .map-key a span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgb(36, 120, 118); color: white; font: 800 0.85rem / 1 Manrope, Arial, sans-serif; }
 @media (max-width: 850px) {
@@ -366,7 +365,7 @@ main > div.hero { min-height: min(680px, 75vh); height: auto; max-height: none; 
 @media (max-width: 700px) {
   main > div.hero { min-height: 590px; }
 }
-.pv-strip { background: rgb(22, 60, 58); color: rgb(255, 255, 255); font: 600 12.5px / 1 "DM Sans", Arial, sans-serif; text-align: center; padding: 8px 12px; }
+.pv-strip { background: rgb(22, 60, 58); color: rgb(255, 255, 255); font: 600 12.5px / 1 Manrope, Arial, sans-serif; text-align: center; padding: 8px 12px; }
 .pv-strip b { color: rgb(168, 223, 203); }
 .g-sec { padding-top: 64px; }
 .gh { margin-bottom: 24px; }
@@ -411,7 +410,7 @@ main > div.hero { min-height: min(680px, 75vh); height: auto; max-height: none; 
 .slider-btn.prev { left: 10px; }
 .slider-btn.next { right: 10px; }
 .slider-btn[hidden] { display: none; }
-.slider-count { position: absolute; right: 18px; bottom: 14px; font: 600 0.78rem / 1 "DM Sans", Arial, sans-serif; color: rgb(255, 255, 255); letter-spacing: 0.04em; text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px; }
+.slider-count { position: absolute; right: 18px; bottom: 14px; font: 600 0.78rem / 1 Manrope, Arial, sans-serif; color: rgb(255, 255, 255); letter-spacing: 0.04em; text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px; }
 .slider .slider-cap { max-width: none; margin: 10px auto 0px; font-size: 0.84rem; line-height: 1.5; color: var(--muted); text-align: center; }
 .minor { padding-top: 8px; }
 .minor-title { font: 800 1.45rem / 1.25 Manrope, Arial, sans-serif; letter-spacing: -0.035em; margin: 0px 0px 8px; color: var(--ink); }
@@ -421,9 +420,9 @@ main > div.hero { min-height: min(680px, 75vh); height: auto; max-height: none; 
 .cost-group th { font: 800 0.95rem Manrope, Arial, sans-serif; color: var(--sea); }
 .cost-table small { font-size: 0.8rem; font-weight: 400; color: var(--muted); }
 .g-credits { padding-top: 48px; }
-html body main #fazit .fazit-lead > .g-grp > p:not(.g-note):not(.table-note):not(#_):not(#__):not(#___){font-size:1.1rem!important;line-height:1.75!important}html body main #fazit .fazit-lead .table-note:not(#_):not(#__){font-size:.95rem!important}html body main #fazit .fazit-lead blockquote.pull:not(#_):not(#__){margin:28px 0}html body main #fazit .fazit-lead blockquote.pull p:not(#_):not(#__):not(#___){font-size:clamp(1.8rem,3vw,2.4rem)!important;line-height:1.15!important}html body main #fazit .g-credit summary:not(#_):not(#__):not(#___){text-transform:none!important;letter-spacing:0!important;font:700 .95rem "DM Sans",Arial,sans-serif!important;margin:0!important;padding:0!important}html body main #fazit .duo:not(#_):not(#__){align-items:start}html body main #fazit .duo-text:not(#_):not(#__):not(#___){align-self:start!important;margin:0!important;padding-top:0!important}html body main #fazit .duo-text p:not(#_):not(#__){font-size:1.1rem!important;line-height:1.75!important}html body main #fazit .duo-text h3:not(#_):not(#__){font-size:30px}
-html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}html body main #fazit .g-credit summary:not(#_):not(#__){font:700 .95rem "DM Sans",Arial,sans-serif;cursor:pointer;color:#1e3431}html body main #fazit .g-credit p:not(#_):not(#__),html body main #fazit .g-credit li:not(#_):not(#__){font-size:.9rem!important;line-height:1.6!important}
-.g-credit summary { cursor: pointer; font: 800 0.78rem / 1.2 "DM Sans", Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sea); }
+html body main #fazit .fazit-lead > .g-grp > p:not(.g-note):not(.table-note):not(#_):not(#__):not(#___){font-size:1.1rem!important;line-height:1.75!important}html body main #fazit .fazit-lead .table-note:not(#_):not(#__){font-size:.95rem!important}html body main #fazit .fazit-lead blockquote.pull:not(#_):not(#__){margin:28px 0}html body main #fazit .fazit-lead blockquote.pull p:not(#_):not(#__):not(#___){font-size:clamp(1.8rem,3vw,2.4rem)!important;line-height:1.15!important}html body main #fazit .g-credit summary:not(#_):not(#__):not(#___){text-transform:none!important;letter-spacing:0!important;font:700 .95rem Manrope,Arial,sans-serif!important;margin:0!important;padding:0!important}html body main #fazit .duo:not(#_):not(#__){align-items:start}html body main #fazit .duo-text:not(#_):not(#__):not(#___){align-self:start!important;margin:0!important;padding-top:0!important}html body main #fazit .duo-text p:not(#_):not(#__){font-size:1.1rem!important;line-height:1.75!important}html body main #fazit .duo-text h3:not(#_):not(#__){font-size:30px}
+html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}html body main #fazit .g-credit summary:not(#_):not(#__){font:700 .95rem Manrope,Arial,sans-serif;cursor:pointer;color:#1e3431}html body main #fazit .g-credit p:not(#_):not(#__),html body main #fazit .g-credit li:not(#_):not(#__){font-size:.9rem!important;line-height:1.6!important}
+.g-credit summary { cursor: pointer; font: 800 0.78rem / 1.2 Manrope, Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sea); }
 .g-credit ul { padding-left: 18px; line-height: 1.7; color: var(--w-text,#315256); font-size: 0.9rem; }
 .g-credit p { font-size: 0.9rem; line-height: 1.65; color: var(--w-text,#315256); }
 @media (min-width: 1001px) {
@@ -488,7 +487,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   body .lex-details summary { list-style: none; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 16px 0px; border-top: 1px solid rgb(230, 223, 210); border-bottom: 1px solid rgb(230, 223, 210); }
   body .lex-details summary::-webkit-details-marker { display: none; }
   body .lex-sum-t { font: 800 1.08rem / 1.2 Manrope, Arial, sans-serif; letter-spacing: -0.02em; color: var(--ink); }
-  body .lex-sum-h { font: 800 0.72rem / 1 "DM Sans", Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sea); }
+  body .lex-sum-h { font: 800 0.72rem / 1 Manrope, Arial, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sea); }
   body .lex-sum-h::after { content: " +"; }
   body .lex-details[open] .lex-sum-h::after { content: " −"; }
   body .lex-details[open] { max-width: none; }
@@ -572,7 +571,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   .slider-btn { width: 56px; height: 56px; opacity: 0.85; transition: opacity 0.2s; }
   .slider-btn:hover { opacity: 1; }
   .slider-btn svg { width: 30px; height: 30px; stroke-width: 1.5; }
-  .slider-count { font-style: normal; font-variant: tabular-nums; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-weight: 500; font-stretch: normal; font-size: 0.8125rem; line-height: 1; font-family: "DM Sans", Arial, sans-serif; letter-spacing: 0.06em; right: 24px; bottom: 22px; }
+  .slider-count { font-style: normal; font-variant: tabular-nums; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-weight: 500; font-stretch: normal; font-size: 0.8125rem; line-height: 1; font-family: Manrope, Arial, sans-serif; letter-spacing: 0.06em; right: 24px; bottom: 22px; }
   .slider .slider-cap { font-size: 0.875rem; color: rgb(107, 124, 120); margin-top: 14px; }
   .slider--overlay .slider-frame::after { content: ""; position: absolute; left: 0px; right: 0px; bottom: 0px; height: 34%; background: linear-gradient(0deg, rgba(10, 30, 28, 0.5), transparent); border-radius: 0px 0px 24px 24px; pointer-events: none; }
   .slider--overlay .slider-cap { position: relative; margin: -50px 0px 0px 28px; text-align: left; color: rgb(255, 255, 255); font-size: 0.9375rem; z-index: 2; pointer-events: none; text-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px; height: 36px; }
@@ -674,7 +673,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   .gh-title, body #fragen .useful-intro h2 { font-size: 3.5rem !important; line-height: 1 !important; }
   .minor-title { font-size: 2.25rem; line-height: 1.05; }
   body .newsletter-invite h2, body .ww-author h2 { font-size: 3rem; line-height: 1; }
-  .g-text h3, .g-tips h3, .acc summary, body #fragen .useful-list summary, .isl h4, .pr .place-heading h3, body .table-head h3, body .lex-sum-t, .g-text p > strong:first-child, .pr .place-facts p strong, body .cost-table .cost-group th, .hnav a, .pr .place-heading .eyebrow, body .faq-group, body .lex-sum-h, .g-credit summary { font-family: "DM Sans", Arial, sans-serif !important; letter-spacing: -0.01em !important; }
+  .g-text h3, .g-tips h3, .acc summary, body #fragen .useful-list summary, .isl h4, .pr .place-heading h3, body .table-head h3, body .lex-sum-t, .g-text p > strong:first-child, .pr .place-facts p strong, body .cost-table .cost-group th, .hnav a, .pr .place-heading .eyebrow, body .faq-group, body .lex-sum-h, .g-credit summary { font-family: Manrope, Arial, sans-serif !important; letter-spacing: -0.01em !important; }
   .g-text h3, .g-tips h3, .isl h4, .pr .place-heading h3, body .table-head h3 { font-weight: 700 !important; }
   .acc summary, body #fragen .useful-list summary { font-weight: 600 !important; }
 }
@@ -725,7 +724,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   body #fragen .useful-intro h2 { margin-bottom: 16px; }
   body #fragen .useful-intro p { line-height: 1.6; color: var(--w-text); font-size: 1.3125rem !important; }
   body #fragen .useful-list { max-width: 900px; }
-  body #fragen .faq-group { padding-left: 29px; font: 600 0.95rem / 1.3 "DM Sans", Arial, sans-serif !important; color: rgb(107, 124, 120) !important; margin: 40px 0px 4px !important; }
+  body #fragen .faq-group { padding-left: 29px; font: 600 0.95rem / 1.3 Manrope, Arial, sans-serif !important; color: rgb(107, 124, 120) !important; margin: 40px 0px 4px !important; }
   body #fragen .faq-group:first-child { margin-top: 8px !important; }
   .acc-more { padding-left: 29px; }
   .acc-more a { font: 400 1.375rem / 1 "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif; letter-spacing: 0.02em; color: var(--w-sea); border-bottom: 1.5px solid rgba(37, 124, 118, 0.35); padding-bottom: 2px; -webkit-font-smoothing: auto; text-decoration: none !important; }
@@ -821,9 +820,9 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
 }
 @media (min-width: 1001px) {
   .map-legend { margin-top: 26px; padding-top: 24px; border-top: 1px solid rgb(229, 225, 216); }
-  .ml-title { text-transform: uppercase; font-family: "DM Sans", Arial, sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: rgb(90, 90, 90); margin: 0px 0px 14px; }
+  .ml-title { text-transform: uppercase; font-family: Manrope, Arial, sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: rgb(90, 90, 90); margin: 0px 0px 14px; }
   .ml-list { list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: 1fr 1fr; gap: 11px 20px; }
-  .ml-list li { display: flex; align-items: center; gap: 11px; font: 500 0.95rem / 1.3 "DM Sans", Arial, sans-serif; color: rgb(17, 17, 17); }
+  .ml-list li { display: flex; align-items: center; gap: 11px; font: 500 0.95rem / 1.3 Tajawal,"Tajawal Fallback", Arial, sans-serif; color: rgb(17, 17, 17); }
   .ml-ic { flex: 0 0 auto; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; }
   .ml-ic svg { width: 18px; height: 18px; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
 }
@@ -834,14 +833,14 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   html body .map-key a span.area-ic svg { width: 23px; height: 23px; }
 }
 @media (min-width: 1001px) {
-  html body .map-key a, html body .map-key a em { font-family: "DM Sans", Arial, sans-serif; color: rgb(17, 17, 17); font-weight: 700; font-size: 1rem; }
+  html body .map-key a, html body .map-key a em { font-family: Manrope, Arial, sans-serif; color: rgb(17, 17, 17); font-weight: 700; font-size: 1rem; }
   html body .map-key a:hover em { color: var(--w-sea); }
-  html body .map-key small { font-family: "DM Sans", Arial, sans-serif; font-size: 0.9rem; font-weight: 400; color: rgb(90, 90, 90); }
+  html body .map-key small { font-family: Tajawal,"Tajawal Fallback", Arial, sans-serif; font-size: 0.9rem; font-weight: 400; color: rgb(90, 90, 90); }
   html body .ml-title { font-size: 1rem; font-weight: 700; letter-spacing: normal; text-transform: none; color: rgb(17, 17, 17); }
   html body .ml-list li { font-size: 0.9rem; font-weight: 400; color: rgb(17, 17, 17); }
 }
 @media (min-width: 1001px) {
-  .ml-link { display: inline-block; margin-top: 20px; padding: 10px 0px; font: 600 0.9rem / 1.3 "DM Sans", Arial, sans-serif; color: var(--w-sea); }
+  .ml-link { display: inline-block; margin-top: 20px; padding: 10px 0px; font: 600 0.9rem / 1.3 Manrope, Arial, sans-serif; color: var(--w-sea); }
   
   .ml-link:hover { color: rgb(17, 17, 17); }
 }
@@ -860,7 +859,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   html body .g-dark .gh { text-align: center; }
   html body main p > strong:first-child, html body .place-facts p strong, html body .g-text p > strong { color: rgb(17, 17, 17) !important; font-weight: 700 !important; }
   html body .g-dark p > strong:first-child, html body .g-dark p strong { color: rgb(255, 255, 255); }
-  html body main .g-text h3, html body main .table-head h3, html body main .isl h4, html body main .lex-card h3 { font-family: "DM Sans", Arial, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; letter-spacing: -0.01em !important; color: rgb(79, 133, 125) !important; margin-bottom: 10px !important; }
+  html body main .g-text h3, html body main .table-head h3, html body main .isl h4, html body main .lex-card h3 { font-family: Tajawal,"Tajawal Fallback", Arial, sans-serif !important; font-size: 21px !important; font-weight: 700 !important; letter-spacing: -0.01em !important; color: rgb(79, 133, 125) !important; margin-bottom: 10px !important; }
   html body .pr .place-heading h3 { font-size: 26px !important; font-weight: 700 !important; color: rgb(17, 17, 17) !important; }
   html body .pr .place-dek { color: rgb(17, 17, 17) !important; font-weight: 700 !important; font-size: 18px !important; }
   html body .pr .place-heading .eyebrow { display: none; }
@@ -903,7 +902,7 @@ html body main #fazit .g-credit:not(#_):not(#__){margin:20px 0 0;max-width:none}
   html body main .gh-lead:not(#_) { font-size: 22px !important; line-height: 1.55 !important; color: var(--d-deep) !important; margin-top: 20px !important; max-width: 760px !important; }
   html body main .g-sec { scroll-margin-top: -80px !important; }
   html body main .g-text:not(#_), html body main .climate:not(#_) { max-width: 760px !important; }
-  html body main .g-text h3:not(#_), html body main .table-head h3:not(#_), html body main .isl h4:not(#_) { font-family: "DM Sans", Arial, sans-serif !important; font-size: 24px !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -0.015em !important; color: var(--d-deep) !important; margin: 56px 0px 12px !important; }
+  html body main .g-text h3:not(#_), html body main .table-head h3:not(#_), html body main .isl h4:not(#_) { font-family: Tajawal,"Tajawal Fallback", Arial, sans-serif !important; font-size: 24px !important; font-weight: 700 !important; line-height: 1.25 !important; letter-spacing: -0.015em !important; color: var(--d-deep) !important; margin: 56px 0px 12px !important; }
   html body main .g-note:not(#_) { background: var(--d-shallow) !important; border: 0px !important; border-radius: 16px !important; padding: 18px 24px !important; margin: 28px 0px !important; }
   html body main .g-note strong:not(#_) { color: var(--d-reef) !important; }
   html body main .g-first { margin-top: 56px; }
@@ -1098,7 +1097,7 @@ main { overflow-x: clip; }
 @font-face { font-family: "Bebas Neue Fallback"; src: local("Arial"), local("ArialMT"), local("Helvetica"); size-adjust: 57.5%; ascent-override: 156.5%; descent-override: 52.2%; line-gap-override: 0%; }
 @font-face { font-family: "Tajawal Fallback"; src: local("Arial"), local("ArialMT"), local("Helvetica"); size-adjust: 92.5%; ascent-override: 69.5%; descent-override: 38.6%; line-gap-override: 21.6%; }
 @media (min-width: 1001px) {
-  html body main :is(p, li, td, th, dt, dd, figcaption, small, h3, h4, .g-note, .gh-lead, .slider-cap, .slider-count, summary.lex-sum, .lex-sum-t, .lex-sum-h, .ml-title, .ml-list li, .map-key a, .map-key small, .map-key em, .faq-group, .table-note, .acc-more, .acc-a p, .answer p):not(#_):not(.hero-h):not(.minor-title) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; }
+  html body main :is(p, li, td, th, dt, dd, figcaption, small, h3, h4, .g-note, .gh-lead, .slider-cap, .slider-count, summary.lex-sum, .lex-sum-t, .lex-sum-h, .ml-title, .ml-list li, .map-key a, .map-key small, .map-key em, .faq-group, .table-note, .acc-more, .acc-a p, .answer p):not(#_):not(.hero-h):not(.minor-title) { font-family: Tajawal, "Tajawal Fallback", Arial, sans-serif !important; }
   html body main p:not(#_):not(.table-note):not(.slider-cap):not(.hero-deck):not(.hero-h), html body main li:not(#_):not(.ml-list li) { font-weight: 400 !important; }
   html body main :is(strong, b, th):not(#_) { font-weight: 700 !important; }
   html body main :is(h3, h4):not(#_) { font-weight: 700 !important; letter-spacing: 0px !important; }
@@ -1175,12 +1174,12 @@ html body main .wx li:not(#_):not(#__) { display: flex; flex-direction: column; 
 html body main .climate:not(#_):not(#__):not(#___) { background: none !important; border-radius: 0px !important; padding: 0px !important; box-shadow: none !important; }
 @media (max-width: 1000px) {
   html body .hero .hero-h:not(#_):not(#__) { font-weight: 400 !important; font-synthesis: none !important; text-transform: uppercase !important; font-size: clamp(4.6rem, 24vw, 6.4rem) !important; letter-spacing: 0.01em !important; word-spacing: -0.1em !important; line-height: 0.9 !important; margin: 16px 0px 18px !important; }
-  html body .hero .hero-deck:not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-size: 1.2rem !important; line-height: 1.5 !important; }
+  html body .hero .hero-deck:not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", Arial, sans-serif !important; font-size: 1.2rem !important; line-height: 1.5 !important; }
   html body main :is(.gh-title, .g-intro h1, .minor-title, .useful-intro h2):not(#_):not(#__) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; text-transform: uppercase !important; letter-spacing: 0.01em !important; line-height: 1.02 !important; }
   html body main .gh-title:not(#_):not(#__) { font-size: 2.7rem !important; }
   html body main .g-intro h1 { font-size: 2.4rem; }
-  html body main :is(p, li, td, th, dd, figcaption, .gh-lead):not(.hero-h):not(.hero-deck):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-size: 17px !important; line-height: 1.7 !important; }
-  html body main :is(h3, h4, .pr .place-heading h3):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", "DM Sans", Arial, sans-serif !important; font-weight: 700 !important; font-size: 1.35rem !important; letter-spacing: 0px !important; }
+  html body main :is(p, li, td, th, dd, figcaption, .gh-lead):not(.hero-h):not(.hero-deck):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", Arial, sans-serif !important; font-size: 17px !important; line-height: 1.7 !important; }
+  html body main :is(h3, h4, .pr .place-heading h3):not(#_):not(#__) { font-family: Tajawal, "Tajawal Fallback", Arial, sans-serif !important; font-weight: 700 !important; font-size: 1.35rem !important; letter-spacing: 0px !important; }
   html body main .hnav a:not(#_):not(#__) { font-family: "Bebas Neue", "Bebas Neue Fallback", Arial, sans-serif !important; font-weight: 400 !important; font-size: 1.15rem !important; letter-spacing: 0.03em !important; text-transform: uppercase !important; }
   html body main .ml-ic { flex: 0 0 auto; display: inline-grid; width: 28px; height: 28px; }
   html body main :is(.ml-ic, .area-ic) svg { stroke-linecap: round; stroke-linejoin: round; width: 18px; height: 18px; fill: none; stroke: rgb(255, 255, 255); stroke-width: 2; }
@@ -1405,7 +1404,7 @@ html body main img:not([aria-hidden="true"]):not(#_):not(#__):not(#___):not(#___
 @media(min-width:1001px){html body main .hnav ul:not(#_):not(#__):not(#___){grid-template-columns:repeat(7,1fr)!important}}
 
 @media (min-width: 1001px) { html body main #essen .duo-pics:not(#_):not(#__) { grid-template-rows: none; grid-template-columns: repeat(2, minmax(0, 1fr)); align-self: center; } }
-.gh .kick{margin:0 0 6px;font:800 .8rem 'DM Sans',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1f6b66}.cards{margin-top:28px}html body main .card a.go:not(#_):not(#__):not(#___):not(#____):not(#_____){display:inline-block;margin-top:10px;font:800 .82rem 'DM Sans',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#147b76;text-decoration:none!important}.mail-line{margin:34px 0 0;font-size:1.08rem;line-height:1.7;color:#1d3a36}html body main .mail-line a:not(#_):not(#__):not(#___):not(#____):not(#_____){color:#147b76;font-weight:700;text-decoration:underline;text-underline-offset:3px}html body main#main{position:relative;overflow:hidden}.tbl-h{margin:44px 0 12px;font:400 1.9rem/1.05 'Bebas Neue',Arial,sans-serif;letter-spacing:.02em;color:#0f2d34}.lead2{margin:0;font-size:1.08rem;line-height:1.7;color:#1d3a36}@media(max-width:860px){.k-top{grid-template-columns:1fr}}#kopf{padding-top:72px;padding-bottom:10px}.d-head .kick{margin:0 0 6px;font:800 .8rem 'DM Sans',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1f6b66}html body main .d-head h1.gh-title:not(#_):not(#__):not(#___):not(#____):not(#_____){font:400 clamp(3.4rem,8vw,6rem)/.95 'Bebas Neue',Arial,sans-serif!important;color:#0f2d34;margin:0 0 18px}.d-lead{font-size:1.15rem;line-height:1.7;color:#1d3a36;max-width:640px;margin:0}#inhalt{padding-top:30px}.d-row{display:grid;grid-template-columns:70px minmax(0,.8fr) minmax(0,1.6fr);gap:0 clamp(1rem,3vw,2.5rem);padding:30px 0 34px;border-top:1px solid #d9d3c4}.d-row:first-child{border-top:2px solid #0f2d34}@media(max-width:860px){.d-row{grid-template-columns:44px minmax(0,1fr)}.d-body{grid-column:1/-1;margin-top:12px}}.d-no{font:400 1.7rem/1.1 'Bebas Neue',Arial,sans-serif;color:#1f6b66}html body main .d-row h2:not(#_):not(#__):not(#___):not(#____):not(#_____){margin:0;font:400 1.9rem/1.08 'Bebas Neue',Arial,sans-serif!important;letter-spacing:.02em!important;color:#0f2d34}.d-body p{font-size:1.03rem;line-height:1.7;color:#1d3a36;margin:0 0 14px;max-width:720px;overflow-wrap:anywhere}.d-body p:last-child{margin-bottom:0}html body main .d-body a:not(#_):not(#__):not(#___):not(#____):not(#_____){color:#147b76;text-decoration:underline;text-underline-offset:3px}html body main .d-body .privacy-button:not(#_):not(#__):not(#___):not(#____):not(#_____){display:inline-block;margin:2px 4px 2px 0;padding:11px 16px;border:0;border-radius:4px;background:#163c3a;color:#fff;font:800 .78rem 'DM Sans',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}html body main .d-body .privacy-button:hover:not(#_):not(#__):not(#___):not(#____):not(#_____){background:#257c76}</style>
+.gh .kick{margin:0 0 6px;font:800 .8rem Manrope,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1f6b66}.cards{margin-top:28px}html body main .card a.go:not(#_):not(#__):not(#___):not(#____):not(#_____){display:inline-block;margin-top:10px;font:800 .82rem Manrope,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#147b76;text-decoration:none!important}.mail-line{margin:34px 0 0;font-size:1.08rem;line-height:1.7;color:#1d3a36}html body main .mail-line a:not(#_):not(#__):not(#___):not(#____):not(#_____){color:#147b76;font-weight:700;text-decoration:underline;text-underline-offset:3px}html body main#main{position:relative;overflow:hidden}.tbl-h{margin:44px 0 12px;font:400 1.9rem/1.05 'Bebas Neue',Arial,sans-serif;letter-spacing:.02em;color:#0f2d34}.lead2{margin:0;font-size:1.08rem;line-height:1.7;color:#1d3a36}@media(max-width:860px){.k-top{grid-template-columns:1fr}}#kopf{padding-top:72px;padding-bottom:10px}.d-head .kick{margin:0 0 6px;font:800 .8rem Manrope,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1f6b66}html body main .d-head h1.gh-title:not(#_):not(#__):not(#___):not(#____):not(#_____){font:400 clamp(3.4rem,8vw,6rem)/.95 'Bebas Neue',Arial,sans-serif!important;color:#0f2d34;margin:0 0 18px}.d-lead{font-size:1.15rem;line-height:1.7;color:#1d3a36;max-width:640px;margin:0}#inhalt{padding-top:30px}.d-row{display:grid;grid-template-columns:70px minmax(0,.8fr) minmax(0,1.6fr);gap:0 clamp(1rem,3vw,2.5rem);padding:30px 0 34px;border-top:1px solid #d9d3c4}.d-row:first-child{border-top:2px solid #0f2d34}@media(max-width:860px){.d-row{grid-template-columns:44px minmax(0,1fr)}.d-body{grid-column:1/-1;margin-top:12px}}.d-no{font:400 1.7rem/1.1 'Bebas Neue',Arial,sans-serif;color:#1f6b66}html body main .d-row h2:not(#_):not(#__):not(#___):not(#____):not(#_____){margin:0;font:400 1.9rem/1.08 'Bebas Neue',Arial,sans-serif!important;letter-spacing:.02em!important;color:#0f2d34}.d-body p{font-size:1.03rem;line-height:1.7;color:#1d3a36;margin:0 0 14px;max-width:720px;overflow-wrap:anywhere}.d-body p:last-child{margin-bottom:0}html body main .d-body a:not(#_):not(#__):not(#___):not(#____):not(#_____){color:#147b76;text-decoration:underline;text-underline-offset:3px}html body main .d-body .privacy-button:not(#_):not(#__):not(#___):not(#____):not(#_____){display:inline-block;margin:2px 4px 2px 0;padding:11px 16px;border:0;border-radius:4px;background:#163c3a;color:#fff;font:800 .78rem Manrope,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}html body main .d-body .privacy-button:hover:not(#_):not(#__):not(#___):not(#____):not(#_____){background:#257c76}</style>
 <style id="gestaltung-1">
 /* Handy (bis 760 px) wie die mobile Startseite; Desktop und Tablet unverändert */
 @media(max-width:760px){
